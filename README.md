@@ -1,8 +1,4 @@
----
-project: Parallel Multilevel Adapted Deflation
-author: Jinqiang Chen
----
-# paraMADP
+# paraMADP (Parallel Multilevel Adapted Deflation Preconditioning)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  [![Fortran](https://img.shields.io/badge/Fortran-2008+-734f96.svg)](https://fortran-lang.org/)  [![MPI](https://img.shields.io/badge/MPI-3.0+-green.svg)](https://www.mpi-forum.org/)  [![FORD](https://img.shields.io/badge/FORD-22.1+-blue.svg)](https://github.com/Fortran-FOSS-Programmers/ford)
 
 Matrix-free parallel Krylov solvers for Helmholtz equation discretized by finite-difference method, mainly using CSLP and high-order deflation preconditioning
@@ -11,7 +7,7 @@ Matrix-free parallel Krylov solvers for Helmholtz equation discretized by finite
 > This project is currently in active development and should be considered a work in progress. The source code is not yet optimized for performance or efficiency. Users should expect potential bugs, and changes in functionality. We welcome feedback and contributions.
 
 ## Table of Contents  
-- [paraMADP](#paramadp)
+- [paraMADP (Parallel Multilevel Adapted Deflation Preconditioning)](#paramadp-parallel-multilevel-adapted-deflation-preconditioning)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
     - [Purpose](#purpose)
