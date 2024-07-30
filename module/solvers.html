@@ -73,6 +73,7 @@
     <div class="row align-items-center justify-content-between" id="info-bar">
       <div class="col">
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
@@ -173,12 +174,12 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <ul class="list-inline">
-                  <li class="list-inline-item"><a href='cslp_solver.html'>CSLP_Solver</a></li>
-                  <li class="list-inline-item"><a href='read_setup.html'>read_setup</a></li>
-                  <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
                   <li class="list-inline-item"><a href='operators.html'>operators</a></li>
-                  <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
+                  <li class="list-inline-item"><a href='read_setup.html'>read_setup</a></li>
                   <li class="list-inline-item"><a href='deflaion_setup.html'>deflaion_setup</a></li>
+                  <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
+                  <li class="list-inline-item"><a href='cslp_solver.html'>CSLP_Solver</a></li>
+                  <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
               </ul>
             </li>
         </ul>
@@ -201,11 +202,7 @@
 </h3></div>
     <div class="card-body">
           
-  <p>This is a routine to select which preconditioner is applied, Precond_x = P^(-1)x
-Subroutine arguments -------------------------------------------------------
-Multigrid based CSLP 
-Deflation preconditioning
-No precondition</p>
+  <p>This is a routine to select which preconditioner is applied, Precond_x = P^(-1)x</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -220,7 +217,7 @@ No precondition</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~2"></span>
+              <span class="anchor" id="variable-x"></span>
               complex(kind=realdp),
             </td>
 <td></td>
@@ -256,7 +253,6 @@ No precondition</p>
     <div class="card-body">
           
   <p>Full GMRES without precondition
- Subroutine arguments -------------------------------------------------------
 Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.</p>
 
   <h4>Arguments</h4>
@@ -272,7 +268,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~3"></span>
+              <span class="anchor" id="variable-b"></span>
               complex(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -327,7 +323,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
             <td>::</td>
             <td><strong>iter</strong></td>
             <td>
-<p>Local arguments ------------------------------------------------------------</p>
+
             </td>
         </tr>
     </tbody>
@@ -343,8 +339,6 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <div class="card-body">
           
   <p>Restart GMRES
- Subroutine arguments -------------------------------------------------------
- compute Ax
 Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.</p>
 
   <h4>Arguments</h4>
@@ -360,7 +354,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~4"></span>
+              <span class="anchor" id="variable-b~2"></span>
               complex(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -415,7 +409,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
             <td>::</td>
             <td><strong>iter_total</strong></td>
             <td>
-<p>Local arguments ------------------------------------------------------------</p>
+
             </td>
         </tr>
     </tbody>
@@ -431,7 +425,6 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <div class="card-body">
           
   <p>Full GMRES with left preconditioned
- Subroutine arguments -------------------------------------------------------
 Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.</p>
 
   <h4>Arguments</h4>
@@ -447,7 +440,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~5"></span>
+              <span class="anchor" id="variable-b~3"></span>
               complex(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -502,7 +495,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
             <td>::</td>
             <td><strong>iter</strong></td>
             <td>
-<p>Local arguments ------------------------------------------------------------</p>
+
             </td>
         </tr>
     </tbody>
@@ -518,8 +511,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <div class="card-body">
           
   <p>Full GMRES with right precondition
- Subroutine arguments -------------------------------------------------------
-Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.</p><a href="../proc/full_pgmres.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -534,7 +526,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~6"></span>
+              <span class="anchor" id="variable-b~4"></span>
               complex(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -589,7 +581,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
             <td>::</td>
             <td><strong>iter</strong></td>
             <td>
-<p>Local arguments ------------------------------------------------------------</p>
+
             </td>
         </tr>
     </tbody>
@@ -605,8 +597,6 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <div class="card-body">
           
   <p>Preconditioned restart GMRES 
- Subroutine arguments -------------------------------------------------------
- Here m_iter is the iteration to restart
 Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.</p>
 
   <h4>Arguments</h4>
@@ -622,7 +612,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~7"></span>
+              <span class="anchor" id="variable-b~5"></span>
               complex(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -677,7 +667,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
             <td>::</td>
             <td><strong>iter</strong></td>
             <td>
-<p>Local arguments ------------------------------------------------------------</p>
+
             </td>
         </tr>
     </tbody>
@@ -692,9 +682,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
 </h3></div>
     <div class="card-body">
           
-  <p>ARNOLDI precess
-Subroutine arguments -------------------------------------------------------
-Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)</p>
+  <p>ARNOLDI precess</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -764,10 +752,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
 </h3></div>
     <div class="card-body">
           
-  <p>Preconditioned ARNOLDI precess
-Subroutine arguments -------------------------------------------------------
-Precondition
-Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)</p>
+  <p>Preconditioned ARNOLDI precess</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -837,8 +822,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
 </h3></div>
     <div class="card-body">
           
-  <p>APPLY GIVENS ROTATION 
-Subroutine arguments -------------------------------------------------------</p>
+  <p>APPLY GIVENS ROTATION </p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -878,7 +862,7 @@ Subroutine arguments -------------------------------------------------------</p>
             <td>::</td>
             <td><strong>cs</strong></td>
             <td>
-<p>Local arguments ------------------------------------------------------------</p>
+
             </td>
         </tr>
         <tr>
@@ -893,7 +877,7 @@ Subroutine arguments -------------------------------------------------------</p>
             <td>::</td>
             <td><strong>sn</strong></td>
             <td>
-<p>Local arguments ------------------------------------------------------------</p>
+
             </td>
         </tr>
         <tr>
@@ -994,7 +978,6 @@ Subroutine arguments -------------------------------------------------------</p>
     <div class="card-body">
           
   <p>Right preconditioned GCR 
- Subroutine arguments -------------------------------------------------------
 Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.</p>
 
   <h4>Arguments</h4>
@@ -1010,7 +993,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~8"></span>
+              <span class="anchor" id="variable-b~6"></span>
               complex(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -1065,7 +1048,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
             <td>::</td>
             <td><strong>iter</strong></td>
             <td>
-<p>Local arguments ------------------------------------------------------------</p>
+
             </td>
         </tr>
     </tbody>
@@ -1081,8 +1064,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <div class="card-body">
           
   <p>Flexible GMRES with right precondition 
- Subroutine arguments -------------------------------------------------------
-Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.</p><a href="../proc/pfgmres.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -1097,7 +1079,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~9"></span>
+              <span class="anchor" id="variable-b~7"></span>
               complex(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -1152,7 +1134,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
             <td>::</td>
             <td><strong>iter</strong></td>
             <td>
-<p>Local arguments ------------------------------------------------------------</p>
+
             </td>
         </tr>
     </tbody>
@@ -1178,7 +1160,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
           <div class="col">
             <p>
               ParaMADP
- was developed by Jinqiang Chen<br>              &copy; 2024 
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
 </p>
           </div>
           <div class="col">

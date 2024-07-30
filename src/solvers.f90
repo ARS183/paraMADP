@@ -15,20 +15,20 @@ contains
     !! Full GMRES without precondition
     implicit none
 
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     complex(kind = realdp), dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(in)    :: b
     complex(kind = realdp), dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(inout) :: u
     real   (kind = realdp),intent(out) :: Rerror
     integer, intent(inout) :: iter
 
-    !! Local arguments ------------------------------------------------------------
+    !-Local arguments ------------------------------------------------------------
     integer                        :: k,ki,j
     real(kind = realdp)                   :: b_norm, res_norm
     complex(kind = realdp), allocatable, dimension(:)     :: sn, cs, beta
     complex(kind = realdp), allocatable, dimension(:,:)   :: res, u0, Au0, H
     complex(kind = realdp), allocatable, dimension(:,:,:) :: V
 
-    !! Subroutine content ---------------------------------------------------------
+    !-Subroutine content ---------------------------------------------------------
     allocate(sn(m_iter+1), cs(m_iter+1), beta(m_iter+1))
     allocate(res(1-LAP:nx+LAP,1-LAP:ny+LAP), u0(1-LAP:nx+LAP,1-LAP:ny+LAP), Au0(1-LAP:nx+LAP,1-LAP:ny+LAP))
     allocate(H(m_iter+1,m_iter))
@@ -98,20 +98,20 @@ contains
     !! Restart GMRES
     implicit none
 
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     complex(kind = realdp),dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(in)    :: b
     complex(kind = realdp),dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(inout) :: u
     real   (kind = realdp),intent(out) :: Rerror
     integer, intent(inout) :: iter_total
 
-    !! Local arguments ------------------------------------------------------------
+    !-Local arguments ------------------------------------------------------------
     integer                        :: k, ki, j, Out_iter
     real(kind = realdp)                   :: b_norm, res0_norm, res_norm, pRerror
     complex(kind = realdp), allocatable, dimension(:)     :: sn, cs, beta
     complex(kind = realdp), allocatable, dimension(:,:)   :: res0, res, u0, Au0, Au, H
     complex(kind = realdp), allocatable, dimension(:,:,:) :: V
 
-    !! Subroutine content ---------------------------------------------------------
+    !-Subroutine content ---------------------------------------------------------
     allocate(sn(m_iter+1), cs(m_iter+1), beta(m_iter+1))
     allocate(res0(1-LAP:nx+LAP,1-LAP:ny+LAP), res(1-LAP:nx+LAP,1-LAP:ny+LAP))
     allocate(u0(1-LAP:nx+LAP,1-LAP:ny+LAP), Au0(1-LAP:nx+LAP,1-LAP:ny+LAP), Au(1-LAP:nx+LAP,1-LAP:ny+LAP))
@@ -134,7 +134,7 @@ contains
       beta = (0.d0,0.d0)
       u0=u
 
-      call Helmholtz2d_BC(u0,Au0) !! compute Ax
+      call Helmholtz2d_BC(u0,Au0) !-compute Ax
       res0 = b - Au0  !r=b-Ax
       res0_norm = norm(res0)  ! ||r||
       beta(1) = res0_norm       ! beta(1)=||r0||
@@ -184,20 +184,20 @@ contains
     !! Full GMRES with left preconditioned
     implicit none
 
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     complex(kind = realdp),   dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(in)    :: b
     complex(kind = realdp),dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(inout) :: u
     real   (kind = realdp),intent(out) :: Rerror
     integer, intent(inout) :: iter
 
-    !! Local arguments ------------------------------------------------------------
+    !-Local arguments ------------------------------------------------------------
     integer                        :: k,ki,j
     real(kind = realdp)                   :: b_norm, Mres_norm, Mb_norm, MRerror, res_norm
     complex(kind = realdp), allocatable, dimension(:)     :: sn, cs, beta
     complex(kind = realdp), allocatable, dimension(:,:)   :: res, Mres, Mb, u0, Au0, Au, H
     complex(kind = realdp), allocatable, dimension(:,:,:) :: V
 
-    !! Subroutine content ---------------------------------------------------------
+    !-Subroutine content ---------------------------------------------------------
     allocate(sn(m_iter+1), cs(m_iter+1), beta(m_iter+1))
     allocate(res(1-LAP:nx+LAP,1-LAP:ny+LAP), Mres(1-LAP:nx+LAP,1-LAP:ny+LAP))
     allocate(Mb(1-LAP:nx+LAP,1-LAP:ny+LAP), u0(1-LAP:nx+LAP,1-LAP:ny+LAP))
@@ -282,20 +282,20 @@ contains
     !! Full GMRES with right precondition
     implicit none
 
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     complex(kind = realdp),   dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(in)    :: b
     complex(kind = realdp),dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(inout) :: u
     real   (kind = realdp),intent(out) :: Rerror
     integer, intent(inout) :: iter
 
-    !! Local arguments ------------------------------------------------------------
+    !-Local arguments ------------------------------------------------------------
     integer                        :: k,ki,j,i
     real(kind = realdp)                   :: b_norm, res_norm
     complex(kind = realdp), allocatable, dimension(:)     :: sn, cs, beta
     complex(kind = realdp), allocatable, dimension(:,:)   :: res, z, u0, Au, H
     complex(kind = realdp), allocatable, dimension(:,:,:) :: V
 
-    !! Subroutine content ---------------------------------------------------------
+    !-Subroutine content ---------------------------------------------------------
     allocate(sn(m_iter+1), cs(m_iter+1), beta(m_iter+1))
     allocate(res(1-LAP:nx+LAP,1-LAP:ny+LAP))
     allocate(u0(1-LAP:nx+LAP,1-LAP:ny+LAP))
@@ -333,7 +333,7 @@ contains
       call Helmholtz2d_BC(z,V(:,:,k+1))
 
       do i=1,k
-          H(i, k)  = dot_prod(V(:,:,i), V(:,:,k+1))     !! Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)
+          H(i, k)  = dot_prod(V(:,:,i), V(:,:,k+1))     !-Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)
           V(:,:,k+1) = V(:,:,k+1) - H(i,k) * V(:,:,i)
       end do
 
@@ -390,20 +390,20 @@ contains
     !! Preconditioned restart GMRES 
     implicit none
 
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     complex(kind = realdp), dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(in)    :: b
     complex(kind = realdp), dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(inout) :: u
     real(kind = realdp), intent(out) :: Rerror
     integer, intent(inout) :: iter
 
-    !! Local arguments ------------------------------------------------------------
+    !-Local arguments ------------------------------------------------------------
     integer                        :: k,ki,j, Out_iter
     real(kind = realdp)                   :: b_norm, Mres_norm, Mb_norm, MRerror, res_norm
     complex(kind = realdp), allocatable, dimension(:)     :: sn, cs, beta
     complex(kind = realdp), allocatable, dimension(:,:)   :: res, Mres, Mb, u0, Au0, Au, H
     complex(kind = realdp), allocatable, dimension(:,:,:) :: V
 
-    !! Subroutine content ---------------------------------------------------------
+    !-Subroutine content ---------------------------------------------------------
     allocate(sn(m_iter+1), cs(m_iter+1), beta(m_iter+1))
     allocate(res(1-LAP:nx+LAP,1-LAP:ny+LAP), Mres(1-LAP:nx+LAP,1-LAP:ny+LAP))
     allocate(Mb(1-LAP:nx+LAP,1-LAP:ny+LAP), u0(1-LAP:nx+LAP,1-LAP:ny+LAP))
@@ -442,7 +442,7 @@ contains
 
       k=0
       do j=1,m_iter 
-          !! Here m_iter is the iteration to restart
+          !-Here m_iter is the iteration to restart
           k=k+1   !!Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
           call Prearnoldi(V, H, k)
 
@@ -485,20 +485,20 @@ contains
     !! ARNOLDI precess
     implicit none
 
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     integer, intent(in)    :: k
     complex(kind = realdp), dimension(1-LAP:nx+LAP,1-LAP:ny+LAP,m_iter+1), intent(inout) :: V
     complex(kind = realdp), dimension(m_iter+1,m_iter),                    intent(inout) :: H
 
     integer :: i
 
-    !! Subroutine content ---------------------------------------------------------
+    !-Subroutine content ---------------------------------------------------------
 
-    !!  w=A*v_i
+    !- w=A*v_i
     call Helmholtz2d_BC(V(:,:,k),V(:,:,k+1))
 
     do i=1,k
-        H(i, k)  = dot_prod(V(:,:,i), V(:,:,k+1))     !! Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)
+        H(i, k)  = dot_prod(V(:,:,i), V(:,:,k+1))     !-Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)
         V(:,:,k+1) = V(:,:,k+1) - H(i,k) * V(:,:,i)
     end do
 
@@ -512,21 +512,21 @@ contains
     !! Preconditioned ARNOLDI precess
     implicit none
 
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     integer,                                                   intent(in)    :: k
     complex(kind = realdp),    dimension(1-LAP:nx+LAP,1-LAP:ny+LAP,m_iter+1),   intent(inout) :: V
     complex(kind = realdp),    dimension(m_iter+1,m_iter),                      intent(inout) :: H
 
     integer                    :: i
 
-    !! Subroutine content ---------------------------------------------------------
-    !!  w=A*v_i
+    !-Subroutine content ---------------------------------------------------------
+    !- w=A*v_i
     call Helmholtz2d_BC(V(:,:,k),V(:,:,k+1))
-    !! Precondition
+    !-Precondition
     V(:,:,k+1) = Precond_x(V(:,:,k+1))
 
     do i=1,k
-        H(i, k)  = dot_prod(V(:,:,i), V(:,:,k+1))     !! Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)
+        H(i, k)  = dot_prod(V(:,:,i), V(:,:,k+1))     !-Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)
         V(:,:,k+1) = V(:,:,k+1) - H(i,k) * V(:,:,i)
     end do
 
@@ -540,16 +540,16 @@ contains
     !! APPLY GIVENS ROTATION 
     implicit none
 
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     complex(kind = realdp),    dimension(m_iter+1,m_iter), intent(inout)   :: H
     integer,                         intent(in)      :: k
     complex(kind = realdp),    dimension(m_iter+1),   intent(inout)   :: cs, sn
 
-    !! Local arguments ------------------------------------------------------------
+    !-Local arguments ------------------------------------------------------------
     complex(kind = realdp)    :: temp
     integer         :: i
 
-    !! Subroutine content ---------------------------------------------------------
+    !-Subroutine content ---------------------------------------------------------
     do i=1,k-1
         temp     =  conjg(cs(i))*H(i,k) + conjg(sn(i))*H(i+1,k)
         H(i+1,k) = -sn(i)*H(i,k) + cs(i)*H(i+1,k)
@@ -595,13 +595,13 @@ contains
     !! Right preconditioned GCR 
     implicit none
 
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     complex(kind = realdp),dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(in)    :: b
     complex(kind = realdp),dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(inout) :: u
     real   (kind = realdp),intent(out) :: Rerror
     integer, intent(inout) :: iter
 
-    !! Local arguments ------------------------------------------------------------
+    !-Local arguments ------------------------------------------------------------
     integer                 :: k,i,j
     complex(kind = realdp)  :: alpha, beta
     real(kind = realdp)     :: b_norm, res_norm, vv_norm
@@ -609,7 +609,7 @@ contains
     complex(kind = realdp), allocatable, dimension(:,:)   :: res, Au
     complex(kind = realdp), allocatable, dimension(:,:,:) :: vv,ss
 
-    !! Subroutine content ---------------------------------------------------------
+    !-Subroutine content ---------------------------------------------------------
     allocate(res(1-LAP:nx+LAP,1-LAP:ny+LAP))
     allocate(Au(1-LAP:nx+LAP,1-LAP:ny+LAP))
     allocate(vv(1-LAP:nx+LAP,1-LAP:ny+LAP,m_iter+1))
@@ -680,20 +680,20 @@ contains
     !! Flexible GMRES with right precondition 
     implicit none
 
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     complex(kind = realdp),   dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(in)    :: b
     complex(kind = realdp),dimension(1-LAP:nx+LAP,1-LAP:ny+LAP),intent(inout) :: u
     real   (kind = realdp),intent(out) :: Rerror
     integer, intent(inout) :: iter
 
-    !! Local arguments ------------------------------------------------------------
+    !-Local arguments ------------------------------------------------------------
     integer                        :: k,ki,j,i
     real(kind = realdp)                   :: b_norm, res_norm
     complex(kind = realdp), allocatable, dimension(:)     :: sn, cs, beta
     complex(kind = realdp), allocatable, dimension(:,:)   :: res, u0, Au, H
     complex(kind = realdp), allocatable, dimension(:,:,:) :: V, Z
 
-    !! Subroutine content ---------------------------------------------------------
+    !-Subroutine content ---------------------------------------------------------
     allocate(sn(m_iter+1), cs(m_iter+1), beta(m_iter+1))
     allocate(res(1-LAP:nx+LAP,1-LAP:ny+LAP))
     allocate(u0(1-LAP:nx+LAP,1-LAP:ny+LAP))
@@ -730,7 +730,7 @@ contains
       call Helmholtz2d_BC(Z(:,:,k),V(:,:,k+1))
 
       do i=1,k
-          H(i, k)  = dot_prod(V(:,:,i), V(:,:,k+1))     !! Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)
+          H(i, k)  = dot_prod(V(:,:,i), V(:,:,k+1))     !-Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)
           V(:,:,k+1) = V(:,:,k+1) - H(i,k) * V(:,:,i)
       end do
 
@@ -783,22 +783,22 @@ contains
   function Precond_x(x)
     !! This is a routine to select which preconditioner is applied, Precond_x = P^(-1)x
     implicit none
-    !! Subroutine arguments -------------------------------------------------------
+    !-Subroutine arguments -------------------------------------------------------
     complex(kind = realdp),dimension(1-LAP:nx+LAP,1-LAP:ny+LAP) :: x
     complex(kind = realdp) :: Precond_x(1-LAP:nx+LAP,1-LAP:ny+LAP)
 
     select case (M_flag)
    
       case (1) 
-        !! Multigrid based CSLP 
+        !-Multigrid based CSLP 
         Precond_x = MGCSLP_invMx(x) 
 
       case (2:5)
-        !! Deflation preconditioning
+        !-Deflation preconditioning
         Precond_x = DEF_Px(x)
 
       case default
-        !! No precondition
+        !-No precondition
         Precond_x = x
        
     end select

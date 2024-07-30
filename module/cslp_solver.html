@@ -73,6 +73,7 @@
     <div class="row align-items-center justify-content-between" id="info-bar">
       <div class="col">
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
@@ -191,10 +192,10 @@ By multigrid methods or Krylov iterations</p>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <ul class="list-inline">
+                  <li class="list-inline-item"><a href='mpi_setup.html'>mpi_setup</a></li>
+                  <li class="list-inline-item"><a href='operators.html'>operators</a></li>
                   <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
                   <li class="list-inline-item"><a href='wavenumber.html'>wavenumber</a></li>
-                  <li class="list-inline-item"><a href='operators.html'>operators</a></li>
-                  <li class="list-inline-item"><a href='mpi_setup.html'>mpi_setup</a></li>
                   <li class="list-inline-item"><a href='smoother.html'>smoother</a></li>
                   <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
               </ul>
@@ -239,7 +240,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-nxc_global"></span>
+              <span class="anchor" id="variable-nxc_global~2"></span>
               integer(kind=4),
             </td>
               <td>public</td>
@@ -256,7 +257,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nyc_global"></span>
+              <span class="anchor" id="variable-nyc_global~2"></span>
               integer(kind=4),
             </td>
               <td>public</td>
@@ -273,7 +274,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nxc"></span>
+              <span class="anchor" id="variable-nxc~2"></span>
               integer(kind=4),
             </td>
               <td>public</td>
@@ -290,7 +291,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nyc"></span>
+              <span class="anchor" id="variable-nyc~2"></span>
               integer(kind=4),
             </td>
               <td>public</td>
@@ -307,7 +308,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ic_offset"></span>
+              <span class="anchor" id="variable-ic_offset~2"></span>
               integer,
             </td>
               <td>public,</td>
@@ -324,7 +325,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-jc_offset"></span>
+              <span class="anchor" id="variable-jc_offset~2"></span>
               integer,
             </td>
               <td>public,</td>
@@ -341,7 +342,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ic_nn"></span>
+              <span class="anchor" id="variable-ic_nn~2"></span>
               integer,
             </td>
               <td>public,</td>
@@ -358,7 +359,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-jc_nn"></span>
+              <span class="anchor" id="variable-jc_nn~2"></span>
               integer,
             </td>
               <td>public,</td>
@@ -375,7 +376,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hxc"></span>
+              <span class="anchor" id="variable-hxc~2"></span>
               real(kind=realdp),
             </td>
               <td>public</td>
@@ -392,7 +393,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hyc"></span>
+              <span class="anchor" id="variable-hyc~2"></span>
               real(kind=realdp),
             </td>
               <td>public</td>
@@ -409,7 +410,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hxhyc"></span>
+              <span class="anchor" id="variable-hxhyc~2"></span>
               real(kind=realdp),
             </td>
               <td>public</td>
@@ -477,7 +478,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-kxy_c"></span>
+              <span class="anchor" id="variable-kxy_c~2"></span>
               real(kind=realdp),
             </td>
               <td>public,</td>
@@ -494,7 +495,7 @@ It is different the type Gridpara, which does not consist any variable like u, r
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-kh2_c"></span>
+              <span class="anchor" id="variable-kh2_c~2"></span>
               real(kind=realdp),
             </td>
               <td>public,</td>
@@ -609,7 +610,7 @@ One F-cycle</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-grid~6"></span>
+              <span class="anchor" id="variable-grid~2"></span>
               type(<a href='../type/gridpara.html'>Gridpara</a>)
             </td>
 <td></td>
@@ -670,7 +671,7 @@ Choose Bi-CGSATB or GMRES by uncomment or comment </p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-grid~7"></span>
+              <span class="anchor" id="variable-grid~3"></span>
               type(<a href='../type/gridpara.html'>Gridpara</a>)
             </td>
 <td></td>
@@ -761,7 +762,7 @@ One can find the differnece of GridSystem and Gridpara </p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-grid~8"></span>
+              <span class="anchor" id="variable-grid~4"></span>
               type(<a href='../type/gridpara.html'>Gridpara</a>)
             </td>
 <td></td>
@@ -1153,7 +1154,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-v~10"></span>
+              <span class="anchor" id="variable-v~13"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -1168,7 +1169,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~12"></span>
+              <span class="anchor" id="variable-h~17"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -1183,7 +1184,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~14"></span>
+              <span class="anchor" id="variable-k~22"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -1228,7 +1229,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hx_c~3"></span>
+              <span class="anchor" id="variable-hx_c~5"></span>
               real(kind=realdp),
             </td>
 <td>intent(in)</td>
@@ -1243,7 +1244,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hy_c~3"></span>
+              <span class="anchor" id="variable-hy_c~5"></span>
               real(kind=realdp),
             </td>
 <td>intent(in)</td>
@@ -1258,7 +1259,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-kxy~3"></span>
+              <span class="anchor" id="variable-kxy~4"></span>
               real(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -1273,7 +1274,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-kh2~3"></span>
+              <span class="anchor" id="variable-kh2~2"></span>
               real(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -1313,7 +1314,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~13"></span>
+              <span class="anchor" id="variable-h~18"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -1328,7 +1329,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-cs~9"></span>
+              <span class="anchor" id="variable-cs~12"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -1343,7 +1344,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sn~9"></span>
+              <span class="anchor" id="variable-sn~12"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -1358,7 +1359,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~15"></span>
+              <span class="anchor" id="variable-k~23"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -1398,7 +1399,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~14"></span>
+              <span class="anchor" id="variable-h~19"></span>
               complex(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -1413,7 +1414,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-beta~10"></span>
+              <span class="anchor" id="variable-beta~13"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -1428,7 +1429,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~16"></span>
+              <span class="anchor" id="variable-k~24"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -1484,7 +1485,7 @@ The CSLP is define by ReD-O2 scheme</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-maximum_iterations"></span>
+              <span class="anchor" id="variable-maximum_iterations~2"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1541,7 +1542,7 @@ CSLP operator by ReD-Glk </p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-grid~9"></span>
+              <span class="anchor" id="variable-grid~5"></span>
               type(<a href='../type/gridpara.html'>Gridpara</a>)
             </td>
 <td></td>
@@ -1556,7 +1557,7 @@ CSLP operator by ReD-Glk </p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-maximum_iterations~2"></span>
+              <span class="anchor" id="variable-maximum_iterations~3"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1613,7 +1614,7 @@ CSLP operator by ReD-Glk </p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-grid~10"></span>
+              <span class="anchor" id="variable-grid~6"></span>
               type(<a href='../type/gridpara.html'>Gridpara</a>)
             </td>
 <td></td>
@@ -1628,7 +1629,7 @@ CSLP operator by ReD-Glk </p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-maximum_iterations~3"></span>
+              <span class="anchor" id="variable-maximum_iterations~4"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1664,7 +1665,7 @@ CSLP operator by ReD-Glk </p>
           <div class="col">
             <p>
               ParaMADP
- was developed by Jinqiang Chen<br>              &copy; 2024 
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
 </p>
           </div>
           <div class="col">

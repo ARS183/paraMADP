@@ -73,6 +73,7 @@
     <div class="row align-items-center justify-content-between" id="info-bar">
       <div class="col">
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
@@ -212,11 +213,11 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <ul class="list-inline">
-                  <li class="list-inline-item"><a href='cslp_solver.html'>CSLP_Solver</a></li>
+                  <li class="list-inline-item"><a href='mpi_setup.html'>mpi_setup</a></li>
+                  <li class="list-inline-item"><a href='operators.html'>operators</a></li>
                   <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
                   <li class="list-inline-item"><a href='wavenumber.html'>wavenumber</a></li>
-                  <li class="list-inline-item"><a href='operators.html'>operators</a></li>
-                  <li class="list-inline-item"><a href='mpi_setup.html'>mpi_setup</a></li>
+                  <li class="list-inline-item"><a href='cslp_solver.html'>CSLP_Solver</a></li>
                   <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
               </ul>
             </li>
@@ -386,7 +387,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nxc_global~2"></span>
+              <span class="anchor" id="variable-nxc_global"></span>
               integer(kind=4),
             </td>
               <td>public</td>
@@ -403,7 +404,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nyc_global~2"></span>
+              <span class="anchor" id="variable-nyc_global"></span>
               integer(kind=4),
             </td>
               <td>public</td>
@@ -420,7 +421,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nxc~2"></span>
+              <span class="anchor" id="variable-nxc"></span>
               integer(kind=4),
             </td>
               <td>public</td>
@@ -437,7 +438,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nyc~2"></span>
+              <span class="anchor" id="variable-nyc"></span>
               integer(kind=4),
             </td>
               <td>public</td>
@@ -505,7 +506,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hxc~2"></span>
+              <span class="anchor" id="variable-hxc"></span>
               real(kind=realdp),
             </td>
               <td>public</td>
@@ -522,7 +523,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hyc~2"></span>
+              <span class="anchor" id="variable-hyc"></span>
               real(kind=realdp),
             </td>
               <td>public</td>
@@ -539,7 +540,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hxhyc~2"></span>
+              <span class="anchor" id="variable-hxhyc"></span>
               real(kind=realdp),
             </td>
               <td>public</td>
@@ -624,7 +625,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ic_offset~2"></span>
+              <span class="anchor" id="variable-ic_offset"></span>
               integer,
             </td>
               <td>public,</td>
@@ -641,7 +642,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-jc_offset~2"></span>
+              <span class="anchor" id="variable-jc_offset"></span>
               integer,
             </td>
               <td>public,</td>
@@ -658,7 +659,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ic_nn~2"></span>
+              <span class="anchor" id="variable-ic_nn"></span>
               integer,
             </td>
               <td>public,</td>
@@ -675,7 +676,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-jc_nn~2"></span>
+              <span class="anchor" id="variable-jc_nn"></span>
               integer,
             </td>
               <td>public,</td>
@@ -709,7 +710,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-kxy_c~2"></span>
+              <span class="anchor" id="variable-kxy_c"></span>
               real(kind=realdp),
             </td>
               <td>public,</td>
@@ -743,7 +744,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-kh2_c~2"></span>
+              <span class="anchor" id="variable-kh2_c"></span>
               real(kind=realdp),
             </td>
               <td>public,</td>
@@ -772,7 +773,7 @@ The wavenumber of the coarse level is restricted from the fine level</p>
 
                     
                     function
-                    <strong><a href='/home/runner/work/paraMADP/paraMADP/doc/proc/fromfine2coarse.html'>FromFine2Coarse</a></strong>
+                    <strong><a href='/home/runner/work/paraMADP/paraMADP/docs/proc/fromfine2coarse.html'>FromFine2Coarse</a></strong>
                     (OneGrid)
                   </td>
                   <td><p>A procedure to create a two-grid system from a given fine Gridpara type
@@ -1689,7 +1690,7 @@ Krylov-based CSLP on the finest and second level</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-grid~11"></span>
+              <span class="anchor" id="variable-grid"></span>
               type(<a href='../type/gridpara.html'>Gridpara</a>),
             </td>
 <td>intent(inout)</td>
@@ -1953,7 +1954,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-v~13"></span>
+              <span class="anchor" id="variable-v~10"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -1968,7 +1969,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~17"></span>
+              <span class="anchor" id="variable-h~12"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -1983,7 +1984,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~22"></span>
+              <span class="anchor" id="variable-k~16"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2053,7 +2054,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~18"></span>
+              <span class="anchor" id="variable-h~13"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -2068,7 +2069,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-cs~12"></span>
+              <span class="anchor" id="variable-cs~9"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -2083,7 +2084,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sn~12"></span>
+              <span class="anchor" id="variable-sn~9"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -2098,7 +2099,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~23"></span>
+              <span class="anchor" id="variable-k~17"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2138,7 +2139,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~19"></span>
+              <span class="anchor" id="variable-h~14"></span>
               complex(kind=realdp),
             </td>
 <td>intent(in),</td>
@@ -2153,7 +2154,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-beta~13"></span>
+              <span class="anchor" id="variable-beta~10"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout),</td>
@@ -2168,7 +2169,7 @@ Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_p
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~24"></span>
+              <span class="anchor" id="variable-k~18"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2324,7 +2325,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-maximum_iterations~4"></span>
+              <span class="anchor" id="variable-maximum_iterations"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2394,7 +2395,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-v_in~7"></span>
+              <span class="anchor" id="variable-v_in"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout)</td>
@@ -2409,7 +2410,7 @@ Be careful!!, after the whole iteration without achieving eps, then the value of
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-v_out~4"></span>
+              <span class="anchor" id="variable-v_out"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout)</td>
@@ -2465,7 +2466,7 @@ fill in a layer of ghost grid points by boundary conditions</p><a href="../proc/
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-v_in~8"></span>
+              <span class="anchor" id="variable-v_in~2"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout)</td>
@@ -2480,7 +2481,7 @@ fill in a layer of ghost grid points by boundary conditions</p><a href="../proc/
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-v_out~5"></span>
+              <span class="anchor" id="variable-v_out~2"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout)</td>
@@ -2535,7 +2536,7 @@ fill in a layer of ghost grid points by boundary conditions</p><a href="../proc/
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~4"></span>
+              <span class="anchor" id="variable-a~2"></span>
               complex(kind=realdp)
             </td>
 <td></td>
@@ -2550,7 +2551,7 @@ fill in a layer of ghost grid points by boundary conditions</p><a href="../proc/
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~16"></span>
+              <span class="anchor" id="variable-b~14"></span>
               complex(kind=realdp)
             </td>
 <td></td>
@@ -2580,7 +2581,7 @@ fill in a layer of ghost grid points by boundary conditions</p><a href="../proc/
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ic~3"></span>
+              <span class="anchor" id="variable-ic"></span>
               integer
             </td>
 <td></td>
@@ -2595,7 +2596,7 @@ fill in a layer of ghost grid points by boundary conditions</p><a href="../proc/
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-jc~3"></span>
+              <span class="anchor" id="variable-jc"></span>
               integer
             </td>
 <td></td>
@@ -2636,7 +2637,7 @@ The zero padding of wavenumber is ok in practical</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-v_in~9"></span>
+              <span class="anchor" id="variable-v_in~3"></span>
               complex(kind=realdp),
             </td>
 <td>intent(inout)</td>
@@ -2687,7 +2688,7 @@ The zero padding of wavenumber is ok in practical</p>
           <div class="col">
             <p>
               ParaMADP
- was developed by Jinqiang Chen<br>              &copy; 2024 
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
 </p>
           </div>
           <div class="col">
