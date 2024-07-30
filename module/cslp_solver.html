@@ -1,0 +1,1703 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>CSLP_Solver &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>CSLP_Solver
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="14.0% of total for modules and submodules.">754 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/CSLP_Solver.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/cslp_solver.f90.html'>CSLP_Solver.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">CSLP_Solver</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/cslp_solver.html#type-gridsystem">GridSystem</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mgcslp_invmx">MGCSLP_invMx</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mgcslp_invmhx">MGCSLP_invMHx</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-krylovcslp_invmhx">KrylovCSLP_invMHx</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-finestgrid_define">finestgrid_define</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-gridsys_define">gridsys_define</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-coarsegrid_create">coarsegrid_create</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-grid_destroy">grid_destroy</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-restriction">restriction</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-prolongation_en_correct">prolongation_en_correct</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-v_cycle">V_cycle</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-f_cycle">F_cycle</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mg_fullgmres">mg_fullgmres</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mg_arnoldi">mg_arnoldi</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mg_apply_givens_rotation">mg_apply_givens_rotation</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mg_back_substitute">mg_back_substitute</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mg_bicgstab">mg_bicgstab</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-red_glk_cslp_bicgstab">ReD_Glk_CSLP_bicgstab</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-red_glk_cslp_gmres">ReD_Glk_CSLP_gmres</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>This is a module to solve the inverse of CSLP approximately
+By multigrid methods or Krylov iterations</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='mpi_setup.html'>mpi_setup</a></li>
+                  <li class="list-inline-item"><a href='smoother.html'>smoother</a></li>
+                  <li class="list-inline-item"><a href='operators.html'>operators</a></li>
+                  <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
+                  <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
+                  <li class="list-inline-item"><a href='wavenumber.html'>wavenumber</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-gridsystem"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/gridsystem.html'>GridSystem</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>A data type that collect some info of a (coarse) grid system 
+It is different the type Gridpara, which does not consist any variable like u, rhs, res, and etc.</p>
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nxc_global~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nxc_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Global grid size, in x and y directions respectively.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nyc_global~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nyc_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Global grid size, in x and y directions respectively.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nxc~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nxc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Local grid size of a subdomain, in x and y directions respectively.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nyc~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nyc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Local grid size of a subdomain, in x and y directions respectively.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ic_offset~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>ic_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>ic_offset: an array that contains the index offset for MPI ranks in x direction   </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jc_offset~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>jc_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>jc_offset: an array that contains the index offset for MPI ranks in y direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ic_nn~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>ic_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>ic_nn: an array that contains the number of grid points for MPI ranks in x direction   </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jc_nn~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>jc_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>jc_nn: an array that contains the number of grid points for MPI ranks in y direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hxc~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hxc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>space step, hxhyc==hx*hy==hx^2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hyc~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hyc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>space step, hxhyc==hx*hy==hx^2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hxhyc~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hxhyc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>space step, hxhyc==hx*hy==hx^2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u_c"></span>
+              complex(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>u_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Solution variable in subdomain</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rhs_c"></span>
+              complex(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>rhs_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>RHS variable in subdomain</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-res_c"></span>
+              complex(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>res_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Residual variable in subdomain</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kxy_c~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>kxy_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>wavenumber in subdomain</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kh2_c~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>kh2_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>wavenumber in subdomain</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mgcslp_invmx"></span> <h3>public  function <a href='../proc/mgcslp_invmx.html'>MGCSLP_invMx</a>(b_in)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Multigrid-Based CSLP, ONLY starts from the default (finest) grid sysyem
+One V-cycle
+Two V-cycle
+One F-cycle</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b_in"></span>
+              complex(kind=realdp),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(1-LAP:nx+LAP,1-LAP:ny+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>b_in</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:nx+LAP,1-LAP:ny+LAP)</small>
+    </h4>
+    <p>MGCSLP_invMx = M_h^(-1)(b_h)</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mgcslp_invmhx"></span> <h3>public  function <a href='../proc/mgcslp_invmhx.html'>MGCSLP_invMHx</a>(b_in, grid)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Multigrid-based CSLP, starts from the a specified grid system
+One V-cycle
+Two V-cycle
+One F-cycle</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b_in~2"></span>
+              complex(kind=realdp),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(1-LAP:grid%nx+LAP,1-LAP:grid%ny+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>b_in</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~7"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+<p>A data type that collect some parameters of a system</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), dimension(1-LAP:grid%nx+LAP,1-LAP:grid%ny+LAP)</small>
+    </h4>
+    <p>MGCSLP_invMHx = M_H^(-1)(b_H)</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-krylovcslp_invmhx"></span> <h3>public  function <a href='../proc/krylovcslp_invmhx.html'>KrylovCSLP_invMHx</a>(b_in, grid)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Krylov-based CSLP, starts from the a specified grid sysyem
+Choose Bi-CGSATB or GMRES by uncomment or comment </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b_in~3"></span>
+              complex(kind=realdp),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(1-LAP:grid%nx+LAP,1-LAP:grid%ny+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>b_in</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~8"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+<p>A data type that collect some parameters of a system</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), dimension(1-LAP:grid%nx+LAP,1-LAP:grid%ny+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-finestgrid_define"></span> <h3>public  subroutine <a href='../proc/finestgrid_define.html'>finestgrid_define</a>(mg_finest)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a routine that define the finest grid system from the default (finest) grid parameters</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_finest"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_finest</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-gridsys_define"></span> <h3>public  subroutine <a href='../proc/gridsys_define.html'>gridsys_define</a>(grid, basegridsys)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a routine that define a GridSystem type from the grid parameters of a data type Gridpara
+One can find the differnece of GridSystem and Gridpara </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~9"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-basegridsys~3"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>basegridsys</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-coarsegrid_create"></span> <h3>public  subroutine <a href='../proc/coarsegrid_create.html'>coarsegrid_create</a>(mg_coarse, mg_fine)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a routine that define a coarse grid system mg_coarse from a fine grid system mg_fine</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_coarse"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_coarse</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_fine"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_fine</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-grid_destroy"></span> <h3>public  subroutine <a href='../proc/grid_destroy.html'>grid_destroy</a>(mg_dm)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a routine that deallocate the arrays of a grid system</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_dm"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_dm</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-restriction"></span> <h3>public  subroutine <a href='../proc/restriction.html'>restriction</a>(mg_coarse, mg_fine)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is routine that perform full-weight resctriction from fine to coarse grid system, mainly
+residual (res) on fine grid --&gt; right-hand side (rhs) on coarse grid,
+wavenumber on fine grid --&gt; wavenumber on the coarse grid
+Based on the relationship of the index between the fine and coarse grid</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_coarse~2"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_coarse</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_fine~2"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_fine</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-prolongation_en_correct"></span> <h3>public  subroutine <a href='../proc/prolongation_en_correct.html'>prolongation_en_correct</a>(mg_coarse, mg_fine)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is routine that perform bilinear interpolation and correction from coarse to fine grid system, mainly
+solution (u) on coarse grid --&gt; correction (e_h) for solution (u) of fine grid
+Based on the relationship of the index between the fine and coarse grid</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_coarse~3"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_coarse</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_fine~3"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_fine</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-v_cycle"></span> <h3>public recursive subroutine <a href='../proc/v_cycle.html'>V_cycle</a>(mg_fine)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A classic multigrid V-cycle
+A classic Two-Cycle
+GMRES or Bi-CGSTAB can be chose to solve the coarse-grid problem
+GMRES or Bi-CGSTAB can be chose to solve the coarsest-grid problem</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_fine~4"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_fine</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-f_cycle"></span> <h3>public recursive subroutine <a href='../proc/f_cycle.html'>F_cycle</a>(mg_fine)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a classic F-cycle multigrid </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_fine~5"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_fine</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_fullgmres"></span> <h3>public  subroutine <a href='../proc/mg_fullgmres.html'>mg_fullgmres</a>(mg_solve)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a rountine to solve the (specified) coarsest-grid CSLP system approximately by using GMRES
+ The CSLP is define by ReD-O2 scheme
+Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
+ The default tolerance is 1E-08</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_solve"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_solve</strong></td>
+            <td>
+<p>The current coarsest grid system</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_arnoldi"></span> <h3>public  subroutine <a href='../proc/mg_arnoldi.html'>mg_arnoldi</a>(V, H, k, ni, nj, hx_c, hy_c, kxy, kh2)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Arnoldi precess
+ w=A*v_i</p><a href="../proc/mg_arnoldi.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~13"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(1-LAP:ni+LAP,1-LAP:nj+LAP,cslp_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>V</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~17"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1,cslp_mg_miter)
+            </td>
+            <td>::</td>
+            <td><strong>H</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~22"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ni~15"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ni</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nj~15"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nj</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hx_c~7"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hx_c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hy_c~7"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hy_c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kxy~5"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1-LAP:ni+LAP,1-LAP:nj+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>kxy</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kh2~3"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1-LAP:ni+LAP,1-LAP:nj+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>kh2</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_apply_givens_rotation"></span> <h3>public  subroutine <a href='../proc/mg_apply_givens_rotation.html'>mg_apply_givens_rotation</a>(H, cs, sn, k)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is routine to perform apply_givens_rotation</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~18"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1,cslp_mg_miter)
+            </td>
+            <td>::</td>
+            <td><strong>H</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cs~12"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>cs</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sn~12"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>sn</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~23"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_back_substitute"></span> <h3>public  subroutine <a href='../proc/mg_back_substitute.html'>mg_back_substitute</a>(H, beta, k)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is routine that performs back substitute</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~19"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1,cslp_mg_miter)
+            </td>
+            <td>::</td>
+            <td><strong>H</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-beta~13"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>beta</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~24"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_bicgstab"></span> <h3>public  subroutine <a href='../proc/mg_bicgstab.html'>mg_bicgstab</a>(mg_solve, maximum_iterations)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a rountine to solve the (specified) coarsest-grid CSLP system approximately by using Bi-CGSTAB
+The CSLP is define by ReD-O2 scheme</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_solve~2"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_solve</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maximum_iterations~2"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maximum_iterations</strong></td>
+            <td>
+<p>User-specified maximum number of iterations</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-red_glk_cslp_bicgstab"></span> <h3>public  subroutine <a href='../proc/red_glk_cslp_bicgstab.html'>ReD_Glk_CSLP_bicgstab</a>(mg_solve, grid, maximum_iterations)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a rountine to solve a coarse grid CSLP system approximately by using Bi-CGSTAB. 
+The CSLP operator is defined by ReD-Glk scheme. 
+CSLP operator by ReD-Glk </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_solve~3"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_solve</strong></td>
+            <td>
+<p>The current coarse grid system</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~10"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+<p>Parameters of current coarse grid</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maximum_iterations~3"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maximum_iterations</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-red_glk_cslp_gmres"></span> <h3>public  subroutine <a href='../proc/red_glk_cslp_gmres.html'>ReD_Glk_CSLP_gmres</a>(mg_solve, grid, maximum_iterations)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a rountine to solve a coarse grid CSLP system approximately by using GMRES
+ The CSLP operator is defined by ReD-Glk scheme
+ CSLP operator by ReD-Glk </p><a href="../proc/red_glk_cslp_gmres.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_solve~4"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_solve</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~11"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maximum_iterations~4"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maximum_iterations</strong></td>
+            <td>
+<p>User-specified maximum number of iterations,default is 300</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
