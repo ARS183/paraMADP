@@ -1,0 +1,709 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>arnoldi &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>arnoldi
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.3% of total for procedures.">14 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/solvers.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/solvers.f90.html'>solvers.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/solvers.html'>solvers</a></li>
+            <li class="breadcrumb-item active" aria-current="page">arnoldi</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine arnoldi(V, H, k)  
+</h2>
+    
+
+    <p>ARNOLDI precess</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~12"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(1-LAP:nx+LAP,1-LAP:ny+LAP,m_iter+1)
+            </td>
+            <td>::</td>
+            <td><strong>V</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~18"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(m_iter+1,m_iter)
+            </td>
+            <td>::</td>
+            <td><strong>H</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~23"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: proc~~arnoldi~~CallsGraph Pages: 1 -->
+<svg id="procarnoldiCallsGraph" width="582pt" height="184pt"
+ viewBox="0.00 0.00 582.08 183.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~arnoldi~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 179.77)">
+<title>proc~~arnoldi~~CallsGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-179.77 578.08,-179.77 578.08,4 -4,4"/>
+<!-- proc~arnoldi -->
+<g id="proc~~arnoldi~~CallsGraph_node1" class="node">
+<title>proc~arnoldi</title>
+<polygon fill="none" stroke="black" points="54,-134.77 0,-134.77 0,-112 54,-112 54,-134.77"/>
+<text text-anchor="middle" x="27" y="-119.03" font-family="Helvetica,sans-Serif" font-size="10.50">arnoldi</text>
+</g>
+<!-- proc~dot_prod -->
+<g id="proc~~arnoldi~~CallsGraph_node2" class="node">
+<title>proc~dot_prod</title>
+<g id="a_proc~~arnoldi~~CallsGraph_node2"><a xlink:href="../proc/dot_prod.html" xlink:title="dot_prod">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="162.64,-175.77 108.37,-175.77 108.37,-153 162.64,-153 162.64,-175.77"/>
+<text text-anchor="middle" x="135.51" y="-160.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dot_prod</text>
+</a>
+</g>
+</g>
+<!-- proc~arnoldi&#45;&gt;proc~dot_prod -->
+<g id="proc~~arnoldi~~CallsGraph_edge1" class="edge">
+<title>proc~arnoldi&#45;&gt;proc~dot_prod</title>
+<path fill="none" stroke="#000000" d="M54.33,-133.52C67.39,-138.55 83.38,-144.7 97.63,-150.19"/>
+<polygon fill="#000000" stroke="#000000" points="96.11,-153.35 106.7,-153.68 98.63,-146.82 96.11,-153.35"/>
+</g>
+<!-- proc~helmholtz2d_bc -->
+<g id="proc~~arnoldi~~CallsGraph_node3" class="node">
+<title>proc~helmholtz2d_bc</title>
+<g id="a_proc~~arnoldi~~CallsGraph_node3"><a xlink:href="../proc/helmholtz2d_bc.html" xlink:title="Helmholtz2d_BC">
+<polygon fill="#d9534f" stroke="#d9534f" points="181.02,-93.77 90,-93.77 90,-71 181.02,-71 181.02,-93.77"/>
+<text text-anchor="middle" x="135.51" y="-78.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Helmholtz2d_BC</text>
+</a>
+</g>
+</g>
+<!-- proc~arnoldi&#45;&gt;proc~helmholtz2d_bc -->
+<g id="proc~~arnoldi~~CallsGraph_edge2" class="edge">
+<title>proc~arnoldi&#45;&gt;proc~helmholtz2d_bc</title>
+<path fill="none" stroke="#000000" d="M54.33,-113.25C66.07,-108.73 80.18,-103.3 93.28,-98.26"/>
+<polygon fill="#000000" stroke="#000000" points="94.47,-101.55 102.54,-94.69 91.95,-95.02 94.47,-101.55"/>
+</g>
+<!-- proc~norm -->
+<g id="proc~~arnoldi~~CallsGraph_node4" class="node">
+<title>proc~norm</title>
+<g id="a_proc~~arnoldi~~CallsGraph_node4"><a xlink:href="../proc/norm.html" xlink:title="norm">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="162.51,-134.77 108.51,-134.77 108.51,-112 162.51,-112 162.51,-134.77"/>
+<text text-anchor="middle" x="135.51" y="-119.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">norm</text>
+</a>
+</g>
+</g>
+<!-- proc~arnoldi&#45;&gt;proc~norm -->
+<g id="proc~~arnoldi~~CallsGraph_edge3" class="edge">
+<title>proc~arnoldi&#45;&gt;proc~norm</title>
+<path fill="none" stroke="#000000" d="M54.33,-123.39C67.13,-123.39 82.75,-123.39 96.79,-123.39"/>
+<polygon fill="#000000" stroke="#000000" points="96.6,-126.89 106.6,-123.39 96.6,-119.89 96.6,-126.89"/>
+</g>
+<!-- mpi_allreduce -->
+<g id="proc~~arnoldi~~CallsGraph_node5" class="node">
+<title>mpi_allreduce</title>
+<polygon fill="#777777" stroke="#777777" points="312.16,-175.77 233.89,-175.77 233.89,-153 312.16,-153 312.16,-175.77"/>
+<text text-anchor="middle" x="273.03" y="-160.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_allreduce</text>
+</g>
+<!-- proc~dot_prod&#45;&gt;mpi_allreduce -->
+<g id="proc~~arnoldi~~CallsGraph_edge4" class="edge">
+<title>proc~dot_prod&#45;&gt;mpi_allreduce</title>
+<path fill="none" stroke="#000000" d="M162.96,-164.38C179.77,-164.38 202.06,-164.38 222.1,-164.38"/>
+<polygon fill="#000000" stroke="#000000" points="222.07,-167.89 232.07,-164.39 222.07,-160.89 222.07,-167.89"/>
+</g>
+<!-- proc~check_xy2d -->
+<g id="proc~~arnoldi~~CallsGraph_node6" class="node">
+<title>proc~check_xy2d</title>
+<g id="a_proc~~arnoldi~~CallsGraph_node6"><a xlink:href="../proc/check_xy2d.html" xlink:title="check_xy2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="306.91,-134.77 239.14,-134.77 239.14,-112 306.91,-112 306.91,-134.77"/>
+<text text-anchor="middle" x="273.03" y="-119.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">check_xy2d</text>
+</a>
+</g>
+</g>
+<!-- proc~helmholtz2d_bc&#45;&gt;proc~check_xy2d -->
+<g id="proc~~arnoldi~~CallsGraph_edge5" class="edge">
+<title>proc~helmholtz2d_bc&#45;&gt;proc~check_xy2d</title>
+<path fill="none" stroke="#000000" d="M175.71,-94.24C192.12,-99.21 211.28,-105.01 228.16,-110.11"/>
+<polygon fill="#000000" stroke="#000000" points="226.84,-113.37 237.43,-112.92 228.87,-106.67 226.84,-113.37"/>
+</g>
+<!-- proc~helmholtz2d_stencils -->
+<g id="proc~~arnoldi~~CallsGraph_node7" class="node">
+<title>proc~helmholtz2d_stencils</title>
+<g id="a_proc~~arnoldi~~CallsGraph_node7"><a xlink:href="../proc/helmholtz2d_stencils.html" xlink:title="Helmholtz2d_stencils">
+<polygon fill="#d9534f" stroke="#d9534f" points="329.04,-93.77 217.02,-93.77 217.02,-71 329.04,-71 329.04,-93.77"/>
+<text text-anchor="middle" x="273.03" y="-78.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Helmholtz2d_stencils</text>
+</a>
+</g>
+</g>
+<!-- proc~helmholtz2d_bc&#45;&gt;proc~helmholtz2d_stencils -->
+<g id="proc~~arnoldi~~CallsGraph_edge6" class="edge">
+<title>proc~helmholtz2d_bc&#45;&gt;proc~helmholtz2d_stencils</title>
+<path fill="none" stroke="#000000" d="M181.26,-82.39C189.02,-82.39 197.23,-82.39 205.42,-82.39"/>
+<polygon fill="#000000" stroke="#000000" points="205.42,-85.89 215.42,-82.39 205.42,-78.89 205.42,-85.89"/>
+</g>
+<!-- proc~if_bcs -->
+<g id="proc~~arnoldi~~CallsGraph_node8" class="node">
+<title>proc~if_bcs</title>
+<g id="a_proc~~arnoldi~~CallsGraph_node8"><a xlink:href="../proc/if_bcs.html" xlink:title="if_BCs">
+<polygon fill="#d9534f" stroke="#d9534f" points="300.03,-52.77 246.03,-52.77 246.03,-30 300.03,-30 300.03,-52.77"/>
+<text text-anchor="middle" x="273.03" y="-37.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">if_BCs</text>
+</a>
+</g>
+</g>
+<!-- proc~helmholtz2d_bc&#45;&gt;proc~if_bcs -->
+<g id="proc~~arnoldi~~CallsGraph_edge7" class="edge">
+<title>proc~helmholtz2d_bc&#45;&gt;proc~if_bcs</title>
+<path fill="none" stroke="#000000" d="M175.71,-70.53C194.35,-64.89 216.53,-58.18 234.9,-52.62"/>
+<polygon fill="#000000" stroke="#000000" points="235.77,-56.01 244.33,-49.76 233.75,-49.31 235.77,-56.01"/>
+</g>
+<!-- proc~norm&#45;&gt;mpi_allreduce -->
+<g id="proc~~arnoldi~~CallsGraph_edge8" class="edge">
+<title>proc~norm&#45;&gt;mpi_allreduce</title>
+<path fill="none" stroke="#000000" d="M162.96,-131.39C179.92,-136.52 202.47,-143.34 222.66,-149.45"/>
+<polygon fill="#000000" stroke="#000000" points="221.55,-152.77 232.14,-152.32 223.58,-146.07 221.55,-152.77"/>
+</g>
+<!-- proc~check_x2d -->
+<g id="proc~~arnoldi~~CallsGraph_node9" class="node">
+<title>proc~check_x2d</title>
+<g id="a_proc~~arnoldi~~CallsGraph_node9"><a xlink:href="../proc/check_x2d.html" xlink:title="check_x2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="443.68,-165.77 381.16,-165.77 381.16,-143 443.68,-143 443.68,-165.77"/>
+<text text-anchor="middle" x="412.42" y="-150.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">check_x2d</text>
+</a>
+</g>
+</g>
+<!-- proc~check_xy2d&#45;&gt;proc~check_x2d -->
+<g id="proc~~arnoldi~~CallsGraph_edge9" class="edge">
+<title>proc~check_xy2d&#45;&gt;proc~check_x2d</title>
+<path fill="none" stroke="#000000" d="M307.29,-130.89C326.1,-135.13 349.79,-140.48 369.82,-145"/>
+<polygon fill="#000000" stroke="#000000" points="368.82,-148.36 379.34,-147.15 370.36,-141.53 368.82,-148.36"/>
+</g>
+<!-- proc~check_y2d -->
+<g id="proc~~arnoldi~~CallsGraph_node10" class="node">
+<title>proc~check_y2d</title>
+<g id="a_proc~~arnoldi~~CallsGraph_node10"><a xlink:href="../proc/check_y2d.html" xlink:title="check_y2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="443.68,-124.77 381.16,-124.77 381.16,-102 443.68,-102 443.68,-124.77"/>
+<text text-anchor="middle" x="412.42" y="-109.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">check_y2d</text>
+</a>
+</g>
+</g>
+<!-- proc~check_xy2d&#45;&gt;proc~check_y2d -->
+<g id="proc~~arnoldi~~CallsGraph_edge10" class="edge">
+<title>proc~check_xy2d&#45;&gt;proc~check_y2d</title>
+<path fill="none" stroke="#000000" d="M307.29,-120.96C326.01,-119.6 349.57,-117.89 369.54,-116.43"/>
+<polygon fill="#000000" stroke="#000000" points="369.59,-119.94 379.31,-115.72 369.08,-112.96 369.59,-119.94"/>
+</g>
+<!-- proc~dirichlet -->
+<g id="proc~~arnoldi~~CallsGraph_node11" class="node">
+<title>proc~dirichlet</title>
+<g id="a_proc~~arnoldi~~CallsGraph_node11"><a xlink:href="../proc/dirichlet.html" xlink:title="Dirichlet">
+<polygon fill="#d9534f" stroke="#d9534f" points="439.42,-63.77 385.42,-63.77 385.42,-41 439.42,-41 439.42,-63.77"/>
+<text text-anchor="middle" x="412.42" y="-48.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Dirichlet</text>
+</a>
+</g>
+</g>
+<!-- proc~if_bcs&#45;&gt;proc~dirichlet -->
+<g id="proc~~arnoldi~~CallsGraph_edge11" class="edge">
+<title>proc~if_bcs&#45;&gt;proc~dirichlet</title>
+<path fill="none" stroke="#000000" d="M300.52,-43.51C321.33,-45.17 350.59,-47.51 373.82,-49.37"/>
+<polygon fill="#000000" stroke="#000000" points="373.26,-52.84 383.51,-50.15 373.82,-45.86 373.26,-52.84"/>
+</g>
+<!-- proc~first_order_neum -->
+<g id="proc~~arnoldi~~CallsGraph_node12" class="node">
+<title>proc~first_order_neum</title>
+<g id="a_proc~~arnoldi~~CallsGraph_node12"><a xlink:href="../proc/first_order_neum.html" xlink:title="first_order_Neum">
+<polygon fill="#d9534f" stroke="#d9534f" points="459.81,-22.77 365.04,-22.77 365.04,0 459.81,0 459.81,-22.77"/>
+<text text-anchor="middle" x="412.42" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">first_order_Neum</text>
+</a>
+</g>
+</g>
+<!-- proc~if_bcs&#45;&gt;proc~first_order_neum -->
+<g id="proc~~arnoldi~~CallsGraph_edge12" class="edge">
+<title>proc~if_bcs&#45;&gt;proc~first_order_neum</title>
+<path fill="none" stroke="#000000" d="M300.52,-35.6C315.64,-32.3 335.21,-28.03 353.69,-23.99"/>
+<polygon fill="#000000" stroke="#000000" points="354.2,-27.46 363.23,-21.91 352.71,-20.62 354.2,-27.46"/>
+</g>
+<!-- mpi_sendrecv -->
+<g id="proc~~arnoldi~~CallsGraph_node13" class="node">
+<title>mpi_sendrecv</title>
+<polygon fill="#777777" stroke="#777777" points="574.08,-144.77 495.81,-144.77 495.81,-122 574.08,-122 574.08,-144.77"/>
+<text text-anchor="middle" x="534.94" y="-129.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_sendrecv</text>
+</g>
+<!-- proc~check_x2d&#45;&gt;mpi_sendrecv -->
+<g id="proc~~arnoldi~~CallsGraph_edge13" class="edge">
+<title>proc~check_x2d&#45;&gt;mpi_sendrecv</title>
+<path fill="none" stroke="#000000" d="M444.15,-149.03C456.35,-146.9 470.71,-144.4 484.31,-142.03"/>
+<polygon fill="#000000" stroke="#000000" points="484.76,-145.51 494.01,-140.34 483.56,-138.61 484.76,-145.51"/>
+</g>
+<!-- proc~check_y2d&#45;&gt;mpi_sendrecv -->
+<g id="proc~~arnoldi~~CallsGraph_edge14" class="edge">
+<title>proc~check_y2d&#45;&gt;mpi_sendrecv</title>
+<path fill="none" stroke="#000000" d="M444.15,-118.48C456.35,-120.51 470.71,-122.89 484.31,-125.15"/>
+<polygon fill="#000000" stroke="#000000" points="483.57,-128.57 494.01,-126.76 484.72,-121.67 483.57,-128.57"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 28.43" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.923937 0.923937) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 689.77,-26.77 689.77,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="63.27,-22.77 0,-22.77 0,0 63.27,0 63.27,-22.77"/>
+<text text-anchor="middle" x="31.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="135.63,-22.77 81.64,-22.77 81.64,0 135.63,0 135.63,-22.77"/>
+<text text-anchor="middle" x="108.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="207.63,-22.77 153.63,-22.77 153.63,0 207.63,0 207.63,-22.77"/>
+<text text-anchor="middle" x="180.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="347.14,-22.77 226.12,-22.77 226.12,0 347.14,0 347.14,-22.77"/>
+<text text-anchor="middle" x="286.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="499.89,-22.77 365.38,-22.77 365.38,0 499.89,0 499.89,-22.77"/>
+<text text-anchor="middle" x="432.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="571.63,-22.77 517.63,-22.77 517.63,0 571.63,0 571.63,-22.77"/>
+<text text-anchor="middle" x="544.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="685.77,-22.77 589.5,-22.77 589.5,0 685.77,0 685.77,-22.77"/>
+<text text-anchor="middle" x="637.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: proc~~arnoldi~~CalledByGraph Pages: 1 -->
+<svg id="procarnoldiCalledByGraph" width="282pt" height="72pt"
+ viewBox="0.00 0.00 281.54 71.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~arnoldi~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 67.77)">
+<title>proc~~arnoldi~~CalledByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-67.77 277.54,-67.77 277.54,4 -4,4"/>
+<!-- proc~arnoldi -->
+<g id="proc~~arnoldi~~CalledByGraph_node1" class="node">
+<title>proc~arnoldi</title>
+<polygon fill="none" stroke="black" points="273.54,-42.77 219.54,-42.77 219.54,-20 273.54,-20 273.54,-42.77"/>
+<text text-anchor="middle" x="246.54" y="-27.04" font-family="Helvetica,sans-Serif" font-size="10.50">arnoldi</text>
+</g>
+<!-- proc~fullgmres -->
+<g id="proc~~arnoldi~~CalledByGraph_node2" class="node">
+<title>proc~fullgmres</title>
+<g id="a_proc~~arnoldi~~CalledByGraph_node2"><a xlink:href="../proc/fullgmres.html" xlink:title="fullgmres">
+<polygon fill="#d9534f" stroke="#d9534f" points="174.91,-63.77 119.89,-63.77 119.89,-41 174.91,-41 174.91,-63.77"/>
+<text text-anchor="middle" x="147.4" y="-48.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fullgmres</text>
+</a>
+</g>
+</g>
+<!-- proc~fullgmres&#45;&gt;proc~arnoldi -->
+<g id="proc~~arnoldi~~CalledByGraph_edge1" class="edge">
+<title>proc~fullgmres&#45;&gt;proc~arnoldi</title>
+<path fill="none" stroke="#000000" d="M175.2,-46.59C185.37,-44.39 197.15,-41.85 208.12,-39.47"/>
+<polygon fill="#000000" stroke="#000000" points="208.65,-42.94 217.68,-37.41 207.17,-36.1 208.65,-42.94"/>
+</g>
+<!-- proc~restartgmres -->
+<g id="proc~~arnoldi~~CalledByGraph_node3" class="node">
+<title>proc~restartgmres</title>
+<g id="a_proc~~arnoldi~~CalledByGraph_node3"><a xlink:href="../proc/restartgmres.html" xlink:title="restartgmres">
+<polygon fill="#d9534f" stroke="#d9534f" points="183.54,-22.77 111.27,-22.77 111.27,0 183.54,0 183.54,-22.77"/>
+<text text-anchor="middle" x="147.4" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">restartgmres</text>
+</a>
+</g>
+</g>
+<!-- proc~restartgmres&#45;&gt;proc~arnoldi -->
+<g id="proc~~arnoldi~~CalledByGraph_edge2" class="edge">
+<title>proc~restartgmres&#45;&gt;proc~arnoldi</title>
+<path fill="none" stroke="#000000" d="M184.02,-18.72C191.81,-20.32 200.07,-22.02 207.93,-23.64"/>
+<polygon fill="#000000" stroke="#000000" points="207.07,-27.04 217.57,-25.63 208.48,-20.18 207.07,-27.04"/>
+</g>
+<!-- program~helmholtz_2d -->
+<g id="proc~~arnoldi~~CalledByGraph_node4" class="node">
+<title>program~helmholtz_2d</title>
+<g id="a_proc~~arnoldi~~CalledByGraph_node4"><a xlink:href="../program/helmholtz_2d.html" xlink:title="helmholtz_2d">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="75.27,-42.77 0,-42.77 0,-20 75.27,-20 75.27,-42.77"/>
+<text text-anchor="middle" x="37.63" y="-27.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">helmholtz_2d</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;proc~fullgmres -->
+<g id="proc~~arnoldi~~CalledByGraph_edge3" class="edge">
+<title>program~helmholtz_2d&#45;&gt;proc~fullgmres</title>
+<path fill="none" stroke="#000000" d="M75.72,-38.61C86.28,-40.67 97.78,-42.91 108.39,-44.98"/>
+<polygon fill="#000000" stroke="#000000" points="107.49,-48.37 117.97,-46.84 108.83,-41.5 107.49,-48.37"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;proc~restartgmres -->
+<g id="proc~~arnoldi~~CalledByGraph_edge4" class="edge">
+<title>program~helmholtz_2d&#45;&gt;proc~restartgmres</title>
+<path fill="none" stroke="#000000" d="M75.72,-24.5C83.5,-23.06 91.8,-21.52 99.88,-20.02"/>
+<polygon fill="#000000" stroke="#000000" points="100.38,-23.49 109.58,-18.22 99.11,-16.6 100.38,-23.49"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 28.43" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.923937 0.923937) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 689.77,-26.77 689.77,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="63.27,-22.77 0,-22.77 0,0 63.27,0 63.27,-22.77"/>
+<text text-anchor="middle" x="31.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="135.63,-22.77 81.64,-22.77 81.64,0 135.63,0 135.63,-22.77"/>
+<text text-anchor="middle" x="108.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="207.63,-22.77 153.63,-22.77 153.63,0 207.63,0 207.63,-22.77"/>
+<text text-anchor="middle" x="180.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="347.14,-22.77 226.12,-22.77 226.12,0 347.14,0 347.14,-22.77"/>
+<text text-anchor="middle" x="286.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="499.89,-22.77 365.38,-22.77 365.38,0 499.89,0 499.89,-22.77"/>
+<text text-anchor="middle" x="432.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="571.63,-22.77 517.63,-22.77 517.63,0 571.63,0 571.63,-22.77"/>
+<text text-anchor="middle" x="544.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="685.77,-22.77 589.5,-22.77 589.5,0 685.77,0 685.77,-22.77"/>
+<text text-anchor="middle" x="637.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

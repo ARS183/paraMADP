@@ -1,0 +1,865 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>wavenumber &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>wavenumber
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 2.1% of total for modules and submodules.">113 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/wavenumber.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/wavenumber.f90.html'>wavenumber.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">wavenumber</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/wavenumber.html#variable-wavenumber_k">wavenumber_k</a>
+            <a class="list-group-item" href="../module/wavenumber.html#variable-kh_pow_2">kh_pow_2</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/wavenumber.html#proc-const_k">Const_K</a>
+            <a class="list-group-item" href="../module/wavenumber.html#proc-wavenumber_k_wedge">wavenumber_k_Wedge</a>
+            <a class="list-group-item" href="../module/wavenumber.html#proc-read_wavenumber_k_marmousi">read_wavenumber_k_marmousi</a>
+            <a class="list-group-item" href="../module/wavenumber.html#proc-wavenumber_k_destroy">wavenumber_k_destroy</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>This module is used to determine the wavenumber of the computational domain, as well as (kh)^2</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
+                  <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
+                  <li class="list-inline-item"><a href='mpi_setup.html'>mpi_setup</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~wavenumber~~UsesGraph Pages: 1 -->
+<svg id="modulewavenumberUsesGraph" width="388pt" height="70pt"
+ viewBox="0.00 0.00 388.31 69.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~wavenumber~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 65.99)">
+<title>module~~wavenumber~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-65.99 384.31,-65.99 384.31,4 -4,4"/>
+<!-- module~wavenumber -->
+<g id="module~~wavenumber~~UsesGraph_node1" class="node">
+<title>module~wavenumber</title>
+<polygon fill="none" stroke="black" points="380.31,-50.67 307.29,-50.67 307.29,-27.9 380.31,-27.9 380.31,-50.67"/>
+<text text-anchor="middle" x="343.8" y="-34.93" font-family="Helvetica,sans-Serif" font-size="10.50">wavenumber</text>
+</g>
+<!-- module~comm_variable -->
+<g id="module~~wavenumber~~UsesGraph_node2" class="node">
+<title>module~comm_variable</title>
+<g id="a_module~~wavenumber~~UsesGraph_node2"><a xlink:href="../module/comm_variable.html" xlink:title="comm_variable">
+<polygon fill="#337ab7" stroke="#337ab7" points="174.27,-50.67 90,-50.67 90,-27.9 174.27,-27.9 174.27,-50.67"/>
+<text text-anchor="middle" x="132.13" y="-34.93" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">comm_variable</text>
+</a>
+</g>
+</g>
+<!-- module~wavenumber&#45;&gt;module~comm_variable -->
+<g id="module~~wavenumber~~UsesGraph_edge1" class="edge">
+<title>module~wavenumber&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M307.92,-51.09C296.4,-54.44 283.42,-57.62 271.29,-59.28 244.42,-62.97 237.17,-62.72 210.27,-59.28 201,-58.1 191.25,-56.15 181.93,-53.92"/>
+<polygon fill="#000000" stroke="#000000" points="182.84,-50.54 172.28,-51.47 181.11,-57.32 182.84,-50.54"/>
+</g>
+<!-- module~mpi_setup -->
+<g id="module~~wavenumber~~UsesGraph_node3" class="node">
+<title>module~mpi_setup</title>
+<g id="a_module~~wavenumber~~UsesGraph_node3"><a xlink:href="../module/mpi_setup.html" xlink:title="mpi_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="271.29,-50.67 210.27,-50.67 210.27,-27.9 271.29,-27.9 271.29,-50.67"/>
+<text text-anchor="middle" x="240.78" y="-34.93" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_setup</text>
+</a>
+</g>
+</g>
+<!-- module~wavenumber&#45;&gt;module~mpi_setup -->
+<g id="module~~wavenumber~~UsesGraph_edge2" class="edge">
+<title>module~wavenumber&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M306.9,-39.28C299.13,-39.28 290.85,-39.28 282.89,-39.28"/>
+<polygon fill="#000000" stroke="#000000" points="283.08,-35.78 273.08,-39.28 283.08,-42.78 283.08,-35.78"/>
+</g>
+<!-- mpi -->
+<g id="module~~wavenumber~~UsesGraph_node4" class="node">
+<title>mpi</title>
+<g id="a_module~~wavenumber~~UsesGraph_node4"><a xlink:href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm" xlink:title="mpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-30.67 0,-30.67 0,-7.9 54,-7.9 54,-30.67"/>
+<text text-anchor="middle" x="27" y="-14.93" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi</text>
+</a>
+</g>
+</g>
+<!-- module~wavenumber&#45;&gt;mpi -->
+<g id="module~~wavenumber~~UsesGraph_edge3" class="edge">
+<title>module~wavenumber&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M306.82,-28.41C265.35,-16.85 194.97,-0.25 133.13,-0.28"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M131.13,-0.28C109.18,0.28 85.01,-3.9 65.59,-8.49"/>
+<polygon fill="#000000" stroke="#000000" points="64.79,-5.08 55.94,-10.91 66.49,-11.87 64.79,-5.08"/>
+</g>
+<!-- module~comm_variable&#45;&gt;mpi -->
+<g id="module~~wavenumber~~UsesGraph_edge4" class="edge">
+<title>module~comm_variable&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M89.78,-31.26C81.72,-29.7 73.32,-28.07 65.4,-26.54"/>
+<polygon fill="#000000" stroke="#000000" points="66.21,-23.13 55.72,-24.66 64.87,-30 66.21,-23.13"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;module~comm_variable -->
+<g id="module~~wavenumber~~UsesGraph_edge5" class="edge">
+<title>module~mpi_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M209.79,-39.28C202.34,-39.28 194.12,-39.28 185.93,-39.28"/>
+<polygon fill="#000000" stroke="#000000" points="185.95,-35.78 175.95,-39.28 185.95,-42.78 185.95,-35.78"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;mpi -->
+<g id="module~~wavenumber~~UsesGraph_edge6" class="edge">
+<title>module~mpi_setup&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M220.51,-27.58C199.72,-16.08 165.27,-0.26 133.13,-0.28"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~wavenumber~~UsedByGraph Pages: 1 -->
+<svg id="modulewavenumberUsedByGraph" width="641pt" height="120pt"
+ viewBox="0.00 0.00 641.00 119.53" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~wavenumber~~UsedByGraph" class="graph" transform="scale(0.69774 0.69774) rotate(0) translate(4 167.31)">
+<title>module~~wavenumber~~UsedByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-167.31 914.68,-167.31 914.68,4 -4,4"/>
+<!-- module~wavenumber -->
+<g id="module~~wavenumber~~UsedByGraph_node1" class="node">
+<title>module~wavenumber</title>
+<polygon fill="none" stroke="black" points="73.02,-75.38 0,-75.38 0,-52.61 73.02,-52.61 73.02,-75.38"/>
+<text text-anchor="middle" x="36.51" y="-59.65" font-family="Helvetica,sans-Serif" font-size="10.50">wavenumber</text>
+</g>
+<!-- module~cslp_solver -->
+<g id="module~~wavenumber~~UsedByGraph_node2" class="node">
+<title>module~cslp_solver</title>
+<g id="a_module~~wavenumber~~UsedByGraph_node2"><a xlink:href="../module/cslp_solver.html" xlink:title="CSLP_Solver">
+<polygon fill="#337ab7" stroke="#337ab7" points="466.35,-94.38 391.83,-94.38 391.83,-71.61 466.35,-71.61 466.35,-94.38"/>
+<text text-anchor="middle" x="429.09" y="-78.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">CSLP_Solver</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~wavenumber -->
+<g id="module~~wavenumber~~UsedByGraph_edge1" class="edge">
+<title>module~cslp_solver&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M326.57,-160C226.33,-178.36 113.19,-114.67 63.39,-82.06"/>
+<polygon fill="#000000" stroke="#000000" points="65.54,-79.29 55.28,-76.64 61.65,-85.11 65.54,-79.29"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M419.58,-94.71C404.15,-114.59 369.33,-153.43 328.57,-160"/>
+</g>
+<!-- module~operators -->
+<g id="module~~wavenumber~~UsedByGraph_node5" class="node">
+<title>module~operators</title>
+<g id="a_module~~wavenumber~~UsedByGraph_node5"><a xlink:href="../module/operators.html" xlink:title="operators">
+<polygon fill="#337ab7" stroke="#337ab7" points="263.31,-56.38 206.04,-56.38 206.04,-33.61 263.31,-33.61 263.31,-56.38"/>
+<text text-anchor="middle" x="234.68" y="-40.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">operators</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~operators -->
+<g id="module~~wavenumber~~UsedByGraph_edge13" class="edge">
+<title>module~cslp_solver&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M407.97,-71.18C388.44,-60.68 357.59,-46.6 328.57,-44"/>
+</g>
+<!-- module~smoother -->
+<g id="module~~wavenumber~~UsedByGraph_node7" class="node">
+<title>module~smoother</title>
+<g id="a_module~~wavenumber~~UsedByGraph_node7"><a xlink:href="../module/smoother.html" xlink:title="smoother">
+<polygon fill="#337ab7" stroke="#337ab7" points="355.83,-94.38 299.31,-94.38 299.31,-71.61 355.83,-71.61 355.83,-94.38"/>
+<text text-anchor="middle" x="327.57" y="-78.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">smoother</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~smoother -->
+<g id="module~~wavenumber~~UsedByGraph_edge18" class="edge">
+<title>module~cslp_solver&#45;&gt;module~smoother</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M391.6,-83C383.86,-83 375.66,-83 367.83,-83"/>
+<polygon fill="#000000" stroke="#000000" points="367.84,-79.5 357.84,-83 367.84,-86.5 367.84,-79.5"/>
+</g>
+<!-- module~define_bc -->
+<g id="module~~wavenumber~~UsedByGraph_node3" class="node">
+<title>module~define_bc</title>
+<g id="a_module~~wavenumber~~UsedByGraph_node3"><a xlink:href="../module/define_bc.html" xlink:title="define_BC">
+<polygon fill="#337ab7" stroke="#337ab7" points="170.04,-75.38 109.02,-75.38 109.02,-52.61 170.04,-52.61 170.04,-75.38"/>
+<text text-anchor="middle" x="139.53" y="-59.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">define_BC</text>
+</a>
+</g>
+</g>
+<!-- module~define_bc&#45;&gt;module~wavenumber -->
+<g id="module~~wavenumber~~UsedByGraph_edge2" class="edge">
+<title>module~define_bc&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M108.77,-64C101.25,-64 92.99,-64 84.85,-64"/>
+<polygon fill="#000000" stroke="#000000" points="85,-60.5 75,-64 85,-67.5 85,-60.5"/>
+</g>
+<!-- module~deflaion_setup -->
+<g id="module~~wavenumber~~UsedByGraph_node4" class="node">
+<title>module~deflaion_setup</title>
+<g id="a_module~~wavenumber~~UsedByGraph_node4"><a xlink:href="../module/deflaion_setup.html" xlink:title="deflaion_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="583.62,-94.38 502.35,-94.38 502.35,-71.61 583.62,-71.61 583.62,-94.38"/>
+<text text-anchor="middle" x="542.99" y="-78.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">deflaion_setup</text>
+</a>
+</g>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~wavenumber -->
+<g id="module~~wavenumber~~UsedByGraph_edge3" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M518.44,-94.8C479.93,-113.35 400.51,-148.41 328.57,-160"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~cslp_solver -->
+<g id="module~~wavenumber~~UsedByGraph_edge6" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M501.9,-83C494.15,-83 485.96,-83 477.98,-83"/>
+<polygon fill="#000000" stroke="#000000" points="478.05,-79.5 468.05,-83 478.05,-86.5 478.05,-79.5"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~operators -->
+<g id="module~~wavenumber~~UsedByGraph_edge14" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M519.16,-71.24C497.07,-60.78 462.27,-46.73 430.09,-44"/>
+</g>
+<!-- module~operators&#45;&gt;module~wavenumber -->
+<g id="module~~wavenumber~~UsedByGraph_edge4" class="edge">
+<title>module~operators&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M219.17,-33.19C201.39,-20.1 169.97,-1.39 140.53,-6"/>
+</g>
+<!-- module~operators&#45;&gt;module~define_bc -->
+<g id="module~~wavenumber~~UsedByGraph_edge9" class="edge">
+<title>module~operators&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M205.73,-50.7C198.15,-52.24 189.79,-53.95 181.65,-55.61"/>
+<polygon fill="#000000" stroke="#000000" points="180.98,-52.17 171.89,-57.6 182.38,-59.03 180.98,-52.17"/>
+</g>
+<!-- program~helmholtz_2d -->
+<g id="module~~wavenumber~~UsedByGraph_node6" class="node">
+<title>program~helmholtz_2d</title>
+<g id="a_module~~wavenumber~~UsedByGraph_node6"><a xlink:href="../program/helmholtz_2d.html" xlink:title="helmholtz_2d">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="910.68,-56.38 835.41,-56.38 835.41,-33.61 910.68,-33.61 910.68,-56.38"/>
+<text text-anchor="middle" x="873.04" y="-40.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">helmholtz_2d</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~wavenumber -->
+<g id="module~~wavenumber~~UsedByGraph_edge5" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M834.95,-33.74C823.62,-30.58 811.07,-27.37 799.41,-25 737.06,-12.3 721.14,-6 657.5,-6 657.5,-6 657.5,-6 326.57,-6 243.89,-6 222.22,6.79 140.53,-6"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M138.53,-6C108.5,-11.01 78.85,-30.19 59.52,-45.14"/>
+<polygon fill="#000000" stroke="#000000" points="57.44,-42.32 51.83,-51.31 61.82,-47.78 57.44,-42.32"/>
+</g>
+<!-- module~solvers -->
+<g id="module~~wavenumber~~UsedByGraph_node8" class="node">
+<title>module~solvers</title>
+<g id="a_module~~wavenumber~~UsedByGraph_node8"><a xlink:href="../module/solvers.html" xlink:title="solvers">
+<polygon fill="#337ab7" stroke="#337ab7" points="683.5,-97.38 629.5,-97.38 629.5,-74.61 683.5,-74.61 683.5,-97.38"/>
+<text text-anchor="middle" x="656.5" y="-81.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">solvers</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~solvers -->
+<g id="module~~wavenumber~~UsedByGraph_edge19" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~solvers</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M763.4,-85C740.74,-86.97 715.25,-87.27 694.96,-87.05"/>
+<polygon fill="#000000" stroke="#000000" points="695.24,-83.56 685.18,-86.9 695.13,-90.56 695.24,-83.56"/>
+</g>
+<!-- module~user_module -->
+<g id="module~~wavenumber~~UsedByGraph_node9" class="node">
+<title>module~user_module</title>
+<g id="a_module~~wavenumber~~UsedByGraph_node9"><a xlink:href="../module/user_module.html" xlink:title="user_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="693.39,-56.38 619.62,-56.38 619.62,-33.61 693.39,-33.61 693.39,-56.38"/>
+<text text-anchor="middle" x="656.5" y="-40.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">user_module</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~user_module -->
+<g id="module~~wavenumber~~UsedByGraph_edge21" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M763.4,-85C749.18,-86.24 717.01,-73.19 691.83,-61.67"/>
+<polygon fill="#000000" stroke="#000000" points="693.46,-58.57 682.91,-57.52 690.5,-64.91 693.46,-58.57"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M851.21,-56.7C830.28,-67.5 796.72,-82.26 765.4,-85"/>
+</g>
+<!-- module~idrs_module -->
+<g id="module~~wavenumber~~UsedByGraph_node10" class="node">
+<title>module~idrs_module</title>
+<g id="a_module~~wavenumber~~UsedByGraph_node10"><a xlink:href="../module/idrs_module.html" xlink:title="idrs_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="799.41,-56.38 729.39,-56.38 729.39,-33.61 799.41,-33.61 799.41,-56.38"/>
+<text text-anchor="middle" x="764.4" y="-40.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">idrs_module</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~idrs_module -->
+<g id="module~~wavenumber~~UsedByGraph_edge22" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~idrs_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M835.05,-45C827.37,-45 819.19,-45 811.23,-45"/>
+<polygon fill="#000000" stroke="#000000" points="811.34,-41.5 801.34,-45 811.34,-48.5 811.34,-41.5"/>
+</g>
+<!-- module~smoother&#45;&gt;module~define_bc -->
+<g id="module~~wavenumber~~UsedByGraph_edge10" class="edge">
+<title>module~smoother&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M299.12,-80.19C268.02,-77.02 217.02,-71.81 181.28,-68.16"/>
+<polygon fill="#000000" stroke="#000000" points="182.06,-64.72 171.76,-67.18 181.35,-71.68 182.06,-64.72"/>
+</g>
+<!-- module~smoother&#45;&gt;module~operators -->
+<g id="module~~wavenumber~~UsedByGraph_edge15" class="edge">
+<title>module~smoother&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M299.3,-71.59C291.36,-68.27 282.53,-64.58 274.04,-61.03"/>
+<polygon fill="#000000" stroke="#000000" points="275.53,-57.86 264.95,-57.24 272.83,-64.32 275.53,-57.86"/>
+</g>
+<!-- module~solvers&#45;&gt;module~cslp_solver -->
+<g id="module~~wavenumber~~UsedByGraph_edge7" class="edge">
+<title>module~solvers&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M630.95,-97.75C608.81,-107.42 575.04,-119.86 543.99,-122"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M541.99,-122C512.53,-124.02 480.93,-111.52 458.85,-100.14"/>
+<polygon fill="#000000" stroke="#000000" points="460.62,-97.12 450.16,-95.44 457.29,-103.27 460.62,-97.12"/>
+</g>
+<!-- module~solvers&#45;&gt;module~deflaion_setup -->
+<g id="module~~wavenumber~~UsedByGraph_edge11" class="edge">
+<title>module~solvers&#45;&gt;module~deflaion_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M629.08,-85.28C618.83,-85.01 606.73,-84.68 594.92,-84.37"/>
+<polygon fill="#000000" stroke="#000000" points="595.36,-80.88 585.27,-84.11 595.17,-87.87 595.36,-80.88"/>
+</g>
+<!-- module~solvers&#45;&gt;module~operators -->
+<g id="module~~wavenumber~~UsedByGraph_edge16" class="edge">
+<title>module~solvers&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M541.99,-122C434.06,-129.43 398.59,-145.98 299.31,-103 280.36,-94.79 263.34,-78.56 251.67,-65.34"/>
+<polygon fill="#000000" stroke="#000000" points="254.59,-63.37 245.47,-57.97 249.23,-67.88 254.59,-63.37"/>
+</g>
+<!-- module~user_module&#45;&gt;module~cslp_solver -->
+<g id="module~~wavenumber~~UsedByGraph_edge8" class="edge">
+<title>module~user_module&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M541.99,-44C514.44,-46.21 485,-56.84 463.23,-66.44"/>
+<polygon fill="#000000" stroke="#000000" points="461.91,-63.19 454.28,-70.54 464.83,-69.56 461.91,-63.19"/>
+</g>
+<!-- module~user_module&#45;&gt;module~deflaion_setup -->
+<g id="module~~wavenumber~~UsedByGraph_edge12" class="edge">
+<title>module~user_module&#45;&gt;module~deflaion_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M620.83,-56.81C610.87,-60.21 599.85,-63.96 589.34,-67.54"/>
+<polygon fill="#000000" stroke="#000000" points="588.41,-64.16 580.07,-70.7 590.67,-70.79 588.41,-64.16"/>
+</g>
+<!-- module~user_module&#45;&gt;module~operators -->
+<g id="module~~wavenumber~~UsedByGraph_edge17" class="edge">
+<title>module~user_module&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M541.99,-44C492.41,-47.99 479.64,-48.21 430.09,-44"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M428.09,-44C384.02,-40.25 372.62,-47.95 328.57,-44"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M326.57,-44C309.62,-42.47 290.82,-42.41 274.74,-42.85"/>
+<polygon fill="#000000" stroke="#000000" points="274.96,-39.34 265.09,-43.19 275.21,-46.34 274.96,-39.34"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M619.29,-43.04C597.44,-42.26 569.07,-41.97 543.99,-44"/>
+</g>
+<!-- module~idrs_module&#45;&gt;module~user_module -->
+<g id="module~~wavenumber~~UsedByGraph_edge20" class="edge">
+<title>module~idrs_module&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M729.02,-45C721.3,-45 712.98,-45 704.84,-45"/>
+<polygon fill="#000000" stroke="#000000" points="705.05,-41.5 695.05,-45 705.05,-48.5 705.05,-41.5"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmodulewavenumberUsedByGraph = svgPanZoom('#modulewavenumberUsedByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-wavenumber_k"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>wavenumber_k</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kh_pow_2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>kh_pow_2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-const_k"></span> <h3>public  subroutine <a href='../proc/const_k.html'>Const_K</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>constant wavenumber, determine by input variable k0
+data communication with neighbouring subdomains</p>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-wavenumber_k_wedge"></span> <h3>public  subroutine <a href='../proc/wavenumber_k_wedge.html'>wavenumber_k_Wedge</a>(xx, yy)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Wavenumber for Wedge model problem
+The top layer
+The bottom layer
+The middle layer</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xx"></span>
+              real(kind=realdp),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(1-LAP:nx+LAP,1-LAP:ny+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>xx</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-yy"></span>
+              real(kind=realdp),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(1-LAP:nx+LAP,1-LAP:ny+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>yy</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-read_wavenumber_k_marmousi"></span> <h3>public  subroutine <a href='../proc/read_wavenumber_k_marmousi.html'>read_wavenumber_k_marmousi</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Read the velocity profile of Marmousi problem with specified grid size and calculate the wavenumber</p>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-wavenumber_k_destroy"></span> <h3>public  subroutine <a href='../proc/wavenumber_k_destroy.html'>wavenumber_k_destroy</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Deallocate the wavenumber field in the end</p>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

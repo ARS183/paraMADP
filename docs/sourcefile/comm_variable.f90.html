@@ -1,0 +1,893 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>comm_variable.f90 &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>comm_variable.f90
+      <small>Source File</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 1.3% of total for source files.">74 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/comm_variable.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+            <li class="breadcrumb-item active" aria-current="page">comm_variable.f90</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#mods-0"
+         aria-expanded="false" aria-controls="mods-0">
+         <h4 class="card-header bg-primary text-white">Modules</h4>
+      </a>
+      <div id="mods-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/comm_variable.html">comm_variable</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../sourcefile/comm_variable.f90.html#src">comm_variable.f90</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Files dependent on this one</h3>
+          </div>
+          <div class="card-body">
+            <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: sourcefile~~comm_variable.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefilecomm_variablef90AfferentGraph" width="641pt" height="328pt"
+ viewBox="0.00 0.00 641.00 327.74" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph" class="graph" transform="scale(0.487471 0.487471) rotate(0) translate(4 668.32)">
+<title>sourcefile~~comm_variable.f90~~AfferentGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-668.32 1310.95,-668.32 1310.95,4 -4,4"/>
+<!-- sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~comm_variable.f90</title>
+<polygon fill="none" stroke="black" points="102.27,-443.77 0,-443.77 0,-421 102.27,-421 102.27,-443.77"/>
+<text text-anchor="middle" x="51.13" y="-428.03" font-family="Helvetica,sans-Serif" font-size="10.50">comm_variable.f90</text>
+</g>
+<!-- sourcefile~analytical_sol.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~analytical_sol.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/analytical_sol.f90.html" xlink:title="analytical_sol.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="826.89,-634.77 733.62,-634.77 733.62,-612 826.89,-612 826.89,-634.77"/>
+<text text-anchor="middle" x="780.25" y="-619.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">analytical_sol.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~analytical_sol.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~analytical_sol.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-662.38C602.62,-657.95 593.55,-637.35 541.46,-623.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M759.31,-635.12C735.81,-647.68 695.28,-665.43 658.36,-662.38"/>
+</g>
+<!-- sourcefile~boundaries.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node3" class="node">
+<title>sourcefile~boundaries.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node3"><a xlink:href="../sourcefile/boundaries.f90.html" xlink:title="boundaries.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="463.83,-290.77 381.06,-290.77 381.06,-268 463.83,-268 463.83,-290.77"/>
+<text text-anchor="middle" x="422.44" y="-275.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">boundaries.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~boundaries.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge2" class="edge">
+<title>sourcefile~boundaries.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M380.64,-271.27C357.38,-267.07 327.64,-262.41 300.92,-260.38"/>
+</g>
+<!-- sourcefile~wavenumber.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node16" class="node">
+<title>sourcefile~wavenumber.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node16"><a xlink:href="../sourcefile/wavenumber.f90.html" xlink:title="wavenumber.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="345.06,-232.77 254.79,-232.77 254.79,-210 345.06,-210 345.06,-232.77"/>
+<text text-anchor="middle" x="299.92" y="-217.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">wavenumber.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~boundaries.f90&#45;&gt;sourcefile~wavenumber.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge47" class="edge">
+<title>sourcefile~boundaries.f90&#45;&gt;sourcefile~wavenumber.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M396.77,-267.51C379.22,-259.06 355.4,-247.6 335.9,-238.21"/>
+<polygon fill="#000000" stroke="#000000" points="337.46,-235.09 326.94,-233.9 334.43,-241.39 337.46,-235.09"/>
+</g>
+<!-- sourcefile~cslp_solver.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node4" class="node">
+<title>sourcefile~cslp_solver.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node4"><a xlink:href="../sourcefile/cslp_solver.f90.html" xlink:title="CSLP_Solver.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="826.14,-290.77 734.37,-290.77 734.37,-268 826.14,-268 826.14,-290.77"/>
+<text text-anchor="middle" x="780.25" y="-275.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">CSLP_Solver.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~cslp_solver.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge3" class="edge">
+<title>sourcefile~cslp_solver.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-240.38C604.04,-227.9 594.6,-210.73 541.46,-202.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M747.32,-267.58C723.16,-259.02 689.04,-247.7 658.36,-240.38"/>
+</g>
+<!-- sourcefile~mpi_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node9" class="node">
+<title>sourcefile~mpi_setup.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node9"><a xlink:href="../sourcefile/mpi_setup.f90.html" xlink:title="MPI_setup.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="218.79,-443.77 138.27,-443.77 138.27,-421 218.79,-421 218.79,-443.77"/>
+<text text-anchor="middle" x="178.53" y="-428.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MPI_setup.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~cslp_solver.f90&#45;&gt;sourcefile~mpi_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge27" class="edge">
+<title>sourcefile~cslp_solver.f90&#45;&gt;sourcefile~mpi_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-318.38C588.19,-334.2 568.57,-322.29 499.83,-335.38 465.24,-341.97 456.36,-343.9 423.44,-356.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M745.92,-291.19C721.8,-299.48 688.31,-310.45 658.36,-318.38"/>
+</g>
+<!-- sourcefile~operators.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node10" class="node">
+<title>sourcefile~operators.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node10"><a xlink:href="../sourcefile/operators.f90.html" xlink:title="Operators.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="579.22,-366.77 501.7,-366.77 501.7,-344 579.22,-344 579.22,-366.77"/>
+<text text-anchor="middle" x="540.46" y="-351.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Operators.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~cslp_solver.f90&#45;&gt;sourcefile~operators.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge34" class="edge">
+<title>sourcefile~cslp_solver.f90&#45;&gt;sourcefile~operators.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-318.38C632.02,-324.03 605.44,-332.44 583.97,-339.82"/>
+<polygon fill="#000000" stroke="#000000" points="582.97,-336.46 574.68,-343.06 585.28,-343.07 582.97,-336.46"/>
+</g>
+<!-- sourcefile~smoother.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node13" class="node">
+<title>sourcefile~smoother.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node13"><a xlink:href="../sourcefile/smoother.f90.html" xlink:title="Smoother.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="694.99,-290.77 619.72,-290.77 619.72,-268 694.99,-268 694.99,-290.77"/>
+<text text-anchor="middle" x="657.36" y="-275.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Smoother.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~cslp_solver.f90&#45;&gt;sourcefile~smoother.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge43" class="edge">
+<title>sourcefile~cslp_solver.f90&#45;&gt;sourcefile~smoother.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M733.89,-279.38C725.04,-279.38 715.73,-279.38 706.78,-279.38"/>
+<polygon fill="#000000" stroke="#000000" points="706.82,-275.89 696.82,-279.39 706.82,-282.89 706.82,-275.89"/>
+</g>
+<!-- sourcefile~cslp_solver.f90&#45;&gt;sourcefile~wavenumber.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge48" class="edge">
+<title>sourcefile~cslp_solver.f90&#45;&gt;sourcefile~wavenumber.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-240.38C606.69,-228.53 592.39,-244.22 541.46,-240.38"/>
+</g>
+<!-- sourcefile~definegrid.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node5" class="node">
+<title>sourcefile~definegrid.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node5"><a xlink:href="../sourcefile/definegrid.f90.html" xlink:title="DefineGrid.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="697.62,-634.77 617.1,-634.77 617.1,-612 697.62,-612 697.62,-634.77"/>
+<text text-anchor="middle" x="657.36" y="-619.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DefineGrid.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~definegrid.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge4" class="edge">
+<title>sourcefile~definegrid.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M616.61,-628.4C594.18,-630 565.84,-629.92 541.46,-623.38"/>
+</g>
+<!-- sourcefile~deflation_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node6" class="node">
+<title>sourcefile~deflation_setup.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node6"><a xlink:href="../sourcefile/deflation_setup.f90.html" xlink:title="deflation_setup.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="965.16,-290.77 862.89,-290.77 862.89,-268 965.16,-268 965.16,-290.77"/>
+<text text-anchor="middle" x="914.02" y="-275.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">deflation_setup.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~deflation_setup.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge5" class="edge">
+<title>sourcefile~deflation_setup.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M880.62,-267.61C822.47,-246.8 702.36,-205.44 658.36,-202.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-202.38C605.35,-200 591.91,-210.31 541.46,-202.38"/>
+</g>
+<!-- sourcefile~deflation_setup.f90&#45;&gt;sourcefile~cslp_solver.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge20" class="edge">
+<title>sourcefile~deflation_setup.f90&#45;&gt;sourcefile~cslp_solver.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M862.46,-279.38C854.37,-279.38 845.95,-279.38 837.73,-279.38"/>
+<polygon fill="#000000" stroke="#000000" points="837.82,-275.89 827.82,-279.39 837.82,-282.89 837.82,-275.89"/>
+</g>
+<!-- sourcefile~deflation_setup.f90&#45;&gt;sourcefile~mpi_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge28" class="edge">
+<title>sourcefile~deflation_setup.f90&#45;&gt;sourcefile~mpi_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M779.25,-356.38C661.82,-397.64 623.38,-390.52 499.83,-375.38 465.11,-371.13 456.34,-344.49 423.44,-356.38"/>
+</g>
+<!-- sourcefile~deflation_setup.f90&#45;&gt;sourcefile~operators.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge35" class="edge">
+<title>sourcefile~deflation_setup.f90&#45;&gt;sourcefile~operators.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M897.37,-291.25C873.64,-308.58 826.5,-340.49 781.25,-356.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M779.25,-356.38C728.56,-374.19 711.92,-360.73 658.36,-356.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-356.38C635,-354.65 611.34,-354.2 591.07,-354.25"/>
+<polygon fill="#000000" stroke="#000000" points="591.05,-350.75 581.08,-354.33 591.1,-357.75 591.05,-350.75"/>
+</g>
+<!-- sourcefile~deflation_setup.f90&#45;&gt;sourcefile~wavenumber.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge49" class="edge">
+<title>sourcefile~deflation_setup.f90&#45;&gt;sourcefile~wavenumber.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M539.46,-240.38C505.38,-237.82 497.82,-230.03 463.83,-226.38 428.25,-222.57 388.07,-221.3 356.51,-221"/>
+<polygon fill="#000000" stroke="#000000" points="356.84,-217.5 346.81,-220.94 356.79,-224.5 356.84,-217.5"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-202.38C602.7,-198.66 595.25,-239.68 541.46,-240.38"/>
+</g>
+<!-- sourcefile~idrs_module.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node7" class="node">
+<title>sourcefile~idrs_module.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node7"><a xlink:href="../sourcefile/idrs_module.f90.html" xlink:title="idrs_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1216.95,-294.77 1128.93,-294.77 1128.93,-272 1216.95,-272 1216.95,-294.77"/>
+<text text-anchor="middle" x="1172.94" y="-279.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">idrs_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~idrs_module.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge6" class="edge">
+<title>sourcefile~idrs_module.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M539.46,-623.38C431.86,-594.53 412.03,-554.48 300.92,-546.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1046.04,-508.38C880.26,-611.55 806.85,-557.31 617.1,-603.38 583.31,-611.59 575.8,-628.88 541.46,-623.38"/>
+</g>
+<!-- sourcefile~idrs_module.f90&#45;&gt;sourcefile~mpi_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge29" class="edge">
+<title>sourcefile~idrs_module.f90&#45;&gt;sourcefile~mpi_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1046.04,-508.38C1014.57,-526.84 1001.23,-499.86 965.16,-494.38 883.66,-482.02 863.68,-470.38 781.25,-470.38 781.25,-470.38 781.25,-470.38 656.36,-470.38 497.49,-470.38 458,-408.58 300.92,-432.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1169.63,-295.22C1161.36,-334.04 1129.26,-457.85 1048.04,-508.38"/>
+</g>
+<!-- sourcefile~read_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node11" class="node">
+<title>sourcefile~read_setup.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node11"><a xlink:href="../sourcefile/read_setup.f90.html" xlink:title="read_setup.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="955.78,-176.77 872.26,-176.77 872.26,-154 955.78,-154 955.78,-176.77"/>
+<text text-anchor="middle" x="914.02" y="-161.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_setup.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~idrs_module.f90&#45;&gt;sourcefile~read_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge39" class="edge">
+<title>sourcefile~idrs_module.f90&#45;&gt;sourcefile~read_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1151.26,-271.54C1143.99,-267.08 1135.9,-261.78 1128.93,-256.38 1111.53,-242.91 1111.88,-233.58 1092.93,-222.38 1053.7,-199.22 1003.96,-184.31 967.05,-175.58"/>
+<polygon fill="#000000" stroke="#000000" points="968.04,-172.21 957.51,-173.4 966.48,-179.04 968.04,-172.21"/>
+</g>
+<!-- sourcefile~user_module.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node15" class="node">
+<title>sourcefile~user_module.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node15"><a xlink:href="../sourcefile/user_module.f90.html" xlink:title="user_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1092.93,-294.77 1001.16,-294.77 1001.16,-272 1092.93,-272 1092.93,-294.77"/>
+<text text-anchor="middle" x="1047.04" y="-279.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">user_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~idrs_module.f90&#45;&gt;sourcefile~user_module.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge45" class="edge">
+<title>sourcefile~idrs_module.f90&#45;&gt;sourcefile~user_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1128.61,-283.38C1120.83,-283.38 1112.62,-283.38 1104.53,-283.38"/>
+<polygon fill="#000000" stroke="#000000" points="1104.76,-279.89 1094.76,-283.39 1104.76,-286.89 1104.76,-279.89"/>
+</g>
+<!-- sourcefile~main.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node8" class="node">
+<title>sourcefile~main.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node8"><a xlink:href="../sourcefile/main.f90.html" xlink:title="main.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1306.95,-294.77 1252.95,-294.77 1252.95,-272 1306.95,-272 1306.95,-294.77"/>
+<text text-anchor="middle" x="1279.95" y="-279.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">main.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge7" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M913.02,-623.38C873.73,-624.22 865.62,-636.73 826.89,-643.38 752.6,-656.15 733.48,-668.58 658.36,-662.38"/>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~analytical_sol.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge17" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~analytical_sol.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M913.02,-623.38C888.66,-623.38 861.76,-623.38 838.65,-623.38"/>
+<polygon fill="#000000" stroke="#000000" points="838.81,-619.89 828.81,-623.39 838.81,-626.89 838.81,-619.89"/>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~definegrid.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge23" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~definegrid.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1046.04,-623.38C989.02,-611.59 973.26,-623.38 915.02,-623.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M913.02,-623.38C873.72,-623.38 865.94,-607.86 826.89,-603.38 785.71,-598.67 774.72,-598.02 733.62,-603.38 724.67,-604.55 715.26,-606.48 706.25,-608.68"/>
+<polygon fill="#000000" stroke="#000000" points="705.37,-605.29 696.57,-611.2 707.13,-612.06 705.37,-605.29"/>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~idrs_module.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge26" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~idrs_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1252.45,-283.38C1245.1,-283.38 1236.84,-283.38 1228.51,-283.38"/>
+<polygon fill="#000000" stroke="#000000" points="1228.7,-279.89 1218.7,-283.39 1228.7,-286.89 1228.7,-279.89"/>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~mpi_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge30" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~mpi_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1277.13,-295.04C1266.56,-358.3 1208.06,-656.49 1048.04,-623.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1046.04,-623.38C917.9,-629.76 909.56,-508.38 781.25,-508.38 781.25,-508.38 781.25,-508.38 421.44,-508.38 343.19,-508.38 256.98,-471.75 211.59,-449.35"/>
+<polygon fill="#000000" stroke="#000000" points="213.34,-446.31 202.83,-444.94 210.19,-452.56 213.34,-446.31"/>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~read_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge40" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~read_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1046.04,-165.38C1021.21,-156.4 991.95,-155.56 967.39,-157.33"/>
+<polygon fill="#000000" stroke="#000000" points="967.26,-153.83 957.62,-158.21 967.89,-160.8 967.26,-153.83"/>
+</g>
+<!-- sourcefile~rhs.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node12" class="node">
+<title>sourcefile~rhs.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node12"><a xlink:href="../sourcefile/rhs.f90.html" xlink:title="RHS.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="449.44,-60.77 395.44,-60.77 395.44,-38 449.44,-38 449.44,-60.77"/>
+<text text-anchor="middle" x="422.44" y="-45.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">RHS.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~rhs.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge42" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~rhs.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-50.38C591.11,-25.86 508.12,-33.91 460.87,-41.79"/>
+<polygon fill="#000000" stroke="#000000" points="460.39,-38.32 451.15,-43.5 461.61,-45.21 460.39,-38.32"/>
+</g>
+<!-- sourcefile~solvers.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node14" class="node">
+<title>sourcefile~solvers.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node14"><a xlink:href="../sourcefile/solvers.f90.html" xlink:title="solvers.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1078.68,-253.77 1015.41,-253.77 1015.41,-231 1078.68,-231 1078.68,-253.77"/>
+<text text-anchor="middle" x="1047.04" y="-238.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">solvers.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~solvers.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge44" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~solvers.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1171.94,-242.38C1145.31,-236.14 1114.55,-236.1 1090.35,-237.64"/>
+<polygon fill="#000000" stroke="#000000" points="1090.26,-234.14 1080.55,-238.39 1090.79,-241.12 1090.26,-234.14"/>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~user_module.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge46" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~user_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1171.94,-242.38C1154.97,-238.4 1113.65,-254.02 1083.37,-267.11"/>
+<polygon fill="#000000" stroke="#000000" points="1082.31,-263.76 1074.57,-270.99 1085.13,-270.16 1082.31,-263.76"/>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~wavenumber.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge50" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~wavenumber.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M779.25,-126.38C613.37,-93.04 414.97,-169.65 335.92,-204.87"/>
+<polygon fill="#000000" stroke="#000000" points="334.63,-201.61 326.96,-208.92 337.51,-207.99 334.63,-201.61"/>
+</g>
+<!-- sourcefile~write_data.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_node17" class="node">
+<title>sourcefile~write_data.f90</title>
+<g id="a_sourcefile~~comm_variable.f90~~AfferentGraph_node17"><a xlink:href="../sourcefile/write_data.f90.html" xlink:title="Write_data.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="581.1,-22.77 499.83,-22.77 499.83,0 581.1,0 581.1,-22.77"/>
+<text text-anchor="middle" x="540.46" y="-7.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Write_data.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~main.f90&#45;&gt;sourcefile~write_data.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge52" class="edge">
+<title>sourcefile~main.f90&#45;&gt;sourcefile~write_data.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M779.25,-126.38C716.5,-116.9 717.77,-72.72 658.36,-50.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1254.55,-271.57C1233.66,-262.01 1202.52,-249.09 1173.94,-242.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1171.94,-242.38C1129.01,-232.31 1131.5,-203.75 1092.93,-182.38 1074.27,-172.05 1068.1,-172.64 1048.04,-165.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-50.38C634.46,-42.15 609.95,-33.73 589.2,-26.82"/>
+<polygon fill="#000000" stroke="#000000" points="590.45,-23.55 579.86,-23.73 588.25,-30.19 590.45,-23.55"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1046.04,-165.38C934.19,-124.9 898.87,-144.15 781.25,-126.38"/>
+</g>
+<!-- sourcefile~mpi_setup.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge8" class="edge">
+<title>sourcefile~mpi_setup.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M137.85,-432.38C130.25,-432.38 122.11,-432.38 114,-432.38"/>
+<polygon fill="#000000" stroke="#000000" points="114.11,-428.89 104.11,-432.39 114.11,-435.89 114.11,-428.89"/>
+</g>
+<!-- sourcefile~operators.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge9" class="edge">
+<title>sourcefile~operators.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M177.53,-508.38C137.84,-497.45 98.26,-470 74.48,-451.27"/>
+<polygon fill="#000000" stroke="#000000" points="76.75,-448.6 66.77,-445.04 72.35,-454.04 76.75,-448.6"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M520.59,-367.12C456.9,-406.12 250.06,-527.83 179.53,-508.38"/>
+</g>
+<!-- sourcefile~operators.f90&#45;&gt;sourcefile~boundaries.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge18" class="edge">
+<title>sourcefile~operators.f90&#45;&gt;sourcefile~boundaries.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M522.47,-343.65C507.22,-333.19 484.18,-317.54 463.83,-304.38 460.12,-301.99 456.19,-299.5 452.3,-297.06"/>
+<polygon fill="#000000" stroke="#000000" points="454.48,-294.29 444.14,-291.99 450.78,-300.24 454.48,-294.29"/>
+</g>
+<!-- sourcefile~operators.f90&#45;&gt;sourcefile~mpi_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge31" class="edge">
+<title>sourcefile~operators.f90&#45;&gt;sourcefile~mpi_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M501.41,-349.2C478.15,-346.98 448.21,-346.99 423.44,-356.38"/>
+</g>
+<!-- sourcefile~operators.f90&#45;&gt;sourcefile~wavenumber.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge51" class="edge">
+<title>sourcefile~operators.f90&#45;&gt;sourcefile~wavenumber.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M501.34,-348.94C467.05,-341.61 416.75,-326.91 381.06,-299.38 358.51,-281.99 366,-265.69 345.06,-246.38 342.19,-243.74 338.99,-241.26 335.66,-238.97"/>
+<polygon fill="#000000" stroke="#000000" points="337.72,-236.13 327.38,-233.82 334.03,-242.08 337.72,-236.13"/>
+</g>
+<!-- sourcefile~read_setup.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge10" class="edge">
+<title>sourcefile~read_setup.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M871.92,-159.9C735.7,-141.76 307.31,-85.05 300.92,-88.38"/>
+</g>
+<!-- sourcefile~rhs.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge11" class="edge">
+<title>sourcefile~rhs.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M394.97,-55.06C369.79,-61.11 331.36,-72.08 300.92,-88.38"/>
+</g>
+<!-- sourcefile~smoother.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge12" class="edge">
+<title>sourcefile~smoother.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M298.92,-260.38C245.35,-256.33 220.93,-207.13 179.53,-241.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M539.46,-278.38C504.85,-280.23 498.23,-263.64 463.83,-259.38 391.97,-250.5 373.12,-265.85 300.92,-260.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M619.31,-277.46C596.77,-276.68 567.42,-276.38 541.46,-278.38"/>
+</g>
+<!-- sourcefile~smoother.f90&#45;&gt;sourcefile~boundaries.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge19" class="edge">
+<title>sourcefile~smoother.f90&#45;&gt;sourcefile~boundaries.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M539.46,-278.38C518.62,-279.5 495.63,-279.87 475.65,-279.93"/>
+<polygon fill="#000000" stroke="#000000" points="475.79,-276.43 465.79,-279.92 475.79,-283.43 475.79,-276.43"/>
+</g>
+<!-- sourcefile~smoother.f90&#45;&gt;sourcefile~mpi_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge32" class="edge">
+<title>sourcefile~smoother.f90&#45;&gt;sourcefile~mpi_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M298.92,-432.38C276.7,-435.75 251.89,-436.27 230.66,-435.74"/>
+<polygon fill="#000000" stroke="#000000" points="230.91,-432.25 220.79,-435.41 230.67,-439.24 230.91,-432.25"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M539.46,-278.38C477.42,-281.7 481.54,-334.35 423.44,-356.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M421.44,-356.38C362.24,-378.85 363.54,-422.9 300.92,-432.38"/>
+</g>
+<!-- sourcefile~smoother.f90&#45;&gt;sourcefile~operators.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge36" class="edge">
+<title>sourcefile~smoother.f90&#45;&gt;sourcefile~operators.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M637.52,-291.24C631.03,-295.36 623.72,-300.04 617.1,-304.38 600.74,-315.11 582.56,-327.35 568.13,-337.16"/>
+<polygon fill="#000000" stroke="#000000" points="566.35,-334.13 560.05,-342.65 570.29,-339.92 566.35,-334.13"/>
+</g>
+<!-- sourcefile~solvers.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge13" class="edge">
+<title>sourcefile~solvers.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1021.06,-230.66C995.15,-219.58 953.16,-204.61 915.02,-204.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M539.46,-202.38C510.44,-197.83 327.16,-75.18 300.92,-88.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M913.02,-204.38C781.31,-203.6 748.26,-176.35 617.1,-188.38 583.06,-191.51 574.68,-210.46 541.46,-202.38"/>
+</g>
+<!-- sourcefile~solvers.f90&#45;&gt;sourcefile~cslp_solver.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge21" class="edge">
+<title>sourcefile~solvers.f90&#45;&gt;sourcefile~cslp_solver.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M913.02,-204.38C868.21,-204.12 824.72,-237.38 800.62,-259.69"/>
+<polygon fill="#000000" stroke="#000000" points="798.25,-257.11 793.46,-266.56 803.1,-262.16 798.25,-257.11"/>
+</g>
+<!-- sourcefile~solvers.f90&#45;&gt;sourcefile~deflation_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge24" class="edge">
+<title>sourcefile~solvers.f90&#45;&gt;sourcefile~deflation_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1015,-251.15C1000.85,-255.15 983.72,-259.99 967.66,-264.52"/>
+<polygon fill="#000000" stroke="#000000" points="966.89,-261.1 958.22,-267.19 968.79,-267.84 966.89,-261.1"/>
+</g>
+<!-- sourcefile~solvers.f90&#45;&gt;sourcefile~operators.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge37" class="edge">
+<title>sourcefile~solvers.f90&#45;&gt;sourcefile~operators.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1017.2,-254.06C1011.68,-256.79 1006.09,-259.93 1001.16,-263.38 982.63,-276.38 983.45,-286.06 965.16,-299.38 909.34,-340.08 894.04,-354.15 826.89,-370.38 786.6,-380.13 774.9,-374.19 733.62,-370.38 699.74,-367.26 692.27,-359.14 658.36,-356.38"/>
+</g>
+<!-- sourcefile~solvers.f90&#45;&gt;sourcefile~read_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge41" class="edge">
+<title>sourcefile~solvers.f90&#45;&gt;sourcefile~read_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.32,-230.51C1016.11,-226.53 1008.19,-221.95 1001.16,-217.38 984.39,-206.49 982.18,-200.89 965.16,-190.38 960.64,-187.59 955.76,-184.86 950.89,-182.28"/>
+<polygon fill="#000000" stroke="#000000" points="952.86,-179.35 942.36,-177.92 949.68,-185.58 952.86,-179.35"/>
+</g>
+<!-- sourcefile~user_module.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge14" class="edge">
+<title>sourcefile~user_module.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-432.38C575.19,-415.28 383.87,-546.49 300.92,-546.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M298.92,-546.38C243.39,-542.34 232.87,-524.39 179.53,-508.38"/>
+</g>
+<!-- sourcefile~user_module.f90&#45;&gt;sourcefile~cslp_solver.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge22" class="edge">
+<title>sourcefile~user_module.f90&#45;&gt;sourcefile~cslp_solver.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1041.79,-294.96C1028.85,-327.95 986.42,-420.77 915.02,-432.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M913.02,-432.38C895.97,-435.16 827,-342.88 796.22,-300.34"/>
+<polygon fill="#000000" stroke="#000000" points="799.17,-298.44 790.48,-292.37 793.49,-302.53 799.17,-298.44"/>
+</g>
+<!-- sourcefile~user_module.f90&#45;&gt;sourcefile~deflation_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge25" class="edge">
+<title>sourcefile~user_module.f90&#45;&gt;sourcefile~deflation_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1000.96,-282.01C993.21,-281.77 985.04,-281.52 976.94,-281.28"/>
+<polygon fill="#000000" stroke="#000000" points="977.2,-277.78 967.1,-280.97 976.99,-284.78 977.2,-277.78"/>
+</g>
+<!-- sourcefile~user_module.f90&#45;&gt;sourcefile~operators.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge38" class="edge">
+<title>sourcefile~user_module.f90&#45;&gt;sourcefile~operators.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M656.36,-432.38C617.15,-426.09 580.65,-395.8 559.73,-375.14"/>
+<polygon fill="#000000" stroke="#000000" points="562.3,-372.76 552.8,-368.05 557.29,-377.65 562.3,-372.76"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M913.02,-432.38C801.31,-450.56 770.12,-450.31 658.36,-432.38"/>
+</g>
+<!-- sourcefile~wavenumber.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge15" class="edge">
+<title>sourcefile~wavenumber.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M254.48,-218.53C229.87,-219.27 200.17,-224.3 179.53,-241.38"/>
+</g>
+<!-- sourcefile~wavenumber.f90&#45;&gt;sourcefile~mpi_setup.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge33" class="edge">
+<title>sourcefile~wavenumber.f90&#45;&gt;sourcefile~mpi_setup.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M292.34,-233.03C273.1,-267.03 216.78,-366.55 191.76,-410.77"/>
+<polygon fill="#000000" stroke="#000000" points="188.87,-408.77 186.99,-419.2 194.96,-412.22 188.87,-408.77"/>
+</g>
+<!-- sourcefile~write_data.f90&#45;&gt;sourcefile~comm_variable.f90 -->
+<g id="sourcefile~~comm_variable.f90~~AfferentGraph_edge16" class="edge">
+<title>sourcefile~write_data.f90&#45;&gt;sourcefile~comm_variable.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M177.53,-241.38C119.4,-289.49 78.42,-371.56 61.2,-410.56"/>
+<polygon fill="#000000" stroke="#000000" points="58.14,-408.82 57.4,-419.39 64.57,-411.59 58.14,-408.82"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M298.92,-88.38C222.89,-129.11 245.98,-186.39 179.53,-241.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M499.37,-10.3C466.5,-10.72 419.32,-14.37 381.06,-29.38 339.89,-45.54 339.91,-67.5 300.92,-88.38"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var pansourcefilecomm_variablef90AfferentGraph = svgPanZoom('#sourcefilecomm_variablef90AfferentGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#AfferentGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="AfferentGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="188pt" height="31pt"
+ viewBox="0.00 0.00 187.89 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 183.89,-26.77 183.89,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="65.52,-22.77 0,-22.77 0,0 65.52,0 65.52,-22.77"/>
+<text text-anchor="middle" x="32.76" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="179.89,-22.77 83.62,-22.77 83.62,0 179.89,0 179.89,-22.77"/>
+<text text-anchor="middle" x="131.76" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a file to a file which it depends on. A file
+is dependent upon another if the latter must be compiled before the former
+can be.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+<br>
+      <section>
+        <h2><span class="anchor" id="src"></span>Source Code</h2>
+        <div class="hl codehilite"><pre><span></span><a id="ln-1" name="ln-1" href="#ln-1"></a><span class="k">module </span><span class="n">comm_variable</span>
+<a id="ln-2" name="ln-2" href="#ln-2"></a><span class="w">   </span><span class="c">!! This is a module that define some common variables for the whole project</span>
+<a id="ln-3" name="ln-3" href="#ln-3"></a><span class="w">   </span><span class="k">use </span><span class="n">mpi</span>
+<a id="ln-4" name="ln-4" href="#ln-4"></a><span class="w">   </span><span class="k">implicit none</span>
+<a id="ln-5" name="ln-5" href="#ln-5"></a>
+<a id="ln-6" name="ln-6" href="#ln-6"></a><span class="w">   </span><span class="c">!=====================math parameter===================</span>
+<a id="ln-7" name="ln-7" href="#ln-7"></a><span class="w">   </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">realdp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w">             </span>
+<a id="ln-8" name="ln-8" href="#ln-8"></a><span class="w">      </span><span class="c">!! precision for the whole program</span>
+<a id="ln-9" name="ln-9" href="#ln-9"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">realdp</span><span class="p">),</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.141592653589793238d0</span>
+<a id="ln-10" name="ln-10" href="#ln-10"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">realdp</span><span class="p">),</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.7182818285d0</span>
+<a id="ln-11" name="ln-11" href="#ln-11"></a>
+<a id="ln-12" name="ln-12" href="#ln-12"></a>
+<a id="ln-13" name="ln-13" href="#ln-13"></a><span class="w">   </span><span class="c">!========= program parameter=================</span>
+<a id="ln-14" name="ln-14" href="#ln-14"></a><span class="w">   </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">npMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">400</span><span class="w"> </span>
+<a id="ln-15" name="ln-15" href="#ln-15"></a><span class="w">      </span><span class="c">!! the maximun number of partitions in one dimension</span>
+<a id="ln-16" name="ln-16" href="#ln-16"></a>
+<a id="ln-17" name="ln-17" href="#ln-17"></a><span class="w">   </span><span class="kt">complex</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">),</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">cone</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">0.d0</span><span class="p">,</span><span class="mf">1.d0</span><span class="p">)</span>
+<a id="ln-18" name="ln-18" href="#ln-18"></a><span class="w">   </span><span class="kt">complex</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">),</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">czero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">0.d0</span><span class="p">,</span><span class="mf">0.d0</span><span class="p">)</span>
+<a id="ln-19" name="ln-19" href="#ln-19"></a><span class="w">      </span><span class="c">!! Constants for complex numbers</span>
+<a id="ln-20" name="ln-20" href="#ln-20"></a>
+<a id="ln-21" name="ln-21" href="#ln-21"></a><span class="w">   </span><span class="kt">character</span><span class="w"> </span><span class="p">(</span><span class="nb">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">filename</span>
+<a id="ln-22" name="ln-22" href="#ln-22"></a><span class="w">   </span><span class="kt">character</span><span class="w"> </span><span class="p">(</span><span class="nb">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">output_name</span>
+<a id="ln-23" name="ln-23" href="#ln-23"></a><span class="w">   </span><span class="kt">character</span><span class="w"> </span><span class="p">(</span><span class="nb">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">logname</span>
+<a id="ln-24" name="ln-24" href="#ln-24"></a><span class="w">      </span><span class="c">!! Strings for file names</span>
+<a id="ln-25" name="ln-25" href="#ln-25"></a>
+<a id="ln-26" name="ln-26" href="#ln-26"></a><span class="w">   </span><span class="c">!=========solver parameter================</span>
+<a id="ln-27" name="ln-27" href="#ln-27"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">eps</span>
+<a id="ln-28" name="ln-28" href="#ln-28"></a><span class="w">      </span><span class="c">!! eps: tolerance for the outer iterations</span>
+<a id="ln-29" name="ln-29" href="#ln-29"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">def_rtol</span>
+<a id="ln-30" name="ln-30" href="#ln-30"></a><span class="w">      </span><span class="c">!! def_rtol: tolerance for the coarse-grid solver in two-level deflation method</span>
+<a id="ln-31" name="ln-31" href="#ln-31"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">cslp_mg_tol</span>
+<a id="ln-32" name="ln-32" href="#ln-32"></a><span class="w">      </span><span class="c">!! cslp_mg_tol: tolerance for Krylov based CSLP solver on coarse-grid levels</span>
+<a id="ln-33" name="ln-33" href="#ln-33"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">m_iter</span>
+<a id="ln-34" name="ln-34" href="#ln-34"></a><span class="w">      </span><span class="c">!! m_iter: maximum number of outer iterations</span>
+<a id="ln-35" name="ln-35" href="#ln-35"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">Algorithm</span>
+<a id="ln-36" name="ln-36" href="#ln-36"></a><span class="w">      </span><span class="c">!! Algorithm: solver identifier</span>
+<a id="ln-37" name="ln-37" href="#ln-37"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">Irestart</span>
+<a id="ln-38" name="ln-38" href="#ln-38"></a><span class="w">      </span><span class="c">!! Irestart: Restart GMRES (1) or full GMRES (0) </span>
+<a id="ln-39" name="ln-39" href="#ln-39"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">M_flag</span>
+<a id="ln-40" name="ln-40" href="#ln-40"></a><span class="w">      </span><span class="c">!! M_flag: Flag for preconditioner type</span>
+<a id="ln-41" name="ln-41" href="#ln-41"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">M2h_flag</span>
+<a id="ln-42" name="ln-42" href="#ln-42"></a><span class="w">      </span><span class="c">!! M2h_flag: In two-level deflation method, flag for using CSLP for the coarse level (1) or not (0)</span>
+<a id="ln-43" name="ln-43" href="#ln-43"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">A2h_flag</span>
+<a id="ln-44" name="ln-44" href="#ln-44"></a><span class="w">      </span><span class="c">!! A2h_flag: In two-level deflation method, flag for the ReD method used for the coarse level operator</span>
+<a id="ln-45" name="ln-45" href="#ln-45"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">def_mg_miter</span>
+<a id="ln-46" name="ln-46" href="#ln-46"></a><span class="w">      </span><span class="c">!! def_mg_miter: maximum number of iterations for deflation on the coarse levels</span>
+<a id="ln-47" name="ln-47" href="#ln-47"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">cslp_mg_miter</span>
+<a id="ln-48" name="ln-48" href="#ln-48"></a><span class="w">      </span><span class="c">!! cslp_mg_miter: maximum number of iterations for solving CSLP by multigrid method on the coarsest level</span>
+<a id="ln-49" name="ln-49" href="#ln-49"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">MG_flag</span>
+<a id="ln-50" name="ln-50" href="#ln-50"></a><span class="w">      </span><span class="c">!! MG_flag: flag for the type of multigrid method</span>
+<a id="ln-51" name="ln-51" href="#ln-51"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nx_min</span>
+<a id="ln-52" name="ln-52" href="#ln-52"></a><span class="w">      </span><span class="c">!! nx_min: minimum number of grid points in x-direction for the coarsest grid, it is used to specified the grid size of the coarsest grid when coarsening</span>
+<a id="ln-53" name="ln-53" href="#ln-53"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">def_nlevel</span><span class="w">   </span>
+<a id="ln-54" name="ln-54" href="#ln-54"></a><span class="w">      </span><span class="c">!! def_nlevel: Number of levels in multilevel deflation method</span>
+<a id="ln-55" name="ln-55" href="#ln-55"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">indf_level</span>
+<a id="ln-56" name="ln-56" href="#ln-56"></a><span class="w">      </span><span class="c">!! indf_level: The level that the linear system becomes indefinite</span>
+<a id="ln-57" name="ln-57" href="#ln-57"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">Sv_L2</span>
+<a id="ln-58" name="ln-58" href="#ln-58"></a><span class="w">      </span><span class="c">!! Sv_L2: In multilevel method, a single-digit number that sets the tolerance for the second coarse grid iterations, ex. 1 means 1E-1</span>
+<a id="ln-59" name="ln-59" href="#ln-59"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">Sv_L3</span><span class="w">   </span>
+<a id="ln-60" name="ln-60" href="#ln-60"></a><span class="w">      </span><span class="c">!! Sv_L3: In multilevel method, a single-digit number that sets the tolerance for the third coarse grid iterations, ex. 3 means 3E-1</span>
+<a id="ln-61" name="ln-61" href="#ln-61"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">Sv_L4</span><span class="w">   </span>
+<a id="ln-62" name="ln-62" href="#ln-62"></a><span class="w">      </span><span class="c">!! Sv_L4: In multilevel method, a single-digit number that sets the tolerance for the fourth coarse grid iterations, ex. 10 means one iteration</span>
+<a id="ln-63" name="ln-63" href="#ln-63"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w">  </span><span class="n">npx0</span>
+<a id="ln-64" name="ln-64" href="#ln-64"></a><span class="w">      </span><span class="c">!! npx0: Number of partitions in x-direction</span>
+<a id="ln-65" name="ln-65" href="#ln-65"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w">  </span><span class="n">npy0</span>
+<a id="ln-66" name="ln-66" href="#ln-66"></a><span class="w">      </span><span class="c">!! npy0: Number of partitions in y-direction</span>
+<a id="ln-67" name="ln-67" href="#ln-67"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w">  </span><span class="n">npx</span>
+<a id="ln-68" name="ln-68" href="#ln-68"></a><span class="w">      </span><span class="c">!! npx: The coordinate/order of the current partition in x-direction</span>
+<a id="ln-69" name="ln-69" href="#ln-69"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w">  </span><span class="n">npy</span>
+<a id="ln-70" name="ln-70" href="#ln-70"></a><span class="w">      </span><span class="c">!! npy: The coordinate/order of the current partition in y-direction</span>
+<a id="ln-71" name="ln-71" href="#ln-71"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w">  </span><span class="n">nx_global</span>
+<a id="ln-72" name="ln-72" href="#ln-72"></a><span class="w">      </span><span class="c">!! nx_global: Global number of grid points in x-direction</span>
+<a id="ln-73" name="ln-73" href="#ln-73"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w">  </span><span class="n">ny_global</span>
+<a id="ln-74" name="ln-74" href="#ln-74"></a><span class="w">      </span><span class="c">!! ny_global: Global number of grid points in y-direction</span>
+<a id="ln-75" name="ln-75" href="#ln-75"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w">  </span><span class="n">nx</span>
+<a id="ln-76" name="ln-76" href="#ln-76"></a><span class="w">      </span><span class="c">!! nx: Local number of grid points of the current subdomain in x-direction</span>
+<a id="ln-77" name="ln-77" href="#ln-77"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w">  </span><span class="n">ny</span>
+<a id="ln-78" name="ln-78" href="#ln-78"></a><span class="w">      </span><span class="c">!! ny: Local number of grid points of the current subdomain in y-direction</span>
+<a id="ln-79" name="ln-79" href="#ln-79"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ID_XM1</span><span class="w">  </span>
+<a id="ln-80" name="ln-80" href="#ln-80"></a><span class="w">      </span><span class="c">!! ID_XM1: Identifier for neighboring partition in the -x direction  </span>
+<a id="ln-81" name="ln-81" href="#ln-81"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ID_XP1</span><span class="w">  </span>
+<a id="ln-82" name="ln-82" href="#ln-82"></a><span class="w">      </span><span class="c">!! ID_XP1: Identifier for neighboring partition in the +x direction  </span>
+<a id="ln-83" name="ln-83" href="#ln-83"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ID_YM1</span><span class="w">  </span>
+<a id="ln-84" name="ln-84" href="#ln-84"></a><span class="w">      </span><span class="c">!! ID_YM1: Identifier for neighboring partition in the -y direction  </span>
+<a id="ln-85" name="ln-85" href="#ln-85"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ID_YP1</span><span class="w">  </span>
+<a id="ln-86" name="ln-86" href="#ln-86"></a><span class="w">      </span><span class="c">!! ID_YP1: Identifier for neighboring partition in the +y direction  </span>
+<a id="ln-87" name="ln-87" href="#ln-87"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">Iperiodic_X</span><span class="w">  </span>
+<a id="ln-88" name="ln-88" href="#ln-88"></a><span class="w">      </span><span class="c">!! Iperiodic_X: Periodicity flag in x-direction  </span>
+<a id="ln-89" name="ln-89" href="#ln-89"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">Iperiodic_Y</span><span class="w">  </span>
+<a id="ln-90" name="ln-90" href="#ln-90"></a><span class="w">      </span><span class="c">!! Iperiodic_Y: Periodicity flag in y-direction</span>
+<a id="ln-91" name="ln-91" href="#ln-91"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">slx</span><span class="w">  </span>
+<a id="ln-92" name="ln-92" href="#ln-92"></a><span class="w">      </span><span class="c">!! slx: Physical length of the computational domain in x direction  </span>
+<a id="ln-93" name="ln-93" href="#ln-93"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">sly</span><span class="w">  </span>
+<a id="ln-94" name="ln-94" href="#ln-94"></a><span class="w">      </span><span class="c">!! sly: Physical length of the computational domain in y direction  </span>
+<a id="ln-95" name="ln-95" href="#ln-95"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">hx</span><span class="w">  </span>
+<a id="ln-96" name="ln-96" href="#ln-96"></a><span class="w">      </span><span class="c">!! hx: Grid spacing in x-direction  </span>
+<a id="ln-97" name="ln-97" href="#ln-97"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">hy</span><span class="w">  </span>
+<a id="ln-98" name="ln-98" href="#ln-98"></a><span class="w">      </span><span class="c">!! hy: Grid spacing in y-direction  </span>
+<a id="ln-99" name="ln-99" href="#ln-99"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">hxhy</span><span class="w">  </span>
+<a id="ln-100" name="ln-100" href="#ln-100"></a><span class="w">      </span><span class="c">!! hxhy: Product of grid spacings hx * hy, for this project hx must equal to hy, so hxhy=h^2</span>
+<a id="ln-101" name="ln-101" href="#ln-101"></a><span class="w">   </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">npMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i_offset</span><span class="w">  </span>
+<a id="ln-102" name="ln-102" href="#ln-102"></a><span class="w">      </span><span class="c">!! i_offset: an array that contains the index offset for MPI ranks in x direction   </span>
+<a id="ln-103" name="ln-103" href="#ln-103"></a><span class="w">   </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">npMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">j_offset</span><span class="w">  </span>
+<a id="ln-104" name="ln-104" href="#ln-104"></a><span class="w">      </span><span class="c">!! j_offset: an array that contains the index offset for MPI ranks in y direction  </span>
+<a id="ln-105" name="ln-105" href="#ln-105"></a><span class="w">   </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">npMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i_nn</span><span class="w">  </span>
+<a id="ln-106" name="ln-106" href="#ln-106"></a><span class="w">      </span><span class="c">!! i_nn: an array that contains the number of grid points for MPI ranks in x direction  </span>
+<a id="ln-107" name="ln-107" href="#ln-107"></a><span class="w">   </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">npMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">j_nn</span><span class="w">  </span>
+<a id="ln-108" name="ln-108" href="#ln-108"></a><span class="w">      </span><span class="c">!! j_nn: an array that contains the number of grid points for MPI ranks in y direction</span>
+<a id="ln-109" name="ln-109" href="#ln-109"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">LAP</span>
+<a id="ln-110" name="ln-110" href="#ln-110"></a><span class="w">      </span><span class="c">!! The number of overlapping layers. The higher order deflation will be turned on once LAP &gt; 1</span>
+<a id="ln-111" name="ln-111" href="#ln-111"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i_case</span>
+<a id="ln-112" name="ln-112" href="#ln-112"></a><span class="w">      </span><span class="c">!! Case identifier</span>
+<a id="ln-113" name="ln-113" href="#ln-113"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">freq</span><span class="w">  </span>
+<a id="ln-114" name="ln-114" href="#ln-114"></a><span class="w">      </span><span class="c">!! freq: the frequency for Helmholtz problem  </span>
+<a id="ln-115" name="ln-115" href="#ln-115"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">k0</span><span class="w">  </span>
+<a id="ln-116" name="ln-116" href="#ln-116"></a><span class="w">      </span><span class="c">!! k0: the wavenumber for constant-wavenumber model problem  </span>
+<a id="ln-117" name="ln-117" href="#ln-117"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">beta1</span><span class="w">  </span>
+<a id="ln-118" name="ln-118" href="#ln-118"></a><span class="w">      </span><span class="c">!! beta1: the real term for CSLP, usually 1.d0  </span>
+<a id="ln-119" name="ln-119" href="#ln-119"></a><span class="w">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">beta2</span><span class="w">  </span>
+<a id="ln-120" name="ln-120" href="#ln-120"></a><span class="w">      </span><span class="c">!! beta2: the complex shift for CSLP</span>
+<a id="ln-121" name="ln-121" href="#ln-121"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">k_case</span>
+<a id="ln-122" name="ln-122" href="#ln-122"></a><span class="w">      </span><span class="c">!! k_case: Case identifier for constant (0) or non-constant (1) wavenumber</span>
+<a id="ln-123" name="ln-123" href="#ln-123"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">flag_BCs</span>
+<a id="ln-124" name="ln-124" href="#ln-124"></a><span class="w">      </span><span class="c">!! flag_BCs: Boundary conditions flag</span>
+<a id="ln-125" name="ln-125" href="#ln-125"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ierr</span><span class="w">  </span>
+<a id="ln-126" name="ln-126" href="#ln-126"></a><span class="w">      </span><span class="c">!! ierr: MPI error code  </span>
+<a id="ln-127" name="ln-127" href="#ln-127"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">np_size</span><span class="w">  </span>
+<a id="ln-128" name="ln-128" href="#ln-128"></a><span class="w">      </span><span class="c">!! np_size: the total number of MPI processes  </span>
+<a id="ln-129" name="ln-129" href="#ln-129"></a><span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">my_id</span><span class="w">  </span>
+<a id="ln-130" name="ln-130" href="#ln-130"></a><span class="w">      </span><span class="c">!! my_id: MPI rank ID</span>
+<a id="ln-131" name="ln-131" href="#ln-131"></a><span class="w">   </span><span class="kt">integer</span><span class="kd">::</span><span class="n">STATUS</span><span class="p">(</span><span class="n">MPI_STATUS_SIZE</span><span class="p">),</span><span class="w"> </span><span class="n">request1</span><span class="p">,</span><span class="w"> </span><span class="n">request2</span>
+<a id="ln-132" name="ln-132" href="#ln-132"></a><span class="w">      </span><span class="c">!! MPI status array</span>
+<a id="ln-133" name="ln-133" href="#ln-133"></a>
+<a id="ln-134" name="ln-134" href="#ln-134"></a><span class="w">   </span><span class="k">type</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Gridpara</span>
+<a id="ln-135" name="ln-135" href="#ln-135"></a><span class="w">      </span><span class="c">!! Type definition for grid parameters</span>
+<a id="ln-136" name="ln-136" href="#ln-136"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">nx_global</span><span class="p">,</span><span class="w"> </span><span class="n">ny_global</span>
+<a id="ln-137" name="ln-137" href="#ln-137"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span>
+<a id="ln-138" name="ln-138" href="#ln-138"></a><span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">hx</span><span class="p">,</span><span class="w"> </span><span class="n">hy</span><span class="p">,</span><span class="w"> </span><span class="n">hxhy</span>
+<a id="ln-139" name="ln-139" href="#ln-139"></a><span class="w">      </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">npMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i_offset</span><span class="p">,</span><span class="w"> </span><span class="n">j_offset</span><span class="p">,</span><span class="w"> </span><span class="n">i_nn</span><span class="p">,</span><span class="w"> </span><span class="n">j_nn</span>
+<a id="ln-140" name="ln-140" href="#ln-140"></a><span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">wavenumber_k</span><span class="w">  </span>
+<a id="ln-141" name="ln-141" href="#ln-141"></a><span class="w">         </span><span class="c">!! wavenumber_k: the wavenumber profile of the domain  </span>
+<a id="ln-142" name="ln-142" href="#ln-142"></a><span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realdp</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">wavenumber_kh_pow_2</span><span class="w">  </span>
+<a id="ln-143" name="ln-143" href="#ln-143"></a><span class="w">         </span><span class="c">!! wavenumber_kh_pow_2 = (kh)^2</span>
+<a id="ln-144" name="ln-144" href="#ln-144"></a><span class="w">   </span><span class="k">end type </span><span class="n">Gridpara</span>
+<a id="ln-145" name="ln-145" href="#ln-145"></a>
+<a id="ln-146" name="ln-146" href="#ln-146"></a><span class="k">end module </span><span class="n">comm_variable</span>
+</pre></div>
+
+      </section>
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

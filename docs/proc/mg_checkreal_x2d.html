@@ -1,0 +1,1186 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>mg_checkreal_x2d &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>mg_checkreal_x2d
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 1.3% of total for procedures.">58 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MPI_setup.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mpi_setup.f90.html'>MPI_setup.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mpi_setup.html'>mpi_setup</a></li>
+            <li class="breadcrumb-item active" aria-current="page">mg_checkreal_x2d</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine mg_checkreal_x2d(f, ni, nj)  
+</h2>
+    
+
+    <p>Exchanges REAL data in the x direction, for a specified-size grid system
+no2
+no2</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f~9"></span>
+              real(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f</strong>(1-LAP:ni+LAP,1-LAP:nj+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ni~13"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ni</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nj~13"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: proc~~mg_checkreal_x2d~~CallsGraph Pages: 1 -->
+<svg id="procmg_checkreal_x2dCallsGraph" width="224pt" height="31pt"
+ viewBox="0.00 0.00 223.79 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~mg_checkreal_x2d~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>proc~~mg_checkreal_x2d~~CallsGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 219.79,-26.77 219.79,4 -4,4"/>
+<!-- proc~mg_checkreal_x2d -->
+<g id="proc~~mg_checkreal_x2d~~CallsGraph_node1" class="node">
+<title>proc~mg_checkreal_x2d</title>
+<polygon fill="none" stroke="black" points="101.52,-22.77 0,-22.77 0,0 101.52,0 101.52,-22.77"/>
+<text text-anchor="middle" x="50.76" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">mg_checkreal_x2d</text>
+</g>
+<!-- mpi_sendrecv -->
+<g id="proc~~mg_checkreal_x2d~~CallsGraph_node2" class="node">
+<title>mpi_sendrecv</title>
+<polygon fill="#777777" stroke="#777777" points="215.79,-22.77 137.52,-22.77 137.52,0 215.79,0 215.79,-22.77"/>
+<text text-anchor="middle" x="176.65" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_sendrecv</text>
+</g>
+<!-- proc~mg_checkreal_x2d&#45;&gt;mpi_sendrecv -->
+<g id="proc~~mg_checkreal_x2d~~CallsGraph_edge1" class="edge">
+<title>proc~mg_checkreal_x2d&#45;&gt;mpi_sendrecv</title>
+<path fill="none" stroke="#000000" d="M101.8,-11.39C109.74,-11.39 117.95,-11.39 125.89,-11.39"/>
+<polygon fill="#000000" stroke="#000000" points="125.74,-14.89 135.74,-11.39 125.74,-7.89 125.74,-14.89"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 28.43" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.923937 0.923937) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 689.77,-26.77 689.77,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="63.27,-22.77 0,-22.77 0,0 63.27,0 63.27,-22.77"/>
+<text text-anchor="middle" x="31.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="135.63,-22.77 81.64,-22.77 81.64,0 135.63,0 135.63,-22.77"/>
+<text text-anchor="middle" x="108.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="207.63,-22.77 153.63,-22.77 153.63,0 207.63,0 207.63,-22.77"/>
+<text text-anchor="middle" x="180.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="347.14,-22.77 226.12,-22.77 226.12,0 347.14,0 347.14,-22.77"/>
+<text text-anchor="middle" x="286.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="499.89,-22.77 365.38,-22.77 365.38,0 499.89,0 499.89,-22.77"/>
+<text text-anchor="middle" x="432.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="571.63,-22.77 517.63,-22.77 517.63,0 571.63,0 571.63,-22.77"/>
+<text text-anchor="middle" x="544.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="685.77,-22.77 589.5,-22.77 589.5,0 685.77,0 685.77,-22.77"/>
+<text text-anchor="middle" x="637.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: proc~~mg_checkreal_x2d~~CalledByGraph Pages: 1 -->
+<svg id="procmg_checkreal_x2dCalledByGraph" width="641pt" height="132pt"
+ viewBox="0.00 0.00 641.00 132.30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph" class="graph" transform="scale(0.290922 0.290922) rotate(0) translate(4 450.77)">
+<title>proc~~mg_checkreal_x2d~~CalledByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-450.77 2199.34,-450.77 2199.34,4 -4,4"/>
+<!-- proc~mg_checkreal_x2d -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node1" class="node">
+<title>proc~mg_checkreal_x2d</title>
+<polygon fill="none" stroke="black" points="2195.34,-370.77 2093.82,-370.77 2093.82,-348 2195.34,-348 2195.34,-370.77"/>
+<text text-anchor="middle" x="2144.58" y="-355.03" font-family="Helvetica,sans-Serif" font-size="10.50">mg_checkreal_x2d</text>
+</g>
+<!-- proc~mg_checkreal_xy2d -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node2" class="node">
+<title>proc~mg_checkreal_xy2d</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node2"><a xlink:href="../proc/mg_checkreal_xy2d.html" xlink:title="mg_checkreal_xy2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="2057.82,-370.77 1951.05,-370.77 1951.05,-348 2057.82,-348 2057.82,-370.77"/>
+<text text-anchor="middle" x="2004.44" y="-355.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mg_checkreal_xy2d</text>
+</a>
+</g>
+</g>
+<!-- proc~mg_checkreal_xy2d&#45;&gt;proc~mg_checkreal_x2d -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge1" class="edge">
+<title>proc~mg_checkreal_xy2d&#45;&gt;proc~mg_checkreal_x2d</title>
+<path fill="none" stroke="#000000" d="M2058.06,-359.38C2065.84,-359.38 2073.93,-359.38 2081.88,-359.38"/>
+<polygon fill="#000000" stroke="#000000" points="2081.87,-362.89 2091.87,-359.39 2081.87,-355.89 2081.87,-362.89"/>
+</g>
+<!-- proc~const_k -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node3" class="node">
+<title>proc~const_k</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node3"><a xlink:href="../proc/const_k.html" xlink:title="Const_K">
+<polygon fill="#d9534f" stroke="#d9534f" points="396.57,-446.77 342.57,-446.77 342.57,-424 396.57,-424 396.57,-446.77"/>
+<text text-anchor="middle" x="369.57" y="-431.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Const_K</text>
+</a>
+</g>
+</g>
+<!-- proc~const_k&#45;&gt;proc~mg_checkreal_xy2d -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge2" class="edge">
+<title>proc~const_k&#45;&gt;proc~mg_checkreal_xy2d</title>
+<path fill="none" stroke="#000000" d="M396.82,-435.57C439.57,-435.86 526.89,-436.38 600.86,-436.38 600.86,-436.38 600.86,-436.38 1688.77,-436.38 1790.67,-436.38 1817.5,-428.87 1915.05,-399.38 1934.36,-393.55 1954.95,-384.42 1971.39,-376.35"/>
+<polygon fill="#000000" stroke="#000000" points="1972.82,-379.55 1980.19,-371.93 1969.68,-373.29 1972.82,-379.55"/>
+</g>
+<!-- proc~read_wavenumber_k_marmousi -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node4" class="node">
+<title>proc~read_wavenumber_k_marmousi</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node4"><a xlink:href="../proc/read_wavenumber_k_marmousi.html" xlink:title="read_wavenumber_k_marmousi">
+<polygon fill="#d9534f" stroke="#d9534f" points="1102.68,-408.77 937.41,-408.77 937.41,-386 1102.68,-386 1102.68,-408.77"/>
+<text text-anchor="middle" x="1020.05" y="-393.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_wavenumber_k_marmousi</text>
+</a>
+</g>
+</g>
+<!-- proc~read_wavenumber_k_marmousi&#45;&gt;proc~mg_checkreal_xy2d -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge3" class="edge">
+<title>proc~read_wavenumber_k_marmousi&#45;&gt;proc~mg_checkreal_xy2d</title>
+<path fill="none" stroke="#000000" d="M1103.11,-397.81C1161.84,-398.09 1242.76,-398.38 1313.96,-398.38 1313.96,-398.38 1313.96,-398.38 1688.77,-398.38 1776.27,-398.38 1876.43,-383.35 1939.79,-371.95"/>
+<polygon fill="#000000" stroke="#000000" points="1940.09,-375.45 1949.3,-370.21 1938.84,-368.56 1940.09,-375.45"/>
+</g>
+<!-- proc~restriction -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node5" class="node">
+<title>proc~restriction</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node5"><a xlink:href="../proc/restriction.html" xlink:title="restriction">
+<polygon fill="#d9534f" stroke="#d9534f" points="1873.05,-293.77 1815.03,-293.77 1815.03,-271 1873.05,-271 1873.05,-293.77"/>
+<text text-anchor="middle" x="1844.04" y="-278.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">restriction</text>
+</a>
+</g>
+</g>
+<!-- proc~restriction&#45;&gt;proc~mg_checkreal_xy2d -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge4" class="edge">
+<title>proc~restriction&#45;&gt;proc~mg_checkreal_xy2d</title>
+<path fill="none" stroke="#000000" d="M1869.44,-294.25C1896.07,-307.19 1938.9,-328.01 1968.96,-342.62"/>
+<polygon fill="#000000" stroke="#000000" points="1967.12,-345.62 1977.64,-346.85 1970.18,-339.33 1967.12,-345.62"/>
+</g>
+<!-- proc~wavenumber_fwrestriction -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node6" class="node">
+<title>proc~wavenumber_fwrestriction</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node6"><a xlink:href="../proc/wavenumber_fwrestriction.html" xlink:title="wavenumber_FWrestriction">
+<polygon fill="#d9534f" stroke="#d9534f" points="1915.05,-224.77 1773.03,-224.77 1773.03,-202 1915.05,-202 1915.05,-224.77"/>
+<text text-anchor="middle" x="1844.04" y="-209.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">wavenumber_FWrestriction</text>
+</a>
+</g>
+</g>
+<!-- proc~wavenumber_fwrestriction&#45;&gt;proc~mg_checkreal_xy2d -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge5" class="edge">
+<title>proc~wavenumber_fwrestriction&#45;&gt;proc~mg_checkreal_xy2d</title>
+<path fill="none" stroke="#000000" d="M1864.3,-225.21C1878.86,-234.54 1899.01,-248.28 1915.05,-262.38 1942.37,-286.41 1970.01,-318.21 1986.93,-338.74"/>
+<polygon fill="#000000" stroke="#000000" points="1984.13,-340.85 1993.16,-346.39 1989.56,-336.42 1984.13,-340.85"/>
+</g>
+<!-- proc~wavenumber_k_wedge -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node7" class="node">
+<title>proc~wavenumber_k_wedge</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node7"><a xlink:href="../proc/wavenumber_k_wedge.html" xlink:title="wavenumber_k_Wedge">
+<polygon fill="#d9534f" stroke="#d9534f" points="1376.97,-370.77 1252.95,-370.77 1252.95,-348 1376.97,-348 1376.97,-370.77"/>
+<text text-anchor="middle" x="1314.96" y="-355.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">wavenumber_k_Wedge</text>
+</a>
+</g>
+</g>
+<!-- proc~wavenumber_k_wedge&#45;&gt;proc~mg_checkreal_xy2d -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge6" class="edge">
+<title>proc~wavenumber_k_wedge&#45;&gt;proc~mg_checkreal_xy2d</title>
+<path fill="none" stroke="#000000" d="M1377.3,-359.38C1429.43,-359.38 1506.25,-359.38 1573.25,-359.38 1573.25,-359.38 1573.25,-359.38 1688.77,-359.38 1775.56,-359.38 1875.8,-359.38 1939.39,-359.38"/>
+<polygon fill="#000000" stroke="#000000" points="1939.31,-362.89 1949.31,-359.39 1939.31,-355.89 1939.31,-362.89"/>
+</g>
+<!-- proc~f_cycle -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node8" class="node">
+<title>proc~f_cycle</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node8"><a xlink:href="../proc/f_cycle.html" xlink:title="F_cycle">
+<polygon fill="#d9534f" stroke="#d9534f" points="1601.25,-284.77 1547.25,-284.77 1547.25,-262 1601.25,-262 1601.25,-284.77"/>
+<text text-anchor="middle" x="1574.25" y="-269.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">F_cycle</text>
+</a>
+</g>
+</g>
+<!-- proc~f_cycle&#45;&gt;proc~restriction -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge9" class="edge">
+<title>proc~f_cycle&#45;&gt;proc~restriction</title>
+<path fill="none" stroke="#000000" d="M1601.41,-274.26C1648.5,-275.85 1747.75,-279.18 1803.28,-281.05"/>
+<polygon fill="#000000" stroke="#000000" points="1803.14,-284.55 1813.25,-281.38 1803.37,-277.55 1803.14,-284.55"/>
+</g>
+<!-- proc~f_cycle&#45;&gt;proc~f_cycle -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge13" class="edge">
+<title>proc~f_cycle&#45;&gt;proc~f_cycle</title>
+<path fill="none" stroke="#000000" d="M1555.6,-285.15C1549.09,-293.93 1555.31,-302.77 1574.25,-302.77 1584.31,-302.77 1590.78,-300.27 1593.66,-296.62"/>
+<polygon fill="#000000" stroke="#000000" points="1597.16,-296.41 1593,-286.66 1590.17,-296.87 1597.16,-296.41"/>
+</g>
+<!-- proc~v_cycle -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node10" class="node">
+<title>proc~v_cycle</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node10"><a xlink:href="../proc/v_cycle.html" xlink:title="V_cycle">
+<polygon fill="#d9534f" stroke="#d9534f" points="1714.77,-236.77 1660.77,-236.77 1660.77,-214 1714.77,-214 1714.77,-236.77"/>
+<text text-anchor="middle" x="1687.77" y="-221.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">V_cycle</text>
+</a>
+</g>
+</g>
+<!-- proc~f_cycle&#45;&gt;proc~v_cycle -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge17" class="edge">
+<title>proc~f_cycle&#45;&gt;proc~v_cycle</title>
+<path fill="none" stroke="#000000" d="M1601.68,-262.01C1616.12,-255.79 1634.24,-248 1650.04,-241.2"/>
+<polygon fill="#000000" stroke="#000000" points="1651.34,-244.45 1659.14,-237.28 1648.57,-238.02 1651.34,-244.45"/>
+</g>
+<!-- proc~fromfine2coarse -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node9" class="node">
+<title>proc~fromfine2coarse</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node9"><a xlink:href="../proc/fromfine2coarse.html" xlink:title="FromFine2Coarse">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="1737.03,-119.77 1638.51,-119.77 1638.51,-97 1737.03,-97 1737.03,-119.77"/>
+<text text-anchor="middle" x="1687.77" y="-104.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">FromFine2Coarse</text>
+</a>
+</g>
+</g>
+<!-- proc~fromfine2coarse&#45;&gt;proc~wavenumber_fwrestriction -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge11" class="edge">
+<title>proc~fromfine2coarse&#45;&gt;proc~wavenumber_fwrestriction</title>
+<path fill="none" stroke="#000000" d="M1706.17,-120.23C1733.04,-138.52 1784.86,-173.78 1816.45,-195.29"/>
+<polygon fill="#000000" stroke="#000000" points="1814.45,-198.16 1824.69,-200.9 1818.39,-192.38 1814.45,-198.16"/>
+</g>
+<!-- proc~v_cycle&#45;&gt;proc~restriction -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge10" class="edge">
+<title>proc~v_cycle&#45;&gt;proc~restriction</title>
+<path fill="none" stroke="#000000" d="M1714.94,-235.05C1739.38,-244.08 1776.17,-257.68 1804.06,-267.98"/>
+<polygon fill="#000000" stroke="#000000" points="1802.63,-271.19 1813.23,-271.37 1805.06,-264.62 1802.63,-271.19"/>
+</g>
+<!-- proc~v_cycle&#45;&gt;proc~v_cycle -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge20" class="edge">
+<title>proc~v_cycle&#45;&gt;proc~v_cycle</title>
+<path fill="none" stroke="#000000" d="M1669,-237.15C1662.45,-245.93 1668.7,-254.77 1687.77,-254.77 1697.9,-254.77 1704.41,-252.27 1707.31,-248.62"/>
+<polygon fill="#000000" stroke="#000000" points="1710.81,-248.4 1706.64,-238.66 1703.82,-248.88 1710.81,-248.4"/>
+</g>
+<!-- program~helmholtz_2d -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node11" class="node">
+<title>program~helmholtz_2d</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node11"><a xlink:href="../program/helmholtz_2d.html" xlink:title="helmholtz_2d">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="75.27,-310.77 0,-310.77 0,-288 75.27,-288 75.27,-310.77"/>
+<text text-anchor="middle" x="37.64" y="-295.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">helmholtz_2d</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;proc~const_k -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge7" class="edge">
+<title>program~helmholtz_2d&#45;&gt;proc~const_k</title>
+<path fill="none" stroke="#000000" d="M42.37,-310.97C50.59,-334.37 72.65,-387.02 111.27,-410.38 179.81,-451.86 277.86,-447.65 330.95,-441.3"/>
+<polygon fill="#000000" stroke="#000000" points="331.22,-444.79 340.69,-440.04 330.32,-437.85 331.22,-444.79"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;proc~read_wavenumber_k_marmousi -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge8" class="edge">
+<title>program~helmholtz_2d&#45;&gt;proc~read_wavenumber_k_marmousi</title>
+<path fill="none" stroke="#000000" d="M46.45,-311.02C58.31,-327.67 82.56,-357.86 111.27,-372.38 175.39,-404.83 199.31,-396.38 271.18,-396.38 271.18,-396.38 271.18,-396.38 733.63,-396.38 797.72,-396.38 869.9,-396.64 925.64,-396.89"/>
+<polygon fill="#000000" stroke="#000000" points="925.39,-400.39 935.41,-396.94 925.42,-393.39 925.39,-400.39"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;proc~wavenumber_k_wedge -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge12" class="edge">
+<title>program~helmholtz_2d&#45;&gt;proc~wavenumber_k_wedge</title>
+<path fill="none" stroke="#000000" d="M66.34,-311.18C109.35,-328.4 195.16,-358.38 271.18,-358.38 271.18,-358.38 271.18,-358.38 1021.05,-358.38 1096.01,-358.38 1181.78,-358.72 1241.04,-359"/>
+<polygon fill="#000000" stroke="#000000" points="1241,-362.5 1251.01,-359.05 1241.03,-355.5 1241,-362.5"/>
+</g>
+<!-- proc~full_pgcr -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node27" class="node">
+<title>proc~full_pgcr</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node27"><a xlink:href="../proc/full_pgcr.html" xlink:title="full_pgcr">
+<polygon fill="#d9534f" stroke="#d9534f" points="299.18,-330.77 245.18,-330.77 245.18,-308 299.18,-308 299.18,-330.77"/>
+<text text-anchor="middle" x="272.18" y="-315.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">full_pgcr</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;proc~full_pgcr -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge49" class="edge">
+<title>program~helmholtz_2d&#45;&gt;proc~full_pgcr</title>
+<path fill="none" stroke="#000000" d="M75.74,-302.58C118.96,-306.29 189.99,-312.4 233.47,-316.14"/>
+<polygon fill="#000000" stroke="#000000" points="232.92,-319.61 243.18,-316.98 233.52,-312.63 232.92,-319.61"/>
+</g>
+<!-- proc~full_pgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node28" class="node">
+<title>proc~full_pgmres</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node28"><a xlink:href="../proc/full_pgmres.html" xlink:title="full_pgmres">
+<polygon fill="#d9534f" stroke="#d9534f" points="192.17,-291.77 125.15,-291.77 125.15,-269 192.17,-269 192.17,-291.77"/>
+<text text-anchor="middle" x="158.66" y="-276.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">full_pgmres</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;proc~full_pgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge50" class="edge">
+<title>program~helmholtz_2d&#45;&gt;proc~full_pgmres</title>
+<path fill="none" stroke="#000000" d="M75.64,-293.48C87.66,-291.56 101.11,-289.41 113.59,-287.42"/>
+<polygon fill="#000000" stroke="#000000" points="113.89,-290.92 123.21,-285.88 112.78,-284 113.89,-290.92"/>
+</g>
+<!-- proc~pfgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node30" class="node">
+<title>proc~pfgmres</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node30"><a xlink:href="../proc/pfgmres.html" xlink:title="pfgmres">
+<polygon fill="#d9534f" stroke="#d9534f" points="299.18,-252.77 245.18,-252.77 245.18,-230 299.18,-230 299.18,-252.77"/>
+<text text-anchor="middle" x="272.18" y="-237.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pfgmres</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;proc~pfgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge52" class="edge">
+<title>program~helmholtz_2d&#45;&gt;proc~pfgmres</title>
+<path fill="none" stroke="#000000" d="M56.01,-287.64C70.23,-278.63 91.2,-266.71 111.27,-260.38 151.76,-247.62 200.48,-243.31 233.41,-241.92"/>
+<polygon fill="#000000" stroke="#000000" points="233.4,-245.42 243.28,-241.58 233.16,-238.43 233.4,-245.42"/>
+</g>
+<!-- proc~pre_fullgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node31" class="node">
+<title>proc~pre_fullgmres</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node31"><a xlink:href="../proc/pre_fullgmres.html" xlink:title="Pre_fullgmres">
+<polygon fill="#d9534f" stroke="#d9534f" points="197.42,-213.77 119.9,-213.77 119.9,-191 197.42,-191 197.42,-213.77"/>
+<text text-anchor="middle" x="158.66" y="-198.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Pre_fullgmres</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;proc~pre_fullgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge53" class="edge">
+<title>program~helmholtz_2d&#45;&gt;proc~pre_fullgmres</title>
+<path fill="none" stroke="#000000" d="M48.58,-287.62C61.81,-272.43 86.45,-245.78 111.27,-227.38 114.89,-224.7 118.83,-222.13 122.84,-219.72"/>
+<polygon fill="#000000" stroke="#000000" points="124.48,-222.81 131.46,-214.85 121.04,-216.72 124.48,-222.81"/>
+</g>
+<!-- proc~pre_restartgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node32" class="node">
+<title>proc~pre_restartgmres</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node32"><a xlink:href="../proc/pre_restartgmres.html" xlink:title="Pre_restartgmres">
+<polygon fill="#d9534f" stroke="#d9534f" points="206.04,-172.77 111.27,-172.77 111.27,-150 206.04,-150 206.04,-172.77"/>
+<text text-anchor="middle" x="158.66" y="-157.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Pre_restartgmres</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;proc~pre_restartgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge54" class="edge">
+<title>program~helmholtz_2d&#45;&gt;proc~pre_restartgmres</title>
+<path fill="none" stroke="#000000" d="M43.22,-287.5C52.67,-264.39 76.4,-212.97 111.27,-182.38 112.69,-181.14 114.19,-179.96 115.75,-178.84"/>
+<polygon fill="#000000" stroke="#000000" points="117.21,-182.05 123.92,-173.85 113.56,-176.08 117.21,-182.05"/>
+</g>
+<!-- interface~twogrids -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node12" class="node">
+<title>interface~twogrids</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node12"><a xlink:href="../interface/twogrids.html" xlink:title="TwoGrids">
+<polygon fill="#a7506f" stroke="#a7506f" points="1602.51,-62.77 1545.99,-62.77 1545.99,-40 1602.51,-40 1602.51,-62.77"/>
+<text text-anchor="middle" x="1574.25" y="-47.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">TwoGrids</text>
+</a>
+</g>
+</g>
+<!-- interface~twogrids&#45;&gt;proc~fromfine2coarse -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge16" class="edge">
+<title>interface~twogrids&#45;&gt;proc~fromfine2coarse</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1598.36,-63.2C1614.28,-71.33 1635.69,-82.28 1653.46,-91.36"/>
+<polygon fill="#000000" stroke="#000000" points="1651.85,-94.47 1662.34,-95.9 1655.03,-88.23 1651.85,-94.47"/>
+</g>
+<!-- proc~mgcslp_invmhx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node13" class="node">
+<title>proc~mgcslp_invmhx</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node13"><a xlink:href="../proc/mgcslp_invmhx.html" xlink:title="MGCSLP_invMHx">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="1509.99,-236.77 1412.97,-236.77 1412.97,-214 1509.99,-214 1509.99,-236.77"/>
+<text text-anchor="middle" x="1461.48" y="-221.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MGCSLP_invMHx</text>
+</a>
+</g>
+</g>
+<!-- proc~mgcslp_invmhx&#45;&gt;proc~f_cycle -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge14" class="edge">
+<title>proc~mgcslp_invmhx&#45;&gt;proc~f_cycle</title>
+<path fill="none" stroke="#000000" d="M1489.86,-237.25C1504.02,-243.39 1521.49,-250.96 1536.78,-257.58"/>
+<polygon fill="#000000" stroke="#000000" points="1534.99,-260.62 1545.56,-261.39 1537.77,-254.2 1534.99,-260.62"/>
+</g>
+<!-- proc~mgcslp_invmhx&#45;&gt;proc~v_cycle -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge18" class="edge">
+<title>proc~mgcslp_invmhx&#45;&gt;proc~v_cycle</title>
+<path fill="none" stroke="#000000" d="M1510.32,-225.38C1551.83,-225.38 1611.09,-225.38 1649.24,-225.38"/>
+<polygon fill="#000000" stroke="#000000" points="1648.85,-228.89 1658.85,-225.39 1648.85,-221.89 1648.85,-228.89"/>
+</g>
+<!-- proc~mgcslp_invmx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node14" class="node">
+<title>proc~mgcslp_invmx</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node14"><a xlink:href="../proc/mgcslp_invmx.html" xlink:title="MGCSLP_invMx">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="777.39,-197.77 687.87,-197.77 687.87,-175 777.39,-175 777.39,-197.77"/>
+<text text-anchor="middle" x="732.63" y="-182.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MGCSLP_invMx</text>
+</a>
+</g>
+</g>
+<!-- proc~mgcslp_invmx&#45;&gt;proc~f_cycle -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge15" class="edge">
+<title>proc~mgcslp_invmx&#45;&gt;proc~f_cycle</title>
+<path fill="none" stroke="#000000" d="M755.77,-198.09C763.2,-202.46 771.32,-207.74 778.14,-213.38 796.56,-228.64 794.09,-240.34 814.14,-253.38 894.44,-305.65 923.23,-320.38 1019.05,-320.38 1019.05,-320.38 1019.05,-320.38 1315.96,-320.38 1395.37,-320.38 1486.35,-298.45 1536.04,-284.55"/>
+<polygon fill="#000000" stroke="#000000" points="1536.76,-287.99 1545.42,-281.88 1534.84,-281.25 1536.76,-287.99"/>
+</g>
+<!-- proc~mgcslp_invmx&#45;&gt;proc~v_cycle -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge19" class="edge">
+<title>proc~mgcslp_invmx&#45;&gt;proc~v_cycle</title>
+<path fill="none" stroke="#000000" d="M777.88,-178.54C862.86,-164.39 1054.86,-136.8 1216.95,-145.38 1288.37,-149.17 1306.29,-151.47 1376.97,-162.38 1475.93,-177.67 1591.17,-203.16 1649.24,-216.55"/>
+<polygon fill="#000000" stroke="#000000" points="1648.39,-219.95 1658.93,-218.8 1649.97,-213.13 1648.39,-219.95"/>
+</g>
+<!-- proc~cprecon -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node15" class="node">
+<title>proc~cprecon</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node15"><a xlink:href="../proc/cprecon.html" xlink:title="cprecon">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="628.86,-122.77 574.86,-122.77 574.86,-100 628.86,-100 628.86,-122.77"/>
+<text text-anchor="middle" x="601.86" y="-107.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">cprecon</text>
+</a>
+</g>
+</g>
+<!-- proc~cprecon&#45;&gt;proc~mgcslp_invmx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge26" class="edge">
+<title>proc~cprecon&#45;&gt;proc~mgcslp_invmx</title>
+<path fill="none" stroke="#000000" d="M626.62,-123.23C634.49,-127.27 643.24,-131.91 651.12,-136.38 669.07,-146.59 688.77,-158.81 704.19,-168.61"/>
+<polygon fill="#000000" stroke="#000000" points="702.06,-171.4 712.37,-173.84 705.83,-165.5 702.06,-171.4"/>
+</g>
+<!-- proc~def_arnoldi -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node16" class="node">
+<title>proc~def_arnoldi</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node16"><a xlink:href="../proc/def_arnoldi.html" xlink:title="def_arnoldi">
+<polygon fill="#d9534f" stroke="#d9534f" points="1210.2,-254.77 1145.43,-254.77 1145.43,-232 1210.2,-232 1210.2,-254.77"/>
+<text text-anchor="middle" x="1177.82" y="-239.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">def_arnoldi</text>
+</a>
+</g>
+</g>
+<!-- proc~def_arnoldi&#45;&gt;proc~mgcslp_invmhx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge21" class="edge">
+<title>proc~def_arnoldi&#45;&gt;proc~mgcslp_invmhx</title>
+<path fill="none" stroke="#000000" d="M1210.58,-241.36C1256.77,-238.4 1343.31,-232.87 1401.43,-229.16"/>
+<polygon fill="#000000" stroke="#000000" points="1401.38,-232.67 1411.14,-228.54 1400.94,-225.68 1401.38,-232.67"/>
+</g>
+<!-- proc~ex -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node19" class="node">
+<title>proc~ex</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node19"><a xlink:href="../proc/ex.html" xlink:title="Ex">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="1341.96,-216.77 1287.96,-216.77 1287.96,-194 1341.96,-194 1341.96,-216.77"/>
+<text text-anchor="middle" x="1314.96" y="-201.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Ex</text>
+</a>
+</g>
+</g>
+<!-- proc~def_arnoldi&#45;&gt;proc~ex -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge34" class="edge">
+<title>proc~def_arnoldi&#45;&gt;proc~ex</title>
+<path fill="none" stroke="#000000" d="M1210.5,-234.48C1230.25,-228.92 1255.76,-221.75 1276.5,-215.92"/>
+<polygon fill="#000000" stroke="#000000" points="1277.34,-219.32 1286.02,-213.24 1275.44,-212.58 1277.34,-219.32"/>
+</g>
+<!-- proc~def_bicgstab -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node17" class="node">
+<title>proc~def_bicgstab</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node17"><a xlink:href="../proc/def_bicgstab.html" xlink:title="DEF_bicgstab">
+<polygon fill="#d9534f" stroke="#d9534f" points="1216.95,-176.77 1138.68,-176.77 1138.68,-154 1216.95,-154 1216.95,-176.77"/>
+<text text-anchor="middle" x="1177.82" y="-161.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DEF_bicgstab</text>
+</a>
+</g>
+</g>
+<!-- proc~def_bicgstab&#45;&gt;proc~mgcslp_invmhx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge22" class="edge">
+<title>proc~def_bicgstab&#45;&gt;proc~mgcslp_invmhx</title>
+<path fill="none" stroke="#000000" d="M1217.16,-165.36C1257.61,-166.24 1322.87,-170.2 1376.97,-185.38 1395.71,-190.64 1415.4,-199.87 1430.95,-208.14"/>
+<polygon fill="#000000" stroke="#000000" points="1429.22,-211.18 1439.67,-212.93 1432.58,-205.05 1429.22,-211.18"/>
+</g>
+<!-- proc~def_bicgstab&#45;&gt;proc~ex -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge35" class="edge">
+<title>proc~def_bicgstab&#45;&gt;proc~ex</title>
+<path fill="none" stroke="#000000" d="M1217.18,-176.74C1235.79,-182.25 1258.06,-188.84 1276.55,-194.31"/>
+<polygon fill="#000000" stroke="#000000" points="1275.47,-197.64 1286.05,-197.12 1277.45,-190.93 1275.47,-197.64"/>
+</g>
+<!-- proc~def_fullgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node18" class="node">
+<title>proc~def_fullgmres</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node18"><a xlink:href="../proc/def_fullgmres.html" xlink:title="DEF_fullgmres">
+<polygon fill="#d9534f" stroke="#d9534f" points="1061.06,-247.77 979.04,-247.77 979.04,-225 1061.06,-225 1061.06,-247.77"/>
+<text text-anchor="middle" x="1020.05" y="-232.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DEF_fullgmres</text>
+</a>
+</g>
+</g>
+<!-- proc~def_fullgmres&#45;&gt;proc~mgcslp_invmhx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge23" class="edge">
+<title>proc~def_fullgmres&#45;&gt;proc~mgcslp_invmhx</title>
+<path fill="none" stroke="#000000" d="M1061.48,-248.04C1084,-253.93 1112.65,-260.44 1138.68,-263.38 1244.12,-275.33 1272.59,-267.5 1376.97,-248.38 1388.4,-246.29 1400.53,-243.37 1411.91,-240.31"/>
+<polygon fill="#000000" stroke="#000000" points="1412.82,-243.68 1421.52,-237.63 1410.94,-236.94 1412.82,-243.68"/>
+</g>
+<!-- proc~def_fullgmres&#45;&gt;proc~def_arnoldi -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge31" class="edge">
+<title>proc~def_fullgmres&#45;&gt;proc~def_arnoldi</title>
+<path fill="none" stroke="#000000" d="M1061.16,-238.19C1083.34,-239.18 1110.92,-240.42 1133.58,-241.44"/>
+<polygon fill="#000000" stroke="#000000" points="1133.27,-244.93 1143.42,-241.88 1133.59,-237.94 1133.27,-244.93"/>
+</g>
+<!-- proc~def_fullgmres&#45;&gt;proc~ex -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge36" class="edge">
+<title>proc~def_fullgmres&#45;&gt;proc~ex</title>
+<path fill="none" stroke="#000000" d="M1061.33,-231.86C1084.04,-229.32 1112.94,-226.13 1138.68,-223.38 1186.1,-218.33 1240.76,-212.76 1276.26,-209.17"/>
+<polygon fill="#000000" stroke="#000000" points="1276.42,-212.67 1286.02,-208.19 1275.72,-205.71 1276.42,-212.67"/>
+</g>
+<!-- proc~ex&#45;&gt;proc~mgcslp_invmhx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge24" class="edge">
+<title>proc~ex&#45;&gt;proc~mgcslp_invmhx</title>
+<path fill="none" stroke="#000000" d="M1342.13,-209.01C1358.67,-211.3 1380.74,-214.35 1401.34,-217.2"/>
+<polygon fill="#000000" stroke="#000000" points="1400.7,-220.65 1411.09,-218.55 1401.66,-213.71 1400.7,-220.65"/>
+</g>
+<!-- proc~multileveladp_px -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node20" class="node">
+<title>proc~multileveladp_px</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node20"><a xlink:href="../proc/multileveladp_px.html" xlink:title="MultiLevelADP_Px">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="651.12,-74.77 552.6,-74.77 552.6,-52 651.12,-52 651.12,-74.77"/>
+<text text-anchor="middle" x="601.86" y="-59.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MultiLevelADP_Px</text>
+</a>
+</g>
+</g>
+<!-- proc~multileveladp_px&#45;&gt;proc~mgcslp_invmhx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge25" class="edge">
+<title>proc~multileveladp_px&#45;&gt;proc~mgcslp_invmhx</title>
+<path fill="none" stroke="#000000" d="M651.4,-71.02C702.4,-78.37 785.02,-88.39 856.78,-88.39 856.78,-88.39 856.78,-88.39 1021.05,-88.39 1182.62,-88.39 1229.82,-95.67 1376.97,-162.38 1400.75,-173.17 1424.16,-191.71 1440.12,-205.9"/>
+<polygon fill="#000000" stroke="#000000" points="1437.74,-208.46 1447.48,-212.63 1442.46,-203.3 1437.74,-208.46"/>
+</g>
+<!-- proc~multilevel_invey -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node34" class="node">
+<title>proc~multilevel_invey</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node34"><a xlink:href="../proc/multilevel_invey.html" xlink:title="MultiLevel_invEy">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="778.14,-22.77 687.12,-22.77 687.12,0 778.14,0 778.14,-22.77"/>
+<text text-anchor="middle" x="732.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MultiLevel_invEy</text>
+</a>
+</g>
+</g>
+<!-- proc~multileveladp_px&#45;&gt;proc~multilevel_invey -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge57" class="edge">
+<title>proc~multileveladp_px&#45;&gt;proc~multilevel_invey</title>
+<path fill="none" stroke="#000000" d="M632.08,-51.59C649.78,-44.44 672.59,-35.23 691.91,-27.42"/>
+<polygon fill="#000000" stroke="#000000" points="693.16,-30.69 701.12,-23.7 690.54,-24.2 693.16,-30.69"/>
+</g>
+<!-- proc~p_adef1x -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node21" class="node">
+<title>proc~p_adef1x</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node21"><a xlink:href="../proc/p_adef1x.html" xlink:title="P_ADEF1x">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="633.5,-200.77 570.23,-200.77 570.23,-178 633.5,-178 633.5,-200.77"/>
+<text text-anchor="middle" x="601.86" y="-185.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">P_ADEF1x</text>
+</a>
+</g>
+</g>
+<!-- proc~p_adef1x&#45;&gt;proc~mgcslp_invmx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge27" class="edge">
+<title>proc~p_adef1x&#45;&gt;proc~mgcslp_invmx</title>
+<path fill="none" stroke="#000000" d="M633.7,-188.67C646.39,-188.37 661.48,-188.02 675.96,-187.68"/>
+<polygon fill="#000000" stroke="#000000" points="675.97,-191.18 685.89,-187.45 675.81,-184.18 675.97,-191.18"/>
+</g>
+<!-- proc~qx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node35" class="node">
+<title>proc~qx</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node35"><a xlink:href="../proc/qx.html" xlink:title="Qx">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="759.63,-244.77 705.63,-244.77 705.63,-222 759.63,-222 759.63,-244.77"/>
+<text text-anchor="middle" x="732.63" y="-229.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Qx</text>
+</a>
+</g>
+</g>
+<!-- proc~p_adef1x&#45;&gt;proc~qx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge58" class="edge">
+<title>proc~p_adef1x&#45;&gt;proc~qx</title>
+<path fill="none" stroke="#000000" d="M633.7,-199.92C651.99,-206.17 675.28,-214.13 694.57,-220.72"/>
+<polygon fill="#000000" stroke="#000000" points="693.36,-224.01 703.95,-223.93 695.62,-217.38 693.36,-224.01"/>
+</g>
+<!-- proc~p_tlkmx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node22" class="node">
+<title>proc~p_tlkmx</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node22"><a xlink:href="../proc/p_tlkmx.html" xlink:title="P_TLKMx">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="630.87,-241.77 572.85,-241.77 572.85,-219 630.87,-219 630.87,-241.77"/>
+<text text-anchor="middle" x="601.86" y="-226.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">P_TLKMx</text>
+</a>
+</g>
+</g>
+<!-- proc~p_tlkmx&#45;&gt;proc~mgcslp_invmx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge28" class="edge">
+<title>proc~p_tlkmx&#45;&gt;proc~mgcslp_invmx</title>
+<path fill="none" stroke="#000000" d="M631.12,-220.73C647.26,-215.21 667.87,-208.17 686.23,-201.9"/>
+<polygon fill="#000000" stroke="#000000" points="687.25,-205.25 695.58,-198.7 684.99,-198.62 687.25,-205.25"/>
+</g>
+<!-- proc~p_tlkmx&#45;&gt;proc~qx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge60" class="edge">
+<title>proc~p_tlkmx&#45;&gt;proc~qx</title>
+<path fill="none" stroke="#000000" d="M631.12,-231.04C649.56,-231.47 673.85,-232.04 693.93,-232.51"/>
+<polygon fill="#000000" stroke="#000000" points="693.6,-236 703.68,-232.73 693.76,-229 693.6,-236"/>
+</g>
+<!-- proc~precond_x -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node23" class="node">
+<title>proc~precond_x</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node23"><a xlink:href="../proc/precond_x.html" xlink:title="Precond_x">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="400.83,-213.77 338.31,-213.77 338.31,-191 400.83,-191 400.83,-213.77"/>
+<text text-anchor="middle" x="369.57" y="-198.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Precond_x</text>
+</a>
+</g>
+</g>
+<!-- proc~precond_x&#45;&gt;proc~mgcslp_invmx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge29" class="edge">
+<title>proc~precond_x&#45;&gt;proc~mgcslp_invmx</title>
+<path fill="none" stroke="#000000" d="M401.28,-191.85C412.37,-188.38 425.06,-184.8 436.83,-182.38 530.3,-163.2 556.22,-159.48 651.12,-169.38 659.33,-170.24 667.93,-171.58 676.33,-173.13"/>
+<polygon fill="#000000" stroke="#000000" points="675.63,-176.56 686.11,-175.07 676.98,-169.69 675.63,-176.56"/>
+</g>
+<!-- proc~def_px -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node26" class="node">
+<title>proc~def_px</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node26"><a xlink:href="../proc/def_px.html" xlink:title="DEF_Px">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="503.72,-213.77 449.72,-213.77 449.72,-191 503.72,-191 503.72,-213.77"/>
+<text text-anchor="middle" x="476.72" y="-198.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DEF_Px</text>
+</a>
+</g>
+</g>
+<!-- proc~precond_x&#45;&gt;proc~def_px -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge48" class="edge">
+<title>proc~precond_x&#45;&gt;proc~def_px</title>
+<path fill="none" stroke="#000000" d="M401.26,-202.38C412.84,-202.38 426.14,-202.38 438.26,-202.38"/>
+<polygon fill="#000000" stroke="#000000" points="437.92,-205.89 447.92,-202.39 437.92,-198.89 437.92,-205.89"/>
+</g>
+<!-- interface~operator(SLASH) -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node24" class="node">
+<title>interface~operator(SLASH)</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node24"><a xlink:href="../interface/operator(SLASH).html" xlink:title="OPERATOR(/)">
+<polygon fill="#a7506f" stroke="#a7506f" points="516.6,-122.77 436.83,-122.77 436.83,-100 516.6,-100 516.6,-122.77"/>
+<text text-anchor="middle" x="476.72" y="-107.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">OPERATOR(/)</text>
+</a>
+</g>
+</g>
+<!-- interface~operator(SLASH)&#45;&gt;proc~cprecon -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge30" class="edge">
+<title>interface~operator(SLASH)&#45;&gt;proc~cprecon</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M517.02,-111.39C531.79,-111.39 548.54,-111.39 563.17,-111.39"/>
+<polygon fill="#000000" stroke="#000000" points="562.85,-114.89 572.85,-111.39 562.85,-107.89 562.85,-114.89"/>
+</g>
+<!-- proc~def_prefgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node25" class="node">
+<title>proc~def_prefgmres</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node25"><a xlink:href="../proc/def_prefgmres.html" xlink:title="DEF_prefgmres">
+<polygon fill="#d9534f" stroke="#d9534f" points="901.41,-41.77 814.14,-41.77 814.14,-19 901.41,-19 901.41,-41.77"/>
+<text text-anchor="middle" x="857.78" y="-26.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DEF_prefgmres</text>
+</a>
+</g>
+</g>
+<!-- proc~def_prefgmres&#45;&gt;proc~multileveladp_px -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge37" class="edge">
+<title>proc~def_prefgmres&#45;&gt;proc~multileveladp_px</title>
+<path fill="none" stroke="#000000" d="M813.78,-35.97C772.35,-41.36 709.3,-49.55 662.93,-55.58"/>
+<polygon fill="#000000" stroke="#000000" points="662.48,-52.11 653.02,-56.87 663.39,-59.05 662.48,-52.11"/>
+</g>
+<!-- proc~def_px&#45;&gt;proc~multileveladp_px -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge38" class="edge">
+<title>proc~def_px&#45;&gt;proc~multileveladp_px</title>
+<path fill="none" stroke="#000000" d="M483.3,-190.75C494.17,-169.06 519.99,-121.86 552.6,-91.39 556.63,-87.62 561.26,-84.14 566.03,-81.01"/>
+<polygon fill="#000000" stroke="#000000" points="567.78,-84.03 574.54,-75.87 564.17,-78.04 567.78,-84.03"/>
+</g>
+<!-- proc~def_px&#45;&gt;proc~p_adef1x -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge39" class="edge">
+<title>proc~def_px&#45;&gt;proc~p_adef1x</title>
+<path fill="none" stroke="#000000" d="M504.13,-199.6C520.09,-197.91 540.79,-195.73 558.95,-193.81"/>
+<polygon fill="#000000" stroke="#000000" points="559.06,-197.32 568.64,-192.79 558.32,-190.36 559.06,-197.32"/>
+</g>
+<!-- proc~def_px&#45;&gt;proc~p_tlkmx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge40" class="edge">
+<title>proc~def_px&#45;&gt;proc~p_tlkmx</title>
+<path fill="none" stroke="#000000" d="M504.13,-208.39C520.87,-212.2 542.82,-217.19 561.58,-221.45"/>
+<polygon fill="#000000" stroke="#000000" points="560.77,-224.86 571.3,-223.66 562.32,-218.03 560.77,-224.86"/>
+</g>
+<!-- proc~p_defx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node36" class="node">
+<title>proc~p_defx</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node36"><a xlink:href="../proc/p_defx.html" xlink:title="P_DEFx">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="628.86,-282.77 574.86,-282.77 574.86,-260 628.86,-260 628.86,-282.77"/>
+<text text-anchor="middle" x="601.86" y="-267.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">P_DEFx</text>
+</a>
+</g>
+</g>
+<!-- proc~def_px&#45;&gt;proc~p_defx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge62" class="edge">
+<title>proc~def_px&#45;&gt;proc~p_defx</title>
+<path fill="none" stroke="#000000" d="M494.5,-214.24C509.37,-224.48 531.89,-239.33 552.6,-250.38 556.28,-252.35 560.19,-254.28 564.12,-256.13"/>
+<polygon fill="#000000" stroke="#000000" points="562.52,-259.25 573.07,-260.17 565.4,-252.87 562.52,-259.25"/>
+</g>
+<!-- proc~full_pgcr&#45;&gt;proc~precond_x -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge41" class="edge">
+<title>proc~full_pgcr&#45;&gt;proc~precond_x</title>
+<path fill="none" stroke="#000000" d="M288.32,-307.57C293.02,-303.6 298.07,-299 302.31,-294.38 322.87,-272 342.73,-243.15 355.26,-223.78"/>
+<polygon fill="#000000" stroke="#000000" points="358.2,-225.68 360.61,-215.37 352.29,-221.92 358.2,-225.68"/>
+</g>
+<!-- proc~full_pgmres&#45;&gt;proc~precond_x -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge42" class="edge">
+<title>proc~full_pgmres&#45;&gt;proc~precond_x</title>
+<path fill="none" stroke="#000000" d="M192.6,-281.38C222.53,-281.06 267.22,-277.48 302.31,-261.38 321.65,-252.52 339.41,-236.04 351.66,-222.75"/>
+<polygon fill="#000000" stroke="#000000" points="354.22,-225.14 358.22,-215.33 348.98,-220.51 354.22,-225.14"/>
+</g>
+<!-- proc~invey -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node29" class="node">
+<title>proc~invey</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node29"><a xlink:href="../proc/invey.html" xlink:title="invEy">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="884.78,-244.77 830.78,-244.77 830.78,-222 884.78,-222 884.78,-244.77"/>
+<text text-anchor="middle" x="857.78" y="-229.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">invEy</text>
+</a>
+</g>
+</g>
+<!-- proc~invey&#45;&gt;proc~def_bicgstab -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge32" class="edge">
+<title>proc~invey&#45;&gt;proc~def_bicgstab</title>
+<path fill="none" stroke="#000000" d="M884.98,-227.7C900.27,-224.39 919.93,-220.14 937.41,-216.38 1002.99,-202.31 1078.72,-186.2 1127.14,-175.92"/>
+<polygon fill="#000000" stroke="#000000" points="1127.71,-179.38 1136.77,-173.88 1126.26,-172.53 1127.71,-179.38"/>
+</g>
+<!-- proc~invey&#45;&gt;proc~def_fullgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge33" class="edge">
+<title>proc~invey&#45;&gt;proc~def_fullgmres</title>
+<path fill="none" stroke="#000000" d="M885.24,-233.88C907.49,-234.3 939.95,-234.9 967.33,-235.42"/>
+<polygon fill="#000000" stroke="#000000" points="967.13,-238.91 977.2,-235.6 967.27,-231.92 967.13,-238.91"/>
+</g>
+<!-- proc~pfgmres&#45;&gt;proc~precond_x -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge43" class="edge">
+<title>proc~pfgmres&#45;&gt;proc~precond_x</title>
+<path fill="none" stroke="#000000" d="M299.49,-230.62C308.65,-226.88 319.12,-222.6 329.11,-218.52"/>
+<polygon fill="#000000" stroke="#000000" points="330.32,-221.8 338.26,-214.78 327.67,-215.32 330.32,-221.8"/>
+</g>
+<!-- proc~pre_fullgmres&#45;&gt;proc~precond_x -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge44" class="edge">
+<title>proc~pre_fullgmres&#45;&gt;proc~precond_x</title>
+<path fill="none" stroke="#000000" d="M197.49,-202.38C233.93,-202.38 288.95,-202.38 326.69,-202.38"/>
+<polygon fill="#000000" stroke="#000000" points="326.3,-205.89 336.3,-202.39 326.3,-198.89 326.3,-205.89"/>
+</g>
+<!-- proc~prearnoldi -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node33" class="node">
+<title>proc~prearnoldi</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node33"><a xlink:href="../proc/prearnoldi.html" xlink:title="Prearnoldi">
+<polygon fill="#d9534f" stroke="#d9534f" points="302.31,-174.77 242.04,-174.77 242.04,-152 302.31,-152 302.31,-174.77"/>
+<text text-anchor="middle" x="272.18" y="-159.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Prearnoldi</text>
+</a>
+</g>
+</g>
+<!-- proc~pre_fullgmres&#45;&gt;proc~prearnoldi -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge55" class="edge">
+<title>proc~pre_fullgmres&#45;&gt;proc~prearnoldi</title>
+<path fill="none" stroke="#000000" d="M193.42,-190.58C205.32,-186.42 218.81,-181.7 231.17,-177.37"/>
+<polygon fill="#000000" stroke="#000000" points="231.97,-180.8 240.25,-174.2 229.66,-174.2 231.97,-180.8"/>
+</g>
+<!-- proc~pre_restartgmres&#45;&gt;proc~precond_x -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge45" class="edge">
+<title>proc~pre_restartgmres&#45;&gt;proc~precond_x</title>
+<path fill="none" stroke="#000000" d="M189.6,-149.51C219.17,-139.63 265.22,-129.26 302.31,-143.38 322.62,-151.12 340.67,-168.25 352.78,-182.07"/>
+<polygon fill="#000000" stroke="#000000" points="349.79,-183.94 358.88,-189.38 355.16,-179.46 349.79,-183.94"/>
+</g>
+<!-- proc~pre_restartgmres&#45;&gt;proc~prearnoldi -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge56" class="edge">
+<title>proc~pre_restartgmres&#45;&gt;proc~prearnoldi</title>
+<path fill="none" stroke="#000000" d="M206.3,-162.22C214.23,-162.36 222.41,-162.51 230.18,-162.65"/>
+<polygon fill="#000000" stroke="#000000" points="229.99,-166.15 240.05,-162.83 230.12,-159.15 229.99,-166.15"/>
+</g>
+<!-- proc~prearnoldi&#45;&gt;proc~precond_x -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge46" class="edge">
+<title>proc~prearnoldi&#45;&gt;proc~precond_x</title>
+<path fill="none" stroke="#000000" d="M302.06,-175.19C310.65,-178.7 320.21,-182.61 329.35,-186.35"/>
+<polygon fill="#000000" stroke="#000000" points="327.81,-189.5 338.39,-190.05 330.45,-183.02 327.81,-189.5"/>
+</g>
+<!-- proc~multilevel_invey&#45;&gt;proc~def_prefgmres -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge47" class="edge">
+<title>proc~multilevel_invey&#45;&gt;proc~def_prefgmres</title>
+<path fill="none" stroke="#000000" d="M778.44,-18.3C786.29,-19.51 794.54,-20.78 802.61,-22.03"/>
+<polygon fill="#000000" stroke="#000000" points="801.94,-25.47 812.35,-23.53 803.01,-18.55 801.94,-25.47"/>
+</g>
+<!-- proc~qx&#45;&gt;proc~invey -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge51" class="edge">
+<title>proc~qx&#45;&gt;proc~invey</title>
+<path fill="none" stroke="#000000" d="M760.05,-233.38C777.25,-233.38 799.97,-233.38 819.06,-233.38"/>
+<polygon fill="#000000" stroke="#000000" points="818.89,-236.89 828.89,-233.39 818.89,-229.89 818.89,-236.89"/>
+</g>
+<!-- proc~p_defx&#45;&gt;proc~qx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge59" class="edge">
+<title>proc~p_defx&#45;&gt;proc~qx</title>
+<path fill="none" stroke="#000000" d="M629.23,-263.6C647.98,-258.07 673.43,-250.56 694.27,-244.41"/>
+<polygon fill="#000000" stroke="#000000" points="695.24,-247.77 703.84,-241.58 693.26,-241.06 695.24,-247.77"/>
+</g>
+<!-- proc~px -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_node37" class="node">
+<title>proc~px</title>
+<g id="a_proc~~mg_checkreal_x2d~~CalledByGraph_node37"><a xlink:href="../proc/px.html" xlink:title="Px">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="628.86,-323.77 574.86,-323.77 574.86,-301 628.86,-301 628.86,-323.77"/>
+<text text-anchor="middle" x="601.86" y="-308.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Px</text>
+</a>
+</g>
+</g>
+<!-- proc~px&#45;&gt;proc~qx -->
+<g id="proc~~mg_checkreal_x2d~~CalledByGraph_edge61" class="edge">
+<title>proc~px&#45;&gt;proc~qx</title>
+<path fill="none" stroke="#000000" d="M629.15,-302.15C636.42,-299 644.21,-295.32 651.12,-291.38 671.45,-279.81 692.87,-264.2 708.5,-252.08"/>
+<polygon fill="#000000" stroke="#000000" points="710.54,-254.93 716.23,-246 706.21,-249.43 710.54,-254.93"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprocmg_checkreal_x2dCalledByGraph = svgPanZoom('#procmg_checkreal_x2dCalledByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 28.43" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.923937 0.923937) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 689.77,-26.77 689.77,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="63.27,-22.77 0,-22.77 0,0 63.27,0 63.27,-22.77"/>
+<text text-anchor="middle" x="31.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="135.63,-22.77 81.64,-22.77 81.64,0 135.63,0 135.63,-22.77"/>
+<text text-anchor="middle" x="108.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="207.63,-22.77 153.63,-22.77 153.63,0 207.63,0 207.63,-22.77"/>
+<text text-anchor="middle" x="180.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="347.14,-22.77 226.12,-22.77 226.12,0 347.14,0 347.14,-22.77"/>
+<text text-anchor="middle" x="286.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="499.89,-22.77 365.38,-22.77 365.38,0 499.89,0 499.89,-22.77"/>
+<text text-anchor="middle" x="432.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="571.63,-22.77 517.63,-22.77 517.63,0 571.63,0 571.63,-22.77"/>
+<text text-anchor="middle" x="544.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="685.77,-22.77 589.5,-22.77 589.5,0 685.77,0 685.77,-22.77"/>
+<text text-anchor="middle" x="637.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

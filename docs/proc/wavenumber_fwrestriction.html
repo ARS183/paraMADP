@@ -1,0 +1,535 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>wavenumber_FWrestriction &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>wavenumber_FWrestriction
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 1.0% of total for procedures.">44 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/deflation_setup.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/deflation_setup.f90.html'>deflation_setup.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/deflaion_setup.html'>deflaion_setup</a></li>
+            <li class="breadcrumb-item active" aria-current="page">wavenumber_FWrestriction</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine wavenumber_FWrestriction(f2c)  
+</h2>
+    
+
+    <p>This routine obtains the wavenumber of the coarse level by full-weight restriction from the fine level</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~2"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: proc~~wavenumber_fwrestriction~~CallsGraph Pages: 1 -->
+<svg id="procwavenumber_fwrestrictionCallsGraph" width="545pt" height="72pt"
+ viewBox="0.00 0.00 544.58 71.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 67.77)">
+<title>proc~~wavenumber_fwrestriction~~CallsGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-67.77 540.58,-67.77 540.58,4 -4,4"/>
+<!-- proc~wavenumber_fwrestriction -->
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph_node1" class="node">
+<title>proc~wavenumber_fwrestriction</title>
+<polygon fill="none" stroke="black" points="142.02,-42.77 0,-42.77 0,-20 142.02,-20 142.02,-42.77"/>
+<text text-anchor="middle" x="71.01" y="-27.04" font-family="Helvetica,sans-Serif" font-size="10.50">wavenumber_FWrestriction</text>
+</g>
+<!-- proc~mg_checkreal_xy2d -->
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph_node2" class="node">
+<title>proc~mg_checkreal_xy2d</title>
+<g id="a_proc~~wavenumber_fwrestriction~~CallsGraph_node2"><a xlink:href="../proc/mg_checkreal_xy2d.html" xlink:title="mg_checkreal_xy2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="284.79,-42.77 178.02,-42.77 178.02,-20 284.79,-20 284.79,-42.77"/>
+<text text-anchor="middle" x="231.4" y="-27.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mg_checkreal_xy2d</text>
+</a>
+</g>
+</g>
+<!-- proc~wavenumber_fwrestriction&#45;&gt;proc~mg_checkreal_xy2d -->
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph_edge1" class="edge">
+<title>proc~wavenumber_fwrestriction&#45;&gt;proc~mg_checkreal_xy2d</title>
+<path fill="none" stroke="#000000" d="M142.41,-31.39C150.4,-31.39 158.52,-31.39 166.42,-31.39"/>
+<polygon fill="#000000" stroke="#000000" points="166.3,-34.89 176.3,-31.39 166.3,-27.89 166.3,-34.89"/>
+</g>
+<!-- proc~mg_checkreal_x2d -->
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph_node3" class="node">
+<title>proc~mg_checkreal_x2d</title>
+<g id="a_proc~~wavenumber_fwrestriction~~CallsGraph_node3"><a xlink:href="../proc/mg_checkreal_x2d.html" xlink:title="mg_checkreal_x2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="422.31,-63.77 320.79,-63.77 320.79,-41 422.31,-41 422.31,-63.77"/>
+<text text-anchor="middle" x="371.55" y="-48.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mg_checkreal_x2d</text>
+</a>
+</g>
+</g>
+<!-- proc~mg_checkreal_xy2d&#45;&gt;proc~mg_checkreal_x2d -->
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph_edge2" class="edge">
+<title>proc~mg_checkreal_xy2d&#45;&gt;proc~mg_checkreal_x2d</title>
+<path fill="none" stroke="#000000" d="M285.03,-39.38C292.9,-40.58 301.08,-41.83 309.12,-43.05"/>
+<polygon fill="#000000" stroke="#000000" points="308.44,-46.48 318.86,-44.53 309.5,-39.56 308.44,-46.48"/>
+</g>
+<!-- proc~mg_checkreal_y2d -->
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph_node4" class="node">
+<title>proc~mg_checkreal_y2d</title>
+<g id="a_proc~~wavenumber_fwrestriction~~CallsGraph_node4"><a xlink:href="../proc/mg_checkreal_y2d.html" xlink:title="mg_checkreal_y2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="422.31,-22.77 320.79,-22.77 320.79,0 422.31,0 422.31,-22.77"/>
+<text text-anchor="middle" x="371.55" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mg_checkreal_y2d</text>
+</a>
+</g>
+</g>
+<!-- proc~mg_checkreal_xy2d&#45;&gt;proc~mg_checkreal_y2d -->
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph_edge3" class="edge">
+<title>proc~mg_checkreal_xy2d&#45;&gt;proc~mg_checkreal_y2d</title>
+<path fill="none" stroke="#000000" d="M285.03,-23.77C292.9,-22.63 301.08,-21.44 309.12,-20.28"/>
+<polygon fill="#000000" stroke="#000000" points="309.46,-23.77 318.85,-18.87 308.46,-16.84 309.46,-23.77"/>
+</g>
+<!-- mpi_sendrecv -->
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph_node5" class="node">
+<title>mpi_sendrecv</title>
+<polygon fill="#777777" stroke="#777777" points="536.58,-42.77 458.31,-42.77 458.31,-20 536.58,-20 536.58,-42.77"/>
+<text text-anchor="middle" x="497.44" y="-27.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_sendrecv</text>
+</g>
+<!-- proc~mg_checkreal_x2d&#45;&gt;mpi_sendrecv -->
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph_edge4" class="edge">
+<title>proc~mg_checkreal_x2d&#45;&gt;mpi_sendrecv</title>
+<path fill="none" stroke="#000000" d="M422.59,-43.9C430.62,-42.54 438.93,-41.13 446.95,-39.77"/>
+<polygon fill="#000000" stroke="#000000" points="447.27,-43.27 456.55,-38.15 446.1,-36.37 447.27,-43.27"/>
+</g>
+<!-- proc~mg_checkreal_y2d&#45;&gt;mpi_sendrecv -->
+<g id="proc~~wavenumber_fwrestriction~~CallsGraph_edge5" class="edge">
+<title>proc~mg_checkreal_y2d&#45;&gt;mpi_sendrecv</title>
+<path fill="none" stroke="#000000" d="M422.59,-19.46C430.53,-20.74 438.74,-22.07 446.68,-23.35"/>
+<polygon fill="#000000" stroke="#000000" points="446.12,-26.81 456.55,-24.94 447.23,-19.9 446.12,-26.81"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 28.43" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.923937 0.923937) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 689.77,-26.77 689.77,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="63.27,-22.77 0,-22.77 0,0 63.27,0 63.27,-22.77"/>
+<text text-anchor="middle" x="31.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="135.63,-22.77 81.64,-22.77 81.64,0 135.63,0 135.63,-22.77"/>
+<text text-anchor="middle" x="108.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="207.63,-22.77 153.63,-22.77 153.63,0 207.63,0 207.63,-22.77"/>
+<text text-anchor="middle" x="180.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="347.14,-22.77 226.12,-22.77 226.12,0 347.14,0 347.14,-22.77"/>
+<text text-anchor="middle" x="286.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="499.89,-22.77 365.38,-22.77 365.38,0 499.89,0 499.89,-22.77"/>
+<text text-anchor="middle" x="432.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="571.63,-22.77 517.63,-22.77 517.63,0 571.63,0 571.63,-22.77"/>
+<text text-anchor="middle" x="544.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="685.77,-22.77 589.5,-22.77 589.5,0 685.77,0 685.77,-22.77"/>
+<text text-anchor="middle" x="637.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: proc~~wavenumber_fwrestriction~~CalledByGraph Pages: 1 -->
+<svg id="procwavenumber_fwrestrictionCalledByGraph" width="377pt" height="31pt"
+ viewBox="0.00 0.00 377.06 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~wavenumber_fwrestriction~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>proc~~wavenumber_fwrestriction~~CalledByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 373.06,-26.77 373.06,4 -4,4"/>
+<!-- proc~wavenumber_fwrestriction -->
+<g id="proc~~wavenumber_fwrestriction~~CalledByGraph_node1" class="node">
+<title>proc~wavenumber_fwrestriction</title>
+<polygon fill="none" stroke="black" points="369.06,-22.77 227.04,-22.77 227.04,0 369.06,0 369.06,-22.77"/>
+<text text-anchor="middle" x="298.05" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">wavenumber_FWrestriction</text>
+</g>
+<!-- proc~fromfine2coarse -->
+<g id="proc~~wavenumber_fwrestriction~~CalledByGraph_node2" class="node">
+<title>proc~fromfine2coarse</title>
+<g id="a_proc~~wavenumber_fwrestriction~~CalledByGraph_node2"><a xlink:href="../proc/fromfine2coarse.html" xlink:title="FromFine2Coarse">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="191.04,-22.77 92.52,-22.77 92.52,0 191.04,0 191.04,-22.77"/>
+<text text-anchor="middle" x="141.78" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">FromFine2Coarse</text>
+</a>
+</g>
+</g>
+<!-- proc~fromfine2coarse&#45;&gt;proc~wavenumber_fwrestriction -->
+<g id="proc~~wavenumber_fwrestriction~~CalledByGraph_edge1" class="edge">
+<title>proc~fromfine2coarse&#45;&gt;proc~wavenumber_fwrestriction</title>
+<path fill="none" stroke="#000000" d="M191.17,-11.39C198.94,-11.39 207.18,-11.39 215.48,-11.39"/>
+<polygon fill="#000000" stroke="#000000" points="215.29,-14.89 225.29,-11.39 215.29,-7.89 215.29,-14.89"/>
+</g>
+<!-- interface~twogrids -->
+<g id="proc~~wavenumber_fwrestriction~~CalledByGraph_node3" class="node">
+<title>interface~twogrids</title>
+<g id="a_proc~~wavenumber_fwrestriction~~CalledByGraph_node3"><a xlink:href="../interface/twogrids.html" xlink:title="TwoGrids">
+<polygon fill="#a7506f" stroke="#a7506f" points="56.52,-22.77 0,-22.77 0,0 56.52,0 56.52,-22.77"/>
+<text text-anchor="middle" x="28.26" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">TwoGrids</text>
+</a>
+</g>
+</g>
+<!-- interface~twogrids&#45;&gt;proc~fromfine2coarse -->
+<g id="proc~~wavenumber_fwrestriction~~CalledByGraph_edge2" class="edge">
+<title>interface~twogrids&#45;&gt;proc~fromfine2coarse</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M56.83,-11.39C64.19,-11.39 72.44,-11.39 80.82,-11.39"/>
+<polygon fill="#000000" stroke="#000000" points="80.73,-14.89 90.73,-11.39 80.73,-7.89 80.73,-14.89"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 28.43" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.923937 0.923937) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 689.77,-26.77 689.77,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="63.27,-22.77 0,-22.77 0,0 63.27,0 63.27,-22.77"/>
+<text text-anchor="middle" x="31.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="135.63,-22.77 81.64,-22.77 81.64,0 135.63,0 135.63,-22.77"/>
+<text text-anchor="middle" x="108.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="207.63,-22.77 153.63,-22.77 153.63,0 207.63,0 207.63,-22.77"/>
+<text text-anchor="middle" x="180.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="347.14,-22.77 226.12,-22.77 226.12,0 347.14,0 347.14,-22.77"/>
+<text text-anchor="middle" x="286.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="499.89,-22.77 365.38,-22.77 365.38,0 499.89,0 499.89,-22.77"/>
+<text text-anchor="middle" x="432.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="571.63,-22.77 517.63,-22.77 517.63,0 571.63,0 571.63,-22.77"/>
+<text text-anchor="middle" x="544.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="685.77,-22.77 589.5,-22.77 589.5,0 685.77,0 685.77,-22.77"/>
+<text text-anchor="middle" x="637.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,3247 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>deflaion_setup &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>deflaion_setup
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="23.0% of total for modules and submodules.">1241 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/deflation_setup.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/deflation_setup.f90.html'>deflation_setup.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">deflaion_setup</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#inters-0"
+         aria-expanded="false" aria-controls="inters-0">
+         <h4 class="card-header bg-primary text-white">Interfaces</h4>
+      </a>
+      <div id="inters-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/deflaion_setup.html#interface-twogrids">TwoGrids</a>
+        </div>
+      </div>
+    </div>
+
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/deflaion_setup.html#type-twogrids">TwoGrids</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-def_px">DEF_Px</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-fromfine2coarse">FromFine2Coarse</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-coarsegridpara">CoarseGridpara</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-ztx">ZTx</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-zx">Zx</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-ztzx">ZTZx</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-helm_ahx">Helm_Ahx</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-helm_a2hx">Helm_A2hx</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-ex">Ex</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-invey">invEy</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-multilevel_invey">MultiLevel_invEy</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-qx">Qx</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-px">Px</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-p_defx">P_DEFx</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-p_adef1x">P_ADEF1x</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-multileveladp_px">MultiLevelADP_Px</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-p_tlkmx">P_TLKMx</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-default_gridpara">default_gridpara</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-wavenumber_fwrestriction">wavenumber_FWrestriction</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-def_fullgmres">DEF_fullgmres</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-def_arnoldi">def_arnoldi</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-def_apply_givens_rotation">def_apply_givens_rotation</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-def_back_substitute">def_back_substitute</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-def_bicgstab">DEF_bicgstab</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-def_prefgmres">DEF_prefgmres</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-helmholtz2d_o4cmpct">Helmholtz2d_O4cmpct</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-helmholtz2d_red_glk">Helmholtz2d_ReD_Glk</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-red_glk_stencils">ReD_Glk_stencils</a>
+            <a class="list-group-item" href="../module/deflaion_setup.html#proc-extrpltghostbcs">ExtrpltGhostBCs</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>This is an integrated module for deflation preconditioning </p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='mpi_setup.html'>mpi_setup</a></li>
+                  <li class="list-inline-item"><a href='wavenumber.html'>wavenumber</a></li>
+                  <li class="list-inline-item"><a href='cslp_solver.html'>CSLP_Solver</a></li>
+                  <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
+                  <li class="list-inline-item"><a href='operators.html'>operators</a></li>
+                  <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~deflaion_setup~~UsesGraph Pages: 1 -->
+<svg id="moduledeflaion_setupUsesGraph" width="641pt" height="217pt"
+ viewBox="0.00 0.00 641.00 217.19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~deflaion_setup~~UsesGraph" class="graph" transform="scale(0.713086 0.713086) rotate(0) translate(4 300.58)">
+<title>module~~deflaion_setup~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-300.58 894.91,-300.58 894.91,4 -4,4"/>
+<!-- module~deflaion_setup -->
+<g id="module~~deflaion_setup~~UsesGraph_node1" class="node">
+<title>module~deflaion_setup</title>
+<polygon fill="none" stroke="black" points="890.91,-221.59 809.64,-221.59 809.64,-198.82 890.91,-198.82 890.91,-221.59"/>
+<text text-anchor="middle" x="850.27" y="-205.86" font-family="Helvetica,sans-Serif" font-size="10.50">deflaion_setup</text>
+</g>
+<!-- module~comm_variable -->
+<g id="module~~deflaion_setup~~UsesGraph_node2" class="node">
+<title>module~comm_variable</title>
+<g id="a_module~~deflaion_setup~~UsesGraph_node2"><a xlink:href="../module/comm_variable.html" xlink:title="comm_variable">
+<polygon fill="#337ab7" stroke="#337ab7" points="174.27,-222.59 90,-222.59 90,-199.82 174.27,-199.82 174.27,-222.59"/>
+<text text-anchor="middle" x="132.13" y="-206.86" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">comm_variable</text>
+</a>
+</g>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~comm_variable -->
+<g id="module~~deflaion_setup~~UsesGraph_edge1" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-287.21C461.03,-264.98 413.58,-316.39 241.78,-287.21"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.78,-287.21C203.54,-279.6 170.24,-250.9 150.81,-231.03"/>
+<polygon fill="#000000" stroke="#000000" points="153.58,-228.87 144.17,-223.99 148.49,-233.67 153.58,-228.87"/>
+</g>
+<!-- module~cslp_solver -->
+<g id="module~~deflaion_setup~~UsesGraph_node3" class="node">
+<title>module~cslp_solver</title>
+<g id="a_module~~deflaion_setup~~UsesGraph_node3"><a xlink:href="../module/cslp_solver.html" xlink:title="CSLP_Solver">
+<polygon fill="#337ab7" stroke="#337ab7" points="773.64,-221.59 699.12,-221.59 699.12,-198.82 773.64,-198.82 773.64,-221.59"/>
+<text text-anchor="middle" x="736.38" y="-205.86" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">CSLP_Solver</text>
+</a>
+</g>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~cslp_solver -->
+<g id="module~~deflaion_setup~~UsesGraph_edge2" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M809.19,-210.21C801.44,-210.21 793.25,-210.21 785.27,-210.21"/>
+<polygon fill="#000000" stroke="#000000" points="785.34,-206.71 775.34,-210.21 785.34,-213.71 785.34,-206.71"/>
+</g>
+<!-- module~mpi_setup -->
+<g id="module~~deflaion_setup~~UsesGraph_node4" class="node">
+<title>module~mpi_setup</title>
+<g id="a_module~~deflaion_setup~~UsesGraph_node4"><a xlink:href="../module/mpi_setup.html" xlink:title="mpi_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="271.29,-68.59 210.27,-68.59 210.27,-45.82 271.29,-45.82 271.29,-68.59"/>
+<text text-anchor="middle" x="240.78" y="-52.86" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_setup</text>
+</a>
+</g>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~mpi_setup -->
+<g id="module~~deflaion_setup~~UsesGraph_edge3" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M834.51,-198.54C792.21,-166.13 665.76,-76.11 542.96,-57.21"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-57.21C505.96,-46.79 511.73,-17.48 477.33,-5.21 451.79,3.9 443.15,-1.3 416.31,-5.21 369.31,-12.06 317.36,-28.78 282.46,-41.43"/>
+<polygon fill="#000000" stroke="#000000" points="281.35,-38.1 273.18,-44.85 283.77,-44.67 281.35,-38.1"/>
+</g>
+<!-- module~operators -->
+<g id="module~~deflaion_setup~~UsesGraph_node5" class="node">
+<title>module~operators</title>
+<g id="a_module~~deflaion_setup~~UsesGraph_node5"><a xlink:href="../module/operators.html" xlink:title="operators">
+<polygon fill="#337ab7" stroke="#337ab7" points="570.6,-221.59 513.33,-221.59 513.33,-198.82 570.6,-198.82 570.6,-221.59"/>
+<text text-anchor="middle" x="541.96" y="-205.86" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">operators</text>
+</a>
+</g>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~operators -->
+<g id="module~~deflaion_setup~~UsesGraph_edge4" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-287.21C629.51,-286.34 590.08,-251.98 564.6,-229.46"/>
+<polygon fill="#000000" stroke="#000000" points="567.19,-227.07 557.39,-223.06 562.55,-232.31 567.19,-227.07"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M833.94,-222.05C799.49,-247.22 712.93,-302.55 635.86,-287.21"/>
+</g>
+<!-- module~wavenumber -->
+<g id="module~~deflaion_setup~~UsesGraph_node6" class="node">
+<title>module~wavenumber</title>
+<g id="a_module~~deflaion_setup~~UsesGraph_node6"><a xlink:href="../module/wavenumber.html" xlink:title="wavenumber">
+<polygon fill="#337ab7" stroke="#337ab7" points="380.31,-145.59 307.29,-145.59 307.29,-122.82 380.31,-122.82 380.31,-145.59"/>
+<text text-anchor="middle" x="343.8" y="-129.86" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">wavenumber</text>
+</a>
+</g>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~wavenumber -->
+<g id="module~~deflaion_setup~~UsesGraph_edge5" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-57.21C475.61,-44.64 404.09,-88.81 368.17,-115.43"/>
+<polygon fill="#000000" stroke="#000000" points="366.04,-112.65 360.21,-121.49 370.29,-118.21 366.04,-112.65"/>
+</g>
+<!-- mpi -->
+<g id="module~~deflaion_setup~~UsesGraph_node7" class="node">
+<title>mpi</title>
+<g id="a_module~~deflaion_setup~~UsesGraph_node7"><a xlink:href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm" xlink:title="mpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-222.59 0,-222.59 0,-199.82 54,-199.82 54,-222.59"/>
+<text text-anchor="middle" x="27" y="-206.86" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi</text>
+</a>
+</g>
+</g>
+<!-- module~deflaion_setup&#45;&gt;mpi -->
+<g id="module~~deflaion_setup~~UsesGraph_edge6" class="edge">
+<title>module~deflaion_setup&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.78,-287.21C176.09,-273.83 105.59,-245.68 64.13,-227.64"/>
+<polygon fill="#000000" stroke="#000000" points="65.69,-224.5 55.12,-223.68 62.87,-230.91 65.69,-224.5"/>
+</g>
+<!-- module~comm_variable&#45;&gt;mpi -->
+<g id="module~~deflaion_setup~~UsesGraph_edge7" class="edge">
+<title>module~comm_variable&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M89.78,-211.21C81.82,-211.21 73.51,-211.21 65.67,-211.21"/>
+<polygon fill="#000000" stroke="#000000" points="65.75,-207.71 55.75,-211.21 65.75,-214.71 65.75,-207.71"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~comm_variable -->
+<g id="module~~deflaion_setup~~UsesGraph_edge8" class="edge">
+<title>module~cslp_solver&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-249.21C593.59,-252.43 583.08,-244.4 542.96,-249.21"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~mpi_setup -->
+<g id="module~~deflaion_setup~~UsesGraph_edge9" class="edge">
+<title>module~cslp_solver&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-57.21C323.16,-58.85 301.29,-59.04 282.94,-58.75"/>
+<polygon fill="#000000" stroke="#000000" points="283.04,-55.26 272.96,-58.54 282.88,-62.25 283.04,-55.26"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~operators -->
+<g id="module~~deflaion_setup~~UsesGraph_edge10" class="edge">
+<title>module~cslp_solver&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M715.64,-221.95C696.15,-232.56 665.09,-246.87 635.86,-249.21"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-249.21C609.96,-251.12 585.1,-239.35 567.43,-228.25"/>
+<polygon fill="#000000" stroke="#000000" points="569.44,-225.38 559.18,-222.74 565.55,-231.21 569.44,-225.38"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~wavenumber -->
+<g id="module~~deflaion_setup~~UsesGraph_edge12" class="edge">
+<title>module~cslp_solver&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-133.21C501.07,-122.17 488.49,-140.92 447.82,-133.21"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M445.82,-133.21C428.46,-129.92 409.12,-129.37 392.04,-129.92"/>
+<polygon fill="#000000" stroke="#000000" points="391.97,-126.42 382.15,-130.38 392.3,-133.41 391.97,-126.42"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;mpi -->
+<g id="module~~deflaion_setup~~UsesGraph_edge13" class="edge">
+<title>module~cslp_solver&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M711.08,-198.44C675.15,-181.53 605.39,-150.48 542.96,-133.21"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-133.21C456.01,-94.15 437.98,-49.44 344.8,-57.21"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M131.13,-135.21C100.14,-150.05 68.98,-174.67 49.16,-191.85"/>
+<polygon fill="#000000" stroke="#000000" points="46.94,-189.14 41.77,-198.38 51.58,-194.38 46.94,-189.14"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-57.21C284.51,-44.91 263.86,-11.19 210.27,-37.21 160.41,-61.42 183.13,-111.27 133.13,-135.21"/>
+</g>
+<!-- module~smoother -->
+<g id="module~~deflaion_setup~~UsesGraph_node9" class="node">
+<title>module~smoother</title>
+<g id="a_module~~deflaion_setup~~UsesGraph_node9"><a xlink:href="../module/smoother.html" xlink:title="smoother">
+<polygon fill="#337ab7" stroke="#337ab7" points="663.12,-221.59 606.6,-221.59 606.6,-198.82 663.12,-198.82 663.12,-221.59"/>
+<text text-anchor="middle" x="634.86" y="-205.86" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">smoother</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~smoother -->
+<g id="module~~deflaion_setup~~UsesGraph_edge11" class="edge">
+<title>module~cslp_solver&#45;&gt;module~smoother</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M698.89,-210.21C691.15,-210.21 682.95,-210.21 675.12,-210.21"/>
+<polygon fill="#000000" stroke="#000000" points="675.13,-206.71 665.13,-210.21 675.13,-213.71 675.13,-206.71"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;module~comm_variable -->
+<g id="module~~deflaion_setup~~UsesGraph_edge14" class="edge">
+<title>module~mpi_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M231.76,-68.78C213.85,-94.65 170.37,-157.43 147.6,-190.32"/>
+<polygon fill="#000000" stroke="#000000" points="144.92,-188.04 142.11,-198.25 150.68,-192.03 144.92,-188.04"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;mpi -->
+<g id="module~~deflaion_setup~~UsesGraph_edge15" class="edge">
+<title>module~mpi_setup&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M227.01,-69.03C207.97,-86.06 170.37,-117.38 133.13,-135.21"/>
+</g>
+<!-- module~operators&#45;&gt;module~comm_variable -->
+<g id="module~~deflaion_setup~~UsesGraph_edge16" class="edge">
+<title>module~operators&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.78,-211.21C222.34,-208.25 203.05,-207.49 185.74,-207.72"/>
+<polygon fill="#000000" stroke="#000000" points="186.1,-204.21 176.19,-207.95 186.28,-211.21 186.1,-204.21"/>
+</g>
+<!-- module~operators&#45;&gt;module~mpi_setup -->
+<g id="module~~deflaion_setup~~UsesGraph_edge18" class="edge">
+<title>module~operators&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-211.21C313.6,-201.5 271.21,-119.35 251.97,-79.17"/>
+<polygon fill="#000000" stroke="#000000" points="255.16,-77.74 247.73,-70.19 248.83,-80.73 255.16,-77.74"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M513.12,-215.81C474.29,-222.42 402.16,-230.28 344.8,-211.21"/>
+</g>
+<!-- module~operators&#45;&gt;module~wavenumber -->
+<g id="module~~deflaion_setup~~UsesGraph_edge19" class="edge">
+<title>module~operators&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M528.01,-198.52C523.38,-194.33 518.11,-189.56 513.33,-185.21 485.85,-160.18 484.34,-140.13 447.82,-133.21"/>
+</g>
+<!-- module~operators&#45;&gt;mpi -->
+<g id="module~~deflaion_setup~~UsesGraph_edge20" class="edge">
+<title>module~operators&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.78,-211.21C182.4,-201.46 185.63,-110.07 133.13,-135.21"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-211.21C300.93,-195 286.04,-218.73 241.78,-211.21"/>
+</g>
+<!-- module~define_bc -->
+<g id="module~~deflaion_setup~~UsesGraph_node8" class="node">
+<title>module~define_bc</title>
+<g id="a_module~~deflaion_setup~~UsesGraph_node8"><a xlink:href="../module/define_bc.html" xlink:title="define_BC">
+<polygon fill="#337ab7" stroke="#337ab7" points="477.33,-183.59 416.31,-183.59 416.31,-160.82 477.33,-160.82 477.33,-183.59"/>
+<text text-anchor="middle" x="446.82" y="-167.86" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">define_BC</text>
+</a>
+</g>
+</g>
+<!-- module~operators&#45;&gt;module~define_bc -->
+<g id="module~~deflaion_setup~~UsesGraph_edge17" class="edge">
+<title>module~operators&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M513.02,-198.81C504.96,-195.52 496,-191.86 487.37,-188.34"/>
+<polygon fill="#000000" stroke="#000000" points="488.7,-185.11 478.12,-184.57 486.05,-191.59 488.7,-185.11"/>
+</g>
+<!-- module~wavenumber&#45;&gt;module~comm_variable -->
+<g id="module~~deflaion_setup~~UsesGraph_edge21" class="edge">
+<title>module~wavenumber&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.78,-135.21C203.1,-141.62 169.71,-170.93 150.41,-191.22"/>
+<polygon fill="#000000" stroke="#000000" points="147.99,-188.67 143.82,-198.41 153.16,-193.4 147.99,-188.67"/>
+</g>
+<!-- module~wavenumber&#45;&gt;module~mpi_setup -->
+<g id="module~~deflaion_setup~~UsesGraph_edge22" class="edge">
+<title>module~wavenumber&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M325.68,-122.45C319.8,-118.33 313.21,-113.63 307.29,-109.21 293.02,-98.54 277.38,-86.15 264.96,-76.14"/>
+<polygon fill="#000000" stroke="#000000" points="267.31,-73.54 257.34,-69.97 262.91,-78.98 267.31,-73.54"/>
+</g>
+<!-- module~wavenumber&#45;&gt;mpi -->
+<g id="module~~deflaion_setup~~UsesGraph_edge23" class="edge">
+<title>module~wavenumber&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.78,-135.21C193.09,-143.37 175.88,-114.74 133.13,-135.21"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M307.01,-131.74C287.57,-131.11 263.2,-131.46 241.78,-135.21"/>
+</g>
+<!-- module~define_bc&#45;&gt;module~comm_variable -->
+<g id="module~~deflaion_setup~~UsesGraph_edge24" class="edge">
+<title>module~define_bc&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M415.99,-174.66C371.19,-178.51 283.95,-186.63 210.27,-197.21 202.4,-198.34 194.1,-199.68 185.97,-201.08"/>
+<polygon fill="#000000" stroke="#000000" points="185.4,-197.63 176.17,-202.82 186.62,-204.52 185.4,-197.63"/>
+</g>
+<!-- module~define_bc&#45;&gt;module~wavenumber -->
+<g id="module~~deflaion_setup~~UsesGraph_edge25" class="edge">
+<title>module~define_bc&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M416.06,-161.01C406.83,-157.54 396.47,-153.65 386.58,-149.93"/>
+<polygon fill="#000000" stroke="#000000" points="388.11,-146.76 377.52,-146.52 385.65,-153.31 388.11,-146.76"/>
+</g>
+<!-- module~smoother&#45;&gt;module~comm_variable -->
+<g id="module~~deflaion_setup~~UsesGraph_edge26" class="edge">
+<title>module~smoother&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M615.62,-221.95C597.89,-232.39 569.78,-246.42 542.96,-249.21"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-249.21C413.38,-262.45 263.12,-238.17 185.47,-222.66"/>
+<polygon fill="#000000" stroke="#000000" points="186.54,-219.31 176.04,-220.75 185.14,-226.17 186.54,-219.31"/>
+</g>
+<!-- module~smoother&#45;&gt;module~mpi_setup -->
+<g id="module~~deflaion_setup~~UsesGraph_edge28" class="edge">
+<title>module~smoother&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-171.21C507.13,-157.44 509.87,-135.79 477.33,-119.21 459.95,-110.35 345.26,-82.05 282.56,-66.94"/>
+<polygon fill="#000000" stroke="#000000" points="283.5,-63.57 272.96,-64.63 281.87,-70.37 283.5,-63.57"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M608.31,-198.33C590.26,-190.17 565.39,-179.37 542.96,-171.21"/>
+</g>
+<!-- module~smoother&#45;&gt;module~operators -->
+<g id="module~~deflaion_setup~~UsesGraph_edge29" class="edge">
+<title>module~smoother&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M606.59,-210.21C598.91,-210.21 590.41,-210.21 582.18,-210.21"/>
+<polygon fill="#000000" stroke="#000000" points="582.36,-206.71 572.36,-210.21 582.36,-213.71 582.36,-206.71"/>
+</g>
+<!-- module~smoother&#45;&gt;module~define_bc -->
+<g id="module~~deflaion_setup~~UsesGraph_edge27" class="edge">
+<title>module~smoother&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-171.21C524.66,-164.57 505.37,-163.76 488.59,-165.02"/>
+<polygon fill="#000000" stroke="#000000" points="488.54,-161.51 478.95,-166.02 489.26,-168.47 488.54,-161.51"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmoduledeflaion_setupUsesGraph = svgPanZoom('#moduledeflaion_setupUsesGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~deflaion_setup~~UsedByGraph Pages: 1 -->
+<svg id="moduledeflaion_setupUsedByGraph" width="416pt" height="72pt"
+ viewBox="0.00 0.00 416.33 71.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~deflaion_setup~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 67.77)">
+<title>module~~deflaion_setup~~UsedByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-67.77 412.33,-67.77 412.33,4 -4,4"/>
+<!-- module~deflaion_setup -->
+<g id="module~~deflaion_setup~~UsedByGraph_node1" class="node">
+<title>module~deflaion_setup</title>
+<polygon fill="none" stroke="black" points="81.27,-42.77 0,-42.77 0,-20 81.27,-20 81.27,-42.77"/>
+<text text-anchor="middle" x="40.63" y="-27.04" font-family="Helvetica,sans-Serif" font-size="10.50">deflaion_setup</text>
+</g>
+<!-- module~solvers -->
+<g id="module~~deflaion_setup~~UsedByGraph_node2" class="node">
+<title>module~solvers</title>
+<g id="a_module~~deflaion_setup~~UsedByGraph_node2"><a xlink:href="../module/solvers.html" xlink:title="solvers">
+<polygon fill="#337ab7" stroke="#337ab7" points="181.15,-63.77 127.15,-63.77 127.15,-41 181.15,-41 181.15,-63.77"/>
+<text text-anchor="middle" x="154.15" y="-48.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">solvers</text>
+</a>
+</g>
+</g>
+<!-- module~solvers&#45;&gt;module~deflaion_setup -->
+<g id="module~~deflaion_setup~~UsedByGraph_edge1" class="edge">
+<title>module~solvers&#45;&gt;module~deflaion_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M126.73,-47.41C116.48,-45.48 104.38,-43.2 92.57,-40.98"/>
+<polygon fill="#000000" stroke="#000000" points="93.37,-37.57 82.89,-39.15 92.07,-44.44 93.37,-37.57"/>
+</g>
+<!-- module~user_module -->
+<g id="module~~deflaion_setup~~UsedByGraph_node3" class="node">
+<title>module~user_module</title>
+<g id="a_module~~deflaion_setup~~UsedByGraph_node3"><a xlink:href="../module/user_module.html" xlink:title="user_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="191.04,-22.77 117.27,-22.77 117.27,0 191.04,0 191.04,-22.77"/>
+<text text-anchor="middle" x="154.15" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">user_module</text>
+</a>
+</g>
+</g>
+<!-- module~user_module&#45;&gt;module~deflaion_setup -->
+<g id="module~~deflaion_setup~~UsedByGraph_edge2" class="edge">
+<title>module~user_module&#45;&gt;module~deflaion_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M116.95,-17.88C109.16,-19.27 100.8,-20.77 92.58,-22.25"/>
+<polygon fill="#000000" stroke="#000000" points="92.23,-18.76 83.01,-23.97 93.47,-25.65 92.23,-18.76"/>
+</g>
+<!-- module~idrs_module -->
+<g id="module~~deflaion_setup~~UsedByGraph_node4" class="node">
+<title>module~idrs_module</title>
+<g id="a_module~~deflaion_setup~~UsedByGraph_node4"><a xlink:href="../module/idrs_module.html" xlink:title="idrs_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="297.06,-23.77 227.04,-23.77 227.04,-1 297.06,-1 297.06,-23.77"/>
+<text text-anchor="middle" x="262.05" y="-8.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">idrs_module</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;module~user_module -->
+<g id="module~~deflaion_setup~~UsedByGraph_edge4" class="edge">
+<title>module~idrs_module&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M226.67,-12.06C218.95,-11.99 210.63,-11.91 202.49,-11.83"/>
+<polygon fill="#000000" stroke="#000000" points="202.73,-8.33 192.7,-11.74 202.66,-15.33 202.73,-8.33"/>
+</g>
+<!-- program~helmholtz_2d -->
+<g id="module~~deflaion_setup~~UsedByGraph_node5" class="node">
+<title>program~helmholtz_2d</title>
+<g id="a_module~~deflaion_setup~~UsedByGraph_node5"><a xlink:href="../program/helmholtz_2d.html" xlink:title="helmholtz_2d">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="408.33,-42.77 333.06,-42.77 333.06,-20 408.33,-20 408.33,-42.77"/>
+<text text-anchor="middle" x="370.69" y="-27.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">helmholtz_2d</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~solvers -->
+<g id="module~~deflaion_setup~~UsedByGraph_edge3" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~solvers</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M261.05,-51.39C238.3,-51.42 212.81,-51.66 192.54,-51.89"/>
+<polygon fill="#000000" stroke="#000000" points="192.74,-48.39 182.78,-52.01 192.82,-55.39 192.74,-48.39"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~user_module -->
+<g id="module~~deflaion_setup~~UsedByGraph_edge5" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M333,-41.71C312.57,-46.58 286.6,-51.35 263.05,-51.39"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M261.05,-51.39C233.6,-51.43 204.59,-39.52 183.88,-28.69"/>
+<polygon fill="#000000" stroke="#000000" points="185.64,-25.66 175.19,-23.92 182.28,-31.8 185.64,-25.66"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~idrs_module -->
+<g id="module~~deflaion_setup~~UsedByGraph_edge6" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~idrs_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M332.7,-24.79C324.93,-23.41 316.65,-21.93 308.61,-20.5"/>
+<polygon fill="#000000" stroke="#000000" points="309.43,-17.09 298.97,-18.78 308.2,-23.98 309.43,-17.09"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+        <section>
+          <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-twogrids"></span>
+      <h3>public        interface <a href='../interface/twogrids.html'>TwoGrids</a> 
+      </h3>
+    </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/fromfine2coarse.html'>FromFine2Coarse</a>(OneGrid)  
+
+    </h3>
+    
+  <p>A procedure to create a two-grid system from a given fine Gridpara type
+The wavenumber of the coarse level is restricted from the fine level</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-onegrid"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OneGrid</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/twogrids.html'>TwoGrids</a>)</small>
+    </h4>
+    
+
+          </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-twogrids"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/twogrids.html'>TwoGrids</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>Type definition for a two-grid system. "f" in variable names stands for fine grid, "c" in variable names stands for coarse grid</p>
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nxf_global"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nxf_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nyf_global"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nyf_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nxf"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nxf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nyf"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nyf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nxc_global~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nxc_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nyc_global~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nyc_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nxc~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nxc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nyc~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nyc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hxf"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hxf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hyf"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hyf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hxhyf"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hxhyf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hxc~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hxc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hyc~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hyc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hxhyc~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hxhyc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-if_offset"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>if_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jf_offset"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>jf_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-if_nn"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>if_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jf_nn"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>jf_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ic_offset~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>ic_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jc_offset~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>jc_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ic_nn~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>ic_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jc_nn~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>jc_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kxy_f"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>kxy_f</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kxy_c~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>kxy_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kh2_f"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>kh2_f</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kh2_c~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>kh2_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <h4>Constructor</h4>
+          
+        <table class="table table-striped varlist">
+          <tbody>
+                <tr>
+                  <td>
+                        public
+
+                    
+                    function
+                    <strong><a href='/Users/jchen/surfdrive/program/paraMADP_public/paraMADP/docs/proc/fromfine2coarse.html'>FromFine2Coarse</a></strong>
+                    (OneGrid)
+                  </td>
+                  <td><p>A procedure to create a two-grid system from a given fine Gridpara type
+The wavenumber of the coarse level is restricted from the fine level</p></td>
+                </tr>
+          </tbody>
+        </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-def_px"></span> <h3>public  function <a href='../proc/def_px.html'>DEF_Px</a>(x)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Identifier for different deflation methods, ONLY for an input array from the default (finest) grid system
+A basic deflation method</p><a href="../proc/def_px.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~4"></span>
+              complex(kind=realdp),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(1-LAP:nx+LAP,1-LAP:ny+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), dimension(1-LAP:nx+LAP,1-LAP:ny+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-fromfine2coarse"></span> <h3>public  function <a href='../proc/fromfine2coarse.html'>FromFine2Coarse</a>(OneGrid)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A procedure to create a two-grid system from a given fine Gridpara type
+The wavenumber of the coarse level is restricted from the fine level</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-onegrid"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OneGrid</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/twogrids.html'>TwoGrids</a>)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-coarsegridpara"></span> <h3>public  function <a href='../proc/coarsegridpara.html'>CoarseGridpara</a>(f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A procedure to create a Gridpara type of the coarse grid system from a given a two-grid system</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~3"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/gridpara.html'>Gridpara</a>)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-ztx"></span> <h3>public  function <a href='../proc/ztx.html'>ZTx</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Restriction of a variable, by full-weight restriction or higher-order restriction depending on the laylers of overlapping grid points used.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~5"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~4"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-zx"></span> <h3>public  function <a href='../proc/zx.html'>Zx</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Interpolation of a variable from coarse to fine, by bilinear or higher-order interpolation depending on the laylers of overlapping grid points used.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~6"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~5"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-ztzx"></span> <h3>public  function <a href='../proc/ztzx.html'>ZTZx</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A routine that first perform restriction and then interpolation</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~7"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~6"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-helm_ahx"></span> <h3>public  function <a href='../proc/helm_ahx.html'>Helm_Ahx</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A function that performs the Helmholtz operator on the fine grid of the two-grid system, by ReD-O2 method</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~8"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~7"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-helm_a2hx"></span> <h3>public  function <a href='../proc/helm_a2hx.html'>Helm_A2hx</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A function that performs the Helmholtz operator on the coarse grid of the two-grid system, by different methods
+ReD-O2
+ReD-Glk
+ReD-cmpO4</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~9"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~8"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-ex"></span> <h3>public  function <a href='../proc/ex.html'>Ex</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Coarse-grid operation for two-level deflation
+Straight-forward Galerkin coarsening approach</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~10"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~9"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-invey"></span> <h3>public  function <a href='../proc/invey.html'>invEy</a>(y, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Invert the coarse-grid operator for two-level delfation method, by using GMRES or Bi-CGSTAB
+determined by the specified maximum number of iterations on the coarse grid</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~10"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-multilevel_invey"></span> <h3>public recursive function <a href='../proc/multilevel_invey.html'>MultiLevel_invEy</a>(y, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A recursive function to invert the coarse-level operators for multilevel delfation methods, by using preconditioned FGMRES</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y~2"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~11"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-qx"></span> <h3>public  function <a href='../proc/qx.html'>Qx</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Perform y=Qx in deflation definition, where Q=ZE^(-1)Z^T</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~11"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~12"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-px"></span> <h3>public  function <a href='../proc/px.html'>Px</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Perform y=Px in deflation definition, where P=I-AQ</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~12"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~13"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-p_defx"></span> <h3>public  function <a href='../proc/p_defx.html'>P_DEFx</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Deflation preconditioning, P = (I-AQ)+Q</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~13"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~14"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-p_adef1x"></span> <h3>public  function <a href='../proc/p_adef1x.html'>P_ADEF1x</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Adapted Deflation Preconditioning, P = M^(-1)(I-AQ)+Q, including higher-order deflation (ADP) if LAP &gt; 1</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~14"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~15"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-multileveladp_px"></span> <h3>public recursive function <a href='../proc/multileveladp_px.html'>MultiLevelADP_Px</a>(x, grid)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Multilevel deflation preconditioning (MADP) 
+Multigrid-based CSLP on the finest and second level
+Krylov-based CSLP on the finest and second level</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~15"></span>
+              complex(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:grid%nx+LAP,1-LAP:grid%ny+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~6"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:grid%nx+LAP,1-LAP:grid%ny+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-p_tlkmx"></span> <h3>public  function <a href='../proc/p_tlkmx.html'>P_TLKMx</a>(x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Two-Level Krylov Method, P = [(I-M^(-1)AQ<code>)+Q</code>]M^(-1), where Q' is defined based on M^(-1)A
+M^(-1)x
+QM^(-1)x</p><a href="../proc/p_tlkmx.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~16"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~16"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:f2c%nxf+LAP,1-LAP:f2c%nyf+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-default_gridpara"></span> <h3>public  subroutine <a href='../proc/default_gridpara.html'>default_gridpara</a>(finestgrid)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a rountine to define the default finest Gridpara from the common grid parameters of the whole project </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-finestgrid~2"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>finestgrid</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-wavenumber_fwrestriction"></span> <h3>public  subroutine <a href='../proc/wavenumber_fwrestriction.html'>wavenumber_FWrestriction</a>(f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This routine obtains the wavenumber of the coarse level by full-weight restriction from the fine level</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~2"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-def_fullgmres"></span> <h3>public  subroutine <a href='../proc/def_fullgmres.html'>DEF_fullgmres</a>(y, x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A (CSLP preconditioned) GMRES solver for the coarse-grid problem in two-level deflation method
+Be careful!!, after the whole iteration without achieving eps, then the value of j will be "def_mg_miter+1".So we need a k.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y~3"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~17"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~17"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-def_arnoldi"></span> <h3>public  subroutine <a href='../proc/def_arnoldi.html'>def_arnoldi</a>(V, H, k, f2c, CurrentGrid)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Arnoldi prosess of DEF_fullgmres
+Attention: h_(i,j)=(w,v_i)=v^H*w, for complex value, so the code should be dot_product(v_i,w)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~5"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP,def_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>V</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~9"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(def_mg_miter+1,def_mg_miter)
+            </td>
+            <td>::</td>
+            <td><strong>H</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~12"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~18"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-currentgrid~3"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>CurrentGrid</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-def_apply_givens_rotation"></span> <h3>public  subroutine <a href='../proc/def_apply_givens_rotation.html'>def_apply_givens_rotation</a>(H, cs, sn, k)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Apply givens rotation of DEF_fullgmres</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~10"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(def_mg_miter+1,def_mg_miter)
+            </td>
+            <td>::</td>
+            <td><strong>H</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cs~5"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(def_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>cs</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sn~5"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(def_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>sn</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~13"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-def_back_substitute"></span> <h3>public  subroutine <a href='../proc/def_back_substitute.html'>def_back_substitute</a>(H, beta, k)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Perform back substitute in of DEF_fullgmres</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~11"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(def_mg_miter+1,def_mg_miter)
+            </td>
+            <td>::</td>
+            <td><strong>H</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-beta~7"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(def_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>beta</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~14"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-def_bicgstab"></span> <h3>public  subroutine <a href='../proc/def_bicgstab.html'>DEF_bicgstab</a>(y, x, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A (CSLP preconditioned) Bi-CGSTAB solver for the coarse-grid problem in two-level deflation method</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y~4"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~18"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~19"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-def_prefgmres"></span> <h3>public recursive subroutine <a href='../proc/def_prefgmres.html'>DEF_prefgmres</a>(y, x, f2c, maximum_iterations, level, rtol)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A recursive flexible GMRES with right deflation preconditioning
+Be careful!!, after the whole iteration without achieving eps, then the value of j will be "maxit+1".So we need a k.</p><a href="../proc/def_prefgmres.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y~5"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~19"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~20"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maximum_iterations~6"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maximum_iterations</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-level"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>level</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rtol"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rtol</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-helmholtz2d_o4cmpct"></span> <h3>public  subroutine <a href='../proc/helmholtz2d_o4cmpct.html'>Helmholtz2d_O4cmpct</a>(v_in, v_out, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A coarse-grid Helmholtz operator for two-level deflation, descretized by a classic compact fourth-order FD scheme</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v_in"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v_in</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v_out"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v_out</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~21"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-helmholtz2d_red_glk"></span> <h3>public  subroutine <a href='../proc/helmholtz2d_red_glk.html'>Helmholtz2d_ReD_Glk</a>(v_in, v_out, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A coarse-grid Helmholtz operator for two-level deflation, descretized by ReD-GLK FD scheme
+fill in a layer of ghost grid points by boundary conditions</p><a href="../proc/helmholtz2d_red_glk.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v_in~2"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v_in</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v_out~2"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v_out</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~22"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-red_glk_stencils"></span> <h3>public  subroutine <a href='../proc/red_glk_stencils.html'>ReD_Glk_stencils</a>(a, b, f2c, ic, jc)  
+</h3></div>
+    <div class="card-body">
+          
+  <p><em>ReD-Glk</em> computational stencils of the Helmholtz operator for coarse-grid level in two-deflation method</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~2"></span>
+              complex(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>a</strong>(-2:2,-2:2)</td>
+            <td>
+<p>a: Laplace operator</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b~4"></span>
+              complex(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>b</strong>(-2:2,-2:2)</td>
+            <td>
+<p>b: wavenumber operator</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~23"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ic"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ic</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jc"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>jc</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-extrpltghostbcs"></span> <h3>public  subroutine <a href='../proc/extrpltghostbcs.html'>ExtrpltGhostBCs</a>(v_in, f2c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Extrapolate a layer of ghost grid points based on the boundary conditions 
+The zero padding of wavenumber is ok in practical</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v_in~3"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v_in</strong>(1-LAP:f2c%nxc+LAP,1-LAP:f2c%nyc+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f2c~24"></span>
+              type(<a href='../type/twogrids.html'>TwoGrids</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f2c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,567 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>ReD_Glk_CSLP_bicgstab &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>ReD_Glk_CSLP_bicgstab
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 1.8% of total for procedures.">80 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/CSLP_Solver.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/cslp_solver.f90.html'>CSLP_Solver.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/cslp_solver.html'>CSLP_Solver</a></li>
+            <li class="breadcrumb-item active" aria-current="page">ReD_Glk_CSLP_bicgstab</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine ReD_Glk_CSLP_bicgstab(mg_solve, grid, maximum_iterations)  
+</h2>
+    
+
+    <p>This is a rountine to solve a coarse grid CSLP system approximately by using Bi-CGSTAB. 
+The CSLP operator is defined by ReD-Glk scheme. 
+CSLP operator by ReD-Glk </p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_solve~3"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_solve</strong></td>
+            <td>
+                <p>The current coarse grid system</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~4"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+                <p>Parameters of current coarse grid</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maximum_iterations~2"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maximum_iterations</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: proc~~red_glk_cslp_bicgstab~~CallsGraph Pages: 1 -->
+<svg id="procred_glk_cslp_bicgstabCallsGraph" width="641pt" height="223pt"
+ viewBox="0.00 0.00 641.00 222.95" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph" class="graph" transform="scale(0.961957 0.961957) rotate(0) translate(4 227.77)">
+<title>proc~~red_glk_cslp_bicgstab~~CallsGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-227.77 662.35,-227.77 662.35,4 -4,4"/>
+<!-- proc~red_glk_cslp_bicgstab -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node1" class="node">
+<title>proc~red_glk_cslp_bicgstab</title>
+<polygon fill="none" stroke="black" points="133.02,-63.77 0,-63.77 0,-41 133.02,-41 133.02,-63.77"/>
+<text text-anchor="middle" x="66.51" y="-48.04" font-family="Helvetica,sans-Serif" font-size="10.50">ReD_Glk_CSLP_bicgstab</text>
+</g>
+<!-- proc~cslp_mx_nth -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node2" class="node">
+<title>proc~cslp_mx_nth</title>
+<g id="a_proc~~red_glk_cslp_bicgstab~~CallsGraph_node2"><a xlink:href="../proc/cslp_mx_nth.html" xlink:title="CSLP_Mx_nth">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="248.79,-122.77 169.02,-122.77 169.02,-100 248.79,-100 248.79,-122.77"/>
+<text text-anchor="middle" x="208.9" y="-107.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">CSLP_Mx_nth</text>
+</a>
+</g>
+</g>
+<!-- proc~red_glk_cslp_bicgstab&#45;&gt;proc~cslp_mx_nth -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge1" class="edge">
+<title>proc~red_glk_cslp_bicgstab&#45;&gt;proc~cslp_mx_nth</title>
+<path fill="none" stroke="#000000" d="M95.58,-64.18C116.72,-73.07 145.95,-85.35 169.29,-95.16"/>
+<polygon fill="#000000" stroke="#000000" points="167.91,-98.37 178.48,-99.02 170.62,-91.92 167.91,-98.37"/>
+</g>
+<!-- proc~mg_dot_prod -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node3" class="node">
+<title>proc~mg_dot_prod</title>
+<g id="a_proc~~red_glk_cslp_bicgstab~~CallsGraph_node3"><a xlink:href="../proc/mg_dot_prod.html" xlink:title="mg_dot_prod">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="246.54,-63.77 171.27,-63.77 171.27,-41 246.54,-41 246.54,-63.77"/>
+<text text-anchor="middle" x="208.9" y="-48.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mg_dot_prod</text>
+</a>
+</g>
+</g>
+<!-- proc~red_glk_cslp_bicgstab&#45;&gt;proc~mg_dot_prod -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge2" class="edge">
+<title>proc~red_glk_cslp_bicgstab&#45;&gt;proc~mg_dot_prod</title>
+<path fill="none" stroke="#000000" d="M133.19,-52.39C142.12,-52.39 151.14,-52.39 159.69,-52.39"/>
+<polygon fill="#000000" stroke="#000000" points="159.47,-55.89 169.47,-52.39 159.47,-48.89 159.47,-55.89"/>
+</g>
+<!-- proc~mg_norm -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node4" class="node">
+<title>proc~mg_norm</title>
+<g id="a_proc~~red_glk_cslp_bicgstab~~CallsGraph_node4"><a xlink:href="../proc/mg_norm.html" xlink:title="mg_norm">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="237.54,-22.77 180.27,-22.77 180.27,0 237.54,0 237.54,-22.77"/>
+<text text-anchor="middle" x="208.9" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mg_norm</text>
+</a>
+</g>
+</g>
+<!-- proc~red_glk_cslp_bicgstab&#45;&gt;proc~mg_norm -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge3" class="edge">
+<title>proc~red_glk_cslp_bicgstab&#45;&gt;proc~mg_norm</title>
+<path fill="none" stroke="#000000" d="M108.12,-40.53C127.25,-34.94 149.98,-28.3 168.91,-22.77"/>
+<polygon fill="#000000" stroke="#000000" points="169.78,-26.17 178.39,-20 167.81,-19.45 169.78,-26.17"/>
+</g>
+<!-- proc~cslp2d_stencils -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node6" class="node">
+<title>proc~cslp2d_stencils</title>
+<g id="a_proc~~red_glk_cslp_bicgstab~~CallsGraph_node6"><a xlink:href="../proc/cslp2d_stencils.html" xlink:title="cslp2d_stencils">
+<polygon fill="#d9534f" stroke="#d9534f" points="396.43,-223.77 312.91,-223.77 312.91,-201 396.43,-201 396.43,-223.77"/>
+<text text-anchor="middle" x="354.67" y="-208.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">cslp2d_stencils</text>
+</a>
+</g>
+</g>
+<!-- proc~cslp_mx_nth&#45;&gt;proc~cslp2d_stencils -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge4" class="edge">
+<title>proc~cslp_mx_nth&#45;&gt;proc~cslp2d_stencils</title>
+<path fill="none" stroke="#000000" d="M217.69,-122.98C229.95,-140.37 255.4,-173.08 284.79,-191.38 290.03,-194.65 295.81,-197.44 301.73,-199.81"/>
+<polygon fill="#000000" stroke="#000000" points="300.42,-203.06 311.02,-203.13 302.78,-196.47 300.42,-203.06"/>
+</g>
+<!-- proc~cslp_mx_nth_stencils -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node7" class="node">
+<title>proc~cslp_mx_nth_stencils</title>
+<g id="a_proc~~red_glk_cslp_bicgstab~~CallsGraph_node7"><a xlink:href="../proc/cslp_mx_nth_stencils.html" xlink:title="CSLP_Mx_nth_stencils">
+<polygon fill="#d9534f" stroke="#d9534f" points="415.18,-182.77 294.16,-182.77 294.16,-160 415.18,-160 415.18,-182.77"/>
+<text text-anchor="middle" x="354.67" y="-167.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">CSLP_Mx_nth_stencils</text>
+</a>
+</g>
+</g>
+<!-- proc~cslp_mx_nth&#45;&gt;proc~cslp_mx_nth_stencils -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge5" class="edge">
+<title>proc~cslp_mx_nth&#45;&gt;proc~cslp_mx_nth_stencils</title>
+<path fill="none" stroke="#000000" d="M230.08,-123.19C244.88,-131.53 265.66,-142.56 284.79,-150.38 289.67,-152.38 294.81,-154.29 299.99,-156.08"/>
+<polygon fill="#000000" stroke="#000000" points="298.59,-159.3 309.18,-159.12 300.79,-152.66 298.59,-159.3"/>
+</g>
+<!-- proc~gridbase_extrpltghostbcs -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node8" class="node">
+<title>proc~gridbase_extrpltghostbcs</title>
+<g id="a_proc~~red_glk_cslp_bicgstab~~CallsGraph_node8"><a xlink:href="../proc/gridbase_extrpltghostbcs.html" xlink:title="GridBase_ExtrpltGhostBCs">
+<polygon fill="#d9534f" stroke="#d9534f" points="424.56,-141.77 284.79,-141.77 284.79,-119 424.56,-119 424.56,-141.77"/>
+<text text-anchor="middle" x="354.67" y="-126.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">GridBase_ExtrpltGhostBCs</text>
+</a>
+</g>
+</g>
+<!-- proc~cslp_mx_nth&#45;&gt;proc~gridbase_extrpltghostbcs -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge6" class="edge">
+<title>proc~cslp_mx_nth&#45;&gt;proc~gridbase_extrpltghostbcs</title>
+<path fill="none" stroke="#000000" d="M249.19,-116.58C256.68,-117.57 264.77,-118.64 273.01,-119.72"/>
+<polygon fill="#000000" stroke="#000000" points="272.43,-123.18 282.8,-121.02 273.35,-116.24 272.43,-123.18"/>
+</g>
+<!-- proc~log2 -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node9" class="node">
+<title>proc~log2</title>
+<g id="a_proc~~red_glk_cslp_bicgstab~~CallsGraph_node9"><a xlink:href="../proc/log2.html" xlink:title="LOG2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="529.32,-162.77 475.32,-162.77 475.32,-140 529.32,-140 529.32,-162.77"/>
+<text text-anchor="middle" x="502.32" y="-147.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">LOG2</text>
+</a>
+</g>
+</g>
+<!-- proc~cslp_mx_nth&#45;&gt;proc~log2 -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge7" class="edge">
+<title>proc~cslp_mx_nth&#45;&gt;proc~log2</title>
+<path fill="none" stroke="#000000" d="M248.98,-105.48C292.54,-100.21 364.73,-95.41 424.56,-110.39 442.6,-114.9 461.05,-124.56 475.33,-133.36"/>
+<polygon fill="#000000" stroke="#000000" points="473.35,-136.25 483.66,-138.72 477.14,-130.37 473.35,-136.25"/>
+</g>
+<!-- proc~mg_check_xy2d -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node10" class="node">
+<title>proc~mg_check_xy2d</title>
+<g id="a_proc~~red_glk_cslp_bicgstab~~CallsGraph_node10"><a xlink:href="../proc/mg_check_xy2d.html" xlink:title="mg_check_xy2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="399.06,-63.77 310.29,-63.77 310.29,-41 399.06,-41 399.06,-63.77"/>
+<text text-anchor="middle" x="354.67" y="-48.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mg_check_xy2d</text>
+</a>
+</g>
+</g>
+<!-- proc~cslp_mx_nth&#45;&gt;proc~mg_check_xy2d -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge8" class="edge">
+<title>proc~cslp_mx_nth&#45;&gt;proc~mg_check_xy2d</title>
+<path fill="none" stroke="#000000" d="M234.66,-99.56C249.15,-92.79 267.87,-84.29 284.79,-77.39 292.48,-74.25 300.74,-71.08 308.76,-68.11"/>
+<polygon fill="#000000" stroke="#000000" points="309.87,-71.43 318.07,-64.72 307.47,-64.86 309.87,-71.43"/>
+</g>
+<!-- mpi_allreduce -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node5" class="node">
+<title>mpi_allreduce</title>
+<polygon fill="#777777" stroke="#777777" points="393.81,-22.77 315.54,-22.77 315.54,0 393.81,0 393.81,-22.77"/>
+<text text-anchor="middle" x="354.67" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_allreduce</text>
+</g>
+<!-- proc~mg_dot_prod&#45;&gt;mpi_allreduce -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge9" class="edge">
+<title>proc~mg_dot_prod&#45;&gt;mpi_allreduce</title>
+<path fill="none" stroke="#000000" d="M246.93,-41.83C264.37,-36.85 285.43,-30.85 304.22,-25.49"/>
+<polygon fill="#000000" stroke="#000000" points="305.16,-28.86 313.82,-22.75 303.24,-22.13 305.16,-28.86"/>
+</g>
+<!-- proc~mg_norm&#45;&gt;mpi_allreduce -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge10" class="edge">
+<title>proc~mg_norm&#45;&gt;mpi_allreduce</title>
+<path fill="none" stroke="#000000" d="M237.97,-11.39C256.6,-11.39 281.59,-11.39 303.57,-11.39"/>
+<polygon fill="#000000" stroke="#000000" points="303.57,-14.89 313.57,-11.39 303.57,-7.89 303.57,-14.89"/>
+</g>
+<!-- proc~cslp_mx_nth_stencils&#45;&gt;proc~log2 -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge11" class="edge">
+<title>proc~cslp_mx_nth_stencils&#45;&gt;proc~log2</title>
+<path fill="none" stroke="#000000" d="M415.33,-163.19C431.7,-160.95 448.98,-158.57 463.73,-156.55"/>
+<polygon fill="#000000" stroke="#000000" points="464.01,-160.04 473.44,-155.21 463.06,-153.11 464.01,-160.04"/>
+</g>
+<!-- proc~mg_check_x2d -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node11" class="node">
+<title>proc~mg_check_x2d</title>
+<g id="a_proc~~red_glk_cslp_bicgstab~~CallsGraph_node11"><a xlink:href="../proc/mg_check_x2d.html" xlink:title="mg_check_x2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="544.08,-82.77 460.56,-82.77 460.56,-60 544.08,-60 544.08,-82.77"/>
+<text text-anchor="middle" x="502.32" y="-67.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mg_check_x2d</text>
+</a>
+</g>
+</g>
+<!-- proc~mg_check_xy2d&#45;&gt;proc~mg_check_x2d -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge12" class="edge">
+<title>proc~mg_check_xy2d&#45;&gt;proc~mg_check_x2d</title>
+<path fill="none" stroke="#000000" d="M399.37,-58.09C415.03,-60.13 432.84,-62.45 449.14,-64.58"/>
+<polygon fill="#000000" stroke="#000000" points="448.28,-67.99 458.65,-65.82 449.18,-61.05 448.28,-67.99"/>
+</g>
+<!-- proc~mg_check_y2d -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node12" class="node">
+<title>proc~mg_check_y2d</title>
+<g id="a_proc~~red_glk_cslp_bicgstab~~CallsGraph_node12"><a xlink:href="../proc/mg_check_y2d.html" xlink:title="mg_check_y2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="544.08,-41.77 460.56,-41.77 460.56,-19 544.08,-19 544.08,-41.77"/>
+<text text-anchor="middle" x="502.32" y="-26.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mg_check_y2d</text>
+</a>
+</g>
+</g>
+<!-- proc~mg_check_xy2d&#45;&gt;proc~mg_check_y2d -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge13" class="edge">
+<title>proc~mg_check_xy2d&#45;&gt;proc~mg_check_y2d</title>
+<path fill="none" stroke="#000000" d="M399.37,-45.78C415.03,-43.42 432.84,-40.73 449.14,-38.27"/>
+<polygon fill="#000000" stroke="#000000" points="449.29,-41.78 458.65,-36.83 448.24,-34.86 449.29,-41.78"/>
+</g>
+<!-- mpi_sendrecv -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_node13" class="node">
+<title>mpi_sendrecv</title>
+<polygon fill="#777777" stroke="#777777" points="658.35,-61.77 580.08,-61.77 580.08,-39 658.35,-39 658.35,-61.77"/>
+<text text-anchor="middle" x="619.21" y="-46.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_sendrecv</text>
+</g>
+<!-- proc~mg_check_x2d&#45;&gt;mpi_sendrecv -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge14" class="edge">
+<title>proc~mg_check_x2d&#45;&gt;mpi_sendrecv</title>
+<path fill="none" stroke="#000000" d="M544.48,-63.86C552.27,-62.44 560.49,-60.94 568.51,-59.47"/>
+<polygon fill="#000000" stroke="#000000" points="568.95,-62.95 578.16,-57.71 567.69,-56.06 568.95,-62.95"/>
+</g>
+<!-- proc~mg_check_y2d&#45;&gt;mpi_sendrecv -->
+<g id="proc~~red_glk_cslp_bicgstab~~CallsGraph_edge15" class="edge">
+<title>proc~mg_check_y2d&#45;&gt;mpi_sendrecv</title>
+<path fill="none" stroke="#000000" d="M544.48,-37.55C552.27,-38.91 560.49,-40.34 568.51,-41.73"/>
+<polygon fill="#000000" stroke="#000000" points="567.71,-45.15 578.16,-43.41 568.91,-38.25 567.71,-45.15"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprocred_glk_cslp_bicgstabCallsGraph = svgPanZoom('#procred_glk_cslp_bicgstabCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 28.43" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.923937 0.923937) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 689.77,-26.77 689.77,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="63.27,-22.77 0,-22.77 0,0 63.27,0 63.27,-22.77"/>
+<text text-anchor="middle" x="31.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="135.63,-22.77 81.64,-22.77 81.64,0 135.63,0 135.63,-22.77"/>
+<text text-anchor="middle" x="108.64" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="207.63,-22.77 153.63,-22.77 153.63,0 207.63,0 207.63,-22.77"/>
+<text text-anchor="middle" x="180.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="347.14,-22.77 226.12,-22.77 226.12,0 347.14,0 347.14,-22.77"/>
+<text text-anchor="middle" x="286.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="499.89,-22.77 365.38,-22.77 365.38,0 499.89,0 499.89,-22.77"/>
+<text text-anchor="middle" x="432.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="571.63,-22.77 517.63,-22.77 517.63,0 571.63,0 571.63,-22.77"/>
+<text text-anchor="middle" x="544.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="685.77,-22.77 589.5,-22.77 589.5,0 685.77,0 685.77,-22.77"/>
+<text text-anchor="middle" x="637.63" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

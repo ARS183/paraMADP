@@ -1,0 +1,1399 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>user_module &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>user_module
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 1.0% of total for modules and submodules.">54 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/user_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/user_module.f90.html'>user_module.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">user_module</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#inters-0"
+         aria-expanded="false" aria-controls="inters-0">
+         <h4 class="card-header bg-primary text-white">Interfaces</h4>
+      </a>
+      <div id="inters-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/user_module.html#interface-operator%28ASTERISK%29">OPERATOR(*)</a>
+            <a class="list-group-item" href="../module/user_module.html#interface-operator%28SLASH%29">OPERATOR(/)</a>
+        </div>
+      </div>
+    </div>
+
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/user_module.html#type-matrix">matrix</a>
+            <a class="list-group-item" href="../module/user_module.html#type-preconditioner">preconditioner</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/user_module.html#proc-rmatvec">rmatvec</a>
+            <a class="list-group-item" href="../module/user_module.html#proc-cmatvec">cmatvec</a>
+            <a class="list-group-item" href="../module/user_module.html#proc-rprecon">rprecon</a>
+            <a class="list-group-item" href="../module/user_module.html#proc-cprecon">cprecon</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>A module for IDR(s) to make data type and operators compatible</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='deflaion_setup.html'>deflaion_setup</a></li>
+                  <li class="list-inline-item"><a href='cslp_solver.html'>CSLP_Solver</a></li>
+                  <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
+                  <li class="list-inline-item"><a href='operators.html'>operators</a></li>
+                  <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~user_module~~UsesGraph Pages: 1 -->
+<svg id="moduleuser_moduleUsesGraph" width="641pt" height="224pt"
+ viewBox="0.00 0.00 641.00 223.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~user_module~~UsesGraph" class="graph" transform="scale(0.635484 0.635484) rotate(0) translate(4 348.1)">
+<title>module~~user_module~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-348.1 1004.68,-348.1 1004.68,4 -4,4"/>
+<!-- module~user_module -->
+<g id="module~~user_module~~UsesGraph_node1" class="node">
+<title>module~user_module</title>
+<polygon fill="none" stroke="black" points="1000.68,-278.38 926.91,-278.38 926.91,-255.62 1000.68,-255.62 1000.68,-278.38"/>
+<text text-anchor="middle" x="963.79" y="-262.65" font-family="Helvetica,sans-Serif" font-size="10.50">user_module</text>
+</g>
+<!-- module~comm_variable -->
+<g id="module~~user_module~~UsesGraph_node2" class="node">
+<title>module~comm_variable</title>
+<g id="a_module~~user_module~~UsesGraph_node2"><a xlink:href="../module/comm_variable.html" xlink:title="comm_variable">
+<polygon fill="#337ab7" stroke="#337ab7" points="174.27,-221.38 90,-221.38 90,-198.62 174.27,-198.62 174.27,-221.38"/>
+<text text-anchor="middle" x="132.13" y="-205.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">comm_variable</text>
+</a>
+</g>
+</g>
+<!-- module~user_module&#45;&gt;module~comm_variable -->
+<g id="module~~user_module~~UsesGraph_edge1" class="edge">
+<title>module~user_module&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M849.27,-306C799.55,-306.82 785.97,-295.4 737.38,-306"/>
+</g>
+<!-- module~cslp_solver -->
+<g id="module~~user_module~~UsesGraph_node3" class="node">
+<title>module~cslp_solver</title>
+<g id="a_module~~user_module~~UsesGraph_node3"><a xlink:href="../module/cslp_solver.html" xlink:title="CSLP_Solver">
+<polygon fill="#337ab7" stroke="#337ab7" points="773.64,-278.38 699.12,-278.38 699.12,-255.62 773.64,-255.62 773.64,-278.38"/>
+<text text-anchor="middle" x="736.38" y="-262.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">CSLP_Solver</text>
+</a>
+</g>
+</g>
+<!-- module~user_module&#45;&gt;module~cslp_solver -->
+<g id="module~~user_module~~UsesGraph_edge2" class="edge">
+<title>module~user_module&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M849.27,-306C820.46,-306.01 789.67,-294.34 767.71,-283.76"/>
+<polygon fill="#000000" stroke="#000000" points="769.53,-280.76 759.03,-279.39 766.39,-287.01 769.53,-280.76"/>
+</g>
+<!-- module~deflaion_setup -->
+<g id="module~~user_module~~UsesGraph_node4" class="node">
+<title>module~deflaion_setup</title>
+<g id="a_module~~user_module~~UsesGraph_node4"><a xlink:href="../module/deflaion_setup.html" xlink:title="deflaion_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="890.91,-278.38 809.64,-278.38 809.64,-255.62 890.91,-255.62 890.91,-278.38"/>
+<text text-anchor="middle" x="850.27" y="-262.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">deflaion_setup</text>
+</a>
+</g>
+</g>
+<!-- module~user_module&#45;&gt;module~deflaion_setup -->
+<g id="module~~user_module~~UsesGraph_edge3" class="edge">
+<title>module~user_module&#45;&gt;module~deflaion_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M926.59,-267C918.89,-267 910.63,-267 902.5,-267"/>
+<polygon fill="#000000" stroke="#000000" points="902.67,-263.5 892.67,-267 902.67,-270.5 902.67,-263.5"/>
+</g>
+<!-- module~operators -->
+<g id="module~~user_module~~UsesGraph_node5" class="node">
+<title>module~operators</title>
+<g id="a_module~~user_module~~UsesGraph_node5"><a xlink:href="../module/operators.html" xlink:title="operators">
+<polygon fill="#337ab7" stroke="#337ab7" points="570.6,-164.38 513.33,-164.38 513.33,-141.62 570.6,-141.62 570.6,-164.38"/>
+<text text-anchor="middle" x="541.96" y="-148.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">operators</text>
+</a>
+</g>
+</g>
+<!-- module~user_module&#45;&gt;module~operators -->
+<g id="module~~user_module~~UsesGraph_edge4" class="edge">
+<title>module~user_module&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M942.57,-278.69C920.78,-290.18 884.71,-305.98 851.27,-306"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-228C605.15,-214.68 577.95,-190.07 560.92,-172.68"/>
+<polygon fill="#000000" stroke="#000000" points="563.89,-170.73 554.45,-165.9 558.82,-175.56 563.89,-170.73"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M849.27,-306C829.74,-306.01 825.28,-298.71 809.64,-287 790.49,-272.67 794.77,-258.2 773.64,-247 719.03,-218.04 691.93,-254.02 635.86,-228"/>
+</g>
+<!-- mpi -->
+<g id="module~~user_module~~UsesGraph_node6" class="node">
+<title>mpi</title>
+<g id="a_module~~user_module~~UsesGraph_node6"><a xlink:href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm" xlink:title="mpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-221.38 0,-221.38 0,-198.62 54,-198.62 54,-221.38"/>
+<text text-anchor="middle" x="27" y="-205.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi</text>
+</a>
+</g>
+</g>
+<!-- module~user_module&#45;&gt;mpi -->
+<g id="module~~user_module~~UsesGraph_edge5" class="edge">
+<title>module~user_module&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.78,-38C224.65,-41.79 223.07,-48.08 210.27,-57 175.07,-81.51 170.05,-93.16 133.13,-115"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M131.13,-115C96.82,-135.3 64.21,-168.5 45.15,-189.8"/>
+<polygon fill="#000000" stroke="#000000" points="42.58,-187.42 38.62,-197.25 47.85,-192.03 42.58,-187.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M959.37,-255.18C943.62,-203.51 872.97,0 737.38,0 737.38,0 737.38,0 445.82,0 353.58,0 331.26,-15.58 241.78,-38"/>
+</g>
+<!-- module~comm_variable&#45;&gt;mpi -->
+<g id="module~~user_module~~UsesGraph_edge6" class="edge">
+<title>module~comm_variable&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M89.78,-210C81.82,-210 73.51,-210 65.67,-210"/>
+<polygon fill="#000000" stroke="#000000" points="65.75,-206.5 55.75,-210 65.75,-213.5 65.75,-206.5"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~comm_variable -->
+<g id="module~~user_module~~UsesGraph_edge7" class="edge">
+<title>module~cslp_solver&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-306C295.03,-301.63 288.91,-276.93 241.78,-268"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M698.95,-278.69C687.59,-281.9 674.93,-285.04 663.12,-287 523.31,-310.25 485.94,-318.91 344.8,-306"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~operators -->
+<g id="module~~user_module~~UsesGraph_edge9" class="edge">
+<title>module~cslp_solver&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M702.24,-255.17C682.67,-247.9 657.57,-238.08 635.86,-228"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;mpi -->
+<g id="module~~user_module~~UsesGraph_edge12" class="edge">
+<title>module~cslp_solver&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-306C283.34,-299.11 267.84,-298.41 210.27,-282 157.71,-267.02 99.34,-242.49 63.15,-226.29"/>
+<polygon fill="#000000" stroke="#000000" points="65.04,-223.31 54.49,-222.38 62.16,-229.68 65.04,-223.31"/>
+</g>
+<!-- module~mpi_setup -->
+<g id="module~~user_module~~UsesGraph_node8" class="node">
+<title>module~mpi_setup</title>
+<g id="a_module~~user_module~~UsesGraph_node8"><a xlink:href="../module/mpi_setup.html" xlink:title="mpi_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="271.29,-88.39 210.27,-88.39 210.27,-65.61 271.29,-65.61 271.29,-88.39"/>
+<text text-anchor="middle" x="240.78" y="-72.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_setup</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~mpi_setup -->
+<g id="module~~user_module~~UsesGraph_edge8" class="edge">
+<title>module~cslp_solver&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M731.52,-255.53C721.14,-226.58 689.72,-150.32 635.86,-114"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-114C525.08,-40.64 359.07,-56.47 282.76,-69"/>
+<polygon fill="#000000" stroke="#000000" points="282.49,-65.49 273.22,-70.63 283.67,-72.39 282.49,-65.49"/>
+</g>
+<!-- module~smoother -->
+<g id="module~~user_module~~UsesGraph_node9" class="node">
+<title>module~smoother</title>
+<g id="a_module~~user_module~~UsesGraph_node9"><a xlink:href="../module/smoother.html" xlink:title="smoother">
+<polygon fill="#337ab7" stroke="#337ab7" points="663.12,-278.38 606.6,-278.38 606.6,-255.62 663.12,-255.62 663.12,-278.38"/>
+<text text-anchor="middle" x="634.86" y="-262.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">smoother</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~smoother -->
+<g id="module~~user_module~~UsesGraph_edge10" class="edge">
+<title>module~cslp_solver&#45;&gt;module~smoother</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M698.89,-267C691.15,-267 682.95,-267 675.12,-267"/>
+<polygon fill="#000000" stroke="#000000" points="675.13,-263.5 665.13,-267 675.13,-270.5 675.13,-263.5"/>
+</g>
+<!-- module~wavenumber -->
+<g id="module~~user_module~~UsesGraph_node10" class="node">
+<title>module~wavenumber</title>
+<g id="a_module~~user_module~~UsesGraph_node10"><a xlink:href="../module/wavenumber.html" xlink:title="wavenumber">
+<polygon fill="#337ab7" stroke="#337ab7" points="380.31,-126.39 307.29,-126.39 307.29,-103.61 380.31,-103.61 380.31,-126.39"/>
+<text text-anchor="middle" x="343.8" y="-110.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">wavenumber</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~wavenumber -->
+<g id="module~~user_module~~UsesGraph_edge11" class="edge">
+<title>module~cslp_solver&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-114C600.37,-91.41 583.16,-109.93 542.96,-114"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~comm_variable -->
+<g id="module~~user_module~~UsesGraph_edge13" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M735.38,-306C651.23,-328.74 630.13,-344 542.96,-344 542.96,-344 542.96,-344 445.82,-344 383.33,-344 364.31,-345.55 307.29,-320 273.37,-304.8 278.3,-274.92 241.78,-268"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M821.31,-278.87C798.99,-287.81 766.73,-299.6 737.38,-306"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~cslp_solver -->
+<g id="module~~user_module~~UsesGraph_edge14" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M809.19,-267C801.44,-267 793.25,-267 785.27,-267"/>
+<polygon fill="#000000" stroke="#000000" points="785.34,-263.5 775.34,-267 785.34,-270.5 785.34,-263.5"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~operators -->
+<g id="module~~user_module~~UsesGraph_edge16" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-76C629.44,-76.6 589.64,-111.41 564.19,-134.02"/>
+<polygon fill="#000000" stroke="#000000" points="562.14,-131.16 557,-140.42 566.8,-136.38 562.14,-131.16"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;mpi -->
+<g id="module~~user_module~~UsesGraph_edge18" class="edge">
+<title>module~deflaion_setup&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-76C605.5,-79.85 598.89,-68.31 570.6,-64 470.73,-48.8 445.38,-28.56 344.8,-38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-38C298.03,-41.33 285.33,-27.09 241.78,-38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M844.06,-255.34C823.44,-211.18 743.45,-57.63 635.86,-76"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~mpi_setup -->
+<g id="module~~user_module~~UsesGraph_edge15" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-38C318.01,-40.33 291.82,-50.69 272.33,-60.15"/>
+<polygon fill="#000000" stroke="#000000" points="270.93,-56.93 263.58,-64.57 274.09,-63.18 270.93,-56.93"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~wavenumber -->
+<g id="module~~user_module~~UsesGraph_edge17" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-114C490.34,-119.12 432,-118.61 392.18,-117.29"/>
+<polygon fill="#000000" stroke="#000000" points="392.34,-113.79 382.22,-116.93 392.08,-120.79 392.34,-113.79"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-76C590.47,-81.88 586.43,-108.68 542.96,-114"/>
+</g>
+<!-- module~operators&#45;&gt;module~comm_variable -->
+<g id="module~~user_module~~UsesGraph_edge19" class="edge">
+<title>module~operators&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M536.8,-164.72C526.62,-191.15 497.57,-254.14 447.82,-268"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M445.82,-268C358.46,-292.35 331.08,-283.77 241.78,-268"/>
+</g>
+<!-- module~operators&#45;&gt;mpi -->
+<g id="module~~user_module~~UsesGraph_edge23" class="edge">
+<title>module~operators&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-154C249.37,-138.05 217.12,-71.07 133.13,-115"/>
+</g>
+<!-- module~define_bc -->
+<g id="module~~user_module~~UsesGraph_node7" class="node">
+<title>module~define_bc</title>
+<g id="a_module~~user_module~~UsesGraph_node7"><a xlink:href="../module/define_bc.html" xlink:title="define_BC">
+<polygon fill="#337ab7" stroke="#337ab7" points="477.33,-202.38 416.31,-202.38 416.31,-179.62 477.33,-179.62 477.33,-202.38"/>
+<text text-anchor="middle" x="446.82" y="-186.65" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">define_BC</text>
+</a>
+</g>
+</g>
+<!-- module~operators&#45;&gt;module~define_bc -->
+<g id="module~~user_module~~UsesGraph_edge20" class="edge">
+<title>module~operators&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M513.02,-164.4C504.96,-167.69 496,-171.34 487.37,-174.86"/>
+<polygon fill="#000000" stroke="#000000" points="486.05,-171.62 478.12,-178.64 488.7,-178.1 486.05,-171.62"/>
+</g>
+<!-- module~operators&#45;&gt;module~mpi_setup -->
+<g id="module~~user_module~~UsesGraph_edge21" class="edge">
+<title>module~operators&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M445.82,-152C401.09,-147.99 389.07,-161.56 344.8,-154"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-154C307.17,-147.92 275.76,-118.06 257.76,-97.37"/>
+<polygon fill="#000000" stroke="#000000" points="260.53,-95.22 251.44,-89.78 255.16,-99.71 260.53,-95.22"/>
+</g>
+<!-- module~operators&#45;&gt;module~wavenumber -->
+<g id="module~~user_module~~UsesGraph_edge22" class="edge">
+<title>module~operators&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M513.19,-153.84C494.64,-154.12 469.73,-153.96 447.82,-152"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M445.82,-152C421.76,-149.84 396.23,-140.42 376.85,-131.63"/>
+<polygon fill="#000000" stroke="#000000" points="378.39,-128.48 367.86,-127.37 375.39,-134.81 378.39,-128.48"/>
+</g>
+<!-- module~define_bc&#45;&gt;module~comm_variable -->
+<g id="module~~user_module~~UsesGraph_edge24" class="edge">
+<title>module~define_bc&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M418.91,-202.8C367.77,-224.98 259.98,-270.48 241.78,-268"/>
+</g>
+<!-- module~define_bc&#45;&gt;module~wavenumber -->
+<g id="module~~user_module~~UsesGraph_edge25" class="edge">
+<title>module~define_bc&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M431.15,-179.25C417.97,-168.78 398.03,-153.12 380.31,-140 377.34,-137.8 374.21,-135.53 371.08,-133.29"/>
+<polygon fill="#000000" stroke="#000000" points="373.32,-130.58 363.13,-127.66 369.27,-136.3 373.32,-130.58"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;module~comm_variable -->
+<g id="module~~user_module~~UsesGraph_edge26" class="edge">
+<title>module~mpi_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M230.32,-88.8C212.09,-111.54 171.92,-161.63 149.35,-189.78"/>
+<polygon fill="#000000" stroke="#000000" points="146.9,-187.24 143.37,-197.23 152.36,-191.62 146.9,-187.24"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;mpi -->
+<g id="module~~user_module~~UsesGraph_edge27" class="edge">
+<title>module~mpi_setup&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M209.88,-85.2C187.97,-91.79 157.87,-102.06 133.13,-115"/>
+</g>
+<!-- module~smoother&#45;&gt;module~comm_variable -->
+<g id="module~~user_module~~UsesGraph_edge28" class="edge">
+<title>module~smoother&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-268C500.2,-260.77 486.92,-254.41 447.82,-268"/>
+</g>
+<!-- module~smoother&#45;&gt;module~operators -->
+<g id="module~~user_module~~UsesGraph_edge31" class="edge">
+<title>module~smoother&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M620.01,-255.32C615.54,-251.29 610.69,-246.62 606.6,-242 587.46,-220.38 568.61,-193.06 556.46,-174.42"/>
+<polygon fill="#000000" stroke="#000000" points="559.45,-172.61 551.1,-166.09 553.56,-176.39 559.45,-172.61"/>
+</g>
+<!-- module~smoother&#45;&gt;module~define_bc -->
+<g id="module~~user_module~~UsesGraph_edge29" class="edge">
+<title>module~smoother&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M606.17,-270.1C588.03,-271.45 563.9,-271.94 542.96,-268"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-268C538.74,-267.58 497.15,-232.71 470.31,-210.04"/>
+<polygon fill="#000000" stroke="#000000" points="472.57,-207.37 462.67,-203.59 468.05,-212.72 472.57,-207.37"/>
+</g>
+<!-- module~smoother&#45;&gt;module~mpi_setup -->
+<g id="module~~user_module~~UsesGraph_edge30" class="edge">
+<title>module~smoother&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-268C485.46,-257.55 351.37,-203.32 307.29,-168 283.45,-148.89 264.22,-119.01 252.91,-98.75"/>
+<polygon fill="#000000" stroke="#000000" points="255.99,-97.1 248.17,-89.95 249.83,-100.41 255.99,-97.1"/>
+</g>
+<!-- module~wavenumber&#45;&gt;module~comm_variable -->
+<g id="module~~user_module~~UsesGraph_edge32" class="edge">
+<title>module~wavenumber&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.78,-268C208.01,-263.67 176.35,-244.01 155.88,-228.77"/>
+<polygon fill="#000000" stroke="#000000" points="158.02,-226 147.97,-222.65 153.74,-231.54 158.02,-226"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M322.61,-126.7C317.2,-130.47 311.64,-134.99 307.29,-140 265.38,-188.25 305.1,-276.62 241.78,-268"/>
+</g>
+<!-- module~wavenumber&#45;&gt;mpi -->
+<g id="module~~user_module~~UsesGraph_edge34" class="edge">
+<title>module~wavenumber&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M336.12,-103.3C321.4,-79.25 284.13,-27.39 241.78,-38"/>
+</g>
+<!-- module~wavenumber&#45;&gt;module~mpi_setup -->
+<g id="module~~user_module~~UsesGraph_edge33" class="edge">
+<title>module~wavenumber&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M311.39,-103.18C302.22,-99.73 292.06,-95.91 282.4,-92.28"/>
+<polygon fill="#000000" stroke="#000000" points="283.8,-89.07 273.2,-88.82 281.33,-95.62 283.8,-89.07"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmoduleuser_moduleUsesGraph = svgPanZoom('#moduleuser_moduleUsesGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~user_module~~UsedByGraph Pages: 1 -->
+<svg id="moduleuser_moduleUsedByGraph" width="299pt" height="50pt"
+ viewBox="0.00 0.00 299.06 49.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~user_module~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 45.77)">
+<title>module~~user_module~~UsedByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-45.77 295.06,-45.77 295.06,4 -4,4"/>
+<!-- module~user_module -->
+<g id="module~~user_module~~UsedByGraph_node1" class="node">
+<title>module~user_module</title>
+<polygon fill="none" stroke="black" points="73.77,-41.77 0,-41.77 0,-19 73.77,-19 73.77,-41.77"/>
+<text text-anchor="middle" x="36.88" y="-26.04" font-family="Helvetica,sans-Serif" font-size="10.50">user_module</text>
+</g>
+<!-- module~idrs_module -->
+<g id="module~~user_module~~UsedByGraph_node2" class="node">
+<title>module~idrs_module</title>
+<g id="a_module~~user_module~~UsedByGraph_node2"><a xlink:href="../module/idrs_module.html" xlink:title="idrs_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="179.79,-22.77 109.77,-22.77 109.77,0 179.79,0 179.79,-22.77"/>
+<text text-anchor="middle" x="144.78" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">idrs_module</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;module~user_module -->
+<g id="module~~user_module~~UsedByGraph_edge1" class="edge">
+<title>module~idrs_module&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M109.4,-17.55C101.68,-18.94 93.36,-20.43 85.22,-21.89"/>
+<polygon fill="#000000" stroke="#000000" points="84.63,-18.44 75.4,-23.65 85.86,-25.33 84.63,-18.44"/>
+</g>
+<!-- program~helmholtz_2d -->
+<g id="module~~user_module~~UsedByGraph_node3" class="node">
+<title>program~helmholtz_2d</title>
+<g id="a_module~~user_module~~UsedByGraph_node3"><a xlink:href="../program/helmholtz_2d.html" xlink:title="helmholtz_2d">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="291.06,-41.77 215.79,-41.77 215.79,-19 291.06,-19 291.06,-41.77"/>
+<text text-anchor="middle" x="253.42" y="-26.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">helmholtz_2d</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~user_module -->
+<g id="module~~user_module~~UsedByGraph_edge2" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M215.47,-30.99C204.04,-31.15 191.39,-31.31 179.79,-31.39 148.67,-31.6 140.89,-31.6 109.77,-31.39 101.88,-31.33 93.5,-31.24 85.36,-31.14"/>
+<polygon fill="#000000" stroke="#000000" points="85.64,-27.64 75.6,-31.01 85.55,-34.64 85.64,-27.64"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~idrs_module -->
+<g id="module~~user_module~~UsedByGraph_edge3" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~idrs_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M215.43,-23.79C207.66,-22.41 199.38,-20.93 191.34,-19.5"/>
+<polygon fill="#000000" stroke="#000000" points="192.16,-16.09 181.7,-17.78 190.93,-22.98 192.16,-16.09"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+        <section>
+          <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-operator%28ASTERISK%29"></span>
+      <h3>public        interface <a href='../interface/operator(ASTERISK).html'>OPERATOR(*)</a> 
+      </h3>
+    </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/rmatvec.html'>rmatvec</a>(A, v)  
+
+    </h3>
+    
+  <p>This is an empty matrix-vector multiplication for real-type input v</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~4"></span>
+              type(<a href='../type/matrix.html'>matrix</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~15"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(:,:)</td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=realdp), (size(v,1),size(v,2))</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/cmatvec.html'>cmatvec</a>(A, v)  
+
+    </h3>
+    
+  <p>This is complex matrix-vector multiplication</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~5"></span>
+              type(<a href='../type/matrix.html'>matrix</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~16"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(:,:)</td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (size(v,1),size(v,2))</small>
+    </h4>
+    
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-operator%28SLASH%29"></span>
+      <h3>public        interface <a href='../interface/operator(SLASH).html'>OPERATOR(/)</a> 
+      </h3>
+    </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/rprecon.html'>rprecon</a>(v, M1)  
+
+    </h3>
+    
+  <p>This is an empty preconditioner for real-type input v</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~17"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>v</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m1~4"></span>
+              type(<a href='../type/preconditioner.html'>preconditioner</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>M1</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=realdp), dimension(size(v,1),size(v,2))</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/cprecon.html'>cprecon</a>(v, M1)  
+
+    </h3>
+    
+  <p>This is an preconditioner for complex-type input v, i.e. M1^(-1)v
+We can manully call different preconditioners here. Here only use multigrid-based CLSP </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~18"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(:,:)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m1~5"></span>
+              type(<a href='../type/preconditioner.html'>preconditioner</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>M1</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (size(v,1),size(v,2))</small>
+    </h4>
+    
+
+          </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-matrix"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/matrix.html'>matrix</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>This is an empty matrix type</p>
+
+
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-preconditioner"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/preconditioner.html'>preconditioner</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ni~16"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ni</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nj~16"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nj</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hx_c~8"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hx_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hy_c~8"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hy_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-rmatvec"></span> <h3>public  function <a href='../proc/rmatvec.html'>rmatvec</a>(A, v)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is an empty matrix-vector multiplication for real-type input v</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~4"></span>
+              type(<a href='../type/matrix.html'>matrix</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~15"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(:,:)</td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=realdp), (size(v,1),size(v,2))</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-cmatvec"></span> <h3>public  function <a href='../proc/cmatvec.html'>cmatvec</a>(A, v)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is complex matrix-vector multiplication</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~5"></span>
+              type(<a href='../type/matrix.html'>matrix</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~16"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(:,:)</td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (size(v,1),size(v,2))</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-rprecon"></span> <h3>public  function <a href='../proc/rprecon.html'>rprecon</a>(v, M1)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is an empty preconditioner for real-type input v</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~17"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>v</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m1~4"></span>
+              type(<a href='../type/preconditioner.html'>preconditioner</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>M1</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=realdp), dimension(size(v,1),size(v,2))</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-cprecon"></span> <h3>public  function <a href='../proc/cprecon.html'>cprecon</a>(v, M1)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is an preconditioner for complex-type input v, i.e. M1^(-1)v
+We can manully call different preconditioners here. Here only use multigrid-based CLSP </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~18"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(:,:)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m1~5"></span>
+              type(<a href='../type/preconditioner.html'>preconditioner</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>M1</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (size(v,1),size(v,2))</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

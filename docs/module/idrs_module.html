@@ -1,0 +1,1781 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>idrs_module &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>idrs_module
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="11.6% of total for modules and submodules.">627 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/idrs_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/idrs_module.f90.html'>idrs_module.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">idrs_module</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#inters-0"
+         aria-expanded="false" aria-controls="inters-0">
+         <h4 class="card-header bg-primary text-white">Interfaces</h4>
+      </a>
+      <div id="inters-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/idrs_module.html#interface-trace_dot">TRACE_DOT</a>
+            <a class="list-group-item" href="../module/idrs_module.html#interface-p_dot">P_DOT</a>
+            <a class="list-group-item" href="../module/idrs_module.html#interface-frob_norm">FROB_NORM</a>
+            <a class="list-group-item" href="../module/idrs_module.html#interface-idrs">IDRS</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>IDRS Induced Dimension Reduction method</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='mpi_setup.html'>mpi_setup</a></li>
+                  <li class="list-inline-item"><a href='read_setup.html'>read_setup</a></li>
+                  <li class="list-inline-item"><a href='user_module.html'>user_module</a></li>
+                  <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
+                  <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~idrs_module~~UsesGraph Pages: 1 -->
+<svg id="moduleidrs_moduleUsesGraph" width="641pt" height="236pt"
+ viewBox="0.00 0.00 641.00 236.01" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~idrs_module~~UsesGraph" class="graph" transform="scale(0.572731 0.572731) rotate(0) translate(4 408.07)">
+<title>module~~idrs_module~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-408.07 1115.2,-408.07 1115.2,4 -4,4"/>
+<!-- module~idrs_module -->
+<g id="module~~idrs_module~~UsesGraph_node1" class="node">
+<title>module~idrs_module</title>
+<polygon fill="none" stroke="black" points="1111.2,-269.07 1041.18,-269.07 1041.18,-246.3 1111.2,-246.3 1111.2,-269.07"/>
+<text text-anchor="middle" x="1076.19" y="-253.34" font-family="Helvetica,sans-Serif" font-size="10.50">idrs_module</text>
+</g>
+<!-- module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_node2" class="node">
+<title>module~comm_variable</title>
+<g id="a_module~~idrs_module~~UsesGraph_node2"><a xlink:href="../module/comm_variable.html" xlink:title="comm_variable">
+<polygon fill="#337ab7" stroke="#337ab7" points="174.27,-365.07 90,-365.07 90,-342.3 174.27,-342.3 174.27,-365.07"/>
+<text text-anchor="middle" x="132.13" y="-349.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">comm_variable</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_edge1" class="edge">
+<title>module~idrs_module&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1065.58,-269.2C1037.18,-301.85 949.7,-392.69 855.77,-392.69 855.77,-392.69 855.77,-392.69 545.46,-392.69 458.28,-392.69 436.12,-400.66 349.3,-392.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M347.3,-392.69C298.49,-387.73 292.36,-345.23 244.03,-353.69"/>
+</g>
+<!-- module~mpi_setup -->
+<g id="module~~idrs_module~~UsesGraph_node3" class="node">
+<title>module~mpi_setup</title>
+<g id="a_module~~idrs_module~~UsesGraph_node3"><a xlink:href="../module/mpi_setup.html" xlink:title="mpi_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="273.54,-154.07 212.52,-154.07 212.52,-131.3 273.54,-131.3 273.54,-154.07"/>
+<text text-anchor="middle" x="243.03" y="-138.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_setup</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;module~mpi_setup -->
+<g id="module~~idrs_module~~UsesGraph_edge2" class="edge">
+<title>module~idrs_module&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M450.32,-9.69C414.33,-18.98 414.79,-39.71 384.81,-61.69 369.45,-72.95 366.66,-77.84 349.3,-85.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M347.3,-85.69C321.56,-97.33 293.57,-112.98 273.24,-124.93"/>
+<polygon fill="#000000" stroke="#000000" points="271.46,-121.92 264.65,-130.04 275.04,-127.94 271.46,-121.92"/>
+</g>
+<!-- module~read_setup -->
+<g id="module~~idrs_module~~UsesGraph_node4" class="node">
+<title>module~read_setup</title>
+<g id="a_module~~idrs_module~~UsesGraph_node4"><a xlink:href="../module/read_setup.html" xlink:title="read_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="275.79,-404.07 210.27,-404.07 210.27,-381.3 275.79,-381.3 275.79,-404.07"/>
+<text text-anchor="middle" x="243.03" y="-388.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_setup</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;module~read_setup -->
+<g id="module~~idrs_module~~UsesGraph_edge3" class="edge">
+<title>module~idrs_module&#45;&gt;module~read_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M347.3,-392.69C327.73,-390.89 305.98,-390.63 287.51,-390.93"/>
+<polygon fill="#000000" stroke="#000000" points="287.63,-387.42 277.71,-391.15 287.78,-394.42 287.63,-387.42"/>
+</g>
+<!-- module~user_module -->
+<g id="module~~idrs_module~~UsesGraph_node5" class="node">
+<title>module~user_module</title>
+<g id="a_module~~idrs_module~~UsesGraph_node5"><a xlink:href="../module/user_module.html" xlink:title="user_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1005.18,-269.07 931.41,-269.07 931.41,-246.3 1005.18,-246.3 1005.18,-269.07"/>
+<text text-anchor="middle" x="968.29" y="-253.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">user_module</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;module~user_module -->
+<g id="module~~idrs_module~~UsesGraph_edge4" class="edge">
+<title>module~idrs_module&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1040.81,-257.69C1033.09,-257.69 1024.77,-257.69 1016.63,-257.69"/>
+<polygon fill="#000000" stroke="#000000" points="1016.84,-254.19 1006.84,-257.69 1016.84,-261.19 1016.84,-254.19"/>
+</g>
+<!-- mpi -->
+<g id="module~~idrs_module~~UsesGraph_node6" class="node">
+<title>mpi</title>
+<g id="a_module~~idrs_module~~UsesGraph_node6"><a xlink:href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm" xlink:title="mpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-365.07 0,-365.07 0,-342.3 54,-342.3 54,-365.07"/>
+<text text-anchor="middle" x="27" y="-349.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;mpi -->
+<g id="module~~idrs_module~~UsesGraph_edge5" class="edge">
+<title>module~idrs_module&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M131.13,-210.69C86.49,-242.93 53.66,-300.48 38.09,-331.84"/>
+<polygon fill="#000000" stroke="#000000" points="34.98,-330.23 33.8,-340.75 41.29,-333.26 34.98,-330.23"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M242.03,-103.69C227.35,-111.12 222.9,-112.15 210.27,-122.69 170.33,-156 175.3,-180.24 133.13,-210.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M450.32,-9.69C403.87,-21.68 395.73,-35.63 349.3,-47.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M347.3,-47.69C296.77,-60.82 290.62,-80.12 244.03,-103.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1071.47,-246.06C1055,-197.03 983.69,-9.69 855.77,-9.69 855.77,-9.69 855.77,-9.69 638.36,-9.69 555.68,-9.69 532.38,10.98 452.32,-9.69"/>
+</g>
+<!-- module~comm_variable&#45;&gt;mpi -->
+<g id="module~~idrs_module~~UsesGraph_edge6" class="edge">
+<title>module~comm_variable&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M89.78,-353.69C81.82,-353.69 73.51,-353.69 65.67,-353.69"/>
+<polygon fill="#000000" stroke="#000000" points="65.75,-350.19 55.75,-353.69 65.75,-357.19 65.75,-350.19"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_edge7" class="edge">
+<title>module~mpi_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M236.02,-154.33C218.51,-188.26 167.33,-287.43 144.43,-331.8"/>
+<polygon fill="#000000" stroke="#000000" points="141.43,-329.98 139.95,-340.48 147.65,-333.19 141.43,-329.98"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;mpi -->
+<g id="module~~idrs_module~~UsesGraph_edge8" class="edge">
+<title>module~mpi_setup&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M221.43,-154.43C199.13,-167.4 162.77,-189.29 133.13,-210.69"/>
+</g>
+<!-- module~read_setup&#45;&gt;module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_edge9" class="edge">
+<title>module~read_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M209.95,-381.2C199.6,-377.49 187.94,-373.32 176.89,-369.36"/>
+<polygon fill="#000000" stroke="#000000" points="178.14,-366.09 167.55,-366.01 175.78,-372.68 178.14,-366.09"/>
+</g>
+<!-- module~read_setup&#45;&gt;mpi -->
+<g id="module~~idrs_module~~UsesGraph_edge10" class="edge">
+<title>module~read_setup&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M209.99,-390.44C179.02,-387.86 130.9,-382.76 90,-373.69 81.8,-371.87 73.14,-369.43 64.98,-366.87"/>
+<polygon fill="#000000" stroke="#000000" points="66.28,-363.61 55.69,-363.83 64.11,-370.27 66.28,-363.61"/>
+</g>
+<!-- module~user_module&#45;&gt;module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_edge11" class="edge">
+<title>module~user_module&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M853.77,-334.69C804.57,-341.94 790.95,-326.62 741.88,-334.69"/>
+</g>
+<!-- module~user_module&#45;&gt;mpi -->
+<g id="module~~idrs_module~~UsesGraph_edge15" class="edge">
+<title>module~user_module&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M962.01,-246.1C941.08,-202.08 859.28,-47.69 741.88,-47.69 741.88,-47.69 741.88,-47.69 545.46,-47.69 458.28,-47.69 433.89,-26.59 349.3,-47.69"/>
+</g>
+<!-- module~cslp_solver -->
+<g id="module~~idrs_module~~UsesGraph_node7" class="node">
+<title>module~cslp_solver</title>
+<g id="a_module~~idrs_module~~UsesGraph_node7"><a xlink:href="../module/cslp_solver.html" xlink:title="CSLP_Solver">
+<polygon fill="#337ab7" stroke="#337ab7" points="778.14,-269.07 703.62,-269.07 703.62,-246.3 778.14,-246.3 778.14,-269.07"/>
+<text text-anchor="middle" x="740.88" y="-253.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">CSLP_Solver</text>
+</a>
+</g>
+</g>
+<!-- module~user_module&#45;&gt;module~cslp_solver -->
+<g id="module~~idrs_module~~UsesGraph_edge12" class="edge">
+<title>module~user_module&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M957.43,-269.52C939.62,-289.57 899.83,-328.68 855.77,-334.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M853.77,-334.69C853.61,-334.71 800.99,-298.45 767.98,-275.69"/>
+<polygon fill="#000000" stroke="#000000" points="770.31,-273.04 760.09,-270.25 766.33,-278.81 770.31,-273.04"/>
+</g>
+<!-- module~deflaion_setup -->
+<g id="module~~idrs_module~~UsesGraph_node8" class="node">
+<title>module~deflaion_setup</title>
+<g id="a_module~~idrs_module~~UsesGraph_node8"><a xlink:href="../module/deflaion_setup.html" xlink:title="deflaion_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="895.41,-269.07 814.14,-269.07 814.14,-246.3 895.41,-246.3 895.41,-269.07"/>
+<text text-anchor="middle" x="854.77" y="-253.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">deflaion_setup</text>
+</a>
+</g>
+</g>
+<!-- module~user_module&#45;&gt;module~deflaion_setup -->
+<g id="module~~idrs_module~~UsesGraph_edge13" class="edge">
+<title>module~user_module&#45;&gt;module~deflaion_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M931.09,-257.69C923.39,-257.69 915.13,-257.69 907,-257.69"/>
+<polygon fill="#000000" stroke="#000000" points="907.17,-254.19 897.17,-257.69 907.17,-261.19 907.17,-254.19"/>
+</g>
+<!-- module~operators -->
+<g id="module~~idrs_module~~UsesGraph_node9" class="node">
+<title>module~operators</title>
+<g id="a_module~~idrs_module~~UsesGraph_node9"><a xlink:href="../module/operators.html" xlink:title="operators">
+<polygon fill="#337ab7" stroke="#337ab7" points="575.1,-250.07 517.83,-250.07 517.83,-227.3 575.1,-227.3 575.1,-250.07"/>
+<text text-anchor="middle" x="546.46" y="-234.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">operators</text>
+</a>
+</g>
+</g>
+<!-- module~user_module&#45;&gt;module~operators -->
+<g id="module~~idrs_module~~UsesGraph_edge14" class="edge">
+<title>module~user_module&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M853.77,-334.69C810.78,-340.56 709.04,-288.63 667.62,-275.69 640.41,-267.19 609.68,-257.73 586.11,-250.5"/>
+<polygon fill="#000000" stroke="#000000" points="587.2,-247.17 576.61,-247.59 585.15,-253.87 587.2,-247.17"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_edge16" class="edge">
+<title>module~cslp_solver&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M730.38,-269.28C714.24,-287.86 679.39,-323.38 640.36,-334.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M638.36,-334.69C558.53,-357.83 532.93,-333.45 452.32,-353.69"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~mpi_setup -->
+<g id="module~~idrs_module~~UsesGraph_edge17" class="edge">
+<title>module~cslp_solver&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M347.3,-123.69C326.62,-123.64 303.98,-127.37 285.19,-131.53"/>
+<polygon fill="#000000" stroke="#000000" points="284.45,-128.11 275.51,-133.81 286.05,-134.93 284.45,-128.11"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;mpi -->
+<g id="module~~idrs_module~~UsesGraph_edge21" class="edge">
+<title>module~cslp_solver&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M347.3,-123.69C300.55,-123.58 285.74,-82.58 244.03,-103.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M727.03,-245.85C713.29,-233.81 690.41,-215.45 667.62,-204.69 535.6,-142.38 495.28,-124.04 349.3,-123.69"/>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~operators -->
+<g id="module~~idrs_module~~UsesGraph_edge18" class="edge">
+<title>module~cslp_solver&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M638.36,-218.69C620.93,-215.5 601.74,-218.72 585.51,-223.44"/>
+<polygon fill="#000000" stroke="#000000" points="584.7,-220.02 576.25,-226.42 586.84,-226.69 584.7,-220.02"/>
+</g>
+<!-- module~smoother -->
+<g id="module~~idrs_module~~UsesGraph_node11" class="node">
+<title>module~smoother</title>
+<g id="a_module~~idrs_module~~UsesGraph_node11"><a xlink:href="../module/smoother.html" xlink:title="smoother">
+<polygon fill="#337ab7" stroke="#337ab7" points="667.62,-307.07 611.1,-307.07 611.1,-284.3 667.62,-284.3 667.62,-307.07"/>
+<text text-anchor="middle" x="639.36" y="-291.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">smoother</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~smoother -->
+<g id="module~~idrs_module~~UsesGraph_edge19" class="edge">
+<title>module~cslp_solver&#45;&gt;module~smoother</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M708.94,-269.5C699.3,-273.18 688.56,-277.29 678.49,-281.13"/>
+<polygon fill="#000000" stroke="#000000" points="677.42,-277.79 669.32,-284.63 679.92,-284.33 677.42,-277.79"/>
+</g>
+<!-- module~wavenumber -->
+<g id="module~~idrs_module~~UsesGraph_node12" class="node">
+<title>module~wavenumber</title>
+<g id="a_module~~idrs_module~~UsesGraph_node12"><a xlink:href="../module/wavenumber.html" xlink:title="wavenumber">
+<polygon fill="#337ab7" stroke="#337ab7" points="384.81,-212.07 311.79,-212.07 311.79,-189.3 384.81,-189.3 384.81,-212.07"/>
+<text text-anchor="middle" x="348.3" y="-196.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">wavenumber</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~wavenumber -->
+<g id="module~~idrs_module~~UsesGraph_edge20" class="edge">
+<title>module~cslp_solver&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M638.36,-218.69C597.76,-211.27 588.74,-199.69 547.46,-199.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M717.3,-245.93C697.6,-236.39 667.92,-223.73 640.36,-218.69"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_edge22" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M843.83,-269.27C825.89,-288.93 785.86,-327.46 741.88,-334.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M739.88,-334.69C696.24,-341.87 683.38,-324.4 640.36,-334.69"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~mpi_setup -->
+<g id="module~~idrs_module~~UsesGraph_edge24" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M450.32,-85.69C405.61,-81.6 390.21,-67.18 349.3,-85.69"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;mpi -->
+<g id="module~~idrs_module~~UsesGraph_edge27" class="edge">
+<title>module~deflaion_setup&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M838.4,-245.83C817.33,-229.88 777.98,-201.17 741.88,-180.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M450.32,-85.69C402.55,-81.32 395.84,-36.08 349.3,-47.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M739.88,-180.69C622.81,-114.27 586.36,-97.95 452.32,-85.69"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~cslp_solver -->
+<g id="module~~idrs_module~~UsesGraph_edge23" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M813.69,-257.69C805.94,-257.69 797.75,-257.69 789.77,-257.69"/>
+<polygon fill="#000000" stroke="#000000" points="789.84,-254.19 779.84,-257.69 789.84,-261.19 789.84,-254.19"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~operators -->
+<g id="module~~idrs_module~~UsesGraph_edge25" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M638.36,-180.69C624.05,-183.54 593.45,-204.43 571.71,-220.34"/>
+<polygon fill="#000000" stroke="#000000" points="569.9,-217.33 563.94,-226.09 574.06,-222.95 569.9,-217.33"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~wavenumber -->
+<g id="module~~idrs_module~~UsesGraph_edge26" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M545.46,-199.69C494.58,-199.69 436.28,-200.03 396.55,-200.31"/>
+<polygon fill="#000000" stroke="#000000" points="396.58,-196.81 386.61,-200.39 396.63,-203.81 396.58,-196.81"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M638.36,-180.69C597.88,-188.75 588.74,-199.47 547.46,-199.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M739.88,-180.69C701.41,-158.86 683.74,-172.06 640.36,-180.69"/>
+</g>
+<!-- module~operators&#45;&gt;module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_edge28" class="edge">
+<title>module~operators&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M541.5,-250.19C531.55,-276.76 502.66,-341.05 452.32,-353.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M450.32,-353.69C406.77,-364.62 393.48,-345.7 349.3,-353.69"/>
+</g>
+<!-- module~operators&#45;&gt;module~mpi_setup -->
+<g id="module~~idrs_module~~UsesGraph_edge30" class="edge">
+<title>module~operators&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M517.55,-227.82C485.7,-215.59 431.9,-195.52 384.81,-180.69 351.49,-170.2 313.19,-159.98 284.96,-152.78"/>
+<polygon fill="#000000" stroke="#000000" points="285.92,-149.42 275.37,-150.36 284.2,-156.2 285.92,-149.42"/>
+</g>
+<!-- module~operators&#45;&gt;mpi -->
+<g id="module~~idrs_module~~UsesGraph_edge32" class="edge">
+<title>module~operators&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M450.32,-237.69C356.93,-237.88 336.99,-286.68 244.03,-277.69"/>
+</g>
+<!-- module~define_bc -->
+<g id="module~~idrs_module~~UsesGraph_node10" class="node">
+<title>module~define_bc</title>
+<g id="a_module~~idrs_module~~UsesGraph_node10"><a xlink:href="../module/define_bc.html" xlink:title="define_BC">
+<polygon fill="#337ab7" stroke="#337ab7" points="481.83,-288.07 420.81,-288.07 420.81,-265.3 481.83,-265.3 481.83,-288.07"/>
+<text text-anchor="middle" x="451.32" y="-272.34" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">define_BC</text>
+</a>
+</g>
+</g>
+<!-- module~operators&#45;&gt;module~define_bc -->
+<g id="module~~idrs_module~~UsesGraph_edge29" class="edge">
+<title>module~operators&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M517.52,-250.09C509.46,-253.38 500.5,-257.03 491.87,-260.55"/>
+<polygon fill="#000000" stroke="#000000" points="490.55,-257.31 482.62,-264.33 493.2,-263.79 490.55,-257.31"/>
+</g>
+<!-- module~operators&#45;&gt;module~wavenumber -->
+<g id="module~~idrs_module~~UsesGraph_edge31" class="edge">
+<title>module~operators&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M450.32,-237.69C425.11,-237.74 398.39,-227.45 378.77,-217.71"/>
+<polygon fill="#000000" stroke="#000000" points="380.48,-214.65 370,-213.12 377.24,-220.86 380.48,-214.65"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M517.34,-238.2C498.86,-237.93 474.15,-237.65 452.32,-237.69"/>
+</g>
+<!-- module~define_bc&#45;&gt;module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_edge33" class="edge">
+<title>module~define_bc&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M441.36,-288.54C425.45,-308.25 390.1,-346.32 349.3,-353.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M347.3,-353.69C302.13,-361.85 289.24,-345.78 244.03,-353.69"/>
+</g>
+<!-- module~define_bc&#45;&gt;module~wavenumber -->
+<g id="module~~idrs_module~~UsesGraph_edge34" class="edge">
+<title>module~define_bc&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M435.65,-264.94C422.47,-254.47 402.53,-238.81 384.81,-225.69 381.84,-223.49 378.71,-221.22 375.58,-218.98"/>
+<polygon fill="#000000" stroke="#000000" points="377.82,-216.27 367.63,-213.35 373.77,-221.99 377.82,-216.27"/>
+</g>
+<!-- module~smoother&#45;&gt;module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_edge35" class="edge">
+<title>module~smoother&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M545.46,-315.69C500.95,-319.88 495.68,-342.8 452.32,-353.69"/>
+</g>
+<!-- module~smoother&#45;&gt;module~mpi_setup -->
+<g id="module~~idrs_module~~UsesGraph_edge37" class="edge">
+<title>module~smoother&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M545.46,-315.69C433.96,-327.36 395.17,-295.63 311.79,-220.69 292.05,-202.95 272.49,-179.66 259.5,-163.16"/>
+<polygon fill="#000000" stroke="#000000" points="262.48,-161.29 253.59,-155.52 256.94,-165.57 262.48,-161.29"/>
+</g>
+<!-- module~smoother&#45;&gt;module~operators -->
+<g id="module~~idrs_module~~UsesGraph_edge38" class="edge">
+<title>module~smoother&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M619.53,-283.88C606.85,-275.93 589.91,-265.31 575.64,-256.36"/>
+<polygon fill="#000000" stroke="#000000" points="577.89,-253.64 567.56,-251.29 574.17,-259.57 577.89,-253.64"/>
+</g>
+<!-- module~smoother&#45;&gt;module~define_bc -->
+<g id="module~~idrs_module~~UsesGraph_edge36" class="edge">
+<title>module~smoother&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M610.78,-303.45C592.89,-308.06 569,-313.44 547.46,-315.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M545.46,-315.69C520.86,-318.26 495.09,-306.15 476.9,-294.76"/>
+<polygon fill="#000000" stroke="#000000" points="478.91,-291.9 468.65,-289.27 475.03,-297.73 478.91,-291.9"/>
+</g>
+<!-- module~wavenumber&#45;&gt;module~comm_variable -->
+<g id="module~~idrs_module~~UsesGraph_edge39" class="edge">
+<title>module~wavenumber&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M345.02,-212.13C337.6,-245.65 310.64,-342.04 244.03,-353.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M242.03,-353.69C223.93,-356.86 203.87,-357.62 185.96,-357.35"/>
+<polygon fill="#000000" stroke="#000000" points="186.14,-353.85 176.05,-357.07 185.95,-360.85 186.14,-353.85"/>
+</g>
+<!-- module~wavenumber&#45;&gt;module~mpi_setup -->
+<g id="module~~idrs_module~~UsesGraph_edge40" class="edge">
+<title>module~wavenumber&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M326.4,-188.95C311.56,-180.62 291.4,-169.3 274.74,-159.94"/>
+<polygon fill="#000000" stroke="#000000" points="276.65,-157 266.22,-155.15 273.22,-163.1 276.65,-157"/>
+</g>
+<!-- module~wavenumber&#45;&gt;mpi -->
+<g id="module~~idrs_module~~UsesGraph_edge41" class="edge">
+<title>module~wavenumber&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M339.9,-212.44C324.64,-235.01 287.44,-281.89 244.03,-277.69"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M242.03,-277.69C185.47,-272.22 179.21,-177.42 133.13,-210.69"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmoduleidrs_moduleUsesGraph = svgPanZoom('#moduleidrs_moduleUsesGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~idrs_module~~UsedByGraph Pages: 1 -->
+<svg id="moduleidrs_moduleUsedByGraph" width="189pt" height="31pt"
+ viewBox="0.00 0.00 189.29 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~idrs_module~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>module~~idrs_module~~UsedByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 185.29,-26.77 185.29,4 -4,4"/>
+<!-- module~idrs_module -->
+<g id="module~~idrs_module~~UsedByGraph_node1" class="node">
+<title>module~idrs_module</title>
+<polygon fill="none" stroke="black" points="70.02,-22.77 0,-22.77 0,0 70.02,0 70.02,-22.77"/>
+<text text-anchor="middle" x="35.01" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">idrs_module</text>
+</g>
+<!-- program~helmholtz_2d -->
+<g id="module~~idrs_module~~UsedByGraph_node2" class="node">
+<title>program~helmholtz_2d</title>
+<g id="a_module~~idrs_module~~UsedByGraph_node2"><a xlink:href="../program/helmholtz_2d.html" xlink:title="helmholtz_2d">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="181.29,-22.77 106.02,-22.77 106.02,0 181.29,0 181.29,-22.77"/>
+<text text-anchor="middle" x="143.66" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">helmholtz_2d</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~idrs_module -->
+<g id="module~~idrs_module~~UsedByGraph_edge1" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~idrs_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M105.66,-11.39C97.98,-11.39 89.8,-11.39 81.84,-11.39"/>
+<polygon fill="#000000" stroke="#000000" points="81.95,-7.89 71.95,-11.39 81.95,-14.89 81.95,-7.89"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+        <section>
+          <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-trace_dot"></span>
+      <h3>public        interface <a href='../interface/trace_dot.html'>TRACE_DOT</a> 
+      </h3>
+    </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  function CTRACE_DOT(v, w)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(1-LAP:nx+LAP,1-LAP:ny+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-w"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>w</strong>(1-LAP:nx+LAP,1-LAP:ny+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  function RTRACE_DOT(v, w)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(1-LAP:nx+LAP,1-LAP:ny+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-w~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>w</strong>(1-LAP:nx+LAP,1-LAP:ny+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=realdp)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  function RCTRACE_DOT(v, w)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~3"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(1-LAP:nx+LAP,1-LAP:ny+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-w~3"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>w</strong>(1-LAP:nx+LAP,1-LAP:ny+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp)</small>
+    </h4>
+    
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-p_dot"></span>
+      <h3>public        interface <a href='../interface/p_dot.html'>P_DOT</a> 
+      </h3>
+    </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  function CP_DOT(P, R0, w, s)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-p"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>P</strong>(:,:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r0"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>R0</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-w~4"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>w</strong>(1-LAP:nx+LAP,1-LAP:ny+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-s~3"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>s</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (s)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  function RP_DOT(P, R0, w, s)  
+
+    </h3>
+  <p>made a big mistake here, only found after done numerous tests,</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-p~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>P</strong>(:,:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r0~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>R0</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-w~5"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>w</strong>(1-LAP:nx+LAP,1-LAP:ny+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-s~4"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>s</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=realdp), (s)</small>
+    </h4>
+    
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-frob_norm"></span>
+      <h3>public        interface <a href='../interface/frob_norm.html'>FROB_NORM</a> 
+      </h3>
+    </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  function CFROB_NORM(v)  
+
+    </h3>
+  <p>Frobenius norm of complex matrix</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~6"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(1-LAP:nx+LAP,1-LAP:ny+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=realdp)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  function RFROB_NORM(v)  
+
+    </h3>
+  <p>Frobenius norm of real matrix</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~7"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v</strong>(1-LAP:nx+LAP,1-LAP:ny+LAP)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=realdp)</small>
+    </h4>
+    
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-idrs"></span>
+      <h3>public        interface <a href='../interface/idrs.html'>IDRS</a> 
+      </h3>
+    </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  function CIDRS(A, b, M1, s, tolerance, maximum_iterations, variant, flag, relres, iterations, x0, U0, omega, resvec, H)  
+
+    </h3>
+  <p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a"></span>
+              type(<a href='../type/matrix.html'>matrix</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>b</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m1"></span>
+              type(<a href='../type/preconditioner.html'>preconditioner</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>M1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-s~5"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>s</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tolerance"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tolerance</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maximum_iterations~4"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maximum_iterations</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-variant"></span>
+              character(len=8),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>variant</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flag"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>flag</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-relres"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>relres</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iterations"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iterations</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x0"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x0</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u0"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>U0</strong>(:,:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-omega~2"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>omega</strong>(:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-resvec"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>resvec</strong>(:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~6"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>H</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (size(b,1),size(b,2))</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  function RIDRS(A, b, M1, s, tolerance, maximum_iterations, variant, flag, relres, iterations, x0, U0, omega, H, resvec)  
+
+    </h3>
+  <p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~2"></span>
+              type(<a href='../type/matrix.html'>matrix</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>b</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m1~2"></span>
+              type(<a href='../type/preconditioner.html'>preconditioner</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>M1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-s~6"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>s</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tolerance~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tolerance</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maximum_iterations~5"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maximum_iterations</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-variant~2"></span>
+              character(len=8),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>variant</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flag~2"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>flag</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-relres~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>relres</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iterations~2"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iterations</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x0~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x0</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u0~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>U0</strong>(:,:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-omega~3"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>omega</strong>(:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~7"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>H</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-resvec~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>resvec</strong>(:)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=realdp), (size(b,1),size(b,2))</small>
+    </h4>
+    
+
+          </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

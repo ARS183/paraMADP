@@ -1,0 +1,2201 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>CSLP_Solver &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>CSLP_Solver
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="14.0% of total for modules and submodules.">754 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/CSLP_Solver.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/cslp_solver.f90.html'>CSLP_Solver.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">CSLP_Solver</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/cslp_solver.html#type-gridsystem">GridSystem</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mgcslp_invmx">MGCSLP_invMx</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mgcslp_invmhx">MGCSLP_invMHx</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-krylovcslp_invmhx">KrylovCSLP_invMHx</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-finestgrid_define">finestgrid_define</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-gridsys_define">gridsys_define</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-coarsegrid_create">coarsegrid_create</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-grid_destroy">grid_destroy</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-restriction">restriction</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-prolongation_en_correct">prolongation_en_correct</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-v_cycle">V_cycle</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-f_cycle">F_cycle</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mg_fullgmres">mg_fullgmres</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mg_arnoldi">mg_arnoldi</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mg_apply_givens_rotation">mg_apply_givens_rotation</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mg_back_substitute">mg_back_substitute</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-mg_bicgstab">mg_bicgstab</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-red_glk_cslp_bicgstab">ReD_Glk_CSLP_bicgstab</a>
+            <a class="list-group-item" href="../module/cslp_solver.html#proc-red_glk_cslp_gmres">ReD_Glk_CSLP_gmres</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>This is a module to solve the inverse of CSLP approximately
+By multigrid methods or Krylov iterations</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='smoother.html'>smoother</a></li>
+                  <li class="list-inline-item"><a href='mpi_setup.html'>mpi_setup</a></li>
+                  <li class="list-inline-item"><a href='wavenumber.html'>wavenumber</a></li>
+                  <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
+                  <li class="list-inline-item"><a href='operators.html'>operators</a></li>
+                  <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~cslp_solver~~UsesGraph Pages: 1 -->
+<svg id="modulecslp_solverUsesGraph" width="641pt" height="206pt"
+ viewBox="0.00 0.00 641.00 206.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~cslp_solver~~UsesGraph" class="graph" transform="scale(0.820071 0.820071) rotate(0) translate(4 247.32)">
+<title>module~~cslp_solver~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-247.32 777.64,-247.32 777.64,4 -4,4"/>
+<!-- module~cslp_solver -->
+<g id="module~~cslp_solver~~UsesGraph_node1" class="node">
+<title>module~cslp_solver</title>
+<polygon fill="none" stroke="black" points="773.64,-69.47 699.12,-69.47 699.12,-46.7 773.64,-46.7 773.64,-69.47"/>
+<text text-anchor="middle" x="736.38" y="-53.73" font-family="Helvetica,sans-Serif" font-size="10.50">CSLP_Solver</text>
+</g>
+<!-- module~comm_variable -->
+<g id="module~~cslp_solver~~UsesGraph_node2" class="node">
+<title>module~comm_variable</title>
+<g id="a_module~~cslp_solver~~UsesGraph_node2"><a xlink:href="../module/comm_variable.html" xlink:title="comm_variable">
+<polygon fill="#337ab7" stroke="#337ab7" points="174.27,-125.47 90,-125.47 90,-102.7 174.27,-102.7 174.27,-125.47"/>
+<text text-anchor="middle" x="132.13" y="-109.73" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">comm_variable</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~comm_variable -->
+<g id="module~~cslp_solver~~UsesGraph_edge1" class="edge">
+<title>module~cslp_solver&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M712.07,-46.2C676.54,-29.23 606.29,-0.08 542.96,-0.08 542.96,-0.08 542.96,-0.08 445.82,-0.08 383.33,-0.08 364.43,1.2 307.29,-24.08 273.55,-39.01 278.13,-68.75 241.78,-75.08"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.78,-75.08C214.7,-79.12 187.85,-88.97 167.37,-97.76"/>
+<polygon fill="#000000" stroke="#000000" points="166.1,-94.5 158.37,-101.75 168.93,-100.9 166.1,-94.5"/>
+</g>
+<!-- module~mpi_setup -->
+<g id="module~~cslp_solver~~UsesGraph_node3" class="node">
+<title>module~mpi_setup</title>
+<g id="a_module~~cslp_solver~~UsesGraph_node3"><a xlink:href="../module/mpi_setup.html" xlink:title="mpi_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="271.29,-125.47 210.27,-125.47 210.27,-102.7 271.29,-102.7 271.29,-125.47"/>
+<text text-anchor="middle" x="240.78" y="-109.73" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_setup</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~mpi_setup -->
+<g id="module~~cslp_solver~~UsesGraph_edge2" class="edge">
+<title>module~cslp_solver&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M445.82,-230.08C381.16,-214.2 363.64,-208.54 307.29,-173.08 289.82,-162.08 272.57,-146.3 260.16,-133.82"/>
+<polygon fill="#000000" stroke="#000000" points="262.93,-131.64 253.46,-126.9 257.9,-136.52 262.93,-131.64"/>
+</g>
+<!-- module~operators -->
+<g id="module~~cslp_solver~~UsesGraph_node4" class="node">
+<title>module~operators</title>
+<g id="a_module~~cslp_solver~~UsesGraph_node4"><a xlink:href="../module/operators.html" xlink:title="operators">
+<polygon fill="#337ab7" stroke="#337ab7" points="570.6,-126.47 513.33,-126.47 513.33,-103.7 570.6,-103.7 570.6,-126.47"/>
+<text text-anchor="middle" x="541.96" y="-110.73" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">operators</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~operators -->
+<g id="module~~cslp_solver~~UsesGraph_edge3" class="edge">
+<title>module~cslp_solver&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-230.08C587.26,-241.57 559.99,-173.72 548.86,-137.19"/>
+<polygon fill="#000000" stroke="#000000" points="552.35,-136.67 546.23,-128.03 545.62,-138.61 552.35,-136.67"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M733.94,-69.52C728.72,-105.1 707.21,-212.49 635.86,-230.08"/>
+</g>
+<!-- module~smoother -->
+<g id="module~~cslp_solver~~UsesGraph_node5" class="node">
+<title>module~smoother</title>
+<g id="a_module~~cslp_solver~~UsesGraph_node5"><a xlink:href="../module/smoother.html" xlink:title="smoother">
+<polygon fill="#337ab7" stroke="#337ab7" points="663.12,-69.47 606.6,-69.47 606.6,-46.7 663.12,-46.7 663.12,-69.47"/>
+<text text-anchor="middle" x="634.86" y="-53.73" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">smoother</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~smoother -->
+<g id="module~~cslp_solver~~UsesGraph_edge4" class="edge">
+<title>module~cslp_solver&#45;&gt;module~smoother</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M698.89,-58.08C691.15,-58.08 682.95,-58.08 675.12,-58.08"/>
+<polygon fill="#000000" stroke="#000000" points="675.13,-54.58 665.13,-58.08 675.13,-61.58 675.13,-54.58"/>
+</g>
+<!-- module~wavenumber -->
+<g id="module~~cslp_solver~~UsesGraph_node6" class="node">
+<title>module~wavenumber</title>
+<g id="a_module~~cslp_solver~~UsesGraph_node6"><a xlink:href="../module/wavenumber.html" xlink:title="wavenumber">
+<polygon fill="#337ab7" stroke="#337ab7" points="380.31,-164.47 307.29,-164.47 307.29,-141.7 380.31,-141.7 380.31,-164.47"/>
+<text text-anchor="middle" x="343.8" y="-148.73" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">wavenumber</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~wavenumber -->
+<g id="module~~cslp_solver~~UsesGraph_edge5" class="edge">
+<title>module~cslp_solver&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M445.82,-230.08C409.23,-223.49 410.08,-200.34 380.31,-178.08 377.35,-175.87 374.22,-173.59 371.1,-171.34"/>
+<polygon fill="#000000" stroke="#000000" points="373.34,-168.64 363.16,-165.71 369.29,-174.35 373.34,-168.64"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.86,-230.08C553.58,-249.87 529.2,-244.73 447.82,-230.08"/>
+</g>
+<!-- mpi -->
+<g id="module~~cslp_solver~~UsesGraph_node7" class="node">
+<title>mpi</title>
+<g id="a_module~~cslp_solver~~UsesGraph_node7"><a xlink:href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm" xlink:title="mpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-183.47 0,-183.47 0,-160.7 54,-160.7 54,-183.47"/>
+<text text-anchor="middle" x="27" y="-167.73" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;mpi -->
+<g id="module~~cslp_solver~~UsesGraph_edge6" class="edge">
+<title>module~cslp_solver&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M445.82,-230.08C402.23,-219.31 388.98,-222.09 344.8,-230.08"/>
+</g>
+<!-- module~comm_variable&#45;&gt;mpi -->
+<g id="module~~cslp_solver~~UsesGraph_edge7" class="edge">
+<title>module~comm_variable&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M110.26,-125.82C95.45,-134.15 75.31,-145.47 58.67,-154.83"/>
+<polygon fill="#000000" stroke="#000000" points="57.16,-151.67 50.16,-159.62 60.59,-157.77 57.16,-151.67"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;module~comm_variable -->
+<g id="module~~cslp_solver~~UsesGraph_edge8" class="edge">
+<title>module~mpi_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M209.79,-114.08C202.34,-114.08 194.12,-114.08 185.93,-114.08"/>
+<polygon fill="#000000" stroke="#000000" points="185.95,-110.58 175.95,-114.08 185.95,-117.58 185.95,-110.58"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;mpi -->
+<g id="module~~cslp_solver~~UsesGraph_edge9" class="edge">
+<title>module~mpi_setup&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M131.13,-230.08C98.86,-229.86 67.35,-208.06 47.83,-191.26"/>
+<polygon fill="#000000" stroke="#000000" points="50.4,-188.86 40.62,-184.77 45.71,-194.06 50.4,-188.86"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M235.61,-125.67C224.2,-155.12 189.49,-230.47 133.13,-230.08"/>
+</g>
+<!-- module~operators&#45;&gt;module~comm_variable -->
+<g id="module~~cslp_solver~~UsesGraph_edge10" class="edge">
+<title>module~operators&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M445.82,-153.08C399.2,-165.04 391.13,-127.12 344.8,-114.08"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M517.07,-126.95C498.61,-135.59 472.18,-146.83 447.82,-153.08"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-114.08C296.47,-101.04 289.19,-66.83 241.78,-75.08"/>
+</g>
+<!-- module~operators&#45;&gt;module~mpi_setup -->
+<g id="module~~cslp_solver~~UsesGraph_edge12" class="edge">
+<title>module~operators&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-114.08C323.6,-108.67 301.52,-108.07 282.91,-109.07"/>
+<polygon fill="#000000" stroke="#000000" points="282.76,-105.57 273.04,-109.79 283.27,-112.55 282.76,-105.57"/>
+</g>
+<!-- module~operators&#45;&gt;module~wavenumber -->
+<g id="module~~cslp_solver~~UsesGraph_edge13" class="edge">
+<title>module~operators&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M445.82,-153.08C428.57,-157.51 409.1,-158.42 391.9,-157.91"/>
+<polygon fill="#000000" stroke="#000000" points="392.07,-154.42 381.92,-157.43 391.74,-161.41 392.07,-154.42"/>
+</g>
+<!-- module~operators&#45;&gt;mpi -->
+<g id="module~~cslp_solver~~UsesGraph_edge14" class="edge">
+<title>module~operators&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M445.82,-153.08C391.14,-167.11 400.35,-220.04 344.8,-230.08"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-230.08C298.62,-238.07 285.96,-222.09 241.78,-230.08"/>
+</g>
+<!-- module~define_bc -->
+<g id="module~~cslp_solver~~UsesGraph_node8" class="node">
+<title>module~define_bc</title>
+<g id="a_module~~cslp_solver~~UsesGraph_node8"><a xlink:href="../module/define_bc.html" xlink:title="define_BC">
+<polygon fill="#337ab7" stroke="#337ab7" points="477.33,-88.47 416.31,-88.47 416.31,-65.7 477.33,-65.7 477.33,-88.47"/>
+<text text-anchor="middle" x="446.82" y="-72.73" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">define_BC</text>
+</a>
+</g>
+</g>
+<!-- module~operators&#45;&gt;module~define_bc -->
+<g id="module~~cslp_solver~~UsesGraph_edge11" class="edge">
+<title>module~operators&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M513.02,-103.68C504.96,-100.39 496,-96.74 487.37,-93.22"/>
+<polygon fill="#000000" stroke="#000000" points="488.7,-89.98 478.12,-89.44 486.05,-96.46 488.7,-89.98"/>
+</g>
+<!-- module~smoother&#45;&gt;module~comm_variable -->
+<g id="module~~cslp_solver~~UsesGraph_edge15" class="edge">
+<title>module~smoother&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M606.36,-48.86C588.51,-43.66 564.62,-38.19 542.96,-38.08"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-38.08C453.78,-37.65 429.26,-16.44 344.8,-38.08"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-38.08C296.85,-51.29 288.89,-66.88 241.78,-75.08"/>
+</g>
+<!-- module~smoother&#45;&gt;module~mpi_setup -->
+<g id="module~~cslp_solver~~UsesGraph_edge17" class="edge">
+<title>module~smoother&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M342.8,-38.08C333.72,-40.41 291.76,-73.48 264.86,-95.22"/>
+<polygon fill="#000000" stroke="#000000" points="262.78,-92.4 257.22,-101.42 267.19,-97.84 262.78,-92.4"/>
+</g>
+<!-- module~smoother&#45;&gt;module~operators -->
+<g id="module~~cslp_solver~~UsesGraph_edge18" class="edge">
+<title>module~smoother&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M615.03,-69.89C602.35,-77.84 585.41,-88.46 571.14,-97.41"/>
+<polygon fill="#000000" stroke="#000000" points="569.67,-94.2 563.06,-102.48 573.39,-100.13 569.67,-94.2"/>
+</g>
+<!-- module~smoother&#45;&gt;module~define_bc -->
+<g id="module~~cslp_solver~~UsesGraph_edge16" class="edge">
+<title>module~smoother&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.96,-38.08C517.08,-37.96 492.23,-49.02 474.21,-59.39"/>
+<polygon fill="#000000" stroke="#000000" points="472.47,-56.35 465.75,-64.54 476.11,-62.33 472.47,-56.35"/>
+</g>
+<!-- module~wavenumber&#45;&gt;module~comm_variable -->
+<g id="module~~cslp_solver~~UsesGraph_edge19" class="edge">
+<title>module~wavenumber&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M325.09,-141.36C319.29,-137.32 312.89,-132.66 307.29,-128.08 278.29,-104.38 278.71,-68.87 241.78,-75.08"/>
+</g>
+<!-- module~wavenumber&#45;&gt;module~mpi_setup -->
+<g id="module~~cslp_solver~~UsesGraph_edge20" class="edge">
+<title>module~wavenumber&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M312.22,-141.27C302.75,-137.62 292.17,-133.53 282.15,-129.66"/>
+<polygon fill="#000000" stroke="#000000" points="283.57,-126.46 272.98,-126.12 281.05,-132.99 283.57,-126.46"/>
+</g>
+<!-- module~wavenumber&#45;&gt;mpi -->
+<g id="module~~cslp_solver~~UsesGraph_edge21" class="edge">
+<title>module~wavenumber&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M333.84,-164.93C317.93,-184.64 282.58,-222.71 241.78,-230.08"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.78,-230.08C193.14,-238.51 180.53,-230.41 133.13,-230.08"/>
+</g>
+<!-- module~define_bc&#45;&gt;module~comm_variable -->
+<g id="module~~cslp_solver~~UsesGraph_edge22" class="edge">
+<title>module~define_bc&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M415.83,-73.52C375.82,-69.51 302.92,-64.81 241.78,-75.08"/>
+</g>
+<!-- module~define_bc&#45;&gt;module~wavenumber -->
+<g id="module~~cslp_solver~~UsesGraph_edge23" class="edge">
+<title>module~define_bc&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M431.15,-88.83C417.97,-99.3 398.03,-114.96 380.31,-128.08 377.34,-130.28 374.21,-132.55 371.08,-134.79"/>
+<polygon fill="#000000" stroke="#000000" points="369.27,-131.78 363.13,-140.42 373.32,-137.5 369.27,-131.78"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmodulecslp_solverUsesGraph = svgPanZoom('#modulecslp_solverUsesGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~cslp_solver~~UsedByGraph Pages: 1 -->
+<svg id="modulecslp_solverUsedByGraph" width="527pt" height="72pt"
+ viewBox="0.00 0.00 526.85 71.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~cslp_solver~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 67.77)">
+<title>module~~cslp_solver~~UsedByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-67.77 522.85,-67.77 522.85,4 -4,4"/>
+<!-- module~cslp_solver -->
+<g id="module~~cslp_solver~~UsedByGraph_node1" class="node">
+<title>module~cslp_solver</title>
+<polygon fill="none" stroke="black" points="74.52,-43.77 0,-43.77 0,-21 74.52,-21 74.52,-43.77"/>
+<text text-anchor="middle" x="37.26" y="-28.04" font-family="Helvetica,sans-Serif" font-size="10.50">CSLP_Solver</text>
+</g>
+<!-- module~deflaion_setup -->
+<g id="module~~cslp_solver~~UsedByGraph_node2" class="node">
+<title>module~deflaion_setup</title>
+<g id="a_module~~cslp_solver~~UsedByGraph_node2"><a xlink:href="../module/deflaion_setup.html" xlink:title="deflaion_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="191.79,-43.77 110.52,-43.77 110.52,-21 191.79,-21 191.79,-43.77"/>
+<text text-anchor="middle" x="151.16" y="-28.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">deflaion_setup</text>
+</a>
+</g>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~cslp_solver -->
+<g id="module~~cslp_solver~~UsedByGraph_edge1" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M110.07,-32.39C102.32,-32.39 94.13,-32.39 86.15,-32.39"/>
+<polygon fill="#000000" stroke="#000000" points="86.22,-28.89 76.22,-32.39 86.22,-35.89 86.22,-28.89"/>
+</g>
+<!-- module~solvers -->
+<g id="module~~cslp_solver~~UsedByGraph_node3" class="node">
+<title>module~solvers</title>
+<g id="a_module~~cslp_solver~~UsedByGraph_node3"><a xlink:href="../module/solvers.html" xlink:title="solvers">
+<polygon fill="#337ab7" stroke="#337ab7" points="291.67,-63.77 237.67,-63.77 237.67,-41 291.67,-41 291.67,-63.77"/>
+<text text-anchor="middle" x="264.67" y="-48.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">solvers</text>
+</a>
+</g>
+</g>
+<!-- module~solvers&#45;&gt;module~cslp_solver -->
+<g id="module~~cslp_solver~~UsedByGraph_edge2" class="edge">
+<title>module~solvers&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M237.24,-54.53C206.6,-56.53 154.65,-58.38 110.52,-52.39 102,-51.23 93.07,-49.34 84.5,-47.17"/>
+<polygon fill="#000000" stroke="#000000" points="85.54,-43.82 74.97,-44.59 83.71,-50.58 85.54,-43.82"/>
+</g>
+<!-- module~solvers&#45;&gt;module~deflaion_setup -->
+<g id="module~~cslp_solver~~UsedByGraph_edge4" class="edge">
+<title>module~solvers&#45;&gt;module~deflaion_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M237.25,-47.65C227,-45.81 214.9,-43.64 203.09,-41.52"/>
+<polygon fill="#000000" stroke="#000000" points="203.88,-38.11 193.42,-39.78 202.64,-45 203.88,-38.11"/>
+</g>
+<!-- module~user_module -->
+<g id="module~~cslp_solver~~UsedByGraph_node4" class="node">
+<title>module~user_module</title>
+<g id="a_module~~cslp_solver~~UsedByGraph_node4"><a xlink:href="../module/user_module.html" xlink:title="user_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="301.56,-22.77 227.79,-22.77 227.79,0 301.56,0 301.56,-22.77"/>
+<text text-anchor="middle" x="264.67" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">user_module</text>
+</a>
+</g>
+</g>
+<!-- module~user_module&#45;&gt;module~cslp_solver -->
+<g id="module~~cslp_solver~~UsedByGraph_edge3" class="edge">
+<title>module~user_module&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M227.59,-8.96C196.43,-7.5 150.29,-6.85 110.52,-12.39 102.09,-13.56 93.26,-15.44 84.78,-17.58"/>
+<polygon fill="#000000" stroke="#000000" points="84.09,-14.14 75.35,-20.13 85.92,-20.9 84.09,-14.14"/>
+</g>
+<!-- module~user_module&#45;&gt;module~deflaion_setup -->
+<g id="module~~cslp_solver~~UsedByGraph_edge5" class="edge">
+<title>module~user_module&#45;&gt;module~deflaion_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M227.47,-18.2C219.68,-19.67 211.32,-21.24 203.1,-22.79"/>
+<polygon fill="#000000" stroke="#000000" points="202.7,-19.3 193.52,-24.6 204,-26.18 202.7,-19.3"/>
+</g>
+<!-- module~idrs_module -->
+<g id="module~~cslp_solver~~UsedByGraph_node5" class="node">
+<title>module~idrs_module</title>
+<g id="a_module~~cslp_solver~~UsedByGraph_node5"><a xlink:href="../module/idrs_module.html" xlink:title="idrs_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="407.58,-23.77 337.56,-23.77 337.56,-1 407.58,-1 407.58,-23.77"/>
+<text text-anchor="middle" x="372.57" y="-8.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">idrs_module</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;module~user_module -->
+<g id="module~~cslp_solver~~UsedByGraph_edge7" class="edge">
+<title>module~idrs_module&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M337.19,-12.06C329.47,-11.99 321.15,-11.91 313.01,-11.83"/>
+<polygon fill="#000000" stroke="#000000" points="313.25,-8.33 303.22,-11.74 313.18,-15.33 313.25,-8.33"/>
+</g>
+<!-- program~helmholtz_2d -->
+<g id="module~~cslp_solver~~UsedByGraph_node6" class="node">
+<title>program~helmholtz_2d</title>
+<g id="a_module~~cslp_solver~~UsedByGraph_node6"><a xlink:href="../program/helmholtz_2d.html" xlink:title="helmholtz_2d">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="518.85,-42.77 443.58,-42.77 443.58,-20 518.85,-20 518.85,-42.77"/>
+<text text-anchor="middle" x="481.21" y="-27.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">helmholtz_2d</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~solvers -->
+<g id="module~~cslp_solver~~UsedByGraph_edge6" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~solvers</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M371.57,-51.39C348.82,-51.42 323.33,-51.66 303.06,-51.89"/>
+<polygon fill="#000000" stroke="#000000" points="303.26,-48.39 293.3,-52.01 303.34,-55.39 303.26,-48.39"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~user_module -->
+<g id="module~~cslp_solver~~UsedByGraph_edge8" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M371.57,-51.39C344.12,-51.43 315.11,-39.52 294.4,-28.69"/>
+<polygon fill="#000000" stroke="#000000" points="296.16,-25.66 285.71,-23.92 292.8,-31.8 296.16,-25.66"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M443.52,-41.71C423.09,-46.58 397.12,-51.35 373.57,-51.39"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~idrs_module -->
+<g id="module~~cslp_solver~~UsedByGraph_edge9" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~idrs_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M443.22,-24.79C435.45,-23.41 427.17,-21.93 419.13,-20.5"/>
+<polygon fill="#000000" stroke="#000000" points="419.95,-17.09 409.49,-18.78 418.72,-23.98 419.95,-17.09"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-gridsystem"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/gridsystem.html'>GridSystem</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>A data type that collect some info of a (coarse) grid system 
+It is different the type Gridpara, which does not consist any variable like u, rhs, res, and etc.</p>
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nxc_global"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nxc_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Global grid size, in x and y directions respectively.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nyc_global"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nyc_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Global grid size, in x and y directions respectively.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nxc"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nxc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Local grid size of a subdomain, in x and y directions respectively.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nyc"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nyc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Local grid size of a subdomain, in x and y directions respectively.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ic_offset"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>ic_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>ic_offset: an array that contains the index offset for MPI ranks in x direction   </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jc_offset"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>jc_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>jc_offset: an array that contains the index offset for MPI ranks in y direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ic_nn"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>ic_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>ic_nn: an array that contains the number of grid points for MPI ranks in x direction   </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jc_nn"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>jc_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>jc_nn: an array that contains the number of grid points for MPI ranks in y direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hxc"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hxc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>space step, hxhyc==hx*hy==hx^2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hyc"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hyc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>space step, hxhyc==hx*hy==hx^2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hxhyc"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hxhyc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>space step, hxhyc==hx*hy==hx^2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u_c"></span>
+              complex(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>u_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Solution variable in subdomain</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rhs_c"></span>
+              complex(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>rhs_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>RHS variable in subdomain</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-res_c"></span>
+              complex(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>res_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>Residual variable in subdomain</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kxy_c"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>kxy_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>wavenumber in subdomain</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kh2_c"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>kh2_c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>wavenumber in subdomain</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mgcslp_invmx"></span> <h3>public  function <a href='../proc/mgcslp_invmx.html'>MGCSLP_invMx</a>(b_in)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Multigrid-Based CSLP, ONLY starts from the default (finest) grid sysyem
+One V-cycle
+Two V-cycle
+One F-cycle</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b_in"></span>
+              complex(kind=realdp),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(1-LAP:nx+LAP,1-LAP:ny+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>b_in</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), (1-LAP:nx+LAP,1-LAP:ny+LAP)</small>
+    </h4>
+    <p>MGCSLP_invMx = M_h^(-1)(b_h)</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mgcslp_invmhx"></span> <h3>public  function <a href='../proc/mgcslp_invmhx.html'>MGCSLP_invMHx</a>(b_in, grid)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Multigrid-based CSLP, starts from the a specified grid system
+One V-cycle
+Two V-cycle
+One F-cycle</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b_in~2"></span>
+              complex(kind=realdp),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(1-LAP:grid%nx+LAP,1-LAP:grid%ny+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>b_in</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+<p>A data type that collect some parameters of a system</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), dimension(1-LAP:grid%nx+LAP,1-LAP:grid%ny+LAP)</small>
+    </h4>
+    <p>MGCSLP_invMHx = M_H^(-1)(b_H)</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-krylovcslp_invmhx"></span> <h3>public  function <a href='../proc/krylovcslp_invmhx.html'>KrylovCSLP_invMHx</a>(b_in, grid)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Krylov-based CSLP, starts from the a specified grid sysyem
+Choose Bi-CGSATB or GMRES by uncomment or comment </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b_in~3"></span>
+              complex(kind=realdp),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(1-LAP:grid%nx+LAP,1-LAP:grid%ny+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>b_in</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~2"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+<p>A data type that collect some parameters of a system</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=realdp), dimension(1-LAP:grid%nx+LAP,1-LAP:grid%ny+LAP)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-finestgrid_define"></span> <h3>public  subroutine <a href='../proc/finestgrid_define.html'>finestgrid_define</a>(mg_finest)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a routine that define the finest grid system from the default (finest) grid parameters</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_finest"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_finest</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-gridsys_define"></span> <h3>public  subroutine <a href='../proc/gridsys_define.html'>gridsys_define</a>(grid, basegridsys)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a routine that define a GridSystem type from the grid parameters of a data type Gridpara
+One can find the differnece of GridSystem and Gridpara </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~3"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-basegridsys~3"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>basegridsys</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-coarsegrid_create"></span> <h3>public  subroutine <a href='../proc/coarsegrid_create.html'>coarsegrid_create</a>(mg_coarse, mg_fine)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a routine that define a coarse grid system mg_coarse from a fine grid system mg_fine</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_coarse"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_coarse</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_fine"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_fine</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-grid_destroy"></span> <h3>public  subroutine <a href='../proc/grid_destroy.html'>grid_destroy</a>(mg_dm)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a routine that deallocate the arrays of a grid system</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_dm"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_dm</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-restriction"></span> <h3>public  subroutine <a href='../proc/restriction.html'>restriction</a>(mg_coarse, mg_fine)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is routine that perform full-weight resctriction from fine to coarse grid system, mainly
+residual (res) on fine grid --&gt; right-hand side (rhs) on coarse grid,
+wavenumber on fine grid --&gt; wavenumber on the coarse grid
+Based on the relationship of the index between the fine and coarse grid</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_coarse~2"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_coarse</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_fine~2"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_fine</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-prolongation_en_correct"></span> <h3>public  subroutine <a href='../proc/prolongation_en_correct.html'>prolongation_en_correct</a>(mg_coarse, mg_fine)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is routine that perform bilinear interpolation and correction from coarse to fine grid system, mainly
+solution (u) on coarse grid --&gt; correction (e_h) for solution (u) of fine grid
+Based on the relationship of the index between the fine and coarse grid</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_coarse~3"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_coarse</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_fine~3"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_fine</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-v_cycle"></span> <h3>public recursive subroutine <a href='../proc/v_cycle.html'>V_cycle</a>(mg_fine)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A classic multigrid V-cycle
+A classic Two-Cycle
+GMRES or Bi-CGSTAB can be chose to solve the coarse-grid problem
+GMRES or Bi-CGSTAB can be chose to solve the coarsest-grid problem</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_fine~4"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_fine</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-f_cycle"></span> <h3>public recursive subroutine <a href='../proc/f_cycle.html'>F_cycle</a>(mg_fine)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a classic F-cycle multigrid </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_fine~5"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_fine</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_fullgmres"></span> <h3>public  subroutine <a href='../proc/mg_fullgmres.html'>mg_fullgmres</a>(mg_solve)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a rountine to solve the (specified) coarsest-grid CSLP system approximately by using GMRES
+ The CSLP is define by ReD-O2 scheme
+Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
+ The default tolerance is 1E-08</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_solve"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_solve</strong></td>
+            <td>
+<p>The current coarsest grid system</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_arnoldi"></span> <h3>public  subroutine <a href='../proc/mg_arnoldi.html'>mg_arnoldi</a>(V, H, k, ni, nj, hx_c, hy_c, kxy, kh2)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Arnoldi precess
+ w=A*v_i</p><a href="../proc/mg_arnoldi.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v~2"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(1-LAP:ni+LAP,1-LAP:nj+LAP,cslp_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>V</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~2"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1,cslp_mg_miter)
+            </td>
+            <td>::</td>
+            <td><strong>H</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~4"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ni~2"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ni</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nj~2"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nj</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hx_c~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hx_c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hy_c~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hy_c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kxy~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1-LAP:ni+LAP,1-LAP:nj+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>kxy</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kh2~2"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1-LAP:ni+LAP,1-LAP:nj+LAP)
+            </td>
+            <td>::</td>
+            <td><strong>kh2</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_apply_givens_rotation"></span> <h3>public  subroutine <a href='../proc/mg_apply_givens_rotation.html'>mg_apply_givens_rotation</a>(H, cs, sn, k)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is routine to perform apply_givens_rotation</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~3"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1,cslp_mg_miter)
+            </td>
+            <td>::</td>
+            <td><strong>H</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cs~2"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>cs</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sn~2"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>sn</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~5"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_back_substitute"></span> <h3>public  subroutine <a href='../proc/mg_back_substitute.html'>mg_back_substitute</a>(H, beta, k)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is routine that performs back substitute</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h~4"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1,cslp_mg_miter)
+            </td>
+            <td>::</td>
+            <td><strong>H</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-beta~2"></span>
+              complex(kind=realdp),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(cslp_mg_miter+1)
+            </td>
+            <td>::</td>
+            <td><strong>beta</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~6"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_bicgstab"></span> <h3>public  subroutine <a href='../proc/mg_bicgstab.html'>mg_bicgstab</a>(mg_solve, maximum_iterations)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a rountine to solve the (specified) coarsest-grid CSLP system approximately by using Bi-CGSTAB
+The CSLP is define by ReD-O2 scheme</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_solve~2"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_solve</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maximum_iterations"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maximum_iterations</strong></td>
+            <td>
+<p>User-specified maximum number of iterations</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-red_glk_cslp_bicgstab"></span> <h3>public  subroutine <a href='../proc/red_glk_cslp_bicgstab.html'>ReD_Glk_CSLP_bicgstab</a>(mg_solve, grid, maximum_iterations)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a rountine to solve a coarse grid CSLP system approximately by using Bi-CGSTAB. 
+The CSLP operator is defined by ReD-Glk scheme. 
+CSLP operator by ReD-Glk </p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_solve~3"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_solve</strong></td>
+            <td>
+<p>The current coarse grid system</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~4"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+<p>Parameters of current coarse grid</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maximum_iterations~2"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maximum_iterations</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-red_glk_cslp_gmres"></span> <h3>public  subroutine <a href='../proc/red_glk_cslp_gmres.html'>ReD_Glk_CSLP_gmres</a>(mg_solve, grid, maximum_iterations)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This is a rountine to solve a coarse grid CSLP system approximately by using GMRES
+ The CSLP operator is defined by ReD-Glk scheme
+ CSLP operator by ReD-Glk </p><a href="../proc/red_glk_cslp_gmres.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_solve~4"></span>
+              type(<a href='../type/gridsystem.html'>GridSystem</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mg_solve</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid~5"></span>
+              type(<a href='../type/gridpara.html'>Gridpara</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>grid</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maximum_iterations~3"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maximum_iterations</strong></td>
+            <td>
+<p>User-specified maximum number of iterations,default is 300</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

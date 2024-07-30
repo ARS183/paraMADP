@@ -1,0 +1,2328 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ParaMADP">
+    <meta name="author" content="Jinqiang Chen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>comm_variable &ndash; ParaMADP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ParaMADP </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/helmholtz_2d.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>comm_variable
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 1.4% of total for modules and submodules.">74 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/comm_variable.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/comm_variable.f90.html'>comm_variable.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">comm_variable</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/comm_variable.html#variable-realdp">realdp</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-pi">pi</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-e">e</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-npmax">npMax</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-cone">cone</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-czero">czero</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-filename">filename</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-output_name">output_name</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-logname">logname</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-eps">eps</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-def_rtol">def_rtol</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-cslp_mg_tol">cslp_mg_tol</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-m_iter">m_iter</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-algorithm">Algorithm</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-irestart">Irestart</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-m_flag">M_flag</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-m2h_flag">M2h_flag</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-a2h_flag">A2h_flag</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-def_mg_miter">def_mg_miter</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-cslp_mg_miter">cslp_mg_miter</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-mg_flag">MG_flag</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-nx_min">nx_min</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-def_nlevel">def_nlevel</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-indf_level">indf_level</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-sv_l2">Sv_L2</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-sv_l3">Sv_L3</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-sv_l4">Sv_L4</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-npx0">npx0</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-npy0">npy0</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-npx">npx</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-npy">npy</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-nx_global">nx_global</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-ny_global">ny_global</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-nx">nx</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-ny">ny</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-id_xm1">ID_XM1</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-id_xp1">ID_XP1</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-id_ym1">ID_YM1</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-id_yp1">ID_YP1</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-iperiodic_x">Iperiodic_X</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-iperiodic_y">Iperiodic_Y</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-slx">slx</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-sly">sly</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-hx">hx</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-hy">hy</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-hxhy">hxhy</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-i_offset">i_offset</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-j_offset">j_offset</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-i_nn">i_nn</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-j_nn">j_nn</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-lap">LAP</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-i_case">i_case</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-freq">freq</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-k0">k0</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-beta1">beta1</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-beta2">beta2</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-k_case">k_case</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-flag_bcs">flag_BCs</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-ierr">ierr</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-np_size">np_size</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-my_id">my_id</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-status">STATUS</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-request1">request1</a>
+            <a class="list-group-item" href="../module/comm_variable.html#variable-request2">request2</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/comm_variable.html#type-gridpara">Gridpara</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>This is a module that define some common variables for the whole project</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~comm_variable~~UsesGraph Pages: 1 -->
+<svg id="modulecomm_variableUsesGraph" width="182pt" height="31pt"
+ viewBox="0.00 0.00 182.27 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~comm_variable~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>module~~comm_variable~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 178.27,-26.77 178.27,4 -4,4"/>
+<!-- module~comm_variable -->
+<g id="module~~comm_variable~~UsesGraph_node1" class="node">
+<title>module~comm_variable</title>
+<polygon fill="none" stroke="black" points="174.27,-22.77 90,-22.77 90,0 174.27,0 174.27,-22.77"/>
+<text text-anchor="middle" x="132.13" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">comm_variable</text>
+</g>
+<!-- mpi -->
+<g id="module~~comm_variable~~UsesGraph_node2" class="node">
+<title>mpi</title>
+<g id="a_module~~comm_variable~~UsesGraph_node2"><a xlink:href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm" xlink:title="mpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi</text>
+</a>
+</g>
+</g>
+<!-- module~comm_variable&#45;&gt;mpi -->
+<g id="module~~comm_variable~~UsesGraph_edge1" class="edge">
+<title>module~comm_variable&#45;&gt;mpi</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M89.78,-11.39C81.82,-11.39 73.51,-11.39 65.67,-11.39"/>
+<polygon fill="#000000" stroke="#000000" points="65.75,-7.89 55.75,-11.39 65.75,-14.89 65.75,-7.89"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: module~~comm_variable~~UsedByGraph Pages: 1 -->
+<svg id="modulecomm_variableUsedByGraph" width="641pt" height="344pt"
+ viewBox="0.00 0.00 641.00 343.57" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~comm_variable~~UsedByGraph" class="graph" transform="scale(0.551175 0.551175) rotate(0) translate(4 619.34)">
+<title>module~~comm_variable~~UsedByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-619.34 1158.97,-619.34 1158.97,4 -4,4"/>
+<!-- module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_node1" class="node">
+<title>module~comm_variable</title>
+<polygon fill="none" stroke="black" points="84.27,-349.77 0,-349.77 0,-327 84.27,-327 84.27,-349.77"/>
+<text text-anchor="middle" x="42.13" y="-334.03" font-family="Helvetica,sans-Serif" font-size="10.50">comm_variable</text>
+</g>
+<!-- module~analytical_sol -->
+<g id="module~~comm_variable~~UsedByGraph_node2" class="node">
+<title>module~analytical_sol</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node2"><a xlink:href="../module/analytical_sol.html" xlink:title="analytical_sol">
+<polygon fill="#337ab7" stroke="#337ab7" points="600.12,-580.77 524.85,-580.77 524.85,-558 600.12,-558 600.12,-580.77"/>
+<text text-anchor="middle" x="562.49" y="-565.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">analytical_sol</text>
+</a>
+</g>
+</g>
+<!-- module~analytical_sol&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge1" class="edge">
+<title>module~analytical_sol&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M455.46,-608.38C412.41,-612.31 399.42,-621.39 358.19,-608.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M540.38,-581.14C519.91,-591.59 487.62,-605.63 457.46,-608.38"/>
+</g>
+<!-- module~cslp_solver -->
+<g id="module~~comm_variable~~UsedByGraph_node3" class="node">
+<title>module~cslp_solver</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node3"><a xlink:href="../module/cslp_solver.html" xlink:title="CSLP_Solver">
+<polygon fill="#337ab7" stroke="#337ab7" points="710.64,-196.77 636.12,-196.77 636.12,-174 710.64,-174 710.64,-196.77"/>
+<text text-anchor="middle" x="673.38" y="-181.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">CSLP_Solver</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge2" class="edge">
+<title>module~cslp_solver&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M646.88,-173.7C578.45,-144.22 387.06,-74.11 254.8,-146.38"/>
+</g>
+<!-- module~mpi_setup -->
+<g id="module~~comm_variable~~UsedByGraph_node9" class="node">
+<title>module~mpi_setup</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node9"><a xlink:href="../module/mpi_setup.html" xlink:title="mpi_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="181.29,-349.77 120.27,-349.77 120.27,-327 181.29,-327 181.29,-349.77"/>
+<text text-anchor="middle" x="150.78" y="-334.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_setup</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~mpi_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge28" class="edge">
+<title>module~cslp_solver&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M561.49,-300.38C477.23,-337.13 447.97,-318.67 358.19,-338.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M666.22,-197.12C652.13,-222.43 614.79,-281.37 563.49,-300.38"/>
+</g>
+<!-- module~operators -->
+<g id="module~~comm_variable~~UsedByGraph_node10" class="node">
+<title>module~operators</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node10"><a xlink:href="../module/operators.html" xlink:title="operators">
+<polygon fill="#337ab7" stroke="#337ab7" points="485.1,-310.77 427.83,-310.77 427.83,-288 485.1,-288 485.1,-310.77"/>
+<text text-anchor="middle" x="456.46" y="-295.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">operators</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~operators -->
+<g id="module~~comm_variable~~UsedByGraph_edge35" class="edge">
+<title>module~cslp_solver&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M561.49,-262.38C539.37,-268.15 515.28,-276.57 495.86,-283.93"/>
+<polygon fill="#000000" stroke="#000000" points="494.79,-280.59 486.72,-287.45 497.31,-287.12 494.79,-280.59"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M661.75,-197.07C643.76,-215.8 605.16,-251.52 563.49,-262.38"/>
+</g>
+<!-- module~smoother -->
+<g id="module~~comm_variable~~UsedByGraph_node12" class="node">
+<title>module~smoother</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node12"><a xlink:href="../module/smoother.html" xlink:title="smoother">
+<polygon fill="#337ab7" stroke="#337ab7" points="590.75,-234.77 534.23,-234.77 534.23,-212 590.75,-212 590.75,-234.77"/>
+<text text-anchor="middle" x="562.49" y="-219.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">smoother</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~smoother -->
+<g id="module~~comm_variable~~UsedByGraph_edge43" class="edge">
+<title>module~cslp_solver&#45;&gt;module~smoother</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M638.52,-197.2C626.86,-201.27 613.72,-205.86 601.73,-210.04"/>
+<polygon fill="#000000" stroke="#000000" points="600.84,-206.64 592.55,-213.24 603.14,-213.25 600.84,-206.64"/>
+</g>
+<!-- module~wavenumber -->
+<g id="module~~comm_variable~~UsedByGraph_node15" class="node">
+<title>module~wavenumber</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node15"><a xlink:href="../module/wavenumber.html" xlink:title="wavenumber">
+<polygon fill="#337ab7" stroke="#337ab7" points="290.31,-215.77 217.29,-215.77 217.29,-193 290.31,-193 290.31,-215.77"/>
+<text text-anchor="middle" x="253.8" y="-200.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">wavenumber</text>
+</a>
+</g>
+</g>
+<!-- module~cslp_solver&#45;&gt;module~wavenumber -->
+<g id="module~~comm_variable~~UsedByGraph_edge47" class="edge">
+<title>module~cslp_solver&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M635.77,-183.38C614.61,-182.64 587.51,-182.39 563.49,-184.38"/>
+</g>
+<!-- module~define_bc -->
+<g id="module~~comm_variable~~UsedByGraph_node4" class="node">
+<title>module~define_bc</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node4"><a xlink:href="../module/define_bc.html" xlink:title="define_BC">
+<polygon fill="#337ab7" stroke="#337ab7" points="387.7,-272.77 326.69,-272.77 326.69,-250 387.7,-250 387.7,-272.77"/>
+<text text-anchor="middle" x="357.19" y="-257.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">define_BC</text>
+</a>
+</g>
+</g>
+<!-- module~define_bc&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge3" class="edge">
+<title>module~define_bc&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M326.22,-254.57C306.13,-250.38 279.03,-245.42 254.8,-243.38"/>
+</g>
+<!-- module~define_bc&#45;&gt;module~wavenumber -->
+<g id="module~~comm_variable~~UsedByGraph_edge48" class="edge">
+<title>module~define_bc&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M335.19,-249.57C320.91,-241.55 301.79,-230.8 285.77,-221.8"/>
+<polygon fill="#000000" stroke="#000000" points="287.53,-218.77 277.1,-216.92 284.1,-224.87 287.53,-218.77"/>
+</g>
+<!-- module~define_grid -->
+<g id="module~~comm_variable~~UsedByGraph_node5" class="node">
+<title>module~define_grid</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node5"><a xlink:href="../module/define_grid.html" xlink:title="define_grid">
+<polygon fill="#337ab7" stroke="#337ab7" points="488.85,-541.77 424.08,-541.77 424.08,-519 488.85,-519 488.85,-541.77"/>
+<text text-anchor="middle" x="456.46" y="-526.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">define_grid</text>
+</a>
+</g>
+</g>
+<!-- module~define_grid&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge4" class="edge">
+<title>module~define_grid&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M356.19,-608.38C277.33,-583.51 330.61,-485.42 254.8,-452.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M449.26,-542.19C435.27,-567.02 399.28,-621.34 358.19,-608.38"/>
+</g>
+<!-- module~define_rhs -->
+<g id="module~~comm_variable~~UsedByGraph_node6" class="node">
+<title>module~define_rhs</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node6"><a xlink:href="../module/define_rhs.html" xlink:title="define_rhs">
+<polygon fill="#337ab7" stroke="#337ab7" points="388.08,-502.77 326.31,-502.77 326.31,-480 388.08,-480 388.08,-502.77"/>
+<text text-anchor="middle" x="357.19" y="-487.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">define_rhs</text>
+</a>
+</g>
+</g>
+<!-- module~define_rhs&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge5" class="edge">
+<title>module~define_rhs&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M326.19,-480.63C305.86,-473.15 278.49,-462.71 254.8,-452.38"/>
+</g>
+<!-- module~deflaion_setup -->
+<g id="module~~comm_variable~~UsedByGraph_node7" class="node">
+<title>module~deflaion_setup</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node7"><a xlink:href="../module/deflaion_setup.html" xlink:title="deflaion_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="827.91,-196.77 746.64,-196.77 746.64,-174 827.91,-174 827.91,-196.77"/>
+<text text-anchor="middle" x="787.27" y="-181.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">deflaion_setup</text>
+</a>
+</g>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge6" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M781.29,-173.85C768.38,-145.93 730.87,-76.59 674.38,-70.38"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~cslp_solver -->
+<g id="module~~comm_variable~~UsedByGraph_edge18" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M746.19,-185.38C738.44,-185.38 730.25,-185.38 722.27,-185.38"/>
+<polygon fill="#000000" stroke="#000000" points="722.34,-181.89 712.34,-185.39 722.34,-188.89 722.34,-181.89"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~mpi_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge29" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M672.38,-300.38C626.29,-315.16 608.87,-283.56 563.49,-300.38"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~operators -->
+<g id="module~~comm_variable~~UsedByGraph_edge36" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M780.17,-197.04C765.89,-222.75 727.43,-283.37 674.38,-300.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M672.38,-300.38C623.57,-316.04 613.09,-249.46 563.49,-262.38"/>
+</g>
+<!-- module~deflaion_setup&#45;&gt;module~wavenumber -->
+<g id="module~~comm_variable~~UsedByGraph_edge49" class="edge">
+<title>module~deflaion_setup&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M561.49,-184.38C469.76,-191.98 362.4,-198.42 302.12,-201.81"/>
+<polygon fill="#000000" stroke="#000000" points="302.01,-198.32 292.22,-202.37 302.4,-205.3 302.01,-198.32"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M749.34,-173.58C737.15,-170.23 723.44,-167.05 710.64,-165.38 677.8,-161.12 668.97,-161.16 636.12,-165.38 603.02,-169.64 596.61,-180.38 563.49,-184.38"/>
+</g>
+<!-- module~idrs_module -->
+<g id="module~~comm_variable~~UsedByGraph_node8" class="node">
+<title>module~idrs_module</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node8"><a xlink:href="../module/idrs_module.html" xlink:title="idrs_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1043.7,-199.77 973.68,-199.77 973.68,-177 1043.7,-177 1043.7,-199.77"/>
+<text text-anchor="middle" x="1008.69" y="-184.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">idrs_module</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge7" class="edge">
+<title>module~idrs_module&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M252.8,-452.38C208.82,-433.22 196.24,-432.38 151.78,-414.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M356.19,-414.38C308.34,-419.48 298.92,-471.61 254.8,-452.38"/>
+</g>
+<!-- module~idrs_module&#45;&gt;module~mpi_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge30" class="edge">
+<title>module~idrs_module&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M252.8,-414.38C221.33,-400.76 190.64,-375.45 171.51,-357.8"/>
+<polygon fill="#000000" stroke="#000000" points="174.1,-355.43 164.42,-351.11 169.29,-360.52 174.1,-355.43"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1003.16,-200.22C984.5,-246.72 908.86,-414.38 788.27,-414.38 788.27,-414.38 788.27,-414.38 561.49,-414.38 471.13,-414.38 448.17,-406.19 358.19,-414.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M356.19,-414.38C311.38,-419.15 296.15,-432.29 254.8,-414.38"/>
+</g>
+<!-- module~read_setup -->
+<g id="module~~comm_variable~~UsedByGraph_node11" class="node">
+<title>module~read_setup</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node11"><a xlink:href="../module/read_setup.html" xlink:title="read_setup">
+<polygon fill="#337ab7" stroke="#337ab7" points="820.03,-42.77 754.51,-42.77 754.51,-20 820.03,-20 820.03,-42.77"/>
+<text text-anchor="middle" x="787.27" y="-27.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_setup</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;module~read_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge40" class="edge">
+<title>module~idrs_module&#45;&gt;module~read_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M995.25,-176.57C981.59,-163.85 958.8,-143.29 937.68,-127.38 891.27,-92.43 876.88,-87.66 827.91,-56.38 824.16,-53.99 820.2,-51.48 816.3,-49.01"/>
+<polygon fill="#000000" stroke="#000000" points="818.46,-46.23 808.13,-43.85 814.72,-52.15 818.46,-46.23"/>
+</g>
+<!-- module~user_module -->
+<g id="module~~comm_variable~~UsedByGraph_node14" class="node">
+<title>module~user_module</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node14"><a xlink:href="../module/user_module.html" xlink:title="user_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="937.68,-199.77 863.91,-199.77 863.91,-177 937.68,-177 937.68,-199.77"/>
+<text text-anchor="middle" x="900.79" y="-184.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">user_module</text>
+</a>
+</g>
+</g>
+<!-- module~idrs_module&#45;&gt;module~user_module -->
+<g id="module~~comm_variable~~UsedByGraph_edge45" class="edge">
+<title>module~idrs_module&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M973.31,-188.38C965.59,-188.38 957.27,-188.38 949.13,-188.38"/>
+<polygon fill="#000000" stroke="#000000" points="949.34,-184.89 939.34,-188.39 949.34,-191.89 949.34,-184.89"/>
+</g>
+<!-- module~mpi_setup&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge8" class="edge">
+<title>module~mpi_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M119.79,-338.38C112.34,-338.38 104.12,-338.38 95.93,-338.38"/>
+<polygon fill="#000000" stroke="#000000" points="95.95,-334.89 85.95,-338.39 95.95,-341.89 95.95,-334.89"/>
+</g>
+<!-- module~operators&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge9" class="edge">
+<title>module~operators&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M446.95,-311.22C431.8,-330.9 398,-368.94 358.19,-376.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M149.78,-414.38C115.18,-403.48 82.28,-376.65 62.4,-357.97"/>
+<polygon fill="#000000" stroke="#000000" points="64.93,-355.55 55.32,-351.11 60.06,-360.58 64.93,-355.55"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M356.19,-376.38C265.36,-393.38 239.92,-442.15 151.78,-414.38"/>
+</g>
+<!-- module~operators&#45;&gt;module~define_bc -->
+<g id="module~~comm_variable~~UsedByGraph_edge21" class="edge">
+<title>module~operators&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M427.33,-288.39C418.36,-284.89 408.25,-280.94 398.59,-277.17"/>
+<polygon fill="#000000" stroke="#000000" points="399.96,-273.94 389.37,-273.56 397.41,-280.46 399.96,-273.94"/>
+</g>
+<!-- module~operators&#45;&gt;module~mpi_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge31" class="edge">
+<title>module~operators&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M433.42,-311.11C414.18,-320.62 385.19,-333.27 358.19,-338.38"/>
+</g>
+<!-- module~operators&#45;&gt;module~wavenumber -->
+<g id="module~~comm_variable~~UsedByGraph_edge50" class="edge">
+<title>module~operators&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M427.35,-301.71C399.63,-302.64 357.06,-300.32 326.31,-281.38 302.37,-266.65 310.11,-249.34 290.31,-229.38 288.14,-227.2 285.77,-225.08 283.3,-223.06"/>
+<polygon fill="#000000" stroke="#000000" points="285.51,-220.33 275.41,-217.12 281.3,-225.93 285.51,-220.33"/>
+</g>
+<!-- module~read_setup&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge10" class="edge">
+<title>module~read_setup&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M672.38,-70.38C624.27,-65.1 611.35,-63.21 563.49,-70.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M768.26,-43.15C746.63,-55.97 708.94,-74.18 674.38,-70.38"/>
+</g>
+<!-- module~smoother&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge11" class="edge">
+<title>module~smoother&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M455.46,-260.38C425.21,-267.67 418.9,-245.65 388.08,-241.38 329.4,-233.27 313.83,-248.35 254.8,-243.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M534.04,-234.47C513.28,-242.52 483.92,-253.23 457.46,-260.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M252.8,-243.38C207.47,-237.69 191.2,-201.3 151.78,-224.38"/>
+</g>
+<!-- module~smoother&#45;&gt;module~define_bc -->
+<g id="module~~comm_variable~~UsedByGraph_edge22" class="edge">
+<title>module~smoother&#45;&gt;module~define_bc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M455.46,-260.38C437.37,-264.74 416.83,-265.53 399.3,-265.02"/>
+<polygon fill="#000000" stroke="#000000" points="399.65,-261.53 389.5,-264.57 399.33,-268.53 399.65,-261.53"/>
+</g>
+<!-- module~smoother&#45;&gt;module~mpi_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge32" class="edge">
+<title>module~smoother&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M455.46,-260.38C401.59,-273.36 412.64,-328.07 358.19,-338.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M356.19,-338.38C300.38,-348.96 234.44,-346.31 192.86,-342.84"/>
+<polygon fill="#000000" stroke="#000000" points="193.33,-339.37 183.06,-341.96 192.71,-346.34 193.33,-339.37"/>
+</g>
+<!-- module~smoother&#45;&gt;module~operators -->
+<g id="module~~comm_variable~~UsedByGraph_edge37" class="edge">
+<title>module~smoother&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M543.85,-235.17C537.78,-239.28 530.98,-243.98 524.85,-248.38 510.33,-258.83 494.35,-270.89 481.6,-280.66"/>
+<polygon fill="#000000" stroke="#000000" points="479.55,-277.83 473.76,-286.7 483.82,-283.37 479.55,-277.83"/>
+</g>
+<!-- module~solvers -->
+<g id="module~~comm_variable~~UsedByGraph_node13" class="node">
+<title>module~solvers</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node13"><a xlink:href="../module/solvers.html" xlink:title="solvers">
+<polygon fill="#337ab7" stroke="#337ab7" points="927.79,-158.77 873.79,-158.77 873.79,-136 927.79,-136 927.79,-158.77"/>
+<text text-anchor="middle" x="900.79" y="-143.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">solvers</text>
+</a>
+</g>
+</g>
+<!-- module~solvers&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge12" class="edge">
+<title>module~solvers&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M876.57,-135.62C836.55,-116.22 751.46,-78.85 674.38,-70.38"/>
+</g>
+<!-- module~solvers&#45;&gt;module~cslp_solver -->
+<g id="module~~comm_variable~~UsedByGraph_edge19" class="edge">
+<title>module~solvers&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M873.32,-149.26C842.63,-151.72 790.65,-156.76 746.64,-165.38 738.56,-166.97 730.06,-168.99 721.85,-171.14"/>
+<polygon fill="#000000" stroke="#000000" points="721.08,-167.72 712.34,-173.72 722.91,-174.47 721.08,-167.72"/>
+</g>
+<!-- module~solvers&#45;&gt;module~deflaion_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge25" class="edge">
+<title>module~solvers&#45;&gt;module~deflaion_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M873.37,-156.39C861.47,-160.44 847.09,-165.34 833.56,-169.95"/>
+<polygon fill="#000000" stroke="#000000" points="832.73,-166.54 824.39,-173.08 834.99,-173.17 832.73,-166.54"/>
+</g>
+<!-- module~solvers&#45;&gt;module~operators -->
+<g id="module~~comm_variable~~UsedByGraph_edge38" class="edge">
+<title>module~solvers&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M877.55,-159.14C872.89,-161.95 868.12,-165.09 863.91,-168.38 845.84,-182.53 844.32,-189.35 827.91,-205.38 777.02,-255.12 776.87,-288.36 710.64,-314.38 639.01,-342.53 547.18,-325.25 496.12,-311.46"/>
+<polygon fill="#000000" stroke="#000000" points="497.29,-308.15 486.71,-308.82 495.4,-314.89 497.29,-308.15"/>
+</g>
+<!-- module~solvers&#45;&gt;module~read_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge41" class="edge">
+<title>module~solvers&#45;&gt;module~read_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M892.47,-135.72C880.54,-117.33 855.45,-81.16 827.91,-56.38 825.19,-53.94 822.2,-51.58 819.12,-49.35"/>
+<polygon fill="#000000" stroke="#000000" points="821.31,-46.6 811.05,-43.95 817.42,-52.42 821.31,-46.6"/>
+</g>
+<!-- module~user_module&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge13" class="edge">
+<title>module~user_module&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M561.49,-376.38C473.95,-354.01 443.39,-346.3 358.19,-376.38"/>
+</g>
+<!-- module~user_module&#45;&gt;module~cslp_solver -->
+<g id="module~~comm_variable~~UsedByGraph_edge20" class="edge">
+<title>module~user_module&#45;&gt;module~cslp_solver</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M863.52,-198.69C852.21,-201.44 839.63,-204.02 827.91,-205.38 792.03,-209.57 782.43,-210.25 746.64,-205.38 738.12,-204.23 729.19,-202.34 720.62,-200.17"/>
+<polygon fill="#000000" stroke="#000000" points="721.66,-196.82 711.09,-197.59 719.83,-203.58 721.66,-196.82"/>
+</g>
+<!-- module~user_module&#45;&gt;module~deflaion_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge26" class="edge">
+<title>module~user_module&#45;&gt;module~deflaion_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M863.59,-187.41C855.89,-187.2 847.63,-186.98 839.5,-186.76"/>
+<polygon fill="#000000" stroke="#000000" points="839.76,-183.27 829.67,-186.5 839.57,-190.27 839.76,-183.27"/>
+</g>
+<!-- module~user_module&#45;&gt;module~operators -->
+<g id="module~~comm_variable~~UsedByGraph_edge39" class="edge">
+<title>module~user_module&#45;&gt;module~operators</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M561.49,-376.38C525.25,-370.01 492.8,-340.28 474.13,-319.69"/>
+<polygon fill="#000000" stroke="#000000" points="476.98,-317.63 467.77,-312.39 471.7,-322.23 476.98,-317.63"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M898.64,-199.98C894.9,-230.76 880.13,-314.78 827.91,-352.38 732.15,-421.34 679.71,-396.83 563.49,-376.38"/>
+</g>
+<!-- module~wavenumber&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge14" class="edge">
+<title>module~wavenumber&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M217.1,-205.71C196.78,-207.82 171.53,-212.82 151.78,-224.38"/>
+</g>
+<!-- module~wavenumber&#45;&gt;module~mpi_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge33" class="edge">
+<title>module~wavenumber&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M244.19,-215.81C227.2,-238.34 189.16,-288.81 167.55,-317.46"/>
+<polygon fill="#000000" stroke="#000000" points="164.8,-315.31 161.57,-325.4 170.38,-319.52 164.8,-315.31"/>
+</g>
+<!-- module~write_data -->
+<g id="module~~comm_variable~~UsedByGraph_node16" class="node">
+<title>module~write_data</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node16"><a xlink:href="../module/write_data.html" xlink:title="write_data">
+<polygon fill="#337ab7" stroke="#337ab7" points="703.89,-22.77 642.87,-22.77 642.87,0 703.89,0 703.89,-22.77"/>
+<text text-anchor="middle" x="673.38" y="-7.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">write_data</text>
+</a>
+</g>
+</g>
+<!-- module~write_data&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge15" class="edge">
+<title>module~write_data&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M561.49,-70.38C457.31,-84 424.45,-56.86 326.31,-94.38 289.61,-108.42 288.16,-125.61 254.8,-146.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M658.42,-23.16C638.77,-38.7 601.12,-64.74 563.49,-70.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M252.8,-146.38C203.72,-174.83 200.73,-195.72 151.78,-224.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M149.78,-224.38C109.52,-247.96 75.18,-291.38 57.01,-317.29"/>
+<polygon fill="#000000" stroke="#000000" points="54.25,-315.12 51.5,-325.35 60.03,-319.07 54.25,-315.12"/>
+</g>
+<!-- program~helmholtz_2d -->
+<g id="module~~comm_variable~~UsedByGraph_node17" class="node">
+<title>program~helmholtz_2d</title>
+<g id="a_module~~comm_variable~~UsedByGraph_node17"><a xlink:href="../program/helmholtz_2d.html" xlink:title="helmholtz_2d">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1154.97,-199.77 1079.7,-199.77 1079.7,-177 1154.97,-177 1154.97,-199.77"/>
+<text text-anchor="middle" x="1117.34" y="-184.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">helmholtz_2d</text>
+</a>
+</g>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~comm_variable -->
+<g id="module~~comm_variable~~UsedByGraph_edge16" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~comm_variable</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M672.38,-569.38C639.3,-573.39 632.77,-582.73 600.12,-589.38 537.45,-602.17 521.16,-602.58 457.46,-608.38"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~analytical_sol -->
+<g id="module~~comm_variable~~UsedByGraph_edge17" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~analytical_sol</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M672.38,-569.38C652.5,-569.38 630.57,-569.38 611.64,-569.38"/>
+<polygon fill="#000000" stroke="#000000" points="611.79,-565.89 601.79,-569.39 611.79,-572.89 611.79,-565.89"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~define_grid -->
+<g id="module~~comm_variable~~UsedByGraph_edge23" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~define_grid</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M561.49,-530.38C541.83,-525.16 519.34,-524.53 500.31,-525.46"/>
+<polygon fill="#000000" stroke="#000000" points="500.21,-521.96 490.47,-526.12 500.68,-528.95 500.21,-521.96"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~define_rhs -->
+<g id="module~~comm_variable~~UsedByGraph_edge24" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~define_rhs</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M455.46,-491.38C437.59,-486.38 417.13,-485.67 399.61,-486.49"/>
+<polygon fill="#000000" stroke="#000000" points="399.82,-482.97 390.08,-487.12 400.29,-489.95 399.82,-482.97"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~idrs_module -->
+<g id="module~~comm_variable~~UsedByGraph_edge27" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~idrs_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1079.34,-188.38C1071.66,-188.38 1063.48,-188.38 1055.52,-188.38"/>
+<polygon fill="#000000" stroke="#000000" points="1055.63,-184.89 1045.63,-188.39 1055.63,-191.89 1055.63,-184.89"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~mpi_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge34" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~mpi_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1110.37,-200.21C1076.96,-264.51 906.37,-569.38 674.38,-569.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M561.49,-530.38C513.77,-517.69 505.01,-504.71 457.46,-491.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M455.46,-491.38C363.48,-465.61 342.46,-452.35 254.8,-414.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M672.38,-569.38C621.34,-575.57 613.16,-543.6 563.49,-530.38"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~read_setup -->
+<g id="module~~comm_variable~~UsedByGraph_edge42" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~read_setup</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M899.79,-31.38C878.53,-22.52 852.95,-21.9 831.65,-23.77"/>
+<polygon fill="#000000" stroke="#000000" points="831.37,-20.28 821.82,-24.86 832.14,-27.23 831.37,-20.28"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~solvers -->
+<g id="module~~comm_variable~~UsedByGraph_edge44" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~solvers</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1007.69,-108.38C993.58,-104.5 959.87,-118.43 934.24,-130.71"/>
+<polygon fill="#000000" stroke="#000000" points="932.98,-127.43 925.54,-134.97 936.06,-133.72 932.98,-127.43"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~user_module -->
+<g id="module~~comm_variable~~UsedByGraph_edge46" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~user_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1007.69,-108.38C968.46,-97.58 970.92,-143.91 937.68,-167.38 936.14,-168.47 934.54,-169.56 932.91,-170.63"/>
+<polygon fill="#000000" stroke="#000000" points="931.35,-167.48 924.71,-175.73 935.05,-173.42 931.35,-167.48"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~wavenumber -->
+<g id="module~~comm_variable~~UsedByGraph_edge51" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~wavenumber</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1007.69,-108.38C913.68,-82.48 885.79,-108.38 788.27,-108.38 788.27,-108.38 788.27,-108.38 455.46,-108.38 384.56,-108.38 312.15,-157.76 276.86,-185.69"/>
+<polygon fill="#000000" stroke="#000000" points="275.06,-182.65 269.49,-191.66 279.47,-188.08 275.06,-182.65"/>
+</g>
+<!-- program~helmholtz_2d&#45;&gt;module~write_data -->
+<g id="module~~comm_variable~~UsedByGraph_edge52" class="edge">
+<title>program~helmholtz_2d&#45;&gt;module~write_data</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M899.79,-31.38C869.19,-18.62 860.77,-15.87 827.91,-11.38 790.09,-6.22 746.54,-6.84 715.5,-8.38"/>
+<polygon fill="#000000" stroke="#000000" points="715.56,-4.87 705.77,-8.92 715.95,-11.86 715.56,-4.87"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1106.36,-176.59C1089.09,-157.27 1051.42,-119.88 1009.69,-108.38"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1007.69,-108.38C951.59,-92.93 956.29,-51.79 901.79,-31.38"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmodulecomm_variableUsedByGraph = svgPanZoom('#modulecomm_variableUsedByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.0.0 (20240704.0754)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-realdp"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>realdp</strong></td>
+<td> =</td>
+                <td>8</td>
+            <td>
+                <p>precision for the whole program</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pi"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>pi</strong></td>
+<td> =</td>
+                <td>3.141592653589793238d0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-e"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>e</strong></td>
+<td> =</td>
+                <td>2.7182818285d0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-npmax"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>npMax</strong></td>
+<td> =</td>
+                <td>400</td>
+            <td>
+                <p>the maximun number of partitions in one dimension</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cone"></span>
+              complex(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>cone</strong></td>
+<td> =</td>
+                <td>(0.d0, 1.d0)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-czero"></span>
+              complex(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>czero</strong></td>
+<td> =</td>
+                <td>(0.d0, 0.d0)</td>
+            <td>
+                <p>Constants for complex numbers</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-filename"></span>
+              character(len=100),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>filename</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-output_name"></span>
+              character(len=100),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>output_name</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-logname"></span>
+              character(len=100),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>logname</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Strings for file names</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-eps"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>eps</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>eps: tolerance for the outer iterations</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-def_rtol"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>def_rtol</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>def_rtol: tolerance for the coarse-grid solver in two-level deflation method</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cslp_mg_tol"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>cslp_mg_tol</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>cslp_mg_tol: tolerance for Krylov based CSLP solver on coarse-grid levels</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m_iter"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>m_iter</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>m_iter: maximum number of outer iterations</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-algorithm"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Algorithm</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Algorithm: solver identifier</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-irestart"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Irestart</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Irestart: Restart GMRES (1) or full GMRES (0) </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m_flag"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>M_flag</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>M_flag: Flag for preconditioner type</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m2h_flag"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>M2h_flag</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>M2h_flag: In two-level deflation method, flag for using CSLP for the coarse level (1) or not (0)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a2h_flag"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A2h_flag</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>A2h_flag: In two-level deflation method, flag for the ReD method used for the coarse level operator</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-def_mg_miter"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>def_mg_miter</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>def_mg_miter: maximum number of iterations for deflation on the coarse levels</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cslp_mg_miter"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>cslp_mg_miter</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>cslp_mg_miter: maximum number of iterations for solving CSLP by multigrid method on the coarsest level</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mg_flag"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MG_flag</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>MG_flag: flag for the type of multigrid method</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nx_min"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nx_min</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>nx_min: minimum number of grid points in x-direction for the coarsest grid, it is used to specified the grid size of the coarsest grid when coarsening</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-def_nlevel"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>def_nlevel</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>def_nlevel: Number of levels in multilevel deflation method</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-indf_level"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>indf_level</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>indf_level: The level that the linear system becomes indefinite</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sv_l2"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sv_L2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Sv_L2: In multilevel method, a single-digit number that sets the tolerance for the second coarse grid iterations, ex. 1 means 1E-1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sv_l3"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sv_L3</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Sv_L3: In multilevel method, a single-digit number that sets the tolerance for the third coarse grid iterations, ex. 3 means 3E-1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sv_l4"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sv_L4</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Sv_L4: In multilevel method, a single-digit number that sets the tolerance for the fourth coarse grid iterations, ex. 10 means one iteration</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-npx0"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>npx0</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>npx0: Number of partitions in x-direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-npy0"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>npy0</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>npy0: Number of partitions in y-direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-npx"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>npx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>npx: The coordinate/order of the current partition in x-direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-npy"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>npy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>npy: The coordinate/order of the current partition in y-direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nx_global"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nx_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>nx_global: Global number of grid points in x-direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ny_global"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ny_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>ny_global: Global number of grid points in y-direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nx"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>nx: Local number of grid points of the current subdomain in x-direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ny"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ny</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>ny: Local number of grid points of the current subdomain in y-direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-id_xm1"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ID_XM1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>ID_XM1: Identifier for neighboring partition in the -x direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-id_xp1"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ID_XP1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>ID_XP1: Identifier for neighboring partition in the +x direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-id_ym1"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ID_YM1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>ID_YM1: Identifier for neighboring partition in the -y direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-id_yp1"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ID_YP1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>ID_YP1: Identifier for neighboring partition in the +y direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iperiodic_x"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Iperiodic_X</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Iperiodic_X: Periodicity flag in x-direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iperiodic_y"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Iperiodic_Y</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Iperiodic_Y: Periodicity flag in y-direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-slx"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>slx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>slx: Physical length of the computational domain in x direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sly"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sly</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>sly: Physical length of the computational domain in y direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hx"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>hx: Grid spacing in x-direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hy"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>hy: Grid spacing in y-direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hxhy"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hxhy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>hxhy: Product of grid spacings hx * hy, for this project hx must equal to hy, so hxhy=h^2</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_offset"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>i_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>i_offset: an array that contains the index offset for MPI ranks in x direction   </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j_offset"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>j_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>j_offset: an array that contains the index offset for MPI ranks in y direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_nn"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>i_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>i_nn: an array that contains the number of grid points for MPI ranks in x direction  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j_nn"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>j_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>j_nn: an array that contains the number of grid points for MPI ranks in y direction</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lap"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LAP</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>The number of overlapping layers. The higher order deflation will be turned on once LAP &gt; 1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_case"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_case</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Case identifier</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-freq"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>freq</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>freq: the frequency for Helmholtz problem  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k0"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k0</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>k0: the wavenumber for constant-wavenumber model problem  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-beta1"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>beta1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>beta1: the real term for CSLP, usually 1.d0  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-beta2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>beta2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>beta2: the complex shift for CSLP</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k_case"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k_case</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>k_case: Case identifier for constant (0) or non-constant (1) wavenumber</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flag_bcs"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>flag_BCs</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>flag_BCs: Boundary conditions flag</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ierr"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ierr</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>ierr: MPI error code  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-np_size"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>np_size</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>np_size: the total number of MPI processes  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-my_id"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>my_id</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>my_id: MPI rank ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-status"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>STATUS</strong>(MPI_STATUS_SIZE)</td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>MPI status array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-request1"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>request1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>MPI status array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-request2"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>request2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>MPI status array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-gridpara"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/gridpara.html'>Gridpara</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>Type definition for grid parameters</p>
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nx_global~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nx_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ny_global~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ny_global</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nx~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ny~2"></span>
+              integer(kind=4),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ny</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hx~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hy~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hxhy~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hxhy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_offset~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>i_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j_offset~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>j_offset</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_nn~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>i_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j_nn~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(0:npMax - 1)
+            </td>
+            <td>::</td>
+            <td><strong>j_nn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-wavenumber_k~2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>wavenumber_k</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>wavenumber_k: the wavenumber profile of the domain  </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-wavenumber_kh_pow_2"></span>
+              real(kind=realdp),
+            </td>
+              <td>public,</td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>wavenumber_kh_pow_2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p>wavenumber_kh_pow_2 = (kh)^2</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ParaMADP
+ was developed by Jinqiang Chen<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
