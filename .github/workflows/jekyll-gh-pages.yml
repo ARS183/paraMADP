@@ -34,6 +34,11 @@ jobs:
 
     - name: Install FORD  
       run: pip install ford  
+    
+    - name: Install Graphviz  
+      run: |  
+        sudo apt-get update  
+        sudo apt-get install -y graphviz
 
     - name: Generate Docs  
       run: ford FORD_documentation.md  
