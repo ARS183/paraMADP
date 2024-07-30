@@ -155,8 +155,8 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <ul class="list-inline">
-                  <li class="list-inline-item"><a href='wavenumber.html'>wavenumber</a></li>
                   <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
+                  <li class="list-inline-item"><a href='wavenumber.html'>wavenumber</a></li>
               </ul>
             </li>
             <li class="list-group-item">
@@ -649,7 +649,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-ap~2"></span>
+              <span class="anchor" id="variable-ap~8"></span>
               complex(kind=realdp)
             </td>
 <td></td>
@@ -664,7 +664,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-an~2"></span>
+              <span class="anchor" id="variable-an~8"></span>
               real(kind=realdp)
             </td>
 <td></td>
@@ -679,7 +679,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-as~2"></span>
+              <span class="anchor" id="variable-as~8"></span>
               real(kind=realdp)
             </td>
 <td></td>
@@ -694,7 +694,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-aw~2"></span>
+              <span class="anchor" id="variable-aw~8"></span>
               real(kind=realdp)
             </td>
 <td></td>
@@ -709,7 +709,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ae~2"></span>
+              <span class="anchor" id="variable-ae~8"></span>
               real(kind=realdp)
             </td>
 <td></td>
@@ -724,7 +724,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-i~17"></span>
+              <span class="anchor" id="variable-i~12"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -739,7 +739,213 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-j~15"></span>
+              <span class="anchor" id="variable-j~17"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>j</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ni~6"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ni</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nj~6"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nj</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hx_c~4"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hx_c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hy_c~4"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hy_c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kxy~3"></span>
+              real(kind=realdp),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>kxy</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-dirichlet"></span> <h3>public  subroutine <a href='../proc/dirichlet.html'>Dirichlet</a>(ap, an, as, aw, ae, i, j, ni, nj, hx_c, hy_c)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Dirichlet, ap=h^2, which will devided by h^2 in the rountine of the operator
+When use this Dirichlet, you have to be carefull with the RHS respectively</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ap~9"></span>
+              complex(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ap</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-an~9"></span>
+              real(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>an</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-as~9"></span>
+              real(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>as</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-aw~9"></span>
+              real(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>aw</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ae~9"></span>
+              real(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ae</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~13"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j~18"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -784,7 +990,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hx_c"></span>
+              <span class="anchor" id="variable-hx_c~5"></span>
               real(kind=realdp),
             </td>
 <td>intent(in)</td>
@@ -799,7 +1005,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hy_c"></span>
+              <span class="anchor" id="variable-hy_c~5"></span>
               real(kind=realdp),
             </td>
 <td>intent(in)</td>
@@ -812,21 +1018,6 @@ modules which it uses.
 
             </td>
         </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-kxy"></span>
-              real(kind=realdp),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>kxy</strong></td>
-            <td>
-
-            </td>
-        </tr>
     </tbody>
   </table>
 
@@ -835,12 +1026,11 @@ modules which it uses.
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-dirichlet"></span> <h3>public  subroutine <a href='../proc/dirichlet.html'>Dirichlet</a>(ap, an, as, aw, ae, i, j, ni, nj, hx_c, hy_c)  
+    <div class="card-header codesum"><span class="anchor" id="proc-first_order_neum"></span> <h3>public  subroutine <a href='../proc/first_order_neum.html'>first_order_Neum</a>(ap, an, as, aw, ae, i, j, ni, nj, hx_c, hy_c, kxy)  
 </h3></div>
     <div class="card-body">
           
-  <p>Dirichlet, ap=h^2, which will devided by h^2 in the rountine of the operator
-When use this Dirichlet, you have to be carefull with the RHS respectively</p>
+  <p>Sommerfeld boundary conditions. Eliminate the ghost grid points by second-order discretization</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -855,7 +1045,7 @@ When use this Dirichlet, you have to be carefull with the RHS respectively</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-ap~3"></span>
+              <span class="anchor" id="variable-ap~10"></span>
               complex(kind=realdp)
             </td>
 <td></td>
@@ -870,7 +1060,7 @@ When use this Dirichlet, you have to be carefull with the RHS respectively</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-an~3"></span>
+              <span class="anchor" id="variable-an~10"></span>
               real(kind=realdp)
             </td>
 <td></td>
@@ -885,7 +1075,7 @@ When use this Dirichlet, you have to be carefull with the RHS respectively</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-as~3"></span>
+              <span class="anchor" id="variable-as~10"></span>
               real(kind=realdp)
             </td>
 <td></td>
@@ -900,7 +1090,7 @@ When use this Dirichlet, you have to be carefull with the RHS respectively</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-aw~3"></span>
+              <span class="anchor" id="variable-aw~10"></span>
               real(kind=realdp)
             </td>
 <td></td>
@@ -915,7 +1105,7 @@ When use this Dirichlet, you have to be carefull with the RHS respectively</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ae~3"></span>
+              <span class="anchor" id="variable-ae~10"></span>
               real(kind=realdp)
             </td>
 <td></td>
@@ -930,7 +1120,7 @@ When use this Dirichlet, you have to be carefull with the RHS respectively</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-i~18"></span>
+              <span class="anchor" id="variable-i~14"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -945,7 +1135,7 @@ When use this Dirichlet, you have to be carefull with the RHS respectively</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-j~16"></span>
+              <span class="anchor" id="variable-j~19"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -990,7 +1180,7 @@ When use this Dirichlet, you have to be carefull with the RHS respectively</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hx_c~2"></span>
+              <span class="anchor" id="variable-hx_c~6"></span>
               real(kind=realdp),
             </td>
 <td>intent(in)</td>
@@ -1005,197 +1195,7 @@ When use this Dirichlet, you have to be carefull with the RHS respectively</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hy_c~2"></span>
-              real(kind=realdp),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>hy_c</strong></td>
-            <td>
-
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-first_order_neum"></span> <h3>public  subroutine <a href='../proc/first_order_neum.html'>first_order_Neum</a>(ap, an, as, aw, ae, i, j, ni, nj, hx_c, hy_c, kxy)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Sommerfeld boundary conditions. Eliminate the ghost grid points by second-order discretization</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ap~4"></span>
-              complex(kind=realdp)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ap</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-an~4"></span>
-              real(kind=realdp)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>an</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-as~4"></span>
-              real(kind=realdp)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>as</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-aw~4"></span>
-              real(kind=realdp)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>aw</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ae~4"></span>
-              real(kind=realdp)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ae</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-i~19"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>i</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-j~17"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>j</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ni~9"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ni</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nj~9"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>nj</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-hx_c~3"></span>
-              real(kind=realdp),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>hx_c</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-hy_c~3"></span>
+              <span class="anchor" id="variable-hy_c~6"></span>
               real(kind=realdp),
             </td>
 <td>intent(in)</td>
@@ -1210,7 +1210,7 @@ When use this Dirichlet, you have to be carefull with the RHS respectively</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-kxy~2"></span>
+              <span class="anchor" id="variable-kxy~4"></span>
               real(kind=realdp),
             </td>
 <td>intent(in)</td>
