@@ -56,7 +56,7 @@ contains
     
     k=0
     do j=1,m_iter
-      k=k+1   !!Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
+      k=k+1   !-Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
       call arnoldi(V, H, k)
       call apply_givens_rotation(H, cs, sn, k)
 
@@ -142,7 +142,7 @@ contains
 
       k=0
       do j=1,m_iter
-        k=k+1   !!Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
+        k=k+1   !-Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
         call arnoldi(V, H, k)
 
         call apply_givens_rotation(H, cs, sn, k)
@@ -233,7 +233,7 @@ contains
 
     k=0
     do j=1,m_iter
-      k=k+1   !!Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
+      k=k+1   !-Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
       call Prearnoldi(V, H, k)
 
       call apply_givens_rotation(H, cs, sn, k)
@@ -326,7 +326,7 @@ contains
 
     k=0
     do j=1,m_iter
-      k=k+1   !!Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
+      k=k+1   !-Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
       
       z = Precond_x(V(:,:,k))
 
@@ -443,7 +443,7 @@ contains
       k=0
       do j=1,m_iter 
           !-Here m_iter is the iteration to restart
-          k=k+1   !!Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
+          k=k+1   !-Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
           call Prearnoldi(V, H, k)
 
           call apply_givens_rotation(H, cs, sn, k)
@@ -628,7 +628,7 @@ contains
     
     k=0
     do i=1,m_iter
-      k=k+1   !!Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
+      k=k+1   !-Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
       
       ss(:,:,i) = Precond_x(res)
       call Helmholtz2d_BC(ss(:,:,i),vv(:,:,i))
@@ -724,7 +724,7 @@ contains
 
     k=0
     do j=1,m_iter
-      k=k+1   !!Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
+      k=k+1   !-Be careful!!, after the whole iteration without achieving eps, then the value of j will be "m_iter+1".So we need a k.
       
       Z(:,:,k) = Precond_x(V(:,:,k))
       call Helmholtz2d_BC(Z(:,:,k),V(:,:,k+1))

@@ -183,8 +183,8 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <ul class="list-inline">
-                  <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
                   <li class="list-inline-item"><a href='http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'>mpi</a></li>
+                  <li class="list-inline-item"><a href='comm_variable.html'>comm_variable</a></li>
               </ul>
             </li>
             <li class="list-group-item">
@@ -802,7 +802,7 @@ if not periodic, npx0-1 node donot send mesg to 0 node</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~3"></span>
+              <span class="anchor" id="variable-f"></span>
               complex(kind=realdp)
             </td>
 <td></td>
@@ -843,7 +843,7 @@ no2</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~4"></span>
+              <span class="anchor" id="variable-f~2"></span>
               complex(kind=realdp)
             </td>
 <td></td>
@@ -883,7 +883,7 @@ no2</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~5"></span>
+              <span class="anchor" id="variable-f~3"></span>
               complex(kind=realdp)
             </td>
 <td></td>
@@ -925,8 +925,294 @@ no2</p>
     <tbody>
         <tr>
             <td>
+              <span class="anchor" id="variable-f~4"></span>
+              complex(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f</strong>(1-LAP:ni+LAP,1-LAP:nj+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ni~6"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ni</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nj~6"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nj</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_check_y2d"></span> <h3>public  subroutine <a href='../proc/mg_check_y2d.html'>mg_check_y2d</a>(f, ni, nj)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Exchanges data in the y direction, for a specified-size grid system
+no2
+no2</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f~5"></span>
+              complex(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f</strong>(1-LAP:ni+LAP,1-LAP:nj+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ni~7"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ni</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nj~7"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nj</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_check_xy2d"></span> <h3>public  subroutine <a href='../proc/mg_check_xy2d.html'>mg_check_xy2d</a>(f, ni, nj)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Exchanges data first in the x direction and then y direction, for a specified-size grid system</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
               <span class="anchor" id="variable-f~6"></span>
               complex(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f</strong>(1-LAP:ni+LAP,1-LAP:nj+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ni~8"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ni</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nj~8"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nj</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_checkreal_x2d"></span> <h3>public  subroutine <a href='../proc/mg_checkreal_x2d.html'>mg_checkreal_x2d</a>(f, ni, nj)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Exchanges REAL data in the x direction, for a specified-size grid system
+no2
+no2</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f~7"></span>
+              real(kind=realdp)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f</strong>(1-LAP:ni+LAP,1-LAP:nj+LAP)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ni~9"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ni</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nj~9"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nj</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_checkreal_y2d"></span> <h3>public  subroutine <a href='../proc/mg_checkreal_y2d.html'>mg_checkreal_y2d</a>(f, ni, nj)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Exchanges REAL data in the y direction, for a specified-size grid system
+no2
+no2</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f~8"></span>
+              real(kind=realdp)
             </td>
 <td></td>
               <td></td>            <td>
@@ -976,155 +1262,11 @@ no2</p>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-mg_check_y2d"></span> <h3>public  subroutine <a href='../proc/mg_check_y2d.html'>mg_check_y2d</a>(f, ni, nj)  
+    <div class="card-header codesum"><span class="anchor" id="proc-mg_checkreal_xy2d"></span> <h3>public  subroutine <a href='../proc/mg_checkreal_xy2d.html'>mg_checkreal_xy2d</a>(f, ni, nj)  
 </h3></div>
     <div class="card-body">
           
-  <p>Exchanges data in the y direction, for a specified-size grid system
-no2
-no2</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-f~7"></span>
-              complex(kind=realdp)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>f</strong>(1-LAP:ni+LAP,1-LAP:nj+LAP)</td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ni~11"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ni</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nj~11"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>nj</strong></td>
-            <td>
-
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-mg_check_xy2d"></span> <h3>public  subroutine <a href='../proc/mg_check_xy2d.html'>mg_check_xy2d</a>(f, ni, nj)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Exchanges data first in the x direction and then y direction, for a specified-size grid system</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-f~8"></span>
-              complex(kind=realdp)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>f</strong>(1-LAP:ni+LAP,1-LAP:nj+LAP)</td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ni~12"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ni</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nj~12"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>nj</strong></td>
-            <td>
-
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-mg_checkreal_x2d"></span> <h3>public  subroutine <a href='../proc/mg_checkreal_x2d.html'>mg_checkreal_x2d</a>(f, ni, nj)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Exchanges REAL data in the x direction, for a specified-size grid system
-no2
-no2</p>
+  <p>Exchanges REAL data first in the x direction and then y direction, for a specified-size grid system</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -1154,7 +1296,7 @@ no2</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ni~13"></span>
+              <span class="anchor" id="variable-ni~11"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -1169,149 +1311,7 @@ no2</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nj~13"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>nj</strong></td>
-            <td>
-
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-mg_checkreal_y2d"></span> <h3>public  subroutine <a href='../proc/mg_checkreal_y2d.html'>mg_checkreal_y2d</a>(f, ni, nj)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Exchanges REAL data in the y direction, for a specified-size grid system
-no2
-no2</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-f~10"></span>
-              real(kind=realdp)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>f</strong>(1-LAP:ni+LAP,1-LAP:nj+LAP)</td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ni~14"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ni</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nj~14"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>nj</strong></td>
-            <td>
-
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-mg_checkreal_xy2d"></span> <h3>public  subroutine <a href='../proc/mg_checkreal_xy2d.html'>mg_checkreal_xy2d</a>(f, ni, nj)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Exchanges REAL data first in the x direction and then y direction, for a specified-size grid system</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-f~11"></span>
-              real(kind=realdp)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>f</strong>(1-LAP:ni+LAP,1-LAP:nj+LAP)</td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ni~15"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ni</strong></td>
-            <td>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nj~15"></span>
+              <span class="anchor" id="variable-nj~11"></span>
               integer,
             </td>
 <td>intent(in)</td>
