@@ -1,0 +1,91 @@
+# helmholtz_2d input file
+#     nx      |    ny      |    LAP
+      289         481           3
+#    npx0     |   npy0     |
+      1           2
+#    slx      |   sly      |
+      600.d0      1000.d0
+# Iperiodic_X | Iperiodic_Y (2 reflection)
+      0            0
+#  i_case     | flag_BCs (1: Dirichlet, 2: Neumman)
+      3            2
+#    m_iter   |   Algorithm   | Irestart  |   eps   
+      100            3            0         1.0d-6
+#   k_case    |      k0       |     freq
+      1             40.d0          40.d0
+#   M_flag    |    M2h_flag   |     beta1     |   beta2
+      5              1             1.0d0         -0.5d0
+#   MG_type   |  def_mg_miter | cslp_mg_miter |   nx_min
+      1              100            100             9
+#   def_rtol  |  cslp_mg_tol  
+     1.d-1         1.d-1
+#  def_nlevel |   Sv_L2   |   Sv_L3   |   Sv_L4   |
+      5           1           10           10
+
+# ########################################################################################## #
+# Instructions:
+# nx, ny: the number of grid points in x- and y- direction. 
+#         The best form is (const*2^n+1), which is conducive to using the multigrid method.
+#
+# LAP: the number of overlapping grid points. 
+#      1: multigrid method using bilinear interpolation, 
+#      2: two-level deflation with higher-order deflation vectors, 
+#      3: multilevel deflation with higher-order deflation vectors
+#
+# npx0, npy0: the number of processes in x- and y- direction, 
+#             the total number of processes used for parallel computing is npx0*npy0
+#
+# slx, sly: the physical length of the computational domain in x- and y- direction.
+#
+# Iperiodic_X, Iperiodic_Y: Periodicity flag in x- and y- direction. 1 for periodic, 0 for non-periodic
+#
+# i_case: 1      MP1, 2D close-off problem
+#         2      MP2, central point source, square unit domain
+#         3      MP3, wedge problem, slx=600, sly=1000, nx/ny=3/5, eg.freq=10,73x121 or 97x161; freq=60,481x801
+#         4      MP4, Marmousi problem, slx=9200, sly=3000, nx/ny=46/15, 
+#                     the available grid size refers to the velocity data file in Input directory. Larger grid size pls contact the author.
+#
+# flag_BCs:  boundary conditions. 1: Dirichlet, 2: Sommerfeld
+# 
+# m_iter: maximum iterations; 
+#
+# Algorithm: 1: (left preconditioned) GMRES, 
+#            21: IDR(1), 24: IDR(4), 28: IDR(8), 31: BiCGSTAB, 
+#            2: right preconditioned GMRES
+#            3: preconditioned FGMRES
+#            4: preconditioned GCR
+#
+# Irestart: 0: full-GMRES, 1: restart-GMRES; 
+#
+# eps: tolerance, 1E-6 by default
+# 
+# k_case: 0: constant wavenumber, 1: nonconst wavenumber
+#
+# k0: wavenumber; freq: frequency
+# 
+# M_flag: 0: no preconditioner, 1: CSLP preconditioner, 
+#         2: two-level deflation without CSLP, 3: (higher-order) two-level deflation combined with CSLP (ADEF1, ADP)
+#         4: Two-level Krylov Method (TLKM), 5: multilevel deflation
+#
+# beta1, beta2: CSLP= Laplace-(beta1-beta2 i)k0^2
+#
+# MG_type: 0: two-grid cycle; 1: V-cycle; 12: 2 V-cycle iterations; 3: F-cycle
+#
+# def_mg_miter: maximum number of iterations for deflation on the coarse levels;
+#               1 for using Bi-CGSTAB, otherwise use GMRES.
+#
+# cslp_mg_miter: maximum number of iterations for solving CSLP by multigrid method on the coarsest level;
+#                1 for using Bi-CGSTAB, otherwise use GMRES.
+#
+# nx_min: minimum grid size in x-direction for the coarsest grid.
+#         It is used to specified the grid size of the coarsest grid when coarsening
+#
+# def_rtol: tolerance for the coarse-grid solver in two-level deflation method
+# 
+# cslp_mg_tol: tolerance for Krylov based CSLP solver on coarse-grid levels
+# 
+# def_nlevel: Number of levels in multilevel deflation method
+#
+# Sv_L2: For multilevel method, a single-digit number that sets the tolerance for the second coarse grid iterations, ex. 1 means 1E-1
+# Sv_L3: For multilevel method, a single-digit number that sets the tolerance for the third coarse grid iterations, ex. 3 means 3E-1
+# Sv_L4: For multilevel method, a single-digit number that sets the tolerance for the fourth coarse grid iterations, ex. 10 means one iteration
